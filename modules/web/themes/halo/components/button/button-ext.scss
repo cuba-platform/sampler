@@ -1,0 +1,17 @@
+@mixin sampler-button($primary-stylename: v-button) {
+  .#{$primary-stylename}-dark {
+    color: #868680;
+  }
+
+  .#{$primary-stylename}-dark:hover {
+    color: #318ae3;
+  }
+
+  .#{$primary-stylename}-dark:focus:after {
+    border-color: #868680;
+  }
+
+  .#{$primary-stylename}-small-link {
+    font-size: 12px;
+  }
+}

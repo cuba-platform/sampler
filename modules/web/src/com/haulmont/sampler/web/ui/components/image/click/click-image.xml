@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.image.click.ClickImageFrame">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="Image single click handler"
+                      height="250px"
+                      width="300px">
+                <image id="imageClick"
+                       align="MIDDLE_CENTER">
+                    <theme path="images/cuba-logo.png"/>
+                </image>
+            </groupBox>
+            <label id="infoLabel"
+                   htmlEnabled="true"
+                   width="120px"/>
+            <groupBox caption="Image double click handler"
+                      height="250px"
+                      width="300px">
+                <image id="imageDoubleClick"
+                       align="MIDDLE_CENTER"
+                       height="200px"
+                       scaleMode="SCALE_DOWN"
+                       width="250px">
+                    <theme path="images/platform-logo.png"/>
+                </image>
+            </groupBox>
+            <label id="doubleInfoLabel"
+                   htmlEnabled="true"/>
+        </hbox>
+    </layout>
+</window>

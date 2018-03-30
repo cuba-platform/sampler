@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.table.action.ActionTableFrame">
+    <dsContext>
+        <collectionDatasource id="customersDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <table id="customerTable"
+               height="100%"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="excel"/>
+                <action id="greeting"
+                        caption="Greeting"
+                        invoke="greet"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+                <column id="grade"/>
+            </columns>
+            <rows datasource="customersDs"/>
+            <buttonsPanel>
+                <button action="customerTable.create"/>
+                <button action="customerTable.edit"/>
+                <button action="customerTable.remove"/>
+                <button action="customerTable.excel"/>
+                <button action="customerTable.greeting"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

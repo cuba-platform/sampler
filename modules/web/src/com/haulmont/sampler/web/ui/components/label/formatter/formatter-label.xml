@@ -1,0 +1,13 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.label.formatter.FormatterLabelFrame">
+    <layout spacing="true">
+        <label id="dateLabel">
+            <formatter class="com.haulmont.cuba.gui.components.formatters.DateFormatter"
+                       type="DATE"/>
+        </label>
+        <label id="numberLabel">
+            <formatter class="com.haulmont.cuba.gui.components.formatters.NumberFormatter"
+                       format="#,###"/>
+        </label>
+    </layout>
+</window>

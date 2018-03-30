@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.haulmont.sampler.web.ui.entities.customer.CustomerBrowse"
+        focusComponent="customerTable"
+        lookupComponent="customerTable"
+        messagesPack="com.haulmont.sampler.web.ui.entities.customer">
+    <dsContext>
+        <collectionDatasource id="customerDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="customerTable"
+            spacing="true">
+        <filter id="filter"
+                datasource="customerDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="customerTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+                <column id="grade"/>
+            </columns>
+            <rows datasource="customerDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="customerTable.create"/>
+                <button id="editBtn"
+                        action="customerTable.edit"/>
+                <button id="removeBtn"
+                        action="customerTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>

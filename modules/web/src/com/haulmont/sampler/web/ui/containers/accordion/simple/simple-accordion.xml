@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dsContext>
+        <collectionDatasource id="customersDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+        <collectionDatasource id="dateValueDs"
+                              class="com.haulmont.sampler.entity.DateValue"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$DateValue e order by e.date]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <accordion id="accordionMain"
+                   height="100%">
+            <tab id="tableTab"
+                 caption="Tab with table">
+                <table id="customerTable"
+                       height="100%"
+                       width="100%">
+                    <columns>
+                        <column id="name"/>
+                        <column id="lastName"/>
+                        <column id="age"/>
+                        <column id="active"/>
+                        <column id="grade"/>
+                    </columns>
+                    <rows datasource="customersDs"/>
+                </table>
+            </tab>
+            <tab id="fieldTab"
+                 caption="Tab with fields"
+                 margin="true">
+                <grid spacing="true">
+                    <columns count="4"/>
+                    <rows>
+                        <row>
+                            <label align="MIDDLE_LEFT"
+                                   value="Field 1"/>
+                            <textField/>
+                            <label align="MIDDLE_LEFT"
+                                   value="Field 2"/>
+                            <textField/>
+                        </row>
+                        <row>
+                            <label align="MIDDLE_LEFT"
+                                   value="Field 3"/>
+                            <textField/>
+                        </row>
+                    </rows>
+                </grid>
+            </tab>
+            <tab id="chartTab"
+                 caption="Tab with chart"
+                 margin="true">
+                <chart:serialChart id="lineChart"
+                                   categoryField="date"
+                                   datasource="dateValueDs"
+                                   height="100%"
+                                   width="100%">
+                    <chart:valueAxes>
+                        <chart:axis axisAlpha="0"
+                                    position="LEFT"/>
+                    </chart:valueAxes>
+                    <chart:graphs>
+                        <chart:graph id="g1"
+                                     bullet="ROUND"
+                                     bulletBorderAlpha="1"
+                                     bulletColor="WHITE"
+                                     bulletSize="5"
+                                     hideBulletsCount="50"
+                                     lineThickness="2"
+                                     title="Red line"
+                                     valueField="value"/>
+                    </chart:graphs>
+                    <chart:categoryAxis dashLength="1"
+                                        minorGridEnabled="true"
+                                        position="TOP"/>
+                    <chart:chartScrollbar graph="g1"
+                                          scrollbarHeight="30"/>
+                    <chart:chartCursor cursorPosition="MOUSE"
+                                       pan="true"/>
+                    <chart:export/>
+                </chart:serialChart>
+            </tab>
+        </accordion>
+    </layout>
+</window>

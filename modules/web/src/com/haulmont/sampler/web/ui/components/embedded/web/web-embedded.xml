@@ -1,0 +1,9 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout>
+        <embedded id="embedded"
+                  height="100%"
+                  src="url://https://doc.cuba-platform.com/manual-latest/index.html"
+                  width="100%"/>
+    </layout>
+</window>

@@ -1,0 +1,33 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.datagrid.selectionmode.DataGridSelectionModeFrame">
+    <dsContext>
+        <collectionDatasource id="customersDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <hbox spacing="true">
+            <label value="Selection Mode:"
+                   align="MIDDLE_LEFT"/>
+            <lookupField id="selectionModeField"
+                         nullOptionVisible="false"
+                         textInputAllowed="false"/>
+        </hbox>
+        <dataGrid id="customersDataGrid"
+                  datasource="customersDs"
+                  width="100%">
+            <columns>
+                <column property="name"/>
+                <column property="lastName"/>
+                <column property="age"/>
+                <column property="active"/>
+                <column property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

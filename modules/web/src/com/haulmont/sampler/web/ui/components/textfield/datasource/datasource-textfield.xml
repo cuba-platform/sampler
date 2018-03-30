@@ -1,0 +1,19 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.textfield.datasource.DatasourceTextFieldFrame">
+    <dsContext>
+        <datasource id="customersDs"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local"
+                    allowCommit="false"/>
+    </dsContext>
+    <layout spacing="true">
+        <textField caption="Name"
+                   datasource="customersDs"
+                   property="name"/>
+        <hbox spacing="true">
+            <label value="Name in the datasource:"/>
+            <label datasource="customersDs"
+                   property="name"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema
+        targetNamespace="com/haulmont/sampler/web/samples-menu.xsd"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="com/haulmont/sampler/web/samples-menu.xsd"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified"
+        >
+
+    <xs:element name="sample-menu-config" type="menuOrItem"/>
+
+    <xs:complexType name="menuOrItem">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element type="itemType" name="item" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element type="menuType" name="menu" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="itemType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="otherFiles" type="otherFilesType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="screenParams" type="screenParamsType" minOccurs="0" maxOccurs="1"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="controller" type="xs:string" use="optional"/>
+        <xs:attribute name="descriptionsPack" type="xs:string" use="optional"/>
+        <xs:attribute name="docUrlSuffix" type="xs:string" use="optional"/>
+        <xs:attribute name="sampleHeight" type="xs:string" use="optional"/>
+        <xs:attribute name="splitEnabled" type="xs:boolean" use="optional"/>
+        <xs:attribute name="image" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="menuType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element type="menuType" name="menu" maxOccurs="unbounded" minOccurs="0"/>
+                <xs:element type="itemType" name="item" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="image" type="xs:string" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="fileType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="otherFilesType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="file" type="fileType"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="paramType">
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="value" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="screenParamsType">
+        <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="param" type="paramType"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

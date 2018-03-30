@@ -1,0 +1,12 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout>
+        <hbox spacing="true">
+            <label align="MIDDLE_LEFT"
+                   value="Label"/>
+            <textField inputPrompt="TextField"/>
+            <button caption="Button"/>
+            <button caption="Button"/>
+        </hbox>
+    </layout>
+</window>

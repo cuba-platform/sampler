@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <dsContext>
+        <collectionDatasource id="customerDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout spacing="true" expand="customerTable">
+        <filter id="filter"
+                datasource="customerDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="customerTable"
+               width="100%">
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+                <column id="grade"/>
+            </columns>
+            <rows datasource="customerDs"/>
+            <rowsCount/>
+        </table>
+    </layout>
+</window>

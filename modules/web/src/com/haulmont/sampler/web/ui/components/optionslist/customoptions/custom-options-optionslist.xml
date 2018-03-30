@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.optionslist.customoptions.CustomOptionsListFrame">
+    <layout>
+        <hbox spacing="true">
+            <optionsList id="optionsListWithList"
+                         caption="Options List"
+                         height="180px"
+                         width="160px"/>
+            <optionsList id="optionsListWithMap"
+                         caption="Options Map"
+                         height="180px"
+                         width="160px"/>
+            <optionsList id="optionsListWithEnum"
+                         caption="Options Enum"
+                         height="180px"
+                         width="160px"/>
+        </hbox>
+    </layout>
+</window>

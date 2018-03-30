@@ -1,0 +1,10 @@
+<p><code>getFieldComponent()</code> method of the <code>FieldGroup</code> returns a visual component, which is located
+    in a field with the specified identifier. This may be required for additional component parameterization, which is
+    not available through XML attributes of <code>field</code>.</p>
+
+<p>To obtain a reference to a field component in a screen controller, you can use injection with the
+    <code>@Named</code> annotation. Specify an identifier of <code>fieldGroup</code> and a field identifier after a dot
+    in the annotation value.</p>
+
+<p>In this example, we have customized actions of the <code>PickerField</code> which is used in the <code>FieldGroup</code>
+    for the <code>customer</code> attribute.</p>

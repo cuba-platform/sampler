@@ -1,0 +1,26 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.datagrid.detailsgenerator.DataGridDetailsGeneratorFrame">
+    <dsContext>
+        <collectionDatasource id="ordersDs"
+                              class="com.haulmont.sampler.entity.Order"
+                              view="order-with-customer">
+            <query>
+                <![CDATA[select e from sampler$Order e order by e.date]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="ordersDataGrid"
+            spacing="true">
+        <dataGrid id="ordersDataGrid"
+                  datasource="ordersDs"
+                  settingsEnabled="false"
+                  width="100%">
+            <columns>
+                <column property="date"/>
+                <column property="customer"/>
+                <column property="amount"/>
+                <column property="description"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

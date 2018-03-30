@@ -1,0 +1,30 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.tokenlist.position.PositionTokenListFrame">
+    <dsContext>
+        <datasource id="orderDs"
+                    allowCommit="false"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="order-edit">
+            <collectionDatasource id="orderItemsDs"
+                                  allowCommit="false"
+                                  property="items"/>
+        </datasource>
+        <collectionDatasource id="allItemsDs"
+                              allowCommit="false"
+                              class="com.haulmont.sampler.entity.OrderItem"
+                              view="orderItem-with-product">
+            <query>
+                <![CDATA[select e from sampler$OrderItem e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <tokenList id="linesList"
+                   datasource="orderItemsDs"
+                   inline="true"
+                   position="BOTTOM"
+                   width="320px">
+            <lookup optionsDatasource="allItemsDs"/>
+        </tokenList>
+    </layout>
+</window>

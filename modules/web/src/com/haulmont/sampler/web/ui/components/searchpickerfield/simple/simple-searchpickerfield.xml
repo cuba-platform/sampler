@@ -1,0 +1,21 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.searchpickerfield.simple.SimpleSearchPickerFieldFrame">
+    <dsContext>
+        <datasource id="orderDs"
+                    allowCommit="false"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="order-with-customer"/>
+        <collectionDatasource id="customersDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e where e.name like :(?i)custom$searchString]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <searchPickerField datasource="orderDs"
+                           property="customer"
+                           optionsDatasource="customersDs"/>
+    </layout>
+</window>

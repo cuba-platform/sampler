@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.charts.pivot.sorter.PivotTableSorterFunction"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd"
+        messagesPack="com.haulmont.sampler.web.ui.charts.pivot.sorter">
+    <dsContext>
+        <collectionDatasource id="tipsDs"
+                              class="com.haulmont.sampler.entity.TipInfo"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$TipInfo e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <chart:pivotTable id="pivotTable"
+                          datasource="tipsDs"
+                          height="100%"
+                          width="100%">
+            <chart:properties>
+                <chart:property name="totalBill"/>
+                <chart:property name="tip"/>
+                <chart:property name="sex"/>
+                <chart:property name="smoker"/>
+                <chart:property name="day"/>
+                <chart:property name="time"/>
+                <chart:property name="size"/>
+            </chart:properties>
+            <chart:aggregation mode="SUM_OVER_SUM">
+                <chart:property name="tip"/>
+                <chart:property name="totalBill"/>
+            </chart:aggregation>
+            <chart:columns>
+                <chart:column value="day"/>
+                <chart:column value="time"/>
+            </chart:columns>
+            <chart:rows>
+                <chart:row value="sex"/>
+                <chart:row value="smoker"/>
+            </chart:rows>
+        </chart:pivotTable>
+    </layout>
+</window>

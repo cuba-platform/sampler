@@ -1,0 +1,7 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.textfield.textchange.TextChangeTextFieldFrame">
+    <layout>
+        <textField id="textField"
+                   inputPrompt="Start typing"/>
+    </layout>
+</window>

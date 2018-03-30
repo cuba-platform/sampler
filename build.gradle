@@ -1,0 +1,268 @@
+
+buildscript {
+    ext.cubaVersion = '6.8.5'
+    repositories {
+        maven {
+            url 'https://repo.cuba-platform.com/content/groups/work'
+            credentials {
+                username('cuba')
+                password('cuba123')
+            }
+        }
+        maven {
+            url 'https://repo.cuba-platform.com/content/groups/premium'
+            credentials {
+                username(rootProject.hasProperty('premiumRepoUser') ? rootProject['premiumRepoUser'] : System.getenv('CUBA_PREMIUM_USER'))
+                password(rootProject.hasProperty('premiumRepoPass') ? rootProject['premiumRepoPass'] : System.getenv('CUBA_PREMIUM_PASSWORD'))
+            }
+        }
+    }
+    dependencies {
+        classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
+        classpath "com.haulmont.cuba:cuba-global:$cubaVersion"
+        classpath "com.haulmont.charts:charts-global:$cubaVersion"
+    }
+}
+
+def globalModule = project(':sampler-global')
+def coreModule = project(':sampler-core')
+def guiModule = project(':sampler-gui')
+def webModule = project(':sampler-web')
+def webThemesModule= project(':sampler-web-themes')
+
+def servletApi = 'org.apache.tomcat:tomcat-servlet-api:8.0.26'
+
+
+apply(plugin: 'idea')
+apply(plugin: 'cuba')
+
+cuba {
+    artifact {
+        group = 'com.haulmont.sampler'
+        version = project.cubaVersion.replace('-SNAPSHOT', '')
+        isSnapshot = project.cubaVersion.endsWith('-SNAPSHOT')
+    }
+    tomcat {
+        dir = "$project.rootDir/build/tomcat"
+    }
+    
+}
+
+def hsql = 'org.hsqldb:hsqldb:2.2.9'
+
+configure([globalModule, coreModule, guiModule, webModule]) {
+    apply(plugin: 'java')
+    apply(plugin: 'maven')
+    apply(plugin: 'idea')
+    apply(plugin: 'cuba')
+
+    dependencies {
+        testCompile('junit:junit:4.12')
+    }
+
+    task sourceJar(type: Jar) {
+        from file('src')
+        classifier = 'sources'
+    }
+
+    artifacts {
+        archives sourceJar
+    }
+}
+
+configure(globalModule) {
+    task enhance(type: CubaEnhancing)
+
+    jar {
+        from sourceSets.main.allJava
+    }
+}
+
+configure(coreModule) {
+
+    configurations {
+        jdbc
+        dbscripts
+    }
+
+    dependencies {
+        compile(globalModule)
+        provided(servletApi)
+        jdbc(hsql)
+        testRuntime(hsql)
+
+    }
+
+    task cleanConf(description: 'Cleans up conf directory') {
+        doLast {
+            def dir = new File(cuba.tomcat.dir, '/conf/sampler-core')
+            if (dir.isDirectory()) {
+                ant.delete(includeemptydirs: true) {
+                    fileset(dir: dir, includes: '**/*', excludes: 'local.app.properties')
+                }
+            }
+        }
+    }
+
+    task deploy(dependsOn: [assemble, cleanConf], type: CubaDeployment) {
+        appName = 'sampler-core'
+        appJars('sampler-global', 'sampler-core')
+    }
+
+    task startDb(type: CubaHsqlStart) {
+        dbName = 'sampler'
+    }
+
+    task stopDb(type: CubaHsqlStop) {
+        dbName = 'sampler'
+    }
+
+    task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
+        dbms = 'hsql'
+        host = 'localhost'
+        dbName = 'sampler'
+        dbUser = 'sa'
+        dbPassword = ''
+    }
+
+    task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
+        dbms = 'hsql'
+        host = 'localhost'
+        dbName = 'sampler'
+        dbUser = 'sa'
+        dbPassword = ''
+    }
+}
+
+configure(guiModule) {
+    dependencies {
+        compile(globalModule)
+    }
+
+    task deployConf(type: Copy) {
+        from file('src')
+        include "com/haulmont/sampler/**"
+        into "$cuba.tomcat.dir/conf/sampler"
+    }
+
+    jar {
+        from sourceSets.main.allJava
+    }
+}
+
+configure(webModule) {
+    configurations {
+        webcontent
+    }
+
+    dependencies {
+        provided(servletApi)
+        compile(guiModule)
+
+    }
+    
+    task webArchive(type: Zip) {
+        from file("$buildDir/web")
+        from file('web')
+        classifier = 'web'
+    }
+
+    artifacts {
+        archives webArchive
+    }
+
+    task deployConf(type: Copy) {
+        from file('src')
+        include "com/haulmont/sampler/**"
+        into "$cuba.tomcat.dir/conf/sampler"
+    }
+
+    task clearMessagesCache(type: CubaClearMessagesCache) {
+        appName = 'sampler'
+    }
+    deployConf.dependsOn clearMessagesCache
+
+    task cleanConf(description: 'Cleans up conf directory') {
+        doLast {
+            def dir = new File(cuba.tomcat.dir, '/conf/sampler')
+            if (dir.isDirectory()) {
+                ant.delete(includeemptydirs: true) {
+                    fileset(dir: dir, includes: '**/*', excludes: 'local.app.properties')
+                }
+            }
+        }
+    }
+
+    task copyLogo(type: Copy) {
+        from 'themes/halo/images/platform-logo.png'
+        into "$cuba.tomcat.dir/work/sampler-core/filestorage/2015/04/01"
+        rename 'platform-logo.png', '61a6a1ee-f13a-f44f-0201-c2f9b3288305.png'
+    }
+
+    task copyImages(type: Copy) {
+        from 'themes/halo/images/customer-standard.svg'
+        into "$cuba.tomcat.dir/work/sampler-core/filestorage/2017/07/19"
+        rename 'customer-standard.svg', 'efc56835-5f5c-6614-bf74-e26e48e2ac5f.svg'
+
+        from 'themes/halo/images/cuba-logo.png'
+        into "$cuba.tomcat.dir/work/sampler-core/filestorage/2017/07/19"
+        rename 'cuba-logo.png', 'a2ba9e37-9f05-3ee3-4041-e838d505415c.png'
+    }
+
+    task deploy(dependsOn: [assemble, cleanConf, copyLogo, copyImages], type: CubaDeployment) {
+        appName = 'sampler'
+        appJars('sampler-global', 'sampler-gui', 'sampler-web')
+    }
+    task buildScssThemes(type: CubaWebScssThemeCreation)
+    task deployThemes(type: CubaDeployThemeTask, dependsOn: buildScssThemes)
+    assemble.dependsOn buildScssThemes
+
+    jar {
+        from sourceSets.main.allJava
+        // copy sources from core to show the service classes for samples in the ui
+        from coreModule.sourceSets.main.allJava
+    }
+}
+
+configure(webThemesModule) {
+    apply(plugin: 'java')
+    apply(plugin: 'maven')
+    apply(plugin: 'cuba')
+
+    appModuleType = 'web-themes'
+
+    buildDir = file('../build/scss-themes')
+
+    sourceSets {
+        main {
+            java {
+                srcDir '.'
+            }
+            resources {
+                srcDir '.'
+            }
+        }
+    }
+}
+
+task undeploy(type: Delete, dependsOn: ':sampler-web:cleanConf') {
+    delete("$cuba.tomcat.dir/shared")
+    delete("$cuba.tomcat.dir/webapps/sampler-core")
+    delete("$cuba.tomcat.dir/webapps/sampler")
+}
+
+task restart(dependsOn: ['stop', ':sampler-core:deploy', ':sampler-web:deploy'],
+        description: 'Redeploys applications and restarts local Tomcat') {
+    doLast {
+        ant.waitfor(maxwait: 6, maxwaitunit: 'second', checkevery: 2, checkeveryunit: 'second') {
+            not {
+                socket(server: 'localhost', port: '8787')
+            }
+        }
+        start.execute()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.3.1'
+}

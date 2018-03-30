@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.haulmont.sampler.web.ui.entities.order.OrderEdit"
+        datasource="orderDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.haulmont.sampler.web.ui.entities.order">
+    <dsContext>
+        <datasource id="orderDs"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="order-edit">
+            <collectionDatasource id="invoiceDs"
+                                  property="items"/>
+        </datasource>
+    </dsContext>
+    <layout expand="invoiceTable"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="orderDs">
+            <column width="250px">
+                <field property="date"/>
+                <field property="amount"/>
+                <field property="customer"/>
+                <field property="description"/>
+            </column>
+        </fieldGroup>
+        <table id="invoiceTable"
+               width="480px">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="product.name"/>
+                <column id="product.price"/>
+                <column id="quantity"/>
+            </columns>
+            <rows datasource="invoiceDs"/>
+            <buttonsPanel>
+                <button action="invoiceTable.create"/>
+                <button action="invoiceTable.edit"/>
+                <button action="invoiceTable.remove"/>
+            </buttonsPanel>
+        </table>
+        <frame id="windowActions"
+                screen="editWindowActions"
+                stylename="window-actions"/>
+    </layout>
+</window>

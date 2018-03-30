@@ -1,0 +1,15 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.dialogsandnotifications.notification.NotificationsSampleFrame">
+    <layout>
+        <hbox spacing="true">
+            <button caption="Tray"
+                    invoke="tray"/>
+            <button caption="Humanized"
+                    invoke="humanized"/>
+            <button caption="Warning"
+                    invoke="warning"/>
+            <button caption="Error"
+                    invoke="error"/>
+        </hbox>
+    </layout>
+</window>

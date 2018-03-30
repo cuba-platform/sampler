@@ -1,0 +1,27 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.datagrid.converter.DataGridConverterFrame"
+        messagesPack="com.haulmont.sampler.web.ui.components.datagrid.converter">
+    <dsContext>
+        <collectionDatasource id="customersDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <dataGrid id="customersDataGrid"
+                  datasource="customersDs"
+                  width="100%">
+            <columns>
+                <column property="name"/>
+                <column property="lastName"/>
+                <column property="age"/>
+                <column property="active"/>
+                <column property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

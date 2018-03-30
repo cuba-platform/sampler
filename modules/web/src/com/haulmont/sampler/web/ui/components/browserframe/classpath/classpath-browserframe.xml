@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.browserframe.classpath.ClasspathBrowserFrameFrame">
+    <layout>
+        <hbox height="250px"
+              spacing="true"
+              width="100%">
+            <groupBox caption="Programmatically defined source"
+                      height="100%">
+                <browserFrame id="browserFrame"
+                              height="100%"
+                              width="100%"/>
+            </groupBox>
+            <groupBox caption="Declaratively defined source"
+                      height="100%">
+                <browserFrame height="100%"
+                              width="100%">
+                    <classpath path="com/haulmont/sampler/web/ui/components/browserframe/classpath/cart-info.html"/>
+                </browserFrame>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

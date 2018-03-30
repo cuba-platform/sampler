@@ -1,0 +1,15 @@
+<p>Для <code>PickerField</code> можно определить произвольное количество
+    <a href="https://doc.cuba-platform.com/manual-6.8-ru/gui_Action.html" target="_blank">действий</a>,
+    отображаемых кнопками справа. Это можно сделать как в XML-дескрипторе с помощью вложенного элемента <code>actions</code>,
+    так и программно в контроллере методом <code>addAction()</code>.</p>
+
+<p>В данном примере три действия определены в XML:
+    <a href="https://doc.cuba-platform.com/manual-6.8-ru/picker_actions.html" target="_blank">стандартные</a>
+    <code>lookup</code> и <code>open</code>, и собственное <code>greeting</code>, вызывающее метод <code>greet()</code>.
+    В контроллере добавлены собственное действие <code>showGrade</code> и стандартное <code>clear</code> с
+    переопределенной пиктограммой.</p>
+
+<p>Некоторые параметры действий могут быть заданы в XML. В данном примере для стандартного действия <code>open</code>
+    задан атрибут <code>openType="DIALOG"</code>, заставляющий экран редактирования сущности открываться в диалоговом
+    окне.</p>
+

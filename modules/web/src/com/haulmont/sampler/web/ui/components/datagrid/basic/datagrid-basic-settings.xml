@@ -1,0 +1,33 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.datagrid.basic.DataGridBasicSettingsFrame">
+    <dsContext>
+        <collectionDatasource id="ordersDs"
+                              class="com.haulmont.sampler.entity.Order"
+                              view="order-with-customer">
+            <query>
+                <![CDATA[select e from sampler$Order e order by e.date]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="ordersDataGrid"
+            spacing="true">
+        <hbox spacing="true">
+            <checkBox id="sortable"
+                      caption="Sortable"/>
+            <checkBox id="reorderingAllowed"
+                      caption="Reordering Allowed"/>
+            <checkBox id="columnsCollapsingAllowed"
+                      caption="Columns Collapsing Allowed"/>
+        </hbox>
+        <dataGrid id="ordersDataGrid"
+                  datasource="ordersDs"
+                  width="100%">
+            <columns>
+                <column property="date"/>
+                <column property="customer"/>
+                <column property="amount"/>
+                <column property="description"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

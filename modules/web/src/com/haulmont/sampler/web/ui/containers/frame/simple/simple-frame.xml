@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout spacing="true">
+        <groupBox caption="Frame 1"
+                  width="AUTO">
+            <frame screen="simple-button"/>
+        </groupBox>
+        <groupBox caption="Frame 2"
+                  width="AUTO">
+            <frame src="/com/haulmont/sampler/web/ui/components/button/simple/simple-button.xml"/>
+        </groupBox>
+    </layout>
+</window>

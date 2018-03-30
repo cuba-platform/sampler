@@ -1,0 +1,13 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout>
+        <hbox spacing="true">
+            <textArea caption="TextArea with rows and cols"
+                      cols="20"
+                      rows="5"/>
+            <textArea caption="TextArea with heigth and width"
+                      height="100px"
+                      width="250px"/>
+        </hbox>
+    </layout>
+</window>

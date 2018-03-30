@@ -1,0 +1,22 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.pickerfield.actions.ActionsPickerFieldFrame">
+    <dsContext>
+        <datasource id="orderDs"
+                    allowCommit="false"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="order-with-customer"/>
+    </dsContext>
+    <layout>
+        <pickerField id="pickerField"
+                     width="320"
+                     caption="Choose a customer"
+                     datasource="orderDs"
+                     property="customer">
+            <actions>
+                <action id="lookup"/>
+                <action id="open" openType="DIALOG"/>
+                <action id="greeting" invoke="greet" icon="icons/wf-design-deploy.png"/>
+            </actions>
+        </pickerField>
+    </layout>
+</window>

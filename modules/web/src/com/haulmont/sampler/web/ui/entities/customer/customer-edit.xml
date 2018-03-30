@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editCaption"
+        class="com.haulmont.sampler.web.ui.entities.customer.CustomerEdit"
+        datasource="customerDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.haulmont.sampler.web.ui.entities.customer">
+    <dsContext>
+        <datasource id="customerDs"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local"/>
+    </dsContext>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="customerDs">
+            <column width="250px">
+                <field property="name"/>
+                <field property="lastName"/>
+                <field property="age"/>
+                <field property="active"/>
+                <field property="grade"
+                       width=""/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+                screen="editWindowActions"
+                stylename="window-actions"/>
+    </layout>
+</window>

@@ -1,0 +1,17 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.optionsgroup.multiselect.MultiSelectOptionsGroupFrame">
+    <dsContext>
+        <collectionDatasource id="productsDs"
+                              class="com.haulmont.sampler.entity.Product"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Product e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <optionsGroup id="optionsGroup"
+                      optionsDatasource="productsDs"
+                      multiselect="true"/>
+    </layout>
+</window>

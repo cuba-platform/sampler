@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.textfield.textchangeeventmode.TextChangeEventModeTextFieldFrame">
+    <layout spacing="true">
+        <optionsGroup id="optionsGroup"
+                      caption="Mode"
+                      orientation="horizontal"/>
+        <textField id="textField"
+                   inputPrompt="Start typing"
+                   maxLength="140"/>
+    </layout>
+</window>

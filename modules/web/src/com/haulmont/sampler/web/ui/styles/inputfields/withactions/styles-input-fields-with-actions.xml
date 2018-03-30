@@ -1,0 +1,82 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.styles.inputfields.withactions.StylesWithActionsInputFieldsFrame">
+    <dsContext>
+        <datasource id="orderDs"
+                    allowCommit="false"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="order-with-customer"/>
+        <collectionDatasource id="customersDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <scrollBox height="100%"
+                   orientation="horizontal"
+                   scrollBars="horizontal"
+                   spacing="true">
+            <groupBox caption="LookupField"
+                      height="202px"
+                      spacing="true"
+                      width="AUTO">
+                <lookupField id="lookupFieldAlignCenter"
+                             caption="align-center"
+                             captionProperty="name"
+                             optionsDatasource="customersDs"
+                             stylename="align-center"/>
+
+                <lookupField id="lookupFieldAlignRight"
+                             caption="align-right"
+                             captionProperty="name"
+                             optionsDatasource="customersDs"
+                             stylename="align-right"/>
+
+                <lookupField id="lookupFieldBorderless"
+                             caption="borderless"
+                             captionProperty="name"
+                             optionsDatasource="customersDs"
+                             stylename="borderless"/>
+            </groupBox>
+            <groupBox caption="PickerField"
+                      height="202px"
+                      spacing="true"
+                      width="AUTO">
+                <pickerField caption="align-center"
+                             datasource="orderDs"
+                             property="customer"
+                             stylename="align-center"/>
+                <pickerField caption="align-right"
+                             datasource="orderDs"
+                             property="customer"
+                             stylename="align-right"/>
+                <pickerField caption="borderless"
+                             datasource="orderDs"
+                             property="customer"
+                             stylename="borderless"/>
+            </groupBox>
+            <groupBox caption="LookupPickerField"
+                      height="202px"
+                      spacing="true"
+                      width="AUTO">
+                <lookupPickerField caption="align-center"
+                                   datasource="orderDs"
+                                   optionsDatasource="customersDs"
+                                   property="customer"
+                                   stylename="align-center"/>
+                <lookupPickerField caption="align-right"
+                                   datasource="orderDs"
+                                   optionsDatasource="customersDs"
+                                   property="customer"
+                                   stylename="align-right"/>
+                <lookupPickerField caption="borderless"
+                                   datasource="orderDs"
+                                   optionsDatasource="customersDs"
+                                   property="customer"
+                                   stylename="borderless"/>
+            </groupBox>
+        </scrollBox>
+    </layout>
+</window>

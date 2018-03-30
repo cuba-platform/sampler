@@ -1,0 +1,31 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.lookupfield.customoptions.CustomOptionsLookupFieldFrame">
+    <dsContext>
+        <datasource id="orderDs"
+                    class="com.haulmont.sampler.entity.Order"
+                    allowCommit="false"
+                    view="_local"/>
+        <datasource id="customerDs"
+                    class="com.haulmont.sampler.entity.Customer"
+                    allowCommit="false"
+                    view="_local"/>
+    </dsContext>
+    <layout>
+        <hbox spacing="true">
+            <lookupField id="amountLookup"
+                         caption="Options List"
+                         datasource="orderDs"
+                         property="amount"/>
+            <lookupField id="ageLookup"
+                         caption="Options Map"
+                         datasource="customerDs"
+                         property="age"
+                         nullName="(not selected)"/>
+            <lookupField id="gradleLookup"
+                         caption="Options Enum"
+                         datasource="customerDs"
+                         property="grade"
+                         inputPrompt="Select grade"/>
+        </hbox>
+    </layout>
+</window>

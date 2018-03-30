@@ -1,0 +1,47 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="Calendar event"
+        class="com.haulmont.sampler.web.ui.components.calendar.month.EventWindow">
+    <dialogMode forceDialog="true"
+                height="AUTO"
+                modal="true"
+                width="450"/>
+    <layout spacing="true">
+        <grid spacing="true"
+              width="100%">
+            <columns count="2"/>
+            <rows>
+                <row>
+                    <label id="startDateLabel"
+                           htmlEnabled="true"
+                           value="Start date"/>
+                    <label id="startDateValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+                <row>
+                    <label id="endDateLabel"
+                           htmlEnabled="true"
+                           value="End date"/>
+                    <label id="endDateValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+                <row>
+                    <label id="captionLabel"
+                           htmlEnabled="true"
+                           value="Caption"/>
+                    <label id="captionValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+                <row>
+                    <label id="descriptionLabel"
+                           htmlEnabled="true"
+                           value="Description"/>
+                    <label id="descriptionValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+            </rows>
+        </grid>
+        <button align="MIDDLE_CENTER"
+                caption="Ok"
+                invoke="windowClose"/>
+    </layout>
+</window>

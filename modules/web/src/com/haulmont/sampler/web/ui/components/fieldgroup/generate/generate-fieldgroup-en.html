@@ -1,0 +1,12 @@
+<p><code>addCustomField()</code> method of the <code>FieldGroup</code> component is used together with the
+    <code>custom="true"</code> attribute of <code>field</code> and it allows you to set your own field view. It takes
+    two parameters: field identifier specified in the <code>id</code> attribute of <code>field</code> and the
+    implementation of the<code>FieldGroup.CustomFieldGenerator</code> interface.</p>
+
+<p><code>generateField()</code> method of the <code>CustomFieldGenerator</code> interface is invoked by
+    <code>FieldGroup</code>. A <a href="https://doc.cuba-platform.com/manual-6.8/datasources.html" target="_blank">data
+        source</a> and field identifier, for which this generator is registered, are passed into the method. The method
+    should return a visual component (or container), which will be displayed in the field.</p>
+
+<p>In this example, we have created a <code>LookupField</code> with two options and used it to edit the boolean entity
+    attribute.</p>

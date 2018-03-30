@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             version="2.0">
+    <persistence-unit name="sampler"
+                      transaction-type="RESOURCE_LOCAL">
+        <class>com.haulmont.sampler.entity.Customer</class>
+        <class>com.haulmont.sampler.entity.Order</class>
+        <class>com.haulmont.sampler.entity.Task</class>
+        <class>com.haulmont.sampler.entity.Product</class>
+        <class>com.haulmont.sampler.entity.OrderItem</class>
+        <class>com.haulmont.sampler.entity.DateValue</class>
+        <class>com.haulmont.sampler.entity.TransportCount</class>
+        <class>com.haulmont.sampler.entity.IncomeExpenses</class>
+        <class>com.haulmont.sampler.entity.CountryGrowth</class>
+        <class>com.haulmont.sampler.entity.PointPair</class>
+        <class>com.haulmont.sampler.entity.CountryLitres</class>
+        <class>com.haulmont.sampler.entity.TitleValue</class>
+        <class>com.haulmont.sampler.entity.Segment</class>
+        <class>com.haulmont.sampler.entity.TaskSpan</class>
+        <class>com.haulmont.sampler.entity.DateTaskSpan</class>
+        <class>com.haulmont.sampler.entity.DateSegment</class>
+        <class>com.haulmont.sampler.entity.CalendarEvent</class>
+        <class>com.haulmont.sampler.entity.PointValue</class>
+        <class>com.haulmont.sampler.entity.Color</class>
+        <class>com.haulmont.sampler.entity.TipInfo</class>
+    </persistence-unit>
+</persistence>

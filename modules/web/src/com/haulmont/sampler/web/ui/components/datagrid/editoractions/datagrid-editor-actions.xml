@@ -1,0 +1,40 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.datagrid.editoractions.DataGridEditorActionsFrame">
+    <dsContext>
+        <collectionDatasource id="customersDs"
+                              allowCommit="false"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <dataGrid id="customersDataGrid"
+                  editorEnabled="true"
+                  datasource="customersDs"
+                  width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+            </actions>
+            <columns>
+                <column property="name"/>
+                <column property="lastName"/>
+                <column property="age"/>
+                <column property="active"/>
+                <column property="grade"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="customersDataGrid.create"/>
+                <button id="editBtn"
+                        action="customersDataGrid.edit"/>
+            </buttonsPanel>
+        </dataGrid>
+    </layout>
+</window>

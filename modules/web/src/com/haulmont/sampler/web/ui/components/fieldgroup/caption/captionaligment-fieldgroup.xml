@@ -1,0 +1,25 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <dsContext>
+        <datasource id="customerDs"
+                    allowCommit="false"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local"/>
+    </dsContext>
+    <layout>
+        <hbox spacing="true">
+            <fieldGroup captionAlignment="TOP"
+                        datasource="customerDs">
+                <field property="name"/>
+                <field property="lastName"/>
+            </fieldGroup>
+            <fieldGroup captionAlignment="LEFT"
+                        datasource="customerDs">
+                <field property="name"/>
+                <field property="lastName"/>
+                <field property="age"/>
+                <field property="grade"/>
+            </fieldGroup>
+        </hbox>
+    </layout>
+</window>

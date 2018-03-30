@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.charts.charts.dataitems.mapdataitem.MapDataItemFrame"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <layout>
+        <chart:pieChart id="chart"
+                        balloonText="[[title]] - [[percents]]%"
+                        labelText="[[]]"
+                        height="100%"
+                        startAngle="312"
+                        titleField="description"
+                        valueField="value"
+                        width="100%">
+            <chart:legend autoMargins="false"
+                          marginRight="80"
+                          markerType="CIRCLE"
+                          position="RIGHT"
+                          valueText="[[]]"/>
+            <chart:colors>
+                <chart:color value="#446493"/>
+                <chart:color value="#5E3D2C"/>
+                <chart:color value="#D0A557"/>
+            </chart:colors>
+            <chart:export/>
+        </chart:pieChart>
+    </layout>
+</window>

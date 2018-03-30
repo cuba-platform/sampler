@@ -1,0 +1,8 @@
+<p>Text field can be assigned a <a href="https://doc.cuba-platform.com/manual-6.8/gui_validator.html"
+                                   target="_blank">validator</a> - a class implementing <code>Field.Validator</code>
+    interface. The validator limits user input in addition to what is already done by the <code>datatype</code>.</p>
+
+<p>Unlike input check against the data type, validation is performed not when the field looses focus, but after
+    invocation of the field's <code>validate()</code> method. It means that the field (and the linked entity
+    attribute) may temporarily contain a value that does not satisfy validation conditions (a non-positive number in the
+    example above).</p>

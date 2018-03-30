@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.charts.charts.incrementalupdate.column.UpdateColumnChartFrame"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dsContext>
+        <collectionDatasource id="incomeExpensesDs"
+                              class="com.haulmont.sampler.entity.IncomeExpenses"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$IncomeExpenses e order by e.year]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="columnChart" spacing="true">
+        <hbox spacing="true">
+            <button caption="Add" icon="font-awesome-icon:PLUS" invoke="addIncome"/>
+            <button caption="Remove" icon="font-awesome-icon:REMOVE" invoke="removeIncome"/>
+        </hbox>
+        <chart:serialChart id="columnChart"
+                           additionalFields="additional"
+                           addClassNames="true"
+                           autoMargins="false"
+                           categoryField="year"
+                           datasource="incomeExpensesDs"
+                           marginBottom="26"
+                           marginLeft="30"
+                           marginRight="8"
+                           marginTop="10"
+                           startDuration="1"
+                           theme="LIGHT"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:balloon adjustBorderColor="false"
+                           color="WHITE"
+                           horizontalPadding="10"
+                           verticalPadding="8"/>
+            <chart:graphs>
+                <chart:graph alphaField="alpha"
+                             balloonText="&lt;span style='font-size:12px;'&gt;[[title]] in [[category]]:&lt;br&gt;
+                             &lt;span style='font-size:20px;'&gt;[[value]]&lt;/span&gt; [[additional]]&lt;/span&gt;"
+                             dashLengthField="dashLengthColumn"
+                             fillAlphas="1"
+                             title="Income"
+                             type="COLUMN"
+                             valueField="income"/>
+            </chart:graphs>
+            <chart:categoryAxis axisAlpha="0"
+                                gridPosition="START"
+                                tickLength="0"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

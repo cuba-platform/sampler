@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.image.theme.ThemeImageFrame">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="Image with a programmatically defined source"
+                      height="250px"
+                      width="320px">
+                <image id="programmaticImage"
+                       align="MIDDLE_CENTER"
+                       scaleMode="SCALE_DOWN"
+                       width="100%"/>
+            </groupBox>
+            <groupBox caption="Image with a declaratively defined source"
+                      height="250px"
+                      width="320px">
+                <image id="declarativeImage"
+                       align="MIDDLE_CENTER">
+                    <theme path="images/cuba-logo.png"/>
+                </image>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

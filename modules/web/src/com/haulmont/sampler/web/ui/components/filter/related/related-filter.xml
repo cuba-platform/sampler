@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <dsContext>
+        <collectionDatasource id="ordersDs"
+                              class="com.haulmont.sampler.entity.Order"
+                              view="order-with-customer">
+            <query>
+                <![CDATA[select e from sampler$Order e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout spacing="true" expand="orderTable">
+        <filter id="filter"
+                datasource="ordersDs">
+            <properties include=".*"/>
+        </filter>
+        <table id="orderTable"
+               width="100%">
+            <columns>
+                <column id="customer"/>
+                <column id="date"/>
+                <column id="amount"/>
+                <column id="description"/>
+            </columns>
+            <rows datasource="ordersDs"/>
+            <rowsCount/>
+        </table>
+    </layout>
+</window>

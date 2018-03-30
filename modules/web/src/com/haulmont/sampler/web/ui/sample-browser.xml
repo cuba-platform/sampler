@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://sampleBrowser"
+        class="com.haulmont.sampler.web.ui.SampleBrowser">
+    <timers>
+        <timer id="timer" delay="5000" repeating="true"/>
+    </timers>
+    <layout margin="true,false,false,false"
+            spacing="true" expand="tabSheet">
+        <label id="spacer" height="10px"/>
+        <tabSheet id="tabSheet"/>
+    </layout>
+</window>

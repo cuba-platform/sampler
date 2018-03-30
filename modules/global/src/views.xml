@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+    <view class="com.haulmont.sampler.entity.Order"
+          name="order-with-customer">
+        <property name="customer"
+                  view="_local"/>
+        <property name="date"/>
+        <property name="amount"/>
+        <property name="description"/>
+    </view>
+    <view class="com.haulmont.sampler.entity.Task"
+          name="task-with-parent">
+        <property name="name"/>
+        <property name="dueDate"/>
+        <property name="assignee">
+            <property name="name"/>
+            <property name="lastName"/>
+        </property>
+        <property name="parentTask">
+            <property name="name"/>
+        </property>
+    </view>
+    <view class="com.haulmont.sampler.entity.OrderItem"
+          name="orderItem-with-product">
+        <property name="product"
+                  view="_local"/>
+        <property name="quantity"/>
+        <property name="order"
+                  view="_minimal"/>
+    </view>
+    <view class="com.haulmont.sampler.entity.Order"
+          name="order-edit">
+        <property name="customer"
+                  view="_minimal"/>
+        <property name="date"/>
+        <property name="amount"/>
+        <property name="description"/>
+        <property name="items">
+            <property name="product">
+                <property name="name"/>
+                <property name="price"/>
+            </property>
+            <property name="quantity"/>
+        </property>
+    </view>
+    <view class="com.haulmont.sampler.entity.TaskSpan"
+          name="taskSpan-with-segments">
+        <property name="category"/>
+        <property name="segments"
+                  view="_local">
+        </property>
+    </view>
+    <view class="com.haulmont.sampler.entity.DateTaskSpan"
+          extends="_local"
+          name="taskSpan-with-segments">
+        <property name="segments"
+                  view="_local"/>
+    </view>
+    <view class="com.haulmont.sampler.entity.Customer"
+          extends="_local"
+          name="customer-view">
+        <property name="avatar"
+                  view="_minimal"/>
+    </view>
+</views>

@@ -1,0 +1,55 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.styles.misc.MiscStylesFrame">
+    <layout spacing="true">
+        <scrollBox orientation="horizontal"
+                   scrollBars="horizontal">
+            <hbox id="hbox"
+                  expand="accordion"
+                  spacing="true"
+                  width="750px">
+                <vbox spacing="true"
+                      width="290px">
+                    <groupBox caption="DateField borderless"
+                              width="AUTO">
+                        <dateField id="dateField"
+                                   stylename="borderless"/>
+                    </groupBox>
+
+                    <groupBox caption="ProgressBar"
+                              spacing="true"
+                              width="AUTO">
+                        <label value="default"/>
+                        <progressBar id="defaultPB"
+                                     width="250px"/>
+
+                        <label value="point"/>
+                        <progressBar id="pointPB"
+                                     stylename="point"
+                                     width="250px"/>
+                    </groupBox>
+                </vbox>
+
+                <accordion id="accordion"
+                           caption="Accordion borderless"
+                           height="100%"
+                           stylename="borderless">
+                    <tab id="first"
+                         caption="First tab">
+                        <label value="msg://loremIpsum"
+                               width="440px"/>
+                    </tab>
+                    <tab id="second"
+                         caption="Second tab">
+                        <label value="msg://loremIpsum"
+                               width="440px"/>
+                    </tab>
+                    <tab id="third"
+                         caption="Third tab">
+                        <label value="msg://loremIpsum"
+                               width="440px"/>
+                    </tab>
+                </accordion>
+            </hbox>
+        </scrollBox>
+    </layout>
+</window>

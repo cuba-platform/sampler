@@ -1,0 +1,15 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout spacing="true">
+        <hbox spacing="true">
+            <dateField resolution="YEAR" caption="YEAR"/>
+            <dateField resolution="MONTH" caption="MONTH"/>
+            <dateField resolution="DAY" caption="DAY"/>
+        </hbox>
+        <hbox spacing="true">
+            <dateField resolution="HOUR" caption="HOUR"/>
+            <dateField resolution="MIN" caption="MIN"/>
+            <dateField resolution="SEC" caption="SEC"/>
+        </hbox>
+    </layout>
+</window>

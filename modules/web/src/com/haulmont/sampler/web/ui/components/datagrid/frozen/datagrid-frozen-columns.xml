@@ -1,0 +1,37 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.datagrid.frozen.DataGridFrozenColumnsFrame">
+    <dsContext>
+        <collectionDatasource id="customersDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <hbox spacing="true">
+            <label value="Frozen Column Count:"
+                   align="MIDDLE_LEFT"/>
+            <textField id="frozenColumnCountField"
+                       datatype="int"/>
+        </hbox>
+        <dataGrid id="customersDataGrid"
+                  datasource="customersDs"
+                  width="100%">
+            <columns>
+                <column property="name"
+                        width="400px"/>
+                <column property="lastName"
+                        width="400px"/>
+                <column property="age"
+                        width="400px"/>
+                <column property="active"
+                        width="400px"/>
+                <column property="grade"
+                        width="400px"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

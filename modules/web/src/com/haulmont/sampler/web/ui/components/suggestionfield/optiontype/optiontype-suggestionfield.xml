@@ -1,0 +1,16 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.suggestionfield.optiontype.OptionTypeSuggestionFieldFrame">
+    <layout>
+        <hbox spacing="true">
+            <suggestionField id="stringSuggestionField"
+                             caption="String">
+            </suggestionField>
+            <suggestionField id="enumSuggestionField"
+                             caption="Enum">
+            </suggestionField>
+            <suggestionField id="optionWrapperSuggestionField"
+                             caption="OptionWrapper">
+            </suggestionField>
+        </hbox>
+    </layout>
+</window>

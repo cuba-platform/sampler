@@ -1,0 +1,58 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout>
+        <hbox spacing="true">
+            <scrollBox height="150px"
+                       width="200px"
+                       spacing="true">
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+            </scrollBox>
+
+            <label width="20px"/>
+
+            <scrollBox height="50px"
+                       width="200px"
+                       orientation="horizontal"
+                       scrollBars="horizontal"
+                       spacing="true">
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+            </scrollBox>
+
+            <label width="20px"/>
+
+            <scrollBox height="150px"
+                       width="150px"
+                       scrollBars="both"
+                       spacing="true">
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+            </scrollBox>
+        </hbox>
+    </layout>
+</window>

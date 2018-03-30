@@ -1,0 +1,15 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.textfield.trim.TrimTextFieldFrame">
+    <layout spacing="true">
+        <checkBox id="trim"
+                  caption="trim"/>
+        <hbox spacing="true">
+            <textField id="textField"/>
+            <button caption="Show value"
+                    invoke="show"/>
+            <label id="value"
+                   align="MIDDLE_LEFT"
+                   htmlEnabled="true"/>
+        </hbox>
+    </layout>
+</window>

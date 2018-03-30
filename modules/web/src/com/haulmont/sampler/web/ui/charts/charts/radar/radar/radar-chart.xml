@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dsContext>
+        <collectionDatasource id="countryLitresDs"
+                              class="com.haulmont.sampler.entity.CountryLitres"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$CountryLitres e order by e.litres desc]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <chart:radarChart id="radarChart"
+                          categoryField="country"
+                          datasource="countryLitresDs"
+                          height="100%"
+                          startDuration="2"
+                          theme="LIGHT"
+                          width="100%">
+            <chart:graphs>
+                <chart:graph balloonText="[[value]] litres of beer per year"
+                             bullet="ROUND"
+                             valueField="litres"/>
+            </chart:graphs>
+            <chart:export/>
+        </chart:radarChart>
+    </layout>
+</window>

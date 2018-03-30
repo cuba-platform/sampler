@@ -1,0 +1,18 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.codeeditor.simple.SimpleSourceCodeEditorFrame">
+    <layout expand="codeEditor" spacing="true">
+        <hbox spacing="true">
+            <checkBox id="highlightActiveLineCheck"
+                      align="BOTTOM_LEFT"
+                      caption="Highlight Active Line"/>
+            <checkBox id="printMarginCheck"
+                      align="BOTTOM_LEFT"
+                      caption="Print Margin"/>
+            <checkBox id="showGutterCheck"
+                      align="BOTTOM_LEFT"
+                      caption="Show Gutter"/>
+        </hbox>
+        <sourceCodeEditor id="codeEditor"
+                          width="100%"/>
+    </layout>
+</window>

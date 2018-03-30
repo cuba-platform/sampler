@@ -1,0 +1,18 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.button.simple.SimpleButtonFrame">
+    <layout>
+        <hbox spacing="true">
+            <button caption="Say Hello!"
+                    description="Click Me!"
+                    invoke="sayHello"/>
+            <button id="saveButton1"
+                    caption="Save"
+                    icon="icons/save.png"
+                    invoke="save"/>
+            <button id="saveButton2"
+                    description="Save"
+                    icon="icons/save.png"
+                    invoke="save"/>
+        </hbox>
+    </layout>
+</window>

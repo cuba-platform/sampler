@@ -1,0 +1,45 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.calendar.week.WeekCalendarFrame"
+        messagesPack="com.haulmont.sampler.web.ui.components.calendar.week">
+    <layout>
+        <hbox expand="calendar"
+              height="100%"
+              spacing="true"
+              width="100%">
+            <calendar id="calendar"
+                      endDate="2016-10-23"
+                      height="100%"
+                      startDate="2016-10-17"/>
+            <scrollBox height="100%"
+                       orientation="vertical"
+                       spacing="true"
+                       width="300px">
+                <label htmlEnabled="true"
+                       stylename="h3"
+                       value="msg://addEvent"/>
+                <dateField id="startDateField"
+                           caption="msg://startDate"
+                           width="100%"/>
+                <dateField id="endDateField"
+                           caption="msg://endDate"
+                           width="100%"/>
+                <textField id="captionField"
+                           caption="msg://caption"
+                           width="100%"/>
+                <textField id="descriptionField"
+                           caption="msg://description"
+                           width="100%"/>
+                <lookupField id="styleNameField"
+                             caption="msg://styleName"
+                             nullOptionVisible="false"
+                             width="100%"/>
+                <checkBox id="isAllDay"
+                          caption="msg://isAllDay"
+                          width="100%"/>
+                <button id="addEvent"
+                        caption="msg://addEvent"
+                        invoke="addEvent"/>
+            </scrollBox>
+        </hbox>
+    </layout>
+</window>

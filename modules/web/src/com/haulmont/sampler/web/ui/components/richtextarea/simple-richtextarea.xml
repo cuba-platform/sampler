@@ -1,0 +1,6 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.richtextarea.SimpleRichTextAreaFrame">
+    <layout>
+        <richTextArea id="richTextArea"/>
+    </layout>
+</window>

@@ -1,0 +1,46 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout expand="spacer"
+            spacing="true">
+        <hbox spacing="true">
+            <groupBox caption="Icon style"
+                      spacing="true">
+                <button caption="icon-align-right"
+                        icon="icons/upload.png"
+                        stylename="icon-align-right"/>
+                <button caption="icon-align-top"
+                        icon="icons/upload.png"
+                        stylename="icon-align-top"/>
+                <label value="icon-only:"/>
+                <button caption="icon-align-right"
+                        icon="icons/upload.png"
+                        stylename="icon-only"/>
+            </groupBox>
+            <vbox spacing="true">
+                <groupBox caption="Border style"
+                          spacing="true">
+                    <hbox spacing="true">
+                        <button caption="borderless"
+                                stylename="borderless"/>
+                        <button caption="borderless-colored"
+                                stylename="borderless-colored"/>
+                        <button caption="quiet"
+                                stylename="quiet"/>
+                    </hbox>
+                </groupBox>
+                <groupBox caption="Action style"
+                          spacing="true">
+                    <hbox spacing="true">
+                        <button caption="primary"
+                                stylename="primary"/>
+                        <button caption="friendly"
+                                stylename="friendly"/>
+                        <button caption="danger"
+                                stylename="danger"/>
+                    </hbox>
+                </groupBox>
+            </vbox>
+        </hbox>
+        <label id="spacer"/>
+    </layout>
+</window>

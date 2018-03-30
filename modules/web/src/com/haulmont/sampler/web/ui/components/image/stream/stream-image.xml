@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.image.stream.StreamImageFrame">
+    <layout>
+        <groupBox caption="Image with a programmatically defined source"
+                  height="250px"
+                  width="320px">
+            <image id="image"
+                   align="MIDDLE_CENTER"/>
+        </groupBox>
+    </layout>
+</window>

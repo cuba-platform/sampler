@@ -1,0 +1,44 @@
+<p>The way the data is displayed in columns can be customized by means of renderers.</p>
+
+<p>The renderers can be created in two ways:</p>
+
+<ul>
+    <li>
+        <p>passing a renderer interface to the fabric method of the <code>DataGrid</code> interface. Suits for
+            <strong>GUI</strong> and <strong>Web</strong> modules.</p>
+    </li>
+    <li>
+        <p>directly creating a renderer implementation for the corresponding module:</p>
+        <p><code>dataGrid.createRenderer(DataGrid.ImageRenderer.class)</code> → <code>new WebImageRenderer()</code></p>
+        <p>For the moment this way is suitable only for the <strong>Web</strong> module.</p>
+    </li>
+</ul>
+
+<p>The list of renderers supported by the Platform:</p>
+
+<ul>
+    <li>
+        <code>TextRenderer</code> - displays plain text.
+    </li>
+    <li>
+        <code>HtmlRenderer</code> - displays HTML layout.
+    </li>
+    <li>
+        <code>ProgressBarRenderer</code> - displays double values as a <code>ProgressBar</code> component.
+    </li>
+    <li>
+        <code>DateRenderer</code> - displays dates in the defined format.
+    </li>
+    <li>
+        <code>NumberRenderer</code> - displays numbers in the defined format.
+    </li>
+    <li>
+        <code>ButtonRenderer</code> - displays string values as a button caption.
+    </li>
+    <li>
+        <code>ImageRenderer</code> - uses the path to an image to display the image.
+    </li>
+    <li>
+        <code>CheckBoxRenderer</code> - displays boolean values as a checkbox icon.
+    </li>
+</ul>

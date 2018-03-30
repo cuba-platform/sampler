@@ -1,0 +1,10 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.lookupfield.filtermode.FilterModeLookupFieldFrame">
+    <layout>
+        <hbox spacing="true">
+            <lookupField id="noFilterLookup" caption="NO" filterMode="NO"/>
+            <lookupField id="startsWithFilterLookup" caption="STARTS_WITH" filterMode="STARTS_WITH"/>
+            <lookupField id="containsFilterLookup" caption="CONTAINS" filterMode="CONTAINS"/>
+        </hbox>
+    </layout>
+</window>

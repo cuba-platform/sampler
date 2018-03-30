@@ -1,0 +1,13 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame"
+        messagesPack="com.haulmont.sampler.web.ui.components.timefield.format">
+    <layout>
+        <hbox spacing="true">
+            <timeField caption="mm/HH"
+                       timeFormat="mm/HH"/>
+            <timeField caption="msg://myTimeFormat"
+                       timeFormat="msg://myTimeFormat"
+                       width="80px"/>
+        </hbox>
+    </layout>
+</window>

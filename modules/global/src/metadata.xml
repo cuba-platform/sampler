@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
+    <metadata-model namespace="sampler"
+                    root-package="com.haulmont.sampler">
+        <class>com.haulmont.sampler.entity.DateValueVolume</class>
+        <class>com.haulmont.sampler.entity.StockData</class>
+        <class>com.haulmont.sampler.entity.ValueDescription</class>
+    </metadata-model>
+</metadata>

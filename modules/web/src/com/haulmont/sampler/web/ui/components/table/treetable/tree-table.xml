@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <dsContext>
+        <hierarchicalDatasource id="tasksDs"
+                                class="com.haulmont.sampler.entity.Task"
+                                hierarchyProperty="parentTask"
+                                view="task-with-parent">
+            <query>
+                <![CDATA[select e from sampler$Task e]]>
+            </query>
+        </hierarchicalDatasource>
+    </dsContext>
+    <layout>
+        <treeTable height="100%"
+                   width="100%">
+            <columns>
+                <column id="name"/>
+                <column id="dueDate"/>
+                <column id="assignee"/>
+            </columns>
+            <rows datasource="tasksDs"/>
+        </treeTable>
+    </layout>
+</window>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <dsContext>
+        <groupDatasource id="customersDs"
+                         class="com.haulmont.sampler.entity.Customer"
+                         view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <layout>
+        <groupTable height="100%"
+                    width="100%">
+            <columns>
+                <group>
+                    <column id="grade"/>
+                </group>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+            </columns>
+            <rows datasource="customersDs"/>
+        </groupTable>
+    </layout>
+</window>

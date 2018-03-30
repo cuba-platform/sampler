@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.timefield.datasource.DatasourceTimeFieldFrame">
+    <dsContext>
+        <datasource id="orderDs"
+                    allowCommit="false"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="_local"/>
+    </dsContext>
+    <layout spacing="true">
+        <timeField datasource="orderDs"
+                   property="createTs"/>
+        <hbox spacing="true">
+            <label value="Time in the datasource:"/>
+            <label datasource="orderDs"
+                   property="createTs"/>
+        </hbox>
+    </layout>
+</window>

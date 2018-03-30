@@ -1,0 +1,44 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.charts.charts.events.zoom.ChartZoomFrame"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dsContext>
+        <collectionDatasource id="dateValueDs"
+                              class="com.haulmont.sampler.entity.DateValue"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$DateValue e order by e.date]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="lineChart" spacing="true">
+        <label id="label" value="Zoom: " htmlEnabled="true"/>
+        <chart:serialChart id="lineChart"
+                           categoryField="date"
+                           datasource="dateValueDs"
+                           mouseWheelScrollEnabled="true"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:graphs>
+                <chart:graph id="g1"
+                             bullet="ROUND"
+                             bulletBorderAlpha="1"
+                             bulletColor="WHITE"
+                             bulletSize="5"
+                             hideBulletsCount="50"
+                             lineThickness="2"
+                             title="Red line"
+                             valueField="value"/>
+            </chart:graphs>
+            <chart:categoryAxis dashLength="1"
+                                minorGridEnabled="true"
+                                position="TOP"/>
+            <chart:chartScrollbar graph="g1"
+                                  autoGridCount="true"
+                                  scrollbarHeight="30"/>
+            <chart:chartCursor cursorPosition="MOUSE"/>
+        </chart:serialChart>
+    </layout>
+</window>

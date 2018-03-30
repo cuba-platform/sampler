@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dsContext>
+        <collectionDatasource id="titleValueDs"
+                              class="com.haulmont.sampler.entity.TitleValue"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$TitleValue e order by e.value desc]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <chart:funnelChart id="funnel"
+                           balloonText="[[title]]: &lt;strong&gt;[[value]]&lt;/strong&gt;"
+                           datasource="titleValueDs"
+                           height="100%"
+                           labelPosition="RIGHT"
+                           marginLeft="15"
+                           marginRight="160"
+                           neckHeight="30%"
+                           neckWidth="40%"
+                           outlineThickness="1"
+                           startAlpha="0"
+                           startX="0"
+                           titleField="title"
+                           valueField="value"
+                           width="100%">
+            <chart:export/>
+        </chart:funnelChart>
+    </layout>
+</window>

@@ -1,0 +1,26 @@
+<p><code>column</code> - optional element that allows to position fields in multiple columns. For this purpose,
+    <code>field</code> elements should be placed not immediately within <code>fieldGroup</code>, but within a
+    <code>column</code>.</p>
+
+<p><code>column</code> may have the following attributes:</p>
+<ul>
+    <li>
+        <p><code>width</code> - specifies the field width of a column. By default, fields have the width of
+            <code>200px</code>. In this attribute, the width can be specified both in pixels and in percentage of the
+            total horizontal width of the column.</p>
+    </li>
+    <li>
+        <p><code>flex</code> - a number, which indicates the degree of horizontal change in the overall size of the
+            column relative to other columns as a result of changing the entire width of <code>fieldGroup</code>. For
+            example, you can specify <code>flex=1</code> for a column, and <code>flex=3</code> for another one.</p>
+    </li>
+    <li>
+        <p><code>id</code> - an optional column identifier, which allows to refer to it in case of <a
+                href="https://doc.cuba-platform.com/manual-6.8/screen_extension.html" target="_blank">screen
+            extension</a>.</p>
+    </li>
+</ul>
+
+<p>In this example, the <code>FieldGroup</code> takes 50% width of its parent container. The first column takes twice
+    more space than the second column due to the <code>flex</code> attribute values. Each field takes 100% width
+    inside the column it belongs to.</p>

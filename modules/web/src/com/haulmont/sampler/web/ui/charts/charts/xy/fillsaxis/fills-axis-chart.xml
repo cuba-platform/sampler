@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <dsContext>
+        <collectionDatasource id="pointPairDs"
+                              class="com.haulmont.sampler.entity.PointPair"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$PointPair e order by e.ax]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <chart:xyChart id="xyChart"
+                       autoMarginOffset="20"
+                       datasource="pointPairDs"
+                       height="100%"
+                       marginBottom="60"
+                       marginLeft="64"
+                       startDuration="1"
+                       theme="LIGHT"
+                       width="100%">
+            <chart:chartCursor/>
+            <chart:graphs>
+                <chart:graph balloonText="x:[[x]] y:[[y]]"
+                             fillAlphas="0.3"
+                             lineAlpha="0.9"
+                             lineColor="#FF6600"
+                             xField="ax"
+                             fillToAxis="x"
+                             yField="ay"/>
+                <chart:graph balloonText="x:[[x]] y:[[y]]"
+                             fillAlphas="0.3"
+                             lineAlpha="0.9"
+                             fillToAxis="y"
+                             lineColor="#FCD202"
+                             xField="bx"
+                             yField="by"/>
+            </chart:graphs>
+            <chart:valueAxes>
+                <chart:axis id="x"
+                            axisAlpha="0"
+                            dashLength="1"
+                            position="BOTTOM"
+                            title="X Axis"/>
+                <chart:axis id="y"
+                            axisAlpha="0"
+                            dashLength="1"
+                            position="LEFT"
+                            title="Y Axis"/>
+            </chart:valueAxes>
+            <chart:export position="BOTTOM_RIGHT"/>
+        </chart:xyChart>
+    </layout>
+</window>

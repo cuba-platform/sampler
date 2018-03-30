@@ -1,0 +1,19 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.checkbox.datasource.DatasourceCheckboxFrame">
+    <dsContext>
+        <datasource id="customersDs"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local"
+                    allowCommit="false"/>
+    </dsContext>
+    <layout spacing="true">
+        <checkBox caption="CheckBox connected to a Datasource"
+                  datasource="customersDs"
+                  property="active"/>
+        <hbox spacing="true">
+            <label value="Value in the Datasource:"/>
+            <label datasource="customersDs"
+                   property="active"/>
+        </hbox>
+    </layout>
+</window>

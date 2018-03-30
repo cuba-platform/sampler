@@ -1,0 +1,12 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame"
+        messagesPack="com.haulmont.sampler.web.ui.components.datefield.format">
+    <layout>
+        <hbox spacing="true">
+            <dateField caption="MM/yy"
+                       dateFormat="MM/yy"/>
+            <dateField caption="msg://myDateFormat"
+                       dateFormat="msg://myDateFormat"/>
+        </hbox>
+    </layout>
+</window>

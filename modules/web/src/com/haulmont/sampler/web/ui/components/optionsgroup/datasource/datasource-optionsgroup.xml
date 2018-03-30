@@ -1,0 +1,15 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <dsContext>
+        <collectionDatasource id="productsDs"
+                    class="com.haulmont.sampler.entity.Product"
+                    view="_local">
+            <query>
+                <![CDATA[select e from sampler$Product e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout>
+        <optionsGroup optionsDatasource="productsDs"/>
+    </layout>
+</window>

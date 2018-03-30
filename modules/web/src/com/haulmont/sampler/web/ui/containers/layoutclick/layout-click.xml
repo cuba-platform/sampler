@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.containers.layoutclick.LayoutClickFrame">
+    <layout>
+        <vbox id="boxLayout"
+              height="300px"
+              stylename="card"
+              width="100%">
+            <label align="MIDDLE_CENTER"
+                   value="Click inside this area"/>
+        </vbox>
+    </layout>
+</window>

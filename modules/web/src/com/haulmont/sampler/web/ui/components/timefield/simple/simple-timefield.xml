@@ -1,0 +1,10 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractFrame">
+    <layout>
+        <hbox spacing="true">
+            <timeField/>
+            <timeField showSeconds="true"/>
+        </hbox>
+
+    </layout>
+</window>

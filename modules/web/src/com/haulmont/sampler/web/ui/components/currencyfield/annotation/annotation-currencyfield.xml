@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.currencyfield.annotation.AnnotationCurrencyFieldFrame">
+    <dsContext>
+        <datasource id="productDs"
+                    allowCommit="false"
+                    class="com.haulmont.sampler.entity.Product"
+                    view="_local"/>
+    </dsContext>
+    <layout>
+        <fieldGroup datasource="productDs">
+            <field property="name"/>
+            <field property="price"/>
+        </fieldGroup>
+    </layout>
+</window>

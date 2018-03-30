@@ -1,0 +1,35 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.styles.inputfields.simple.StylesSimpleInputFieldsFrame">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="TextField"
+                      spacing="true"
+                      width="AUTO">
+                <textField id="textFieldAlignRight"
+                           stylename="align-right"/>
+                <textField id="textFieldAlignCenter"
+                           caption="Caption"
+                           icon="icons/save.png"
+                           stylename="align-center"/>
+                <textField id="textFieldBorderless"
+                           stylename="borderless"/>
+                <textField id="textFieldInlineIcon"
+                           icon="icons/upload.png"
+                           stylename="inline-icon"/>
+            </groupBox>
+            <groupBox caption="TextArea"
+                      orientation="horizontal"
+                      spacing="true"
+                      width="AUTO">
+                <textArea id="textAreaAlignCenter"
+                          height="100px"
+                          stylename="align-center"
+                          width="150px"/>
+                <textArea id="textAreaAlignRight"
+                          height="100px"
+                          stylename="align-right"
+                          width="150px"/>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

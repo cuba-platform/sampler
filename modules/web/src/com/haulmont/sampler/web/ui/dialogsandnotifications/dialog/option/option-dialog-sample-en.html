@@ -1,0 +1,17 @@
+<p>An option dialog is a modal window that includes a message and one or more buttons which represent <a
+        href="https://doc.cuba-platform.com/manual-6.8/gui_Action.html" target="_blank">actions</a>
+    available to users.</p>
+
+<p>The dialog can be invoked by <code>showOptionDialog()</code> method of the <code>Frame</code>
+    interface. This interface is implemented by screen controllers, so these methods can be used directly in the
+    controller code.</p>
+
+<p>In addition to parameters described for <code>showMessageDialog()</code>, the method takes an array or a list of
+    actions. A button is created for each action. After a button is clicked, the dialog closes and invokes the
+    <code>actionPerform()</code> method of the corresponding action.</p>
+
+<p>If you need an action with a standard name and icon, use an anonymous class derived from <code>DialogAction</code>.
+    Five types of actions are supported: <code>OK</code>, <code>CANCEL</code>, <code>YES</code>, <code>NO</code>, <code>CLOSE</code>.
+    Names of corresponding buttons are extracted from the <a
+            href="https://doc.cuba-platform.com/manual-6.8/main_message_pack.html"
+            target="_blank">mаin message pack</a>.</p>

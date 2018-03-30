@@ -1,0 +1,24 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.datagrid.headerfooter.DataGridHeaderFooterFrame"
+        messagesPack="com.haulmont.sampler.web.ui.components.datagrid.headerfooter">
+    <dsContext>
+        <collectionDatasource id="countryGrowthDs"
+                              class="com.haulmont.sampler.entity.CountryGrowth"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$CountryGrowth e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <layout expand="dataGrid">
+        <dataGrid id="dataGrid"
+                  datasource="countryGrowthDs"
+                  width="100%">
+            <columns>
+                <column property="country"/>
+                <column property="year2014"/>
+                <column property="year2015"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

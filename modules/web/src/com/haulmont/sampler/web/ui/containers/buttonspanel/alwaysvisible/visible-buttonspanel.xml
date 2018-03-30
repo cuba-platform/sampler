@@ -1,0 +1,41 @@
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.cuba.gui.components.AbstractLookup"
+        lookupComponent="customerTable">
+    <dsContext>
+        <collectionDatasource id="customerDs"
+                              class="com.haulmont.sampler.entity.Customer"
+                              view="_local">
+            <query>
+                <![CDATA[select e from sampler$Customer e]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode width="800" height="600"/>
+    <layout expand="customerTable">
+        <table id="customerTable"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+                <column id="grade"/>
+            </columns>
+            <rows datasource="customerDs"/>
+            <rowsCount/>
+            <buttonsPanel alwaysVisible="true">
+                <button id="createBtn"
+                        action="customerTable.create"/>
+                <button id="editBtn"
+                        action="customerTable.edit"/>
+                <button id="removeBtn"
+                        action="customerTable.remove"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
