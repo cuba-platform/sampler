@@ -25,8 +25,12 @@
                   controller="com/haulmont/sampler/web/ui/components/button/linkbutton/LinkButtonFrame.java"/>
             <item id="simple-popupbutton" docUrlSuffix="gui_PopupButton" sampleHeight="30px"
                   image="images/dashboard/components/simple-popupbutton.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton"
-                  controller="com/haulmont/sampler/web/ui/components/popupbutton/SimplePopupButtonFrame.java"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton/simple"
+                  controller="com/haulmont/sampler/web/ui/components/popupbutton/simple/SimplePopupButtonFrame.java"/>
+            <item id="customlayout-popupbutton" docUrlSuffix="gui_PopupButton"
+                  image="images/dashboard/components/customlayout-popupbutton.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton/customlayout"
+                  controller="com/haulmont/sampler/web/ui/components/popupbutton/customlayout/CustomLayoutPopupButtonFrame.java"/>
         </menu>
 
         <menu id="browserFrame">

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.popupbutton.customlayout.CustomLayoutPopupButtonFrame"
+        messagesPack="com.haulmont.sampler.web.ui.components.popupbutton.customlayout">
+    <layout>
+        <hbox width="300px">
+            <popupButton id="popupButton"
+                         align="TOP_CENTER"
+                         caption="msg://popupButtonCaption"
+                         icon="font-icon:GEARS"
+                         popupOpenDirection="BOTTOM_CENTER">
+                <popup>
+                    <vbox margin="true"
+                          spacing="true"
+                          width="260px">
+                        <label align="MIDDLE_CENTER"
+                               stylename="h2"
+                               value="Settings"/>
+                        <progressBar caption="Progress"
+                                     width="100%"/>
+                        <textField id="textField"
+                                   caption="msg://textFieldCaption"
+                                   width="100%"/>
+                        <lookupField id="lookupField"
+                                     caption="Status"
+                                     optionsEnum="com.haulmont.cuba.core.global.SendingStatus"
+                                     width="100%"/>
+                        <hbox spacing="true">
+                            <button caption="msg://saveButtonCaption"
+                                    icon="SAVE"
+                                    invoke="showSaveMessageAndClose"/>
+                            <button caption="msg://resetButtonCaption"
+                                    icon="REMOVE"
+                                    invoke="showResetMessageAndClose"/>
+                        </hbox>
+                    </vbox>
+                </popup>
+            </popupButton>
+        </hbox>
+    </layout>
+</window>

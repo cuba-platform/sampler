@@ -1,4 +1,4 @@
-package com.haulmont.sampler.web.ui.components.popupbutton;
+package com.haulmont.sampler.web.ui.components.popupbutton.simple;
 
 import com.haulmont.cuba.gui.components.*;
 import com.haulmont.cuba.gui.components.actions.BaseAction;

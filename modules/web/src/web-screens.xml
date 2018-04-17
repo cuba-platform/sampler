@@ -156,7 +156,9 @@
     <screen id="simple-passwordfield"
             template="com/haulmont/sampler/web/ui/components/passwordfield/simple-passwordfield.xml"/>
     <screen id="simple-popupbutton"
-            template="com/haulmont/sampler/web/ui/components/popupbutton/simple-popupbutton.xml"/>
+            template="/com/haulmont/sampler/web/ui/components/popupbutton/simple/simple-popupbutton.xml"/>
+    <screen id="customlayout-popupbutton"
+            template="/com/haulmont/sampler/web/ui/components/popupbutton/customlayout/customlayout-popupbutton.xml"/>
     <screen id="simple-richtextarea"
             template="com/haulmont/sampler/web/ui/components/richtextarea/simple-richtextarea.xml"/>
     <screen id="simple-textarea"
