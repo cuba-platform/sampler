@@ -21,12 +21,12 @@ public class CustomLayoutPopupButtonFrame extends AbstractFrame {
         showNotification("Settings saved");
     }
 
-    public void showResetMessageAndClose() {
+    public void showCancelMessageAndClose() {
         popupButton.setPopupVisible(false);
 
         lookupField.setValue(null);
         textField.setValue(null);
 
-        showNotification("Settings reset");
+        showNotification("Cancelled");
     }
 }
