@@ -1,0 +1,19 @@
+@mixin sample-all-icons {
+
+  .text-label {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .sampler-scroll {
+    height: inherit;
+  }
+
+  .sampler-scroll.v-slot {
+    height: inherit;
+  }
+
+  .v-slot-sampler-scroll .v-slot-c-scrollbox {
+    height: inherit;
+  }
+}

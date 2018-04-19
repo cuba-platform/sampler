@@ -343,6 +343,10 @@
             template="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick/contexthelp-fieldgroup-click.xml"/>
     <screen id="datagrid-detailsgenerator"
             template="com/haulmont/sampler/web/ui/components/datagrid/detailsgenerator/datagrid-detailsgenerator.xml"/>
+    <screen id="all-icons"
+            template="com/haulmont/sampler/web/ui/components/icons/all/all-icons.xml"/>
+    <screen id="simple-icons"
+            template="com/haulmont/sampler/web/ui/components/icons/simple/simple-icons.xml"/>
     <!-- Containers -->
     <screen id="hbox-sample"
             template="com/haulmont/sampler/web/ui/containers/boxlayout/hbox/hbox-sample.xml"/>

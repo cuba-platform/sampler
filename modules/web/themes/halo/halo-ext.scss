@@ -13,6 +13,7 @@
 @import "samples/components/htmlLayout/html-layout";
 @import "samples/containers/cssLayout/css-layout";
 @import "samples/containers/layoutClick/layout-click";
+@import "samples/components/icons/icons";
 @import "components/sidemenu/sidemenu-ext";
 
 @mixin halo-ext {
@@ -32,4 +33,5 @@
   @include sample-layout-click;
   @include sample-sidemenu;
   @include sample-main-dashboard-frame;
+  @include sample-all-icons;
 }
