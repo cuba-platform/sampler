@@ -5,14 +5,14 @@ import com.haulmont.cuba.gui.icons.CubaIcon;
 import com.haulmont.cuba.gui.xml.layout.ComponentsFactory;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class AllIconsFrame extends AbstractFrame {
 
-    private static final String TEXT_STYLE = "text-label";
-    private static final String FONT_ICON = "font-icon:";
+    private static final String TEXT_STYLE = "name-label";
+    private static final String SOURCE_TEXT_STYLE = "source-label";
+    private static final String ICON_STYLE = "icon-label";
+    private static final String VBOX_STYLE = "vbox-icon";
 
     @Inject
     private CssLayout cssLayout;
@@ -20,49 +20,45 @@ public class AllIconsFrame extends AbstractFrame {
     @Inject
     private ComponentsFactory factory;
 
-    private List<String> visibleSources = new ArrayList<>(20);
-
     @Override
     public void init(Map<String, Object> params) {
         getWrappedFrame().addStyleName("sampler-scroll");
 
         for (CubaIcon icon : CubaIcon.values()) {
-            if (icon.source().isEmpty() || isSourceAdded(icon.source())) {
+            if (icon.source().isEmpty()) {
                 continue;
             }
 
-            visibleSources.add(icon.source());
             cssLayout.add(createIconInfo(icon));
         }
     }
 
     protected VBoxLayout createIconInfo(CubaIcon icon) {
         VBoxLayout vbox = factory.createComponent(VBoxLayout.class);
-        vbox.setWidth(AUTO_SIZE);
         vbox.setAlignment(Alignment.MIDDLE_CENTER);
-        vbox.setWidth("160px");
+        vbox.setWidth("210px");
+        vbox.setStyleName(VBOX_STYLE);
 
         Label iconLabel = factory.createComponent(Label.class);
         iconLabel.setIconFromSet(icon);
         iconLabel.setAlignment(Alignment.MIDDLE_CENTER);
-        iconLabel.setStyleName("h1");
+        iconLabel.addStyleName("h1");
+        iconLabel.addStyleName(ICON_STYLE);
 
         Label nameLabel = factory.createComponent(Label.class);
         nameLabel.setAlignment(Alignment.MIDDLE_CENTER);
         nameLabel.setStyleName(TEXT_STYLE);
-        nameLabel.setValue(FONT_ICON + "\n" + getSourceName(icon.source()));
+        nameLabel.setValue(icon.name());
+
+        Label sourceLabel = factory.createComponent(Label.class);
+        sourceLabel.setAlignment(Alignment.MIDDLE_CENTER);
+        sourceLabel.setStyleName(SOURCE_TEXT_STYLE);
+        sourceLabel.setValue(icon.source());
 
         vbox.add(iconLabel);
         vbox.add(nameLabel);
+        vbox.add(sourceLabel);
 
         return vbox;
-    }
-
-    protected String getSourceName(String source) {
-        return source.substring(FONT_ICON.length());
-    }
-
-    protected boolean isSourceAdded(String source) {
-        return visibleSources.indexOf(source) != -1;
     }
 }

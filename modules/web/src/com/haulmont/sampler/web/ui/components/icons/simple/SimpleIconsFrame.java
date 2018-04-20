@@ -12,10 +12,7 @@ import java.util.Map;
 public class SimpleIconsFrame extends AbstractFrame {
 
     @Inject
-    private GroupBoxLayout groupFont;
-
-    @Inject
-    private GroupBoxLayout groupSimple;
+    private GroupBoxLayout groupProgrammatic;
 
     @Inject
     private ComponentsFactory factory;
@@ -25,16 +22,16 @@ public class SimpleIconsFrame extends AbstractFrame {
         Label dollarLabel = factory.createComponent(Label.class);
         dollarLabel.setIcon("font-icon:DOLLAR");
         dollarLabel.setValue("DOLLAR");
-        groupFont.add(dollarLabel);
+        groupProgrammatic.add(dollarLabel);
 
         Label yenLabel = factory.createComponent(Label.class);
         yenLabel.setIconFromSet(CubaIcon.YEN);
         yenLabel.setValue("YEN");
-        groupFont.add(yenLabel);
+        groupProgrammatic.add(yenLabel);
 
         Label gearLabel = factory.createComponent(Label.class);
         gearLabel.setIcon("icons/gear.png");
         gearLabel.setValue("GEAR");
-        groupSimple.add(gearLabel);
+        groupProgrammatic.add(gearLabel);
     }
 }

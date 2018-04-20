@@ -4,20 +4,19 @@
         class="com.haulmont.sampler.web.ui.components.icons.simple.SimpleIconsFrame">
     <layout>
         <hbox spacing="true">
-            <groupBox id="groupFont"
-                      caption="msg://caption.groupFont"
+            <groupBox id="groupDeclarative"
+                      caption="msg://caption.groupDeclarative"
                       spacing="true">
                 <label icon="EUR"
                        value="EURO"/>
                 <label icon="font-icon:BITCOIN"
                        value="BITCOIN"/>
-            </groupBox>
-            <groupBox id="groupSimple"
-                      caption="msg://caption.groupSimple"
-                      spacing="true">
                 <label icon="icons/chain.png"
                        value="CHAIN"/>
             </groupBox>
+            <groupBox id="groupProgrammatic"
+                      caption="msg://caption.groupProgrammatic"
+                      spacing="true"/>
         </hbox>
     </layout>
 </window>

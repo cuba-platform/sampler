@@ -1,8 +1,16 @@
 @mixin sample-all-icons {
 
-  .text-label {
+  .name-label {
     text-align: center;
     font-size: 12px;
+    font-weight: bold;
+    cursor: text;
+  }
+
+  .source-label {
+    text-align: center;
+    font-size: 12px;
+    cursor: text;
   }
 
   .sampler-scroll {
@@ -13,7 +21,16 @@
     height: inherit;
   }
 
-  .v-slot-sampler-scroll .v-slot-c-scrollbox {
+  .v-slot-sampler-scroll {
     height: inherit;
+  }
+
+  .vbox-icon:hover {
+    background-color: #a3a3a3;
+    color: #ffffff;
+
+    .icon-label > span {
+      color: #ffffff;
+    }
   }
 }
