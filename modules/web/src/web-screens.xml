@@ -343,6 +343,8 @@
             template="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick/contexthelp-fieldgroup-click.xml"/>
     <screen id="datagrid-detailsgenerator"
             template="com/haulmont/sampler/web/ui/components/datagrid/detailsgenerator/datagrid-detailsgenerator.xml"/>
+    <screen id="capslockindicator"
+            template="com/haulmont/sampler/web/ui/components/capslockindicator/capslockindicator.xml"/>
     <!-- Containers -->
     <screen id="hbox-sample"
             template="com/haulmont/sampler/web/ui/containers/boxlayout/hbox/hbox-sample.xml"/>
