@@ -96,7 +96,7 @@
         </menu>
 
         <item id="capslockindicator" docUrlSuffix="gui_CapsLockIndicator"
-              image=""
+              image="images/dashboard/components/capslockindicator.png"
               descriptionsPack="com/haulmont/sampler/web/ui/components/capslockindicator"/>
 
         <menu id="checkBox">
