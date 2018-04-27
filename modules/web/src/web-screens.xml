@@ -133,6 +133,8 @@
             template="/com/haulmont/sampler/web/ui/components/lookupfield/userinput/user-input-lookupfield.xml"/>
     <screen id="icon-provider-lookupfield"
             template="/com/haulmont/sampler/web/ui/components/lookupfield/iconprovider/icon-provider-lookupfield.xml"/>
+    <screen id="options-style-provider-lookupfield"
+            template="/com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/options-style-provider-lookupfield.xml"/>
     <screen id="column-fieldgroup"
             template="com/haulmont/sampler/web/ui/components/fieldgroup/column/column-fieldgroup.xml"/>
     <screen id="generate-fieldgroup"
