@@ -25,12 +25,18 @@
     height: inherit;
   }
 
+  .vbox-icon {
+    padding: 10px 0 14px 0;
+  }
+
   .vbox-icon:hover {
-    background-color: #a3a3a3;
-    color: #ffffff;
+    background-color: $v-focus-color;
+
+    $font-color: valo-font-color($v-selection-color, 0.9);
+    color: $font-color;
 
     .icon-label > span {
-      color: #ffffff;
+      color: $font-color;
     }
   }
 }
