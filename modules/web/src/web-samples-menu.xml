@@ -95,6 +95,10 @@
             </item>
         </menu>
 
+        <item id="capslockindicator" docUrlSuffix="gui_CapsLockIndicator"
+              image="images/dashboard/components/capslockindicator.png"
+              descriptionsPack="com/haulmont/sampler/web/ui/components/capslockindicator"/>
+
         <menu id="checkBox">
             <item id="simple-checkbox" docUrlSuffix="gui_CheckBox" sampleHeight="15px"
                   image="images/dashboard/components/simple-checkbox.png"
