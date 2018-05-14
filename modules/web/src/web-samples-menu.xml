@@ -465,6 +465,18 @@
             </item>
         </menu>
 
+        <menu id="icons">
+            <item id="all-icons" docUrlSuffix="gui_icons" splitEnabled="true" sampleHeight="400px"
+                  image="images/dashboard/components/all-icons.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/icons/all"
+                  controller="com/haulmont/sampler/web/ui/components/icons/all/AllIconsFrame.java">
+            </item>
+            <item id="simple-icons" docUrlSuffix="gui_icons"
+                  image="images/dashboard/components/simple-icons.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/icons/simple"
+                  controller="com/haulmont/sampler/web/ui/components/icons/simple/SimpleIconsFrame.java"/>
+        </menu>
+
         <menu id="image">
             <item id="url-image" sampleHeight="80px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/url-image.png"

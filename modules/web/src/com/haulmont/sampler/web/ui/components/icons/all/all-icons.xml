@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.sampler.web.ui.components.icons.all.AllIconsFrame">
+    <layout>
+        <scrollBox id="scrollBox"
+                   stylename="sampler-scroll">
+            <cssLayout id="cssLayout"
+                       width="100%"/>
+        </scrollBox>
+    </layout>
+</window>
