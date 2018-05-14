@@ -95,6 +95,10 @@
             </item>
         </menu>
 
+        <item id="capslockindicator" docUrlSuffix="gui_CapsLockIndicator"
+              image="images/dashboard/components/capslockindicator.png"
+              descriptionsPack="com/haulmont/sampler/web/ui/components/capslockindicator"/>
+
         <menu id="checkBox">
             <item id="simple-checkbox" docUrlSuffix="gui_CheckBox" sampleHeight="15px"
                   image="images/dashboard/components/simple-checkbox.png"
@@ -579,6 +583,16 @@
                   image="images/dashboard/components/icon-provider-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/iconprovider"
                   controller="com/haulmont/sampler/web/ui/components/lookupfield/iconprovider/IconProviderLookupFieldFrame.java"/>
+            <item id="options-style-provider-lookupfield" docUrlSuffix="gui_LookupField"
+                  image="images/dashboard/components/options-style-provider-lookupfield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider"
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/OptionsStyleProviderLookupFieldFrame.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                    <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
+                    <file name="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/styles.scss"/>
+                </otherFiles>
+            </item>
         </menu>
 
         <item id="simple-lookuppickerfield" docUrlSuffix="gui_LookupPickerField" sampleHeight="30px"
