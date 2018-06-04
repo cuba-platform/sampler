@@ -25,8 +25,12 @@
                   controller="com/haulmont/sampler/web/ui/components/button/linkbutton/LinkButtonFrame.java"/>
             <item id="simple-popupbutton" docUrlSuffix="gui_PopupButton" sampleHeight="30px"
                   image="images/dashboard/components/simple-popupbutton.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton"
-                  controller="com/haulmont/sampler/web/ui/components/popupbutton/SimplePopupButtonFrame.java"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton/simple"
+                  controller="com/haulmont/sampler/web/ui/components/popupbutton/simple/SimplePopupButtonFrame.java"/>
+            <item id="customlayout-popupbutton" docUrlSuffix="gui_PopupButton"
+                  image="images/dashboard/components/customlayout-popupbutton.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton/customlayout"
+                  controller="com/haulmont/sampler/web/ui/components/popupbutton/customlayout/CustomLayoutPopupButtonFrame.java"/>
         </menu>
 
         <menu id="browserFrame">
@@ -90,6 +94,10 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <item id="capslockindicator" docUrlSuffix="gui_CapsLockIndicator"
+              image="images/dashboard/components/capslockindicator.png"
+              descriptionsPack="com/haulmont/sampler/web/ui/components/capslockindicator"/>
 
         <menu id="checkBox">
             <item id="simple-checkbox" docUrlSuffix="gui_CheckBox" sampleHeight="15px"
@@ -457,6 +465,18 @@
             </item>
         </menu>
 
+        <menu id="icons">
+            <item id="all-icons" docUrlSuffix="gui_icons" splitEnabled="true" sampleHeight="400px"
+                  image="images/dashboard/components/all-icons.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/icons/all"
+                  controller="com/haulmont/sampler/web/ui/components/icons/all/AllIconsFrame.java">
+            </item>
+            <item id="simple-icons" docUrlSuffix="gui_icons"
+                  image="images/dashboard/components/simple-icons.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/icons/simple"
+                  controller="com/haulmont/sampler/web/ui/components/icons/simple/SimpleIconsFrame.java"/>
+        </menu>
+
         <menu id="image">
             <item id="url-image" sampleHeight="80px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/url-image.png"
@@ -563,6 +583,16 @@
                   image="images/dashboard/components/icon-provider-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/iconprovider"
                   controller="com/haulmont/sampler/web/ui/components/lookupfield/iconprovider/IconProviderLookupFieldFrame.java"/>
+            <item id="options-style-provider-lookupfield" docUrlSuffix="gui_LookupField"
+                  image="images/dashboard/components/options-style-provider-lookupfield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider"
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/OptionsStyleProviderLookupFieldFrame.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                    <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
+                    <file name="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/styles.scss"/>
+                </otherFiles>
+            </item>
         </menu>
 
         <item id="simple-lookuppickerfield" docUrlSuffix="gui_LookupPickerField" sampleHeight="30px"

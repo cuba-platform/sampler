@@ -133,6 +133,8 @@
             template="/com/haulmont/sampler/web/ui/components/lookupfield/userinput/user-input-lookupfield.xml"/>
     <screen id="icon-provider-lookupfield"
             template="/com/haulmont/sampler/web/ui/components/lookupfield/iconprovider/icon-provider-lookupfield.xml"/>
+    <screen id="options-style-provider-lookupfield"
+            template="/com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/options-style-provider-lookupfield.xml"/>
     <screen id="column-fieldgroup"
             template="com/haulmont/sampler/web/ui/components/fieldgroup/column/column-fieldgroup.xml"/>
     <screen id="generate-fieldgroup"
@@ -156,7 +158,9 @@
     <screen id="simple-passwordfield"
             template="com/haulmont/sampler/web/ui/components/passwordfield/simple-passwordfield.xml"/>
     <screen id="simple-popupbutton"
-            template="com/haulmont/sampler/web/ui/components/popupbutton/simple-popupbutton.xml"/>
+            template="/com/haulmont/sampler/web/ui/components/popupbutton/simple/simple-popupbutton.xml"/>
+    <screen id="customlayout-popupbutton"
+            template="/com/haulmont/sampler/web/ui/components/popupbutton/customlayout/customlayout-popupbutton.xml"/>
     <screen id="simple-richtextarea"
             template="com/haulmont/sampler/web/ui/components/richtextarea/simple-richtextarea.xml"/>
     <screen id="simple-textarea"
@@ -341,6 +345,13 @@
             template="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick/contexthelp-fieldgroup-click.xml"/>
     <screen id="datagrid-detailsgenerator"
             template="com/haulmont/sampler/web/ui/components/datagrid/detailsgenerator/datagrid-detailsgenerator.xml"/>
+    <screen id="all-icons"
+            template="com/haulmont/sampler/web/ui/components/icons/all/all-icons.xml"/>
+    <screen id="simple-icons"
+            template="com/haulmont/sampler/web/ui/components/icons/simple/simple-icons.xml"/>
+    <screen id="capslockindicator"
+            template="com/haulmont/sampler/web/ui/components/capslockindicator/capslockindicator.xml"/>
+
     <!-- Containers -->
     <screen id="hbox-sample"
             template="com/haulmont/sampler/web/ui/containers/boxlayout/hbox/hbox-sample.xml"/>

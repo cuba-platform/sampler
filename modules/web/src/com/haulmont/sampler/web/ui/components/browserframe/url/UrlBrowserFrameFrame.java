@@ -18,7 +18,7 @@ public class UrlBrowserFrameFrame extends AbstractFrame {
     public void init(Map<String, Object> params) {
         URL url = null;
         try {
-            url = new URL("https://doc.cuba-platform.com/manual-6.8/");
+            url = new URL("https://doc.cuba-platform.com/manual-6.9/");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        messagesPack="com.haulmont.sampler.web.ui.components.icons.simple"
+        class="com.haulmont.sampler.web.ui.components.icons.simple.SimpleIconsFrame">
+    <layout>
+        <hbox spacing="true">
+            <groupBox id="groupDeclarative"
+                      caption="msg://caption.groupDeclarative"
+                      spacing="true">
+                <label icon="EUR"
+                       value="EURO"/>
+                <label icon="font-icon:BITCOIN"
+                       value="BITCOIN"/>
+                <label icon="icons/chain.png"
+                       value="CHAIN"/>
+            </groupBox>
+            <groupBox id="groupProgrammatic"
+                      caption="msg://caption.groupProgrammatic"
+                      spacing="true"/>
+        </hbox>
+    </layout>
+</window>
