@@ -18,12 +18,16 @@
         border-bottom: 0;
     }
 
+    .#{$primary-stylename}-submenu>* {
+        margin-left: 0;
+    }
+
     .#{$primary-stylename}-submenu .#{$primary-stylename}-item {
         padding-left: 0;
     }
 
     .#{$primary-stylename}-submenu-open {
-        max-height: 6000px;
+        max-height: 8000px;
         padding-left: 10px;
         margin-left: 5px;
     }
