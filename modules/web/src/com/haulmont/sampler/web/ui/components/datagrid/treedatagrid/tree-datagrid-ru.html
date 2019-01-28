@@ -1,0 +1,15 @@
+<p>Компонент <code>TreeDataGrid</code> - позволяет выводить информацию в виде таблицы, а также позволяет отображать
+    иерархические данные и более эффективно управлять строками и колонками таблицы за счёт отложенной загрузки данных
+    при прокрутке.</p>
+
+<p>Для <code>TreeTable</code> в атрибуте <code>datasource</code> элемента <code>rows</code> должен быть указан
+    <code>hierarchicalDatasource</code>. Объявление <code>hierarchicalDatasource</code> должно содержать атрибут
+    <code>hierarchyProperty</code> - имя атрибута сущности, являющегося ссылкой на саму себя.</p>
+
+<p>Для <code>TreeDataGrid</code> кроме атрибута <code>dataContainer</code>, задающего <a
+        href="https://doc.cuba-platform.com/manual-7.0/gui_data_containers.html">data container</a> для загрузки данных
+    в таблицу, необходимо определить атрибут <code>hierarchyProperty</code> – имя атрибута сущности, являющегося ссылкой
+    на саму себя.</p>
+
+<p>Функциональность <code>TreeDataGrid</code> аналогична простому <a
+        href="open?screen=datagrid-basic-settings">DataGrid</a>.</p>

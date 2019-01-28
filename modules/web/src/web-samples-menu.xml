@@ -348,6 +348,14 @@
                     <file name="com/haulmont/sampler/service/DataGridDetailsGeneratorServiceBean.java"/>
                 </otherFiles>
             </item>
+            <item id="tree-datagrid" docUrlSuffix="gui_TreeDataGrid" splitEnabled="true"
+                  image="images/dashboard/components/tree-datagrid.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/treedatagrid"
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/treedatagrid/TreeDataGridSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Task.java"/>
+                </otherFiles>
+            </item>
         </menu>
 
         <menu id="dateField">

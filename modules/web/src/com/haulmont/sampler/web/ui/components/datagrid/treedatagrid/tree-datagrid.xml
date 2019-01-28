@@ -1,0 +1,32 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="tasksDc"
+                    class="com.haulmont.sampler.entity.Task"
+                    view="task-with-parent">
+            <loader id="tasksLoader">
+                <query>
+                    <![CDATA[select e from sampler$Task e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <treeDataGrid id="taskDataGrid"
+                      dataContainer="tasksDc"
+                      height="100%"
+                      hierarchyProperty="parentTask"
+                      width="100%">
+            <columns>
+                <column property="name"/>
+                <column property="dueDate"/>
+                <column property="assignee"/>
+            </columns>
+            <buttonsPanel>
+                <label align="MIDDLE_LEFT" value="Hierarchy Column:"/>
+                <lookupField id="columnSelector"
+                             nullOptionVisible="false"
+                             textInputAllowed="false"/>
+            </buttonsPanel>
+        </treeDataGrid>
+    </layout>
+</window>
