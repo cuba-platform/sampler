@@ -4,7 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:task="http://www.springframework.org/schema/task">
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:gui="http://schemas.haulmont.com/cuba/spring/cuba-gui.xsd">
     <!-- Annotation-based beans -->
     <context:component-scan base-package="com.haulmont.sampler"/>
     <bean id="cuba_LinkHandler"
@@ -31,4 +32,5 @@
             </map>
         </property>
     </bean>
+    <gui:screens base-packages="com.haulmont.sampler.web"/>
 </beans>

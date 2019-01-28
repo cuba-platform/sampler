@@ -1,7 +1,11 @@
 package com.haulmont.sampler.web.ui.entities.product;
 
-import com.haulmont.cuba.gui.components.AbstractEditor;
+import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.sampler.entity.Product;
 
-public class ProductEdit extends AbstractEditor<Product> {
+@UiController("sampler$Product.edit")
+@UiDescriptor("product-edit.xml")
+@EditedEntityContainer("productDc")
+@LoadDataBeforeShow
+public class ProductEdit extends StandardEditor<Product> {
 }

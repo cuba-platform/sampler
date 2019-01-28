@@ -1,5 +1,4 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.calendar.week.WeekCalendarFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         messagesPack="com.haulmont.sampler.web.ui.components.calendar.week">
     <layout>
         <hbox expand="calendar"
@@ -37,8 +36,7 @@
                           caption="msg://isAllDay"
                           width="100%"/>
                 <button id="addEvent"
-                        caption="msg://addEvent"
-                        invoke="addEvent"/>
+                        caption="msg://addEvent"/>
             </scrollBox>
         </hbox>
     </layout>

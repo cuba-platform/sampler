@@ -1,4 +1,4 @@
-# How to add a sample
+``# How to add a sample
 
 - Create a sample files inside `com.haulmont.sampler.web.ui` package of _web module_. 
 

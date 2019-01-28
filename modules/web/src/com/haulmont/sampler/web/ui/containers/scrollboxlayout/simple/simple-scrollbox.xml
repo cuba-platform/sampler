@@ -1,9 +1,8 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox spacing="true">
             <scrollBox height="150px"
-                       width="200px"
+                       width="270px"
                        spacing="true">
                 <textField/>
                 <textField/>

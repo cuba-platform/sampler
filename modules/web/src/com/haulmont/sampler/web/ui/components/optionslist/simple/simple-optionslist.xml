@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.optionslist.simple.SimpleOptionsListFrame">
-    <dsContext>
-        <datasource id="customerDs"
-                    allowCommit="false"
-                    class="com.haulmont.sampler.entity.Customer"
-                    view="_local"/>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="_local"/>
+    </data>
     <layout>
-        <optionsList datasource="customerDs"
+        <optionsList dataContainer="customerDc"
                      property="grade"
                      height="180px"
                      width="160px"/>

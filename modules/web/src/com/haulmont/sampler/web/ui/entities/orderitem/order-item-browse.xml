@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://browseCaption"
+        focusComponent="orderItemsTable"
+        messagesPack="com.haulmont.sampler.web.ui.entities.orderitem">
+    <data readOnly="true">
+        <collection id="orderItemsDc"
+                    class="com.haulmont.sampler.entity.OrderItem"
+                    view="orderItem-with-product">
+            <loader id="orderItemsDl">
+                <query>
+                    <![CDATA[select e from sampler$OrderItem e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="orderItemsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="orderItemsTable"
+                dataLoader="orderItemsDl">
+            <properties include=".*"/>
+        </filter>
+        <table id="orderItemsTable"
+               width="100%"
+               dataContainer="orderItemsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="product"/>
+                <column id="quantity"/>
+                <column id="order"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="orderItemsTable.create"/>
+                <button id="editBtn" action="orderItemsTable.edit"/>
+                <button id="removeBtn" action="orderItemsTable.remove"/>
+            </buttonsPanel>
+        </table>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

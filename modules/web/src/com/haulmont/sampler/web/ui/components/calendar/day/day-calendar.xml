@@ -1,16 +1,18 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame">
-    <dsContext>
-        <collectionDatasource id="calendarEventsDs"
-                              class="com.haulmont.sampler.entity.CalendarEvent">
-            <query>
-                <![CDATA[select e from sampler$CalendarEvent e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="calendarEventsDc"
+                    class="com.haulmont.sampler.entity.CalendarEvent"
+                    view="_local">
+            <loader id="calendarEventsLoader">
+                <query>
+                    <![CDATA[select e from sampler$CalendarEvent e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <calendar captionProperty="caption"
-                  datasource="calendarEventsDs"
+                  dataContainer="calendarEventsDc"
                   descriptionProperty="description"
                   endDate="2016-10-19 23:59"
                   endDateProperty="endDate"

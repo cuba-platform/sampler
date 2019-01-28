@@ -1,18 +1,19 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.datagrid.detailsgenerator.DataGridDetailsGeneratorFrame">
-    <dsContext>
-        <collectionDatasource id="ordersDs"
-                              class="com.haulmont.sampler.entity.Order"
-                              view="order-with-customer">
-            <query>
-                <![CDATA[select e from sampler$Order e order by e.date]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="ordersDc"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="order-with-customer">
+            <loader id="ordersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Order e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout expand="ordersDataGrid"
             spacing="true">
         <dataGrid id="ordersDataGrid"
-                  datasource="ordersDs"
+                  dataContainer="ordersDc"
                   settingsEnabled="false"
                   width="100%">
             <columns>

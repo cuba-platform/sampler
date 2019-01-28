@@ -1,7 +1,11 @@
 package com.haulmont.sampler.web.ui.entities.customer;
 
-import com.haulmont.cuba.gui.components.AbstractEditor;
+import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.sampler.entity.Customer;
 
-public class CustomerEdit extends AbstractEditor<Customer> {
+@UiController("sampler$Customer.edit")
+@UiDescriptor("customer-edit.xml")
+@EditedEntityContainer("customerDc")
+@LoadDataBeforeShow
+public class CustomerEdit extends StandardEditor<Customer> {
 }

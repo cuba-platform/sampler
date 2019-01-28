@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.map.marker.MarkerMapFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
     <layout>
         <chart:mapViewer id="map"

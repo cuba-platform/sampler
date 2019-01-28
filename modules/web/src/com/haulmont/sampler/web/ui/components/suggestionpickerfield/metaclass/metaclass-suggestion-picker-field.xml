@@ -1,47 +1,43 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.suggestionpickerfield.metaclass.MetaClassSuggestionPickerFieldFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         messagesPack="com.haulmont.sampler.web.ui.components.suggestionpickerfield.metaclass">
-    <dsContext>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                select c from sampler$Customer c
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    select c from sampler$Customer c
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
-        <hbox spacing="true">
-            <vbox>
-                <label value="msg://enterQuery"/>
-                <suggestionPickerField id="suggestionPickerField"
-                                       captionProperty="name"
-                                       metaClass="sampler$Customer"/>
-                <groupBox caption="msg://tuning"
-                          spacing="true"
-                          width="250px">
-                    <label value="msg://asyncSearchDelayMs"/>
-                    <textField id="delayTextField">
-                        <validator class="com.haulmont.cuba.gui.components.validators.IntegerValidator"/>
-                    </textField>
-                    <label value="msg://minSearchStringLength"/>
-                    <textField id="stringLengthTextField">
-                        <validator class="com.haulmont.cuba.gui.components.validators.IntegerValidator"/>
-                    </textField>
-                    <label value="msg://suggestionsLimit"/>
-                    <textField id="limitTextField">
-                        <validator class="com.haulmont.cuba.gui.components.validators.IntegerValidator"/>
-                    </textField>
-                </groupBox>
-            </vbox>
-            <table caption="msg://customers"
-                   height="258px"
-                   width="300px">
-                <columns>
-                    <column id="name"/>
-                </columns>
-                <rows datasource="customersDs"/>
-            </table>
-        </hbox>
+        <vbox spacing="true"
+              width="300px">
+            <label value="msg://enterQuery"/>
+            <suggestionPickerField id="suggestionPickerField"
+                                   metaClass="sampler$Customer"
+                                   width="100%">
+                <actions>
+                    <action id="lookup" type="picker_lookup"/>
+                    <action id="open" type="picker_open"/>
+                </actions>
+            </suggestionPickerField>
+            <groupBox caption="msg://tuning"
+                      spacing="true">
+                <label value="msg://asyncSearchDelayMs"/>
+                <textField id="delayTextField"
+                           datatype="int"
+                           width="100%"/>
+                <label value="msg://minSearchStringLength"/>
+                <textField id="stringLengthTextField"
+                           datatype="int"
+                           width="100%"/>
+                <label value="msg://suggestionsLimit"/>
+                <textField id="limitTextField"
+                           datatype="int"
+                           width="100%"/>
+            </groupBox>
+        </vbox>
     </layout>
 </window>

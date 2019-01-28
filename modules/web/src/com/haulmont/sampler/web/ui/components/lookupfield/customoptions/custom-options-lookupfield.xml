@@ -1,29 +1,27 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.lookupfield.customoptions.CustomOptionsLookupFieldFrame">
-    <dsContext>
-        <datasource id="orderDs"
-                    class="com.haulmont.sampler.entity.Order"
-                    allowCommit="false"
-                    view="_local"/>
-        <datasource id="customerDs"
-                    class="com.haulmont.sampler.entity.Customer"
-                    allowCommit="false"
-                    view="_local"/>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="orderDc"
+                  class="com.haulmont.sampler.entity.Order"
+                  view="_local"/>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="_local"/>
+    </data>
     <layout>
         <hbox spacing="true">
             <lookupField id="amountLookup"
                          caption="Options List"
-                         datasource="orderDs"
+                         dataContainer="orderDc"
                          property="amount"/>
             <lookupField id="ageLookup"
                          caption="Options Map"
-                         datasource="customerDs"
+                         dataContainer="customerDc"
                          property="age"
                          nullName="(not selected)"/>
             <lookupField id="gradleLookup"
                          caption="Options Enum"
-                         datasource="customerDs"
+                         dataContainer="customerDc"
+                         optionsEnum="com.haulmont.sampler.entity.CustomerGrade"
                          property="grade"
                          inputPrompt="Select grade"/>
         </hbox>

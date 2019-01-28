@@ -1,13 +1,12 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.textfield.validator.ValidatorTextFieldFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox spacing="true">
-        <textField id="integerField"
-                   datatype="int">
-            <validator class="com.haulmont.sampler.web.ui.components.textfield.validator.PositiveIntegerValidator"/>
-        </textField>
-            <button caption="Validate"
-                    invoke="validate"/>
+            <textField id="integerField"
+                       datatype="int">
+                <validator class="com.haulmont.sampler.web.ui.components.textfield.validator.PositiveIntegerValidator"/>
+            </textField>
+            <button id="validate"
+                    caption="Validate"/>
         </hbox>
     </layout>
 </window>

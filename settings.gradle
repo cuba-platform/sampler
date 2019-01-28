@@ -1,7 +1,6 @@
 rootProject.name = 'sampler'
-include(':sampler-global', ':sampler-core', ':sampler-gui', ':sampler-web', ':sampler-web-themes')
-project(':sampler-global').projectDir = new File(settingsDir, 'modules/global')
-project(':sampler-core').projectDir = new File(settingsDir, 'modules/core')
-project(':sampler-gui').projectDir = new File(settingsDir, 'modules/gui')
-project(':sampler-web').projectDir = new File(settingsDir, 'modules/web')
-project(':sampler-web-themes').projectDir = new File(settingsDir, 'modules/web/themes')
+def modulePrefix = 'sampler'
+include(":${modulePrefix}-global" , ":${modulePrefix}-core", ":${modulePrefix}-web")
+project(":${modulePrefix}-global" ).projectDir = new File(settingsDir, 'modules/global')
+project(":${modulePrefix}-core" ).projectDir = new File(settingsDir, 'modules/core')
+project(":${modulePrefix}-web" ).projectDir = new File(settingsDir, 'modules/web')

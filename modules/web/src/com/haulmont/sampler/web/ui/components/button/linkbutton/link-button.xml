@@ -1,16 +1,13 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.button.linkbutton.LinkButtonFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout spacing="true">
-        <linkButton caption="Say Hello!"
-                    invoke="sayHello"
+        <linkButton id="helloButton"
+                    caption="Say Hello!"
                     description="Click Me!"/>
         <linkButton id="saveButton1"
                     caption="Save"
-                    icon="icons/save.png"
-                    invoke="save"/>
+                    icon="icons/save.png"/>
         <linkButton id="saveButton2"
                     description="Save"
-                    icon="icons/save.png"
-                    invoke="save"/>
+                    icon="icons/save.png"/>
     </layout>
 </window>

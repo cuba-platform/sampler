@@ -1,0 +1,16 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="_minimal"/>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <textField dataContainer="customerDc"
+                       property="name"/>
+            <label align="MIDDLE_CENTER"
+                   dataContainer="customerDc"
+                   property="name"/>
+        </hbox>
+    </layout>
+</window>

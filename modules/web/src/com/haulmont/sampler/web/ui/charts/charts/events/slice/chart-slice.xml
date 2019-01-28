@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.charts.events.slice.ChartSliceFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="countryLitresDs"
-                              class="com.haulmont.sampler.entity.CountryLitres"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$CountryLitres e order by e.litres desc]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="countryLitresDc"
+                    class="com.haulmont.sampler.entity.CountryLitres"
+                    view="_local">
+            <loader id="countryLitresLoader">
+                <query>
+                    <![CDATA[select e from sampler$CountryLitres e order by e.litres desc]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <chart:pieChart id="pieChart"
                         balloonText="[[title]] - [[percents]]%"
-                        datasource="countryLitresDs"
+                        dataContainer="countryLitresDc"
                         height="100%"
                         titleField="country"
                         valueField="litres"

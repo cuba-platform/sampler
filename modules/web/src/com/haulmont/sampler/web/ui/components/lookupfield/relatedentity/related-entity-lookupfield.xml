@@ -1,21 +1,21 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.lookupfield.relatedentity.RelatedEntityLookupFieldFrame">
-    <dsContext>
-        <datasource id="orderDs"
-                    class="com.haulmont.sampler.entity.Order"
-                    allowCommit="false"
-                    view="order-with-customer"/>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="orderDc"
+                  class="com.haulmont.sampler.entity.Order"
+                  view="order-with-customer"/>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
-        <lookupField datasource="orderDs"
+        <lookupField dataContainer="orderDc"
                      property="customer"
-                     optionsDatasource="customersDs"/>
+                     optionsContainer="customersDc"/>
     </layout>
 </window>

@@ -1,5 +1,4 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.codeeditor.simple.SimpleSourceCodeEditorFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout expand="codeEditor" spacing="true">
         <hbox spacing="true">
             <checkBox id="highlightActiveLineCheck"

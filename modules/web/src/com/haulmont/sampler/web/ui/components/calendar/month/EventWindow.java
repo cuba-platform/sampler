@@ -1,34 +1,39 @@
 package com.haulmont.sampler.web.ui.components.calendar.month;
 
-import com.haulmont.cuba.gui.components.AbstractWindow;
+import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.Label;
+import com.haulmont.cuba.gui.screen.*;
 
 import javax.inject.Inject;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 
-public class EventWindow extends AbstractWindow {
+@UiController("event-window")
+@UiDescriptor("event-window.xml")
+public class EventWindow extends Screen {
     @Inject
-    private Label startDateValue;
+    private Label<String> startDateValue;
     @Inject
-    private Label endDateValue;
+    private Label<String> endDateValue;
     @Inject
-    private Label captionValue;
+    private Label<String> captionValue;
     @Inject
-    private Label descriptionValue;
+    private Label<String> descriptionValue;
 
-    @Override
-    public void init(Map<String, Object> params) {
-        super.init(params);
+    @Subscribe
+    protected void onInit(InitEvent event) {
+        MapScreenOptions options = (MapScreenOptions) event.getOptions();
+        Map<String, Object> params = options.getParams();
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM yyyy HH:mm");
         startDateValue.setValue(simpleDateFormat.format(params.get("startDate")));
         endDateValue.setValue(simpleDateFormat.format(params.get("endDate")));
-        captionValue.setValue(params.get("caption"));
-        descriptionValue.setValue(params.get("description"));
+        captionValue.setValue((String) params.get("caption"));
+        descriptionValue.setValue((String) params.get("description"));
     }
 
-    public void windowClose() {
-        close(CLOSE_ACTION_ID);
+    @Subscribe("closeButton")
+    protected void onCloseButtonClick(Button.ClickEvent event) {
+        close(WINDOW_CLOSE_ACTION);
     }
 }

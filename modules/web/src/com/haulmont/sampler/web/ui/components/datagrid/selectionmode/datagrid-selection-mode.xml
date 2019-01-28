@@ -1,14 +1,15 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.datagrid.selectionmode.DataGridSelectionModeFrame">
-    <dsContext>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout expand="customersDataGrid"
             spacing="true">
         <hbox spacing="true">
@@ -19,7 +20,7 @@
                          textInputAllowed="false"/>
         </hbox>
         <dataGrid id="customersDataGrid"
-                  datasource="customersDs"
+                  dataContainer="customersDc"
                   width="100%">
             <columns>
                 <column property="name"/>

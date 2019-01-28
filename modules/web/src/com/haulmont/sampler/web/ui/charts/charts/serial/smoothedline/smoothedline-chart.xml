@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="dateValueDs"
-                              class="com.haulmont.sampler.entity.DateValue"
-                              view="_local"
-                              maxResults="20">
-            <query>
-                <![CDATA[select e from sampler$DateValue e order by e.date]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="dateValueDc"
+                    class="com.haulmont.sampler.entity.DateValue"
+                    view="_local">
+            <loader id="dateValueLoader"
+                    maxResults="20">
+                <query>
+                    <![CDATA[select e from sampler$DateValue e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <chart:serialChart id="lineChart"
                            autoMarginOffset="20"
                            categoryField="date"
-                           datasource="dateValueDs"
+                           dataContainer="dateValueDc"
                            height="100%"
                            marginRight="40"
                            marginLeft="40"

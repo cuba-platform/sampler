@@ -1,0 +1,16 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="ordersDc"
+                  class="com.haulmont.sampler.entity.Order"
+                  view="_minimal"/>
+    </data>
+    <layout spacing="true">
+        <datePicker dataContainer="ordersDc"
+                    property="date"/>
+        <hbox spacing="true">
+            <label value="Value in the Container:"/>
+            <label dataContainer="ordersDc"
+                   property="date"/>
+        </hbox>
+    </layout>
+</window>

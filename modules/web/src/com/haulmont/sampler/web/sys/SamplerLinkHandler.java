@@ -1,22 +1,24 @@
 package com.haulmont.sampler.web.sys;
 
-import com.haulmont.cuba.gui.WindowManager;
-import com.haulmont.cuba.gui.components.Window;
+import com.haulmont.cuba.gui.Screens;
+import com.haulmont.cuba.gui.screen.OpenMode;
+import com.haulmont.cuba.gui.screen.Screen;
+import com.haulmont.cuba.gui.screen.ScreenOptions;
 import com.haulmont.cuba.web.App;
+import com.haulmont.cuba.web.AppUI;
 import com.haulmont.cuba.web.sys.LinkHandler;
 import com.haulmont.sampler.web.app.mainwindow.SamplerMainWindow;
-import com.haulmont.sampler.web.util.SamplesHelper;
 import com.haulmont.sampler.web.config.MenuItem;
 import com.haulmont.sampler.web.config.SamplesMenuConfig;
+import com.haulmont.sampler.web.util.SamplesHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
 import java.util.Map;
 
-/**
- * @author gorelov
- */
+import static com.haulmont.cuba.gui.screen.FrameOwner.WINDOW_CLOSE_ACTION;
+
 public class SamplerLinkHandler extends LinkHandler {
     @Inject
     private SamplesHelper samplesHelper;
@@ -45,22 +47,23 @@ public class SamplerLinkHandler extends LinkHandler {
             return;
         }
 
-        Window.TopLevelWindow window = App.getInstance().getTopLevelWindow();
+        Screens.OpenedScreens openedScreens = AppUI.getCurrent().getScreens().getOpenedScreens();
+        Screen rootScreen = openedScreens.getRootScreen();
         if (!item.isMenu()) {
-            Map<String, Object> params = samplesHelper.getParams(item);
-            App.getInstance().getWindowManager()
-                    .openWindow(samplesHelper.getSampleBrowser(), WindowManager.OpenType.NEW_TAB, params);
-            if (window instanceof SamplerMainWindow) {
-                ((SamplerMainWindow) window).expandItemsFromDirectLink(item.getId());
+            ScreenOptions screenOptions = samplesHelper.getScreenOptions(item);
+            AppUI.getCurrent().getScreens()
+                    .create(samplesHelper.getSampleBrowserId(), OpenMode.NEW_TAB, screenOptions)
+                    .show();
+            if (rootScreen instanceof SamplerMainWindow) {
+                ((SamplerMainWindow) rootScreen).expandItemsFromDirectLink(item.getId());
             }
-        } else {
-            if (samplesMenuConfig.isRootItem(item.getId())) {
-                if (window instanceof SamplerMainWindow) {
-                    window.getWindowManager().getOpenWindows().forEach(
-                            openWindow -> openWindow.close(Window.CLOSE_ACTION_ID));
-                    ((SamplerMainWindow) window).initDashboardByRootItemId(item.getId());
-                    ((SamplerMainWindow) window).expandItemsFromDirectLink(item.getId());
-                }
+        } else if (samplesMenuConfig.isRootItem(item.getId())) {
+            if (rootScreen instanceof SamplerMainWindow) {
+                openedScreens.getAll().forEach(screen ->
+                        screen.close(WINDOW_CLOSE_ACTION));
+
+                ((SamplerMainWindow) rootScreen).initDashboardByRootItemId(item.getId());
+                ((SamplerMainWindow) rootScreen).expandItemsFromDirectLink(item.getId());
             }
         }
     }

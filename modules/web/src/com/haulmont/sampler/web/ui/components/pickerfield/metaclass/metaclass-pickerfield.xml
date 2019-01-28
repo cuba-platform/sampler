@@ -1,7 +1,11 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.pickerfield.metaclass.MetaClassPickerFieldFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <pickerField id="picker"
-                     metaClass="sampler$Customer"/>
+                     metaClass="sampler$Customer">
+            <actions>
+                <action id="lookup" type="picker_lookup"/>
+                <action id="clear" type="picker_clear"/>
+            </actions>
+        </pickerField>
     </layout>
 </window>

@@ -1,23 +1,25 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractLookup"
-        lookupComponent="customerTable">
-    <dsContext>
-        <collectionDatasource id="customerDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customerDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <dialogMode width="800" height="600"/>
-    <layout expand="customerTable">
+    <layout expand="customerTable"
+            spacing="true">
         <table id="customerTable"
+               dataContainer="customerDc"
                width="100%">
             <actions>
-                <action id="create"/>
-                <action id="edit"/>
-                <action id="remove"/>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
             </actions>
             <columns>
                 <column id="name"/>
@@ -26,7 +28,6 @@
                 <column id="active"/>
                 <column id="grade"/>
             </columns>
-            <rows datasource="customerDs"/>
             <rowsCount/>
             <buttonsPanel>
                 <button id="createBtn"
@@ -37,5 +38,9 @@
                         action="customerTable.remove"/>
             </buttonsPanel>
         </table>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
     </layout>
 </window>

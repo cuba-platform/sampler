@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.currencyfield.simple.SimpleCurrencyFieldFrame">
-    <dsContext>
-        <datasource id="productDs"
-                    allowCommit="false"
-                    class="com.haulmont.sampler.entity.Product"
-                    view="_local"/>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="productDc"
+                  class="com.haulmont.sampler.entity.Product"
+                  view="_local"/>
+    </data>
     <layout>
         <currencyField id="currencyField"
                        currency="€"
-                       datasource="productDs"
+                       dataContainer="productDc"
                        property="price"/>
     </layout>
 </window>

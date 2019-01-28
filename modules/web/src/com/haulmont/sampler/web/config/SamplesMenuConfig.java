@@ -4,14 +4,12 @@ import com.haulmont.bali.util.Dom4j;
 import com.haulmont.cuba.core.global.Messages;
 import com.haulmont.cuba.core.global.Resources;
 import com.haulmont.cuba.core.sys.AppContext;
-import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.IterableUtils;
 import org.apache.commons.collections4.Predicate;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.text.StrTokenizer;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.commons.text.StringTokenizer;
 import org.dom4j.Element;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
@@ -24,9 +22,6 @@ import java.util.*;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/**
- * @author gorelov
- */
 @Component(SamplesMenuConfig.NAME)
 public class SamplesMenuConfig {
 
@@ -74,20 +69,14 @@ public class SamplesMenuConfig {
         rootItems.clear();
 
         String configName = AppContext.getProperty(MENU_CONFIG_XML_PROP);
-
-        StrTokenizer tokenizer = new StrTokenizer(configName);
+        StringTokenizer tokenizer = new StringTokenizer(configName);
         for (String location : tokenizer.getTokenArray()) {
             Resource resource = resources.getResource(location);
             if (resource.exists()) {
-                InputStream stream = null;
-                try {
-                    stream = resource.getInputStream();
-                    Element rootElement = Dom4j.readDocument(stream).getRootElement();
-                    loadMenuItems(rootElement, null);
+                try (InputStream stream = resource.getInputStream()) {
+                    loadMenuItems(Dom4j.readDocument(stream).getRootElement(), null);
                 } catch (IOException e) {
-                    throw new RuntimeException(e.getMessage(), e);
-                } finally {
-                    IOUtils.closeQuietly(stream);
+                    throw new RuntimeException("Unable to read samples menu config from " + location, e);
                 }
             } else {
                 log.warn("Resource " + location + " not found, ignore it");
@@ -116,8 +105,7 @@ public class SamplesMenuConfig {
     }
 
     private void loadMenuItems(Element parentElement, MenuItem parentItem) {
-        //noinspection unchecked
-        for (Element element : ((List<Element>) parentElement.elements())) {
+        for (Element element : parentElement.elements()) {
             MenuItem menuItem = null;
             String id = element.attributeValue("id");
             if (StringUtils.isNotBlank(id)) {
@@ -179,8 +167,7 @@ public class SamplesMenuConfig {
         Element otherFilesElement = element.element("otherFiles");
         if (otherFilesElement != null && !otherFilesElement.elements().isEmpty()) {
             List<String> otherFiles = new ArrayList<>();
-            //noinspection unchecked
-            for (Element file : ((List<Element>) otherFilesElement.elements())) {
+            for (Element file : otherFilesElement.elements()) {
                 String fileName = file.attributeValue("name");
                 if (StringUtils.isNotEmpty(fileName))
                     otherFiles.add(fileName);
@@ -191,8 +178,7 @@ public class SamplesMenuConfig {
         Element screenParamsElement = element.element("screenParams");
         if (screenParamsElement != null && !screenParamsElement.elements().isEmpty()) {
             Map<String, Object> params = new HashMap<>();
-            //noinspection unchecked
-            for (Element param : ((List<Element>) screenParamsElement.elements())) {
+            for (Element param : screenParamsElement.elements()) {
                 String paramName = param.attributeValue("name");
                 if (StringUtils.isNotEmpty(paramName)) {
                     String value = param.attributeValue("value");
@@ -202,6 +188,14 @@ public class SamplesMenuConfig {
             menuItem.setScreenParams(params);
         }
 
+        return menuItem;
+    }
+
+    public MenuItem getItemById(String id) {
+        MenuItem menuItem = IterableUtils.find(getItemsAsList(), new MenuItemPredicate(id));
+        if (menuItem == null) {
+            throw new IllegalArgumentException("Unable to find item with id " + id);
+        }
         return menuItem;
     }
 
@@ -229,10 +223,9 @@ public class SamplesMenuConfig {
      * @return List of items.
      */
     public List<MenuItem> getAllChildrenAsList(String itemId) {
-        MenuItem item = findItemById(itemId);
+        MenuItem item = getItemById(itemId);
         List<MenuItem> items = getItemsAsList(Collections.singletonList(item));
-        items = setCategoriesForSingleItems(items);
-        return items;
+        return setCategoriesForSingleItems(items);
     }
 
     private List<MenuItem> setCategoriesForSingleItems(List<MenuItem> items) {
@@ -260,8 +253,7 @@ public class SamplesMenuConfig {
                 itemList.add(item);
         }
         if (itemList.size() == items.size()) {
-            //noinspection unchecked
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
         return itemList;
     }

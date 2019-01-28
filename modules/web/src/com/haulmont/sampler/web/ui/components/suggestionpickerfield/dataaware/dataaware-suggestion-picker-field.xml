@@ -1,0 +1,44 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        messagesPack="com.haulmont.sampler.web.ui.components.suggestionpickerfield.dataaware">
+    <data>
+        <instance id="orderDc"
+                  class="com.haulmont.sampler.entity.Order"
+                  view="order-with-customer"/>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query><![CDATA[select c from sampler$Customer c]]></query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <vbox spacing="true" width="300px">
+            <label value="msg://enterQuery"/>
+            <suggestionPickerField id="suggestionPickerField"
+                                   dataContainer="orderDc"
+                                   property="customer"
+                                   width="100%">
+                <actions>
+                    <action id="lookup" type="picker_lookup"/>
+                    <action id="open" type="picker_open"/>
+                </actions>
+            </suggestionPickerField>
+            <groupBox caption="msg://tuning"
+                      spacing="true">
+                <label value="msg://asyncSearchDelayMs"/>
+                <textField id="delayTextField"
+                           datatype="int"
+                           width="100%"/>
+                <label value="msg://minSearchStringLength"/>
+                <textField id="stringLengthTextField"
+                           datatype="int"
+                           width="100%"/>
+                <label value="msg://suggestionsLimit"/>
+                <textField id="limitTextField"
+                           datatype="int"
+                           width="100%"/>
+            </groupBox>
+        </vbox>
+    </layout>
+</window>

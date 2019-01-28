@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.stockcharts.intradaydata.StockChartIntradayDataFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="stockChartDs"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-    </dsContext>
+    <data>
+        <collection id="stockChartDc"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+    </data>
     <layout>
         <chart:stockChart id="stockChart"
                           height="100%"
@@ -15,7 +12,10 @@
             <chart:categoryAxesSettings minPeriod="mm"/>
 
             <chart:dataSets>
-                <chart:dataSet id="dataSet" color="#b0de09" datasource="stockChartDs" categoryField="date">
+                <chart:dataSet id="dataSet"
+                               color="#b0de09"
+                               dataContainer="stockChartDc"
+                               categoryField="date">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="value" toField="value"/>
                         <chart:fieldMapping fromField="volume" toField="volume"/>
@@ -26,14 +26,20 @@
             <chart:panels>
                 <chart:panel showCategoryAxis="false" title="Value" percentHeight="70">
                     <chart:stockGraphs>
-                        <chart:stockGraph id="stockGraph" valueField="value" type="SMOOTHED_LINE" lineThickness="2"
-                                          bullet="ROUND"/>
+                        <chart:stockGraph id="stockGraph"
+                                          bullet="ROUND"
+                                          lineThickness="2"
+                                          type="SMOOTHED_LINE"
+                                          valueField="value"/>
                     </chart:stockGraphs>
                     <chart:stockLegend valueTextRegular=" " markerType="NONE"/>
                 </chart:panel>
                 <chart:panel title="Volume" percentHeight="30">
                     <chart:stockGraphs>
-                        <chart:stockGraph valueField="volume" type="COLUMN" cornerRadiusTop="2" fillAlphas="1"/>
+                        <chart:stockGraph cornerRadiusTop="2"
+                                          fillAlphas="1"
+                                          type="COLUMN"
+                                          valueField="volume"/>
                     </chart:stockGraphs>
                     <chart:stockLegend valueTextRegular=" " markerType="NONE"/>
                 </chart:panel>

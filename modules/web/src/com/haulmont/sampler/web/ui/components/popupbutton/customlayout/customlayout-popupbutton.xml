@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.popupbutton.customlayout.CustomLayoutPopupButtonFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         messagesPack="com.haulmont.sampler.web.ui.components.popupbutton.customlayout">
     <layout>
         <popupButton id="popupButton"
@@ -24,12 +22,12 @@
                                  optionsEnum="com.haulmont.cuba.core.global.SendingStatus"
                                  width="100%"/>
                     <hbox spacing="true">
-                        <button caption="msg://saveButtonCaption"
-                                icon="SAVE"
-                                invoke="showSaveMessageAndClose"/>
-                        <button caption="msg://resetButtonCaption"
-                                icon="REMOVE"
-                                invoke="showCancelMessageAndClose"/>
+                        <button id="saveAnsCloseButton"
+                                caption="msg://saveButtonCaption"
+                                icon="SAVE"/>
+                        <button id="cancelAnsCloseButton"
+                                caption="msg://resetButtonCaption"
+                                icon="REMOVE"/>
                     </hbox>
                 </vbox>
             </popup>

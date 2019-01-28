@@ -1,4 +1,4 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout expand="mainSplit">
         <label value="Large divider style"/>
         <split id="mainSplit"

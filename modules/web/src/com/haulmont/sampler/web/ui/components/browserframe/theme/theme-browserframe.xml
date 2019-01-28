@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.browserframe.theme.ThemeBrowserFrameFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox height="100%"
               spacing="true"

@@ -1,5 +1,4 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.checkbox.simple.SimpleCheckboxFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <checkBox id="carField"
                   caption="I have a car"/>

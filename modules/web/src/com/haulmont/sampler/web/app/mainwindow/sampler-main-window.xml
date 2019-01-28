@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
         class="com.haulmont.sampler.web.app.mainwindow.SamplerMainWindow"
-        messagesPack="com.haulmont.sampler.web.app.mainwindow"
-        xmlns:main="http://schemas.haulmont.com/cuba/mainwindow.xsd">
+        messagesPack="com.haulmont.sampler.web.app.mainwindow">
     <layout expand="mainSplit">
         <hbox id="titleBar"
               expand="mainMenu"
@@ -17,18 +16,18 @@
                    stylename="sampler-app-tittle-label"
                    value="msg://menuBar.appTitle"/>
 
-            <main:menu id="mainMenu" align="MIDDLE_LEFT"/>
+            <menu id="mainMenu" align="MIDDLE_LEFT"/>
 
-            <main:userIndicator id="userIndicator" align="MIDDLE_LEFT"/>
+            <userIndicator id="userIndicator" align="MIDDLE_LEFT"/>
 
             <hbox id="mainButtonsBox" stylename="c-main-buttons" align="MIDDLE_LEFT">
-                <main:newWindowButton id="newWindowButton"
-                                      icon="app/images/new-window.png"
-                                      description="mainMsg://newWindowBtnDescription"/>
+                <newWindowButton id="newWindowButton"
+                                 icon="app/images/new-window.png"
+                                 description="mainMsg://newWindowBtnDescription"/>
 
-                <main:logoutButton id="logoutButton"
-                                   icon="app/images/exit.png"
-                                   description="mainMsg://logoutBtnDescription"/>
+                <logoutButton id="logoutButton"
+                              icon="app/images/exit.png"
+                              description="mainMsg://logoutBtnDescription"/>
             </hbox>
         </hbox>
 
@@ -85,15 +84,18 @@
                                 description="msg://sideMenu.expandAll"
                                 stylename="small-link dark"/>
                 </hbox>
-                <main:sideMenu id="sideMenu"
-                               width="100%"/>
+                <sideMenu id="sideMenu"
+                          width="100%"/>
             </vbox>
 
-            <main:workArea id="workArea" width="100%" height="100%">
-                <main:initialLayout>
-                    <frame id="dashboardFrame" screen="mainDashboardFrame" height="100%" width="100%"/>
-                </main:initialLayout>
-            </main:workArea>
+            <workArea id="workArea" width="100%" height="100%">
+                <initialLayout>
+                    <fragment id="dashboardFrame"
+                              screen="sampler-main-dashboard-fragment"
+                              height="100%"
+                              width="100%"/>
+                </initialLayout>
+            </workArea>
         </split>
     </layout>
 </window>

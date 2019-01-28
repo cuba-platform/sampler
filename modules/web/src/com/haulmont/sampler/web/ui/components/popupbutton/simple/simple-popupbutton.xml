@@ -1,13 +1,12 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.popupbutton.simple.SimplePopupButtonFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         messagesPack="com.haulmont.sampler.web.ui.components.popupbutton.simple">
     <layout>
         <hbox spacing="true">
             <popupButton id="popupButton1"
                          caption="msg://buttonCaption">
                 <actions>
-                    <action id="popupAction1" caption="Save as DOC" invoke="saveAsDoc"/>
-                    <action id="popupAction2" caption="Save as PDF" invoke="saveAsPdf"/>
+                    <action id="popupAction1" caption="Save as DOC"/>
+                    <action id="popupAction2" caption="Save as PDF"/>
                 </actions>
             </popupButton>
 
@@ -15,8 +14,8 @@
                          caption="msg://buttonCaption"
                          icon="icons/save.png">
                 <actions>
-                    <action id="popupAction1" caption="Save as DOC" invoke="saveAsDoc"/>
-                    <action id="popupAction2" caption="Save as PDF" invoke="saveAsPdf"/>
+                    <action id="popupAction1" caption="Save as DOC"/>
+                    <action id="popupAction2" caption="Save as PDF"/>
                 </actions>
             </popupButton>
 

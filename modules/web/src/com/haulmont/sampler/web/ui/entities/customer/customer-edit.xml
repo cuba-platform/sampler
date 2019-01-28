@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        caption="msg://editCaption"
-        class="com.haulmont.sampler.web.ui.entities.customer.CustomerEdit"
-        datasource="customerDs"
-        focusComponent="fieldGroup"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://editorCaption"
+        focusComponent="form"
         messagesPack="com.haulmont.sampler.web.ui.entities.customer">
-    <dsContext>
-        <datasource id="customerDs"
-                    class="com.haulmont.sampler.entity.Customer"
-                    view="_local"/>
-    </dsContext>
-    <layout expand="windowActions"
-            spacing="true">
-        <fieldGroup id="fieldGroup"
-                    datasource="customerDs">
+    <data>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="customer-view">
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="customerDc">
             <column width="250px">
-                <field property="name"/>
-                <field property="lastName"/>
-                <field property="age"/>
-                <field property="active"/>
-                <field property="grade"
-                       width=""/>
+                <textField id="nameField" property="name"/>
+                <textField id="lastNameField" property="lastName"/>
+                <textField id="ageField" property="age"/>
+                <checkBox id="activeField" property="active"/>
+                <lookupField id="gradeField" property="grade"/>
+                <upload id="avatarField" fileStoragePutMode="IMMEDIATE" property="avatar" showFileName="true"/>
             </column>
-        </fieldGroup>
-        <frame id="windowActions"
-                screen="editWindowActions"
-                stylename="window-actions"/>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
     </layout>
 </window>

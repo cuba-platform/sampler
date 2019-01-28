@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.charts.serial.multipleaxis.MultipleValueAxisFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="lineChartDs"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-    </dsContext>
+    <data>
+        <collection id="lineChartDc"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+    </data>
     <layout>
         <chart:serialChart id="lineChart"
                            autoMarginOffset="20"
                            categoryField="date"
-                           datasource="lineChartDs"
+                           dataContainer="lineChartDc"
                            height="100%"
                            marginLeft="40"
                            marginRight="40"

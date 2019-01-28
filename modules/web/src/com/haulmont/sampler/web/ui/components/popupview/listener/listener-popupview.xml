@@ -1,5 +1,4 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.popupview.listener.ListenerPopupViewFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout spacing="true">
         <popupView id="popupView"
                    minimizedValue="Minimized Value"

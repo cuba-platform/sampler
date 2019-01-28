@@ -1,23 +1,26 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.suggestionpickerfield.optionsstyleprovider.StyleProviderSuggestionPickerFieldFrame">
-    <dsContext>
-        <datasource id="orderDs"
-                    allowCommit="false"
-                    class="com.haulmont.sampler.entity.Order"
-                    view="order-with-customer"/>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                select c from sampler$Customer c
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="orderDc"
+                  class="com.haulmont.sampler.entity.Order"
+                  view="order-with-customer"/>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    select c from sampler$Customer c
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <suggestionPickerField id="suggestionPickerField"
-                               captionProperty="name"
-                               datasource="orderDs"
+                               dataContainer="orderDc"
                                property="customer">
+            <actions>
+                <action id="lookup" type="picker_lookup"/>
+                <action id="open" type="picker_open"/>
+            </actions>
             <query entityClass="com.haulmont.sampler.entity.Customer"
                    escapeValueForLike="true"
                    searchStringFormat="%$searchString%">

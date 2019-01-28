@@ -1,0 +1,8 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <layout spacing="true">
+        <groupBox caption="Fragment"
+                  width="AUTO">
+            <fragment screen="simple-button"/>
+        </groupBox>
+    </layout>
+</window>

@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.stockcharts.multiplepanels.StockChartMultiplePanelsFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="stockChartDs"
-                              class="com.haulmont.sampler.entity.StockData"
-                              refreshMode="NEVER"
-                              view="_local"/>
-    </dsContext>
+    <data>
+        <collection id="stockChartDc"
+                    class="com.haulmont.sampler.entity.StockData"
+                    view="_local"/>
+    </data>
     <layout>
         <chart:stockChart id="stockChart"
                           height="100%"
@@ -16,7 +13,7 @@
                 <chart:dataSet id="dataSet1"
                                categoryField="date"
                                color="#7f8da9"
-                               datasource="stockChartDs"
+                               dataContainer="stockChartDc"
                                title="West Stock">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="open"
@@ -37,7 +34,7 @@
                                categoryField="date"
                                color="#fac314"
                                compared="true"
-                               datasource="stockChartDs"
+                               dataContainer="stockChartDc"
                                title="East Stock">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="value"

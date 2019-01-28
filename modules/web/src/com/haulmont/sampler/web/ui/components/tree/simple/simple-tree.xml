@@ -1,20 +1,22 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractLookup">
-    <dsContext>
-        <hierarchicalDatasource id="tasksDs"
-                                class="com.haulmont.sampler.entity.Task"
-                                hierarchyProperty="parentTask"
-                                view="task-with-parent">
-            <query>
-                <![CDATA[select e from sampler$Task e]]>
-            </query>
-        </hierarchicalDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="tasksDc"
+                    class="com.haulmont.sampler.entity.Task"
+                    view="task-with-parent">
+            <loader id="tasksLoader">
+                <query>
+                    <![CDATA[select e from sampler$Task e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
-        <tree height="200px"
+        <tree id="tree"
+              captionProperty="name"
+              dataContainer="tasksDc"
+              height="200px"
+              hierarchyProperty="parentTask"
               width="300px">
-            <treechildren captionProperty="name"
-                          datasource="tasksDs"/>
         </tree>
     </layout>
 </window>

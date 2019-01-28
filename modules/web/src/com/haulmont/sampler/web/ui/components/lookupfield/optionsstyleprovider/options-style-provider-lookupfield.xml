@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.lookupfield.optionsstyleprovider.OptionsStyleProviderLookupFieldFrame">
-    <dsContext>
-        <datasource id="customerDs"
-                    allowCommit="false"
-                    class="com.haulmont.sampler.entity.Customer"
-                    view="_local"/>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="_local"/>
+    </data>
     <layout>
         <lookupField id="lookupField"
-                     datasource="customerDs"
+                     dataContainer="customerDc"
                      property="grade"/>
     </layout>
 </window>

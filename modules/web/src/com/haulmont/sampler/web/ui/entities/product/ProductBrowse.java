@@ -1,6 +1,11 @@
 package com.haulmont.sampler.web.ui.entities.product;
 
-import com.haulmont.cuba.gui.components.AbstractLookup;
+import com.haulmont.cuba.gui.screen.*;
+import com.haulmont.sampler.entity.Product;
 
-public class ProductBrowse extends AbstractLookup {
+@UiController("sampler$Product.browse")
+@UiDescriptor("product-browse.xml")
+@LookupComponent("productsTable")
+@LoadDataBeforeShow
+public class ProductBrowse extends StandardLookup<Product> {
 }

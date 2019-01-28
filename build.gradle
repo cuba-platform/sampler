@@ -1,39 +1,29 @@
 
 buildscript {
-    ext.cubaVersion = '6.9.0'
+    ext.cubaVersion = '7.0.0'
     repositories {
         maven {
-            url 'https://repo.cuba-platform.com/content/groups/work'
+            url "https://repo.cuba-platform.com/content/groups/work"
             credentials {
                 username('cuba')
                 password('cuba123')
             }
         }
-        maven {
-            url 'https://repo.cuba-platform.com/content/groups/premium'
-            credentials {
-                username(rootProject.hasProperty('premiumRepoUser') ? rootProject['premiumRepoUser'] : System.getenv('CUBA_PREMIUM_USER'))
-                password(rootProject.hasProperty('premiumRepoPass') ? rootProject['premiumRepoPass'] : System.getenv('CUBA_PREMIUM_PASSWORD'))
-            }
-        }
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
-        classpath "com.haulmont.cuba:cuba-global:$cubaVersion"
-        classpath "com.haulmont.charts:charts-global:$cubaVersion"
     }
 }
 
-def globalModule = project(':sampler-global')
-def coreModule = project(':sampler-core')
-def guiModule = project(':sampler-gui')
-def webModule = project(':sampler-web')
-def webThemesModule= project(':sampler-web-themes')
+def modulePrefix = 'sampler'
+
+def globalModule = project(":${modulePrefix}-global" )
+def coreModule = project(":${modulePrefix}-core" )
+def webModule = project(":${modulePrefix}-web" )
 
 def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
 
-apply(plugin: 'idea')
 apply(plugin: 'cuba')
 
 cuba {
@@ -48,12 +38,17 @@ cuba {
     
 }
 
+dependencies {
+    appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
+    appComponent("com.haulmont.charts:charts-global:$cubaVersion")
+
+}
+
 def hsql = 'org.hsqldb:hsqldb:2.2.9'
 
-configure([globalModule, coreModule, guiModule, webModule]) {
+configure([globalModule, coreModule, webModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
-    apply(plugin: 'idea')
     apply(plugin: 'cuba')
 
     dependencies {
@@ -71,7 +66,9 @@ configure([globalModule, coreModule, guiModule, webModule]) {
 }
 
 configure(globalModule) {
-    task enhance(type: CubaEnhancing)
+    entitiesEnhancing {
+        main { enabled = true }
+    }
 
     jar {
         from sourceSets.main.allJava
@@ -87,7 +84,7 @@ configure(coreModule) {
 
     dependencies {
         compile(globalModule)
-        provided(servletApi)
+        compileOnly(servletApi)
         jdbc(hsql)
         testRuntime(hsql)
 
@@ -95,7 +92,7 @@ configure(coreModule) {
 
     task cleanConf(description: 'Cleans up conf directory') {
         doLast {
-            def dir = new File(cuba.tomcat.dir, '/conf/sampler-core')
+            def dir = new File(cuba.tomcat.dir, "/conf/${modulePrefix}-core" )
             if (dir.isDirectory()) {
                 ant.delete(includeemptydirs: true) {
                     fileset(dir: dir, includes: '**/*', excludes: 'local.app.properties')
@@ -105,8 +102,8 @@ configure(coreModule) {
     }
 
     task deploy(dependsOn: [assemble, cleanConf], type: CubaDeployment) {
-        appName = 'sampler-core'
-        appJars('sampler-global', 'sampler-core')
+        appName = "${modulePrefix}-core"
+        appJars(modulePrefix + '-global', modulePrefix + '-core')
     }
 
     task startDb(type: CubaHsqlStart) {
@@ -134,21 +131,6 @@ configure(coreModule) {
     }
 }
 
-configure(guiModule) {
-    dependencies {
-        compile(globalModule)
-    }
-
-    task deployConf(type: Copy) {
-        from file('src')
-        include "com/haulmont/sampler/**"
-        into "$cuba.tomcat.dir/conf/sampler"
-    }
-
-    jar {
-        from sourceSets.main.allJava
-    }
-}
 
 configure(webModule) {
     configurations {
@@ -156,8 +138,8 @@ configure(webModule) {
     }
 
     dependencies {
-        provided(servletApi)
-        compile(guiModule)
+        compileOnly(servletApi)
+        compile(globalModule)
 
     }
     
@@ -174,17 +156,17 @@ configure(webModule) {
     task deployConf(type: Copy) {
         from file('src')
         include "com/haulmont/sampler/**"
-        into "$cuba.tomcat.dir/conf/sampler"
+        into "$cuba.tomcat.dir/conf/${modulePrefix}"
     }
 
     task clearMessagesCache(type: CubaClearMessagesCache) {
-        appName = 'sampler'
+        appName = "${modulePrefix}"
     }
     deployConf.dependsOn clearMessagesCache
 
     task cleanConf(description: 'Cleans up conf directory') {
         doLast {
-            def dir = new File(cuba.tomcat.dir, '/conf/sampler')
+            def dir = new File(cuba.tomcat.dir, "/conf/${modulePrefix}" )
             if (dir.isDirectory()) {
                 ant.delete(includeemptydirs: true) {
                     fileset(dir: dir, includes: '**/*', excludes: 'local.app.properties')
@@ -210,8 +192,8 @@ configure(webModule) {
     }
 
     task deploy(dependsOn: [assemble, cleanConf, copyLogo, copyImages], type: CubaDeployment) {
-        appName = 'sampler'
-        appJars('sampler-global', 'sampler-gui', 'sampler-web')
+        appName = "${modulePrefix}"
+        appJars(modulePrefix + '-global', modulePrefix + '-web')
     }
     task buildScssThemes(type: CubaWebScssThemeCreation)
     task deployThemes(type: CubaDeployThemeTask, dependsOn: buildScssThemes)
@@ -224,34 +206,14 @@ configure(webModule) {
     }
 }
 
-configure(webThemesModule) {
-    apply(plugin: 'java')
-    apply(plugin: 'maven')
-    apply(plugin: 'cuba')
 
-    appModuleType = 'web-themes'
-
-    buildDir = file('../build/scss-themes')
-
-    sourceSets {
-        main {
-            java {
-                srcDir '.'
-            }
-            resources {
-                srcDir '.'
-            }
-        }
-    }
-}
-
-task undeploy(type: Delete, dependsOn: ':sampler-web:cleanConf') {
+task undeploy(type: Delete, dependsOn: ":${modulePrefix}-web:cleanConf" ) {
     delete("$cuba.tomcat.dir/shared")
-    delete("$cuba.tomcat.dir/webapps/sampler-core")
-    delete("$cuba.tomcat.dir/webapps/sampler")
+    delete("$cuba.tomcat.dir/webapps/${modulePrefix}-core" )
+    delete("$cuba.tomcat.dir/webapps/${modulePrefix}" )
 }
 
-task restart(dependsOn: ['stop', ':sampler-core:deploy', ':sampler-web:deploy'],
+task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy" , ":${modulePrefix}-web:deploy" ],
         description: 'Redeploys applications and restarts local Tomcat') {
     doLast {
         ant.waitfor(maxwait: 6, maxwaitunit: 'second', checkevery: 2, checkeveryunit: 'second') {
@@ -263,6 +225,3 @@ task restart(dependsOn: ['stop', ':sampler-core:deploy', ':sampler-web:deploy'],
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.3.1'
-}

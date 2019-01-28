@@ -1,11 +1,11 @@
 <p><code>ButtonsPanel</code> - контейнер, унифицирующий использование и размещение компонентов (чаще всего кнопок) для
     управления данными в таблице.</p>
 
-<p>Элемент <code>buttonsPanel</code> можно разместить как внутри <code>table</code>, так и в произвольном месте экрана.
+<p>Элемент <code>buttonsPanel</code> можно разместить как внутри таких компонентов как <code>table</code>,
+    <code>dataGrid</code> и <code>tree</code>, так и в произвольном месте экрана.
 </p>
 
-<p>Если <code>buttonsPanel</code> находится внутри <code>table</code>, то она комбинируется с компонентом <a
-        href="https://doc.cuba-platform.com/manual-6.9-ru/gui_Table.html#gui_Table_rowsCount"
-        target="_blank">rowsCount</a> таблицы, тем самым оптимально расходуя место по вертикали. Кроме того, в этом
-    случае при открытии экрана выбора методом<code>Frame.openLookup()</code> (например, из компонента <a
-            href="open?screen=simple-pickerfield">PickerField</a>) панель кнопок скрывается.</p>
+<p>Если <code>buttonsPanel</code> находится внутри <code>table</code>, то она комбинируется с компонентом
+    <a href="https://doc.cuba-platform.com/manual-7.0-ru/gui_Table.html#gui_Table_rowsCount" target="_blank">rowsCount</a>
+    таблицы, тем самым оптимально расходуя место по вертикали. Кроме того, если экран открыт как lookup (например, из
+    компонента <a href="open?screen=simple-pickerfield">PickerField</a>) панель кнопок скрывается.</p>

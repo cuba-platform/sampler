@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="taskSpansDs"
-                              class="com.haulmont.sampler.entity.TaskSpan"
-                              view="taskSpan-with-segments">
-            <query>
-                <![CDATA[select e from sampler$TaskSpan e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="taskSpansDc"
+                    class="com.haulmont.sampler.entity.TaskSpan"
+                    view="taskSpan-with-segments">
+            <loader id="taskSpansLoader">
+                <query>
+                    <![CDATA[select e from sampler$TaskSpan e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <chart:ganttChart id="ganttChart"
                           additionalSegmentFields="task"
@@ -19,7 +19,7 @@
                           categoryField="category"
                           colorField="color"
                           columnWidth="0.5"
-                          datasource="taskSpansDs"
+                          dataContainer="taskSpansDc"
                           durationField="duration"
                           height="100%"
                           marginRight="70"

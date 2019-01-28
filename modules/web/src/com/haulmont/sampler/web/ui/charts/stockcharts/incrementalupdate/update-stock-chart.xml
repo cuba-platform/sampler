@@ -1,29 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.stockcharts.incrementalupdate.UpdateStockChartFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="stockChartDs1"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-        <collectionDatasource id="stockChartDs2"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-        <collectionDatasource id="stockChartDs3"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-        <collectionDatasource id="stockChartDs4"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-    </dsContext>
+    <data>
+        <collection id="stockChartDc1"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+        <collection id="stockChartDc2"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+        <collection id="stockChartDc3"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+        <collection id="stockChartDc4"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+    </data>
     <layout expand="stockChart" spacing="true">
         <hbox spacing="true">
-            <button caption="Start" icon="font-awesome-icon:PLAY" invoke="startTimer"/>
-            <button caption="Stop" icon="font-awesome-icon:STOP" invoke="stopTimer"/>
+            <button id="startTimer" caption="Start" icon="font-awesome-icon:PLAY"/>
+            <button id="stopTimer" caption="Stop" icon="font-awesome-icon:STOP"/>
             <label id="statusLabel" align="MIDDLE_LEFT" value="Update enabled"/>
         </hbox>
         <chart:stockChart id="stockChart"
@@ -33,7 +27,7 @@
             <chart:dataSets>
                 <chart:dataSet id="dataSet1"
                                categoryField="date"
-                               datasource="stockChartDs1"
+                               dataContainer="stockChartDc1"
                                title="First data set">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="value"
@@ -44,7 +38,7 @@
                 </chart:dataSet>
                 <chart:dataSet id="dataSet2"
                                categoryField="date"
-                               datasource="stockChartDs2"
+                               dataContainer="stockChartDc2"
                                title="Second data set">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="value"
@@ -55,7 +49,7 @@
                 </chart:dataSet>
                 <chart:dataSet id="dataSet3"
                                categoryField="date"
-                               datasource="stockChartDs3"
+                               dataContainer="stockChartDc3"
                                title="Third data set">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="value"
@@ -66,7 +60,7 @@
                 </chart:dataSet>
                 <chart:dataSet id="dataSet4"
                                categoryField="date"
-                               datasource="stockChartDs4"
+                               dataContainer="stockChartDc4"
                                title="Fourth data set">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="value"

@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        messagesPack="com.haulmont.sampler.web.ui.components.icons.simple"
-        class="com.haulmont.sampler.web.ui.components.icons.simple.SimpleIconsFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        messagesPack="com.haulmont.sampler.web.ui.components.icons.simple">
     <layout>
         <hbox spacing="true">
             <groupBox id="groupDeclarative"

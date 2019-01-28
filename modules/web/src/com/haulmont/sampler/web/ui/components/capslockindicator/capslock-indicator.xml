@@ -1,0 +1,27 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        messagesPack="com.haulmont.sampler.web.ui.components.capslockindicator">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="msg://caption.groupSimple">
+                <capsLockIndicator id="capsLock1"
+                                   align="MIDDLE_CENTER"/>
+                <passwordField capsLockIndicator="capsLock1"
+                               align="MIDDLE_CENTER"/>
+            </groupBox>
+            <groupBox caption="msg://caption.groupWithOff">
+                <capsLockIndicator id="capsLock2"
+                                   align="MIDDLE_CENTER"
+                                   capsLockOffMessage="msg://capsLock.off"/>
+                <passwordField capsLockIndicator="capsLock2"
+                               align="MIDDLE_CENTER"/>
+            </groupBox>
+            <groupBox caption="msg://caption.groupWithout"
+                      orientation="horizontal"
+                      spacing="true">
+                <passwordField capsLockIndicator="capsLock3"/>
+                <capsLockIndicator id="capsLock3"
+                                   capsLockOnMessage=""/>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

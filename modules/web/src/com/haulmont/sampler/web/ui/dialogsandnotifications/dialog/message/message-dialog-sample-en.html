@@ -1,28 +1,3 @@
-<p>You can display a message by calling the <code>showMessageDialog()</code> method of the <code>Frame</code>
-    interface. This interface is implemented by screen controllers, so the method can be used directly in the
-    controller code.</p>
-
-<p>The method has the following parameters:</p>
-<ul>
-    <li>
-        <p><code>title</code> - dialog title.</p>
-    </li>
-    <li>
-        <p><code>message</code> - message.
-            <br>For HTML type (see below), you can use HTML tags for formatting the message.
-            When using HTML, make sure you escape data loaded from the database to avoid code injection in web client.
-            <br>You can use <code>\n</code> characters for line breaks in non-HTML messages.</p>
-    </li>
-    <li>
-        <p><code>messageType</code> - message type. Possible types:</p>
-        <ul>
-            <li>
-                <p><code>CONFIRMATION</code>, <code>CONFIRMATION_HTML</code> - confirmation dialog.</p>
-            </li>
-            <li>
-                <p><code>WARNING</code>, <code>WARNING_HTML</code> - warning dialog.</p>
-            </li>
-        </ul>
-        <p>The difference between CONFIRMATION and WARNING types is reflected in desktop client only.</p>
-    </li>
-</ul>
+<p>The <code>Dialogs</code> interface is designed to display standard dialogs windows. Its
+    <code>createMessageDialog()</code> method is the entry points to the fluent API that allows you to construct and
+    show message dialogs.</p>

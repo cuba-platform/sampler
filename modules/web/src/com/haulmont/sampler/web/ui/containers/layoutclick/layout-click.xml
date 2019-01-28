@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.containers.layoutclick.LayoutClickFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
-        <vbox id="boxLayout"
+        <vbox id="layout"
               height="300px"
               stylename="card"
               width="100%">

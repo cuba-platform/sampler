@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox spacing="true">
-            <textArea caption="Both"
-                      resizableDirection="BOTH"/>
-            <textArea caption="Vertical"
-                      resizableDirection="VERTICAL"/>
-            <textArea caption="Horizontal"
-                      resizableDirection="HORIZONTAL"/>
+            <resizableTextArea caption="Both"
+                               resizableDirection="BOTH"/>
+            <resizableTextArea caption="Vertical"
+                               resizableDirection="VERTICAL"/>
+            <resizableTextArea caption="Horizontal"
+                               resizableDirection="HORIZONTAL"/>
         </hbox>
     </layout>
 </window>

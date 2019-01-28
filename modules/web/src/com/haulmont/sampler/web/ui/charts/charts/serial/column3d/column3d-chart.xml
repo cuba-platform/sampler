@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="countryGrowthDs"
-                              class="com.haulmont.sampler.entity.CountryGrowth"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$CountryGrowth e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="countryGrowthDc"
+                    class="com.haulmont.sampler.entity.CountryGrowth"
+                    view="_local">
+            <loader id="countryGrowthLoader">
+                <query>
+                    <![CDATA[select e from sampler$CountryGrowth e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <chart:serialChart id="column3d"
                            angle="30"
                            categoryField="country"
-                           datasource="countryGrowthDs"
+                           dataContainer="countryGrowthDc"
                            depth3D="60"
                            height="100%"
                            plotAreaFillAlphas="0.1"

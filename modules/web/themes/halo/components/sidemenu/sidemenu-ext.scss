@@ -6,6 +6,8 @@
 
     .#{$primary-stylename}-item {
         padding: 0 30px 0 0;
+        text-shadow: 0 -2px 0 rgba(255,255,255,0.05);
+        font-size: $v-font-size;
     }
 
     .#{$primary-stylename}-item-caption {
@@ -32,7 +34,7 @@
         margin-left: 5px;
     }
 
-    .#{$primary-stylename}-submenu .#{$primary-stylename}-item-header{
+    .#{$primary-stylename}-submenu .#{$primary-stylename}-item-header {
         margin-left: 0;
     }
 
@@ -44,7 +46,7 @@
         max-width: initial;
     }
 
-   .#{$primary-stylename}-submenu.c-sidemenu-submenu-open{
+   .#{$primary-stylename}-submenu.c-sidemenu-submenu-open {
         margin-left: 15px;
     }
 
@@ -85,7 +87,7 @@
         transition: all 100ms;
     }
 
-    .found-item{
+    .found-item {
         font-weight: bold;
     }
 }

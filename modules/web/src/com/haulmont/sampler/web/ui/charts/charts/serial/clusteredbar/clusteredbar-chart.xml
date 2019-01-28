@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.charts.serial.clusteredbar.ClusteredBarChartFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="stackedAreaChartDs"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-    </dsContext>
+    <data>
+        <collection id="stackedAreaChartDc"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+    </data>
     <layout>
         <chart:serialChart id="stackedArea"
                            categoryField="date"
-                           datasource="stackedAreaChartDs"
+                           dataContainer="stackedAreaChartDc"
                            height="100%"
                            marginLeft="0"
                            marginTop="10"

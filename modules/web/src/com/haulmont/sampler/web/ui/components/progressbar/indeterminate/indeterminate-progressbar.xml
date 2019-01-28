@@ -1,5 +1,4 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout spacing="true">
         <progressBar indeterminate="true" width="200px"/>
         <progressBar indeterminate="true" stylename="indeterminate-circle"/>

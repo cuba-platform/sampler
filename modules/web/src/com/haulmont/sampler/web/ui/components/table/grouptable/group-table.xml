@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame">
-    <dsContext>
-        <groupDatasource id="customersDs"
-                         class="com.haulmont.sampler.entity.Customer"
-                         view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </groupDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
-        <groupTable height="100%"
+        <groupTable id="customerTable"
+                    dataContainer="customersDc"
+                    height="100%"
                     width="100%">
             <columns>
                 <group>
@@ -22,7 +24,6 @@
                 <column id="age"/>
                 <column id="active"/>
             </columns>
-            <rows datasource="customersDs"/>
         </groupTable>
     </layout>
 </window>

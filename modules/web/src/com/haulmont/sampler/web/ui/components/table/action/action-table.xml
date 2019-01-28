@@ -1,24 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.table.action.ActionTableFrame">
-    <dsContext>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <table id="customerTable"
+               dataContainer="customersDc"
                height="100%"
                width="100%">
             <actions>
-                <action id="create"/>
-                <action id="edit"/>
-                <action id="remove"/>
-                <action id="excel"/>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="excel" type="excel"/>
                 <action id="greeting"
                         caption="Greeting"
                         invoke="greet"/>
@@ -30,7 +31,6 @@
                 <column id="active"/>
                 <column id="grade"/>
             </columns>
-            <rows datasource="customersDs"/>
             <buttonsPanel>
                 <button action="customerTable.create"/>
                 <button action="customerTable.edit"/>

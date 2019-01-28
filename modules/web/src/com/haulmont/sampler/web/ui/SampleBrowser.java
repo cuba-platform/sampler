@@ -4,75 +4,91 @@ import com.haulmont.cuba.core.global.GlobalConfig;
 import com.haulmont.cuba.core.global.MessageTools;
 import com.haulmont.cuba.core.global.Messages;
 import com.haulmont.cuba.core.global.UserSessionSource;
+import com.haulmont.cuba.gui.Fragments;
+import com.haulmont.cuba.gui.UiComponents;
 import com.haulmont.cuba.gui.components.*;
-import com.haulmont.cuba.gui.xml.layout.ComponentsFactory;
+import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.cuba.web.controllers.ControllerUtils;
 import com.haulmont.cuba.web.gui.components.WebComponentsHelper;
-import com.haulmont.cuba.web.toolkit.ui.CubaSourceCodeEditor;
+import com.haulmont.cuba.web.widgets.CubaSourceCodeEditor;
+import com.haulmont.cuba.web.widgets.addons.aceeditor.AceMode;
 import com.haulmont.sampler.web.util.SamplesHelper;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang.BooleanUtils;
-import org.apache.commons.lang.StringUtils;
-import org.vaadin.aceeditor.AceMode;
+import org.apache.commons.lang3.BooleanUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.inject.Inject;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class SampleBrowser extends AbstractWindow {
+@UiController("sample-browser")
+@UiDescriptor("sample-browser.xml")
+public class SampleBrowser extends Screen {
 
     private static final String DESCRIPTION_BOX_STYLE = "description-box";
     private static final String DOC_URL_MESSAGES_KEY = "docUrl";
     private static final int SPLIT_POSITION_SPACING = 30;
 
     @Inject
-    private Label spacer;
-
+    private Label<String> spacer;
     @Inject
     private TabSheet tabSheet;
 
     @Inject
-    private ComponentsFactory componentsFactory;
-
+    private UiComponents uiComponents;
     @Inject
     private SamplesHelper samplesHelper;
-
     @Inject
     private Messages messages;
-
+    @Inject
+    private MessageBundle messageBundle;
     @Inject
     private MessageTools messageTools;
-
     @Inject
     private GlobalConfig globalConfig;
-
     @Inject
     private UserSessionSource userSessionSource;
+    @Inject
+    private Fragments fragments;
 
     @SuppressWarnings("unchecked")
-    @Override
-    public void init(Map<String, Object> params) {
+    @Subscribe
+    protected void onInit(InitEvent event) {
+        MapScreenOptions options = (MapScreenOptions) event.getOptions();
+        Map<String, Object> params = options.getParams();
+
         String id = (String) params.get("windowId");
         Map<String, Object> screenParams = (Map<String, Object>) params.get("screenParams");
-        Frame frame = openFrame(null, id, screenParams);
-        frame.setId("sampleFrame");
+
+        ScreenFragment screenFragment = fragments
+                .create(this, id, new MapScreenOptions(screenParams))
+                .init();
+        Fragment fragment = screenFragment.getFragment();
+
+        LoadDataBeforeShow annotation = screenFragment.getClass().getAnnotation(LoadDataBeforeShow.class);
+        if (annotation != null && annotation.value()) {
+            UiControllerUtils.getScreenData(fragment.getFrameOwner())
+                    .loadAll();
+        }
+
+        fragment.setId("sampleFrame");
 
         String sampleHeight = (String) params.get("sampleHeight");
         String splitEnabled = (String) params.get("splitEnabled");
         if (BooleanUtils.toBoolean(splitEnabled)) {
 
-            remove(spacer);
-            remove(tabSheet);
+            getWindow().remove(spacer);
+            getWindow().remove(tabSheet);
 
-            SplitPanel split = componentsFactory.createComponent(SplitPanel.class);
+            SplitPanel split = uiComponents.create(SplitPanel.class);
             split.setSettingsEnabled(false);
             split.setOrientation(SplitPanel.ORIENTATION_VERTICAL);
             split.setWidth("100%");
             split.setHeight("100%");
 
-            Container vBox = createContainer(false, false, true, false);
-            vBox.add(frame);
+            ComponentContainer vBox = createContainer(false, false, true, false);
+            vBox.add(fragment);
 
             split.add(vBox);
             split.add(tabSheet);
@@ -80,30 +96,30 @@ public class SampleBrowser extends AbstractWindow {
             if (StringUtils.isNotEmpty(sampleHeight)) {
                 if (sampleHeight.contains("px")) {
                     String height = sampleHeight.replace("px", "");
-                    split.setSplitPosition(Integer.valueOf(height) + SPLIT_POSITION_SPACING, UNITS_PIXELS);
+                    split.setSplitPosition(Integer.valueOf(height) + SPLIT_POSITION_SPACING, SizeUnit.PIXELS);
                 } else {
-                    frame.setHeight("100%");
+                    fragment.setHeight("100%");
                     split.setSplitPosition(Integer.valueOf(sampleHeight));
                 }
             } else {
-                frame.setHeight("100%");
+                fragment.setHeight("100%");
             }
 
-            add(split);
+            getWindow().add(split);
         } else {
-            add(frame, 0);
+            getWindow().add(fragment, 0);
         }
 
 
         String caption = (String) params.get("caption");
         if (StringUtils.isEmpty(caption))
             caption = id;
-        setCaption(caption);
+        getWindow().setCaption(caption);
 
         String descriptionsPack = (String) params.get("descriptionsPack");
         if (StringUtils.isNotEmpty(descriptionsPack)) {
             String docUrlSuffix = (String) params.get("docUrlSuffix");
-            addTab(messages.getMessage(getClass(), "sampleBrowser.description"),
+            addTab(messageBundle.getMessage("sampleBrowser.description"),
                     createDescription(descriptionsPack, docUrlSuffix, id));
         }
 
@@ -126,12 +142,13 @@ public class SampleBrowser extends AbstractWindow {
         }
     }
 
-    private Container createContainer() {
+    private ComponentContainer createContainer() {
         return createContainer(true, true, true, true);
     }
 
-    private Container createContainer(boolean topEnable, boolean rightEnable, boolean bottomEnable, boolean leftEnable) {
-        VBoxLayout vBox = componentsFactory.createComponent(VBoxLayout.class);
+    private ComponentContainer createContainer(boolean topEnable, boolean rightEnable,
+                                               boolean bottomEnable, boolean leftEnable) {
+        VBoxLayout vBox = uiComponents.create(VBoxLayout.class);
         vBox.setMargin(topEnable, rightEnable, bottomEnable, leftEnable);
         vBox.setHeight("100%");
 
@@ -139,7 +156,7 @@ public class SampleBrowser extends AbstractWindow {
     }
 
     private Component createDescription(String descriptionsPack, String docUrlSuffix, String frameId) {
-        ScrollBoxLayout scrollBoxLayout = componentsFactory.createComponent(ScrollBoxLayout.class);
+        ScrollBoxLayout scrollBoxLayout = uiComponents.create(ScrollBoxLayout.class);
         scrollBoxLayout.addStyleName(DESCRIPTION_BOX_STYLE);
         scrollBoxLayout.setWidth("100%");
         scrollBoxLayout.setHeight("100%");
@@ -147,7 +164,7 @@ public class SampleBrowser extends AbstractWindow {
 
         scrollBoxLayout.add(descriptionText(frameId, descriptionsPack));
 
-        HBoxLayout hbox = componentsFactory.createComponent(HBoxLayout.class);
+        HBoxLayout hbox = uiComponents.create(HBoxLayout.class);
         hbox.setWidth("100%");
 
         if (StringUtils.isNotEmpty(docUrlSuffix)) {
@@ -169,7 +186,7 @@ public class SampleBrowser extends AbstractWindow {
             sb.append(text);
             sb.append("<hr>");
         }
-        Label doc = componentsFactory.createComponent(Label.class);
+        Label<String> doc = uiComponents.create(Label.TYPE_STRING);
         doc.setHtmlEnabled(true);
         doc.setWidth("100%");
         doc.setValue(sb.toString());
@@ -177,7 +194,7 @@ public class SampleBrowser extends AbstractWindow {
     }
 
     private Component documentLinks(String descriptionsPack, String docUrlSuffix) {
-        Link docLink = componentsFactory.createComponent(Link.class);
+        Link docLink = uiComponents.create(Link.class);
         Locale locale = userSessionSource.getLocale();
         String url = String.format(messages.getMessage(descriptionsPack, DOC_URL_MESSAGES_KEY, locale), docUrlSuffix);
         docLink.setUrl(url);
@@ -187,13 +204,13 @@ public class SampleBrowser extends AbstractWindow {
     }
 
     private Component permalink(String frameId) {
-        PopupView permalink = componentsFactory.createComponent(PopupView.class);
-        permalink.setAlignment(Alignment.TOP_RIGHT);
+        PopupView permalink = uiComponents.create(PopupView.class);
+        permalink.setAlignment(Component.Alignment.TOP_RIGHT);
         permalink.setHideOnMouseOut(false);
-        permalink.setDescription(getMessage("sampleBrowser.permalink.description"));
+        permalink.setDescription(messages.getMessage(this.getClass(), "sampleBrowser.permalink.description"));
         permalink.setStyleName("external-link");
 
-        TextField content = componentsFactory.createComponent(TextField.class);
+        TextField<String> content = uiComponents.create(TextField.TYPE_STRING);
         String value = ControllerUtils.getLocationWithoutParams() + "open?screen=" + frameId;
         content.setValue(value);
         content.setWidth((value.length() * 8) + "px");
@@ -203,7 +220,7 @@ public class SampleBrowser extends AbstractWindow {
 
         permalink.addPopupVisibilityListener(event -> {
             if (event.isPopupVisible()) {
-                content.requestFocus();
+                content.focus();
             }
         });
 
@@ -221,7 +238,7 @@ public class SampleBrowser extends AbstractWindow {
     }
 
     private SourceCodeEditor createSourceCodeEditor(AceMode mode) {
-        SourceCodeEditor editor = componentsFactory.createComponent(SourceCodeEditor.class);
+        SourceCodeEditor editor = uiComponents.create(SourceCodeEditor.class);
         editor.setStyleName("sample-browser");
         editor.setShowPrintMargin(false);
         CubaSourceCodeEditor codeEditor = (CubaSourceCodeEditor) WebComponentsHelper.unwrap(editor);
@@ -253,7 +270,7 @@ public class SampleBrowser extends AbstractWindow {
     }
 
     private void addTab(String name, Component component) {
-        Container container = createContainer();
+        ComponentContainer container = createContainer();
         container.add(component);
         tabSheet.addTab(name, container);
         TabSheet.Tab tab = tabSheet.getTab(name);

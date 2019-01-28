@@ -1,13 +1,12 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.dialogsandnotifications.dialog.option.OptionDialogSampleFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox spacing="true">
-            <button caption="OK &amp; Cancel"
-                    invoke="okAndCancel"/>
-            <button caption="All DialogActions"
-                    invoke="allActions"/>
-            <button caption="Custom Action"
-                    invoke="customAction"/>
+            <button id="okAndCancel"
+                    caption="OK &amp; Cancel"/>
+            <button id="allActions"
+                    caption="All DialogActions"/>
+            <button id="customAction"
+                    caption="Custom Action"/>
         </hbox>
     </layout>
 </window>

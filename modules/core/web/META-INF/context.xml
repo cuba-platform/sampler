@@ -4,9 +4,9 @@
     <Resource
       name="jdbc/CubaDS"
       type="javax.sql.DataSource"
-      maxActive="20"
+      maxTotal="20"
       maxIdle="2"
-      maxWait="5000"
+      maxWaitMillis="5000"
       driverClassName="org.hsqldb.jdbc.JDBCDriver"
       url="jdbc:hsqldb:hsql://localhost/sampler"
       username="sa"

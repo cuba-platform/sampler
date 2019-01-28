@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="pointPairDs"
-                              class="com.haulmont.sampler.entity.PointPair"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$PointPair e order by e.ax]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="pointPairDc"
+                    class="com.haulmont.sampler.entity.PointPair"
+                    view="_local">
+            <loader id="pointPair">
+                <query>
+                    <![CDATA[select e from sampler$PointPair e order by e.ax]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <chart:xyChart id="xyChart"
                        autoMarginOffset="20"
-                       datasource="pointPairDs"
+                       dataContainer="pointPairDc"
                        height="100%"
                        marginBottom="60"
                        marginLeft="64"

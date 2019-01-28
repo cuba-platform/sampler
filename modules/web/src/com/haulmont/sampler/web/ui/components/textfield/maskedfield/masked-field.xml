@@ -1,23 +1,22 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.textfield.maskedfield.MaskedFieldFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout spacing="true">
         <hbox spacing="true">
             <maskedField id="phoneFieldMasked"
                          caption="valueMode='masked'"
                          mask="(###) ###-##-##"
                          valueMode="masked"/>
-            <button align="BOTTOM_LEFT"
-                    caption="Show value"
-                    invoke="showMasked"/>
+            <button id="showMasked"
+                    align="BOTTOM_LEFT"
+                    caption="Show value"/>
         </hbox>
         <hbox spacing="true">
             <maskedField id="phoneFieldClear"
                          caption="valueMode='clear'"
                          mask="(###) ###-##-##"
                          valueMode="clear"/>
-            <button align="BOTTOM_LEFT"
-                    caption="Show value"
-                    invoke="showClear"/>
+            <button id="showClear"
+                    align="BOTTOM_LEFT"
+                    caption="Show value"/>
         </hbox>
     </layout>
 </window>

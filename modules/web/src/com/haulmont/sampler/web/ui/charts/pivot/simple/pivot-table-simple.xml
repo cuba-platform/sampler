@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="tipsDs"
-                              class="com.haulmont.sampler.entity.TipInfo"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$TipInfo e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="tipsDc"
+                    class="com.haulmont.sampler.entity.TipInfo"
+                    view="_local">
+            <loader id="tipsLoader">
+                <query>
+                    <![CDATA[select e from sampler$TipInfo e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
-        <chart:pivotTable datasource="tipsDs">
+        <chart:pivotTable id="pivotTable"
+                          dataContainer="tipsDc">
             <chart:properties>
                 <chart:property name="totalBill"/>
                 <chart:property name="tip"/>

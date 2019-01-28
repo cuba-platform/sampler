@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.image.click.ClickImageFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox spacing="true">
             <groupBox caption="Image single click handler"
@@ -13,6 +11,7 @@
             </groupBox>
             <label id="infoLabel"
                    htmlEnabled="true"
+                   value="&lt;strong&gt;Click info:&lt;/strong&gt;"
                    width="120px"/>
             <groupBox caption="Image double click handler"
                       height="250px"
@@ -26,7 +25,8 @@
                 </image>
             </groupBox>
             <label id="doubleInfoLabel"
-                   htmlEnabled="true"/>
+                   htmlEnabled="true"
+                   value="&lt;strong&gt;Click info:&lt;/strong&gt;"/>
         </hbox>
     </layout>
 </window>

@@ -7,37 +7,38 @@
             <item id="simple-button" docUrlSuffix="gui_Button" sampleHeight="30px"
                   image="images/dashboard/components/simple-button.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/button/simple"
-                  controller="com/haulmont/sampler/web/ui/components/button/simple/SimpleButtonFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/button/simple/SimpleButtonSample.java"/>
             <item id="localized-button" docUrlSuffix="gui_Button" sampleHeight="30px"
                   image="images/dashboard/components/localized-button.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/button/localized"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/button/localized"
+                  controller="com/haulmont/sampler/web/ui/components/button/localized/LocalizedButtonSample.java"/>
             <item id="action-button" docUrlSuffix="gui_Button" sampleHeight="30px"
                   image="images/dashboard/components/action-button.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/button/action"
-                  controller="com/haulmont/sampler/web/ui/components/button/action/ActionButtonFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/button/action/ActionButtonSample.java"/>
             <item id="programmatic-action-button" docUrlSuffix="gui_Button" sampleHeight="30px"
                   image="images/dashboard/components/action-button.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/button/programmaticaction"
-                  controller="com/haulmont/sampler/web/ui/components/button/programmaticaction/ProgrammaticActionButtonFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/button/programmaticaction/ProgrammaticActionButtonSample.java"/>
             <item id="link-button" docUrlSuffix="gui_LinkButton" sampleHeight="80px"
                   image="images/dashboard/components/link-button.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/button/linkbutton"
-                  controller="com/haulmont/sampler/web/ui/components/button/linkbutton/LinkButtonFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/button/linkbutton/LinkButtonSample.java"/>
             <item id="simple-popupbutton" docUrlSuffix="gui_PopupButton" sampleHeight="30px"
                   image="images/dashboard/components/simple-popupbutton.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton/simple"
-                  controller="com/haulmont/sampler/web/ui/components/popupbutton/simple/SimplePopupButtonFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/popupbutton/simple/SimplePopupButtonSample.java"/>
             <item id="customlayout-popupbutton" docUrlSuffix="gui_PopupButton"
                   image="images/dashboard/components/customlayout-popupbutton.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/popupbutton/customlayout"
-                  controller="com/haulmont/sampler/web/ui/components/popupbutton/customlayout/CustomLayoutPopupButtonFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/popupbutton/customlayout/CustomLayoutPopupButtonSample.java"/>
         </menu>
 
         <menu id="browserFrame">
             <item id="classpath-browserframe" docUrlSuffix="gui_BrowserFrame" sampleHeight="250px"
                   image="images/dashboard/components/classpath-browserframe.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/browserframe/classpath"
-                  controller="com/haulmont/sampler/web/ui/components/browserframe/classpath/ClasspathBrowserFrameFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/browserframe/classpath/ClasspathBrowserFrameSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/browserframe/classpath/cart-info.html"/>
                 </otherFiles>
@@ -45,20 +46,21 @@
             <item id="relative-browserframe" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
                   image="images/dashboard/components/relative-browserframe.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/browserframe/relative"
-                  controller="com/haulmont/sampler/web/ui/components/browserframe/relative/RelativeBrowserFrameFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/browserframe/relative/RelativeBrowserFrameSample.java"/>
             <item id="theme-browserframe" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
                   image="images/dashboard/components/relative-browserframe.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/browserframe/theme"
-                  controller="com/haulmont/sampler/web/ui/components/browserframe/theme/ThemeBrowserFrameFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/browserframe/theme/ThemeBrowserFrameSample.java"/>
             <item id="url-browserframe" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
                   image="images/dashboard/components/url-browserframe.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/browserframe/url"
-                  controller="com/haulmont/sampler/web/ui/components/browserframe/url/UrlBrowserFrameFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/browserframe/url/UrlBrowserFrameSample.java"/>
         </menu>
 
         <item id="bulk-editor" docUrlSuffix="gui_BulkEditor" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/components/bulk-editor.png"
-              descriptionsPack="com/haulmont/sampler/web/ui/components/bulkeditor">
+              descriptionsPack="com/haulmont/sampler/web/ui/components/bulkeditor"
+              controller="com/haulmont/sampler/web/ui/components/bulkeditor/BulkEditorSample.java">
             <otherFiles>
                 <file name="com/haulmont/sampler/entity/Customer.java"/>
             </otherFiles>
@@ -68,7 +70,7 @@
             <item id="month-calendar" docUrlSuffix="gui_Calendar" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/components/calendar.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/calendar/month"
-                  controller="com/haulmont/sampler/web/ui/components/calendar/month/MonthCalendarFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/calendar/month/MonthCalendarSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/CalendarEvent.java"/>
                     <file name="com/haulmont/sampler/web/ui/components/calendar/month/event-window.xml"/>
@@ -79,7 +81,7 @@
             <item id="week-calendar" docUrlSuffix="gui_Calendar" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/components/week-calendar.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/calendar/week"
-                  controller="com/haulmont/sampler/web/ui/components/calendar/week/WeekCalendarFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/calendar/week/WeekCalendarSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/CalendarEvent.java"/>
                     <file name="com/haulmont/sampler/web/ui/components/calendar/month/style.scss"/>
@@ -87,7 +89,8 @@
             </item>
             <item id="day-calendar" docUrlSuffix="gui_Calendar" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/components/day-calendar.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/calendar/day">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/calendar/day"
+                  controller="com/haulmont/sampler/web/ui/components/calendar/day/DayCalendarSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/CalendarEvent.java"/>
                     <file name="com/haulmont/sampler/web/ui/components/calendar/month/style.scss"/>
@@ -95,44 +98,20 @@
             </item>
         </menu>
 
-        <item id="capslockindicator" docUrlSuffix="gui_CapsLockIndicator"
+        <item id="capslock-indicator" docUrlSuffix="gui_CapsLockIndicator"
               image="images/dashboard/components/capslockindicator.png"
-              descriptionsPack="com/haulmont/sampler/web/ui/components/capslockindicator"/>
+              descriptionsPack="com/haulmont/sampler/web/ui/components/capslockindicator"
+              controller="com/haulmont/sampler/web/ui/components/capslockindicator/CapslockIndicatorSample.java"/>
 
         <menu id="checkBox">
             <item id="simple-checkbox" docUrlSuffix="gui_CheckBox" sampleHeight="15px"
                   image="images/dashboard/components/simple-checkbox.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/checkbox/simple"
-                  controller="com/haulmont/sampler/web/ui/components/checkbox/simple/SimpleCheckboxFrame.java"/>
-            <item id="datasource-checkbox" docUrlSuffix="gui_CheckBox" sampleHeight="45px"
-                  image="images/dashboard/components/datasource-checkbox.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/checkbox/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/checkbox/datasource/DatasourceCheckboxFrame.java">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
-                </otherFiles>
-            </item>
-        </menu>
-
-        <menu id="contextHelp">
-            <item id="contexthelp-field" docUrlSuffix="gui_attributes"
-                  image="images/dashboard/components/contexthelp-field.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/field"/>
-            <item id="contexthelp-field-click" docUrlSuffix="gui_attributes"
-                  image="images/dashboard/components/contexthelp-field-click.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldclick"
-                  controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldclick/ContextHelpFieldClickFrame.java"/>
-            <item id="contexthelp-fieldgroup" docUrlSuffix="gui_attributes"
-                  image="images/dashboard/components/contexthelp-fieldgroup.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroup">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
-                </otherFiles>
-            </item>
-            <item id="contexthelp-fieldgroup-click" docUrlSuffix="gui_attributes"
-                  image="images/dashboard/components/contexthelp-fieldgroup-click.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick"
-                  controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick/ContextHelpFieldGroupClickFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/checkbox/simple/SimpleCheckboxSample.java"/>
+            <item id="dataaware-checkbox" docUrlSuffix="gui_CheckBox" sampleHeight="45px"
+                  image="images/dashboard/components/dataaware-checkbox.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/checkbox/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/checkbox/dataaware/DataawareCheckboxSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -143,31 +122,61 @@
             <item id="simple-colorpicker" docUrlSuffix="gui_ColorPicker"
                   image="images/dashboard/components/simple-colorpicker.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/simple"
-                  controller="com/haulmont/sampler/web/ui/components/colorpicker/simple/SimpleColorPickerFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/colorpicker/simple/SimpleColorPickerSample.java"/>
             <item id="default-caption-colorpicker" docUrlSuffix="gui_ColorPicker"
                   image="images/dashboard/components/default-caption-colorpicker.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/defaultcaption"/>
-            <item id="datasource-colorpicker" docUrlSuffix="gui_ColorPicker"
-                  image="images/dashboard/components/datasource-colorpicker.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/colorpicker/datasource/DatasourceColorPickerFrame.java">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/defaultcaption"
+                  controller="com/haulmont/sampler/web/ui/components/colorpicker/defaultcaption/DefaultCaptionColorPickerSample.java"/>
+            <item id="dataaware-colorpicker" docUrlSuffix="gui_ColorPicker"
+                  image="images/dashboard/components/dataaware-colorpicker.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/colorpicker/dataaware/DataawareColorPickerSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Color.java"/>
                 </otherFiles>
             </item>
             <item id="tabs-colorpicker" docUrlSuffix="gui_ColorPicker"
                   image="images/dashboard/components/tabs-colorpicker.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/tabs"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/tabs"
+                  controller="com/haulmont/sampler/web/ui/components/colorpicker/tabs/TabsColorPickerSample.java"/>
             <item id="captions-colorpicker" docUrlSuffix="gui_ColorPicker"
                   image="images/dashboard/components/captions-colorpicker.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/captions"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/colorpicker/captions"
+                  controller="com/haulmont/sampler/web/ui/components/colorpicker/captions/CaptionsColorPickerSample.java"/>
+        </menu>
+
+        <menu id="contextHelp">
+            <item id="contexthelp-field" docUrlSuffix="gui_attributes"
+                  image="images/dashboard/components/contexthelp-field.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/field"
+                  controller="com/haulmont/sampler/web/ui/components/contexthelp/field/ContextHelpFieldSample.java"/>
+            <item id="contexthelp-field-click" docUrlSuffix="gui_attributes"
+                  image="images/dashboard/components/contexthelp-field-click.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldclick"
+                  controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldclick/ContextHelpFieldClickSample.java"/>
+            <item id="contexthelp-fieldgroup" docUrlSuffix="gui_attributes"
+                  image="images/dashboard/components/contexthelp-fieldgroup.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroup"
+                  controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroup/ContextHelpFieldGroupSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="contexthelp-fieldgroup-click" docUrlSuffix="gui_attributes"
+                  image="images/dashboard/components/contexthelp-fieldgroup-click.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick"
+                  controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick/ContextHelpFieldGroupClickSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
         </menu>
 
         <menu id="currencyField">
             <item id="simple-currencyfield" docUrlSuffix="gui_CurrencyField" sampleHeight="110px"
                   image="images/dashboard/components/simple-currencyfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/currencyfield/simple"
-                  controller="com/haulmont/sampler/web/ui/components/currencyfield/simple/SimpleCurrencyFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/currencyfield/simple/SimpleCurrencyFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/currencyfield/simple/Product.java"/>
                 </otherFiles>
@@ -175,7 +184,7 @@
             <item id="annotation-currencyfield" docUrlSuffix="gui_CurrencyField" sampleHeight="110px"
                   image="images/dashboard/components/annotation-currencyfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/currencyfield/annotation"
-                  controller="com/haulmont/sampler/web/ui/components/currencyfield/annotation/AnnotationCurrencyFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/currencyfield/annotation/AnnotationCurrencyFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Product.java"/>
                 </otherFiles>
@@ -186,7 +195,7 @@
             <item id="datagrid-basic-settings" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-basic-settings.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/basic"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/basic/DataGridBasicSettingsFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/basic/DataGridBasicSettingsSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -195,7 +204,7 @@
             <item id="datagrid-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-actions.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/actions"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/actions/DataGridActionsFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/actions/DataGridActionsSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -203,7 +212,7 @@
             <item id="datagrid-selection-mode" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-selection-mode.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/selectionmode"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/selectionmode/DataGridSelectionModeFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/selectionmode/DataGridSelectionModeSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -211,14 +220,15 @@
             <item id="datagrid-frozen-columns" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-frozen-columns.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/frozen"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/frozen/DataGridFrozenColumnsFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/frozen/DataGridFrozenColumnsSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
             <item id="datagrid-noheader" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-noheader.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/noheader">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/noheader"
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/noheader/DataGridNoHeaderSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -226,7 +236,7 @@
             <item id="datagrid-style" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-style.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/style"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/style/DataGridStyleFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/style/DataGridStyleSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/datagrid/style/style.scss"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -235,7 +245,7 @@
             <item id="datagrid-large-dataset" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-large-dataset.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/large"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/large/DataGridLargeDataSetFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/large/DataGridLargeDataSetSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -243,15 +253,15 @@
             <item id="datagrid-itemclick" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-itemclick.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/itemclick"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/itemclick/DataGridItemClickFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/itemclick/DataGridItemClickSample.java">
                 <otherFiles>
-
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
             <item id="datagrid-generated-column" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-generated-column.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/generate"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/generate/DataGridGeneratedColumnFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/generate/DataGridGeneratedColumnSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -259,7 +269,7 @@
             <item id="datagrid-formatter" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-formatter.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/formatter"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/formatter/DataGridFormatterFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/formatter/DataGridFormatterSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -267,7 +277,7 @@
             <item id="datagrid-converter" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-converter.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/converter"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/converter/DataGridConverterFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/converter/DataGridConverterSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -275,7 +285,7 @@
             <item id="datagrid-renderer" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-renderer.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/renderer"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/renderer/DataGridRendererFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/renderer/DataGridRendererSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -283,7 +293,7 @@
             <item id="datagrid-description-provider" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-description-provider.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/description"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/description/DataGridDescriptionProviderFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/description/DataGridDescriptionProviderSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -291,15 +301,16 @@
             <item id="datagrid-header-footer" docUrlSuffix="gui_DataGrid" splitEnabled="true" sampleHeight="42"
                   image="images/dashboard/components/datagrid-header-footer.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/headerfooter"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/headerfooter/DataGridHeaderFooterFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/headerfooter/DataGridHeaderFooterSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/CountryGrowth.java"/>
                     <file name="com/haulmont/sampler/web/ui/components/datagrid/headerfooter/style.scss"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-valueds" docUrlSuffix="value_datasources" splitEnabled="true"
-                  image="images/dashboard/components/datagrid-valueds.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/valueds">
+            <item id="datagrid-keyvalue" docUrlSuffix="gui_keyvalue_containers" splitEnabled="true"
+                  image="images/dashboard/components/datagrid-keyvalue.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/keyvalue"
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/keyvalue/DataGridKeyValueSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -308,7 +319,7 @@
             <item id="datagrid-editor" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-editor.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/editor"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/editor/DataGridEditorFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/editor/DataGridEditorSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -316,11 +327,11 @@
             <item id="datagrid-editor-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-editor-actions.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/editoractions"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/editoractions/DataGridEditorActionsFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/editoractions/DataGridEditorActionsSample.java"/>
             <item id="datagrid-editor-events" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-editor-events.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/editorevents"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/editorevents/DataGridEditorEventsFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/editorevents/DataGridEditorEventsSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -328,7 +339,7 @@
             <item id="datagrid-detailsgenerator" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="images/dashboard/components/datagrid-detailsgenerator.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/detailsgenerator"
-                  controller="com/haulmont/sampler/web/ui/components/datagrid/detailsgenerator/DataGridDetailsGeneratorFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/detailsgenerator/DataGridDetailsGeneratorSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -343,59 +354,64 @@
             <item id="simple-datefield" docUrlSuffix="gui_DateField" sampleHeight="90px"
                   image="images/dashboard/components/simple-datefield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/simple"
-                  controller="com/haulmont/sampler/web/ui/components/datefield/simple/SimpleDateFieldFrame.java"/>
-            <item id="datasource-datefield" docUrlSuffix="gui_DateField" sampleHeight="60px"
-                  image="images/dashboard/components/datasource-datefield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/datefield/datasource/DatasourceDateFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datefield/simple/SimpleDateFieldSample.java"/>
+            <item id="dataaware-datefield" docUrlSuffix="gui_DateField" sampleHeight="60px"
+                  image="images/dashboard/components/dataaware-datefield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/datefield/dataaware/DataawareDateFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
             <item id="format-datefield" docUrlSuffix="gui_DateField" sampleHeight="50px"
                   image="images/dashboard/components/format-datefield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/format"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/format"
+                  controller="com/haulmont/sampler/web/ui/components/datefield/format/FormatDateFieldSample.java"/>
             <item id="resolution-datefield" docUrlSuffix="gui_DateField" sampleHeight="110px"
                   image="images/dashboard/components/resolution-datefield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/resolution"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/resolution"
+                  controller="com/haulmont/sampler/web/ui/components/datefield/resolution/ResolutionDateFieldSample.java"/>
         </menu>
 
         <menu id="datePicker">
             <item id="simple-datepicker" docUrlSuffix="gui_DatePicker"
                   image="images/dashboard/components/simple-datepicker.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datepicker/simple"
-                  controller="com/haulmont/sampler/web/ui/components/datepicker/simple/SimpleDatePickerFrame.java"/>
-            <item id="datasource-datepicker" docUrlSuffix="gui_DatePicker"
-                  image="images/dashboard/components/datasource-datepicker.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datepicker/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/datepicker/datasource/DatasourceDatePickerFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/datepicker/simple/SimpleDatePickerSample.java"/>
+            <item id="dataaware-datepicker" docUrlSuffix="gui_DatePicker"
+                  image="images/dashboard/components/dataaware-datepicker.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datepicker/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/datepicker/dataaware/DataawareDatePickerSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
             <item id="range-datepicker" docUrlSuffix="gui_DatePicker"
                   image="images/dashboard/components/range-datepicker.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datepicker/range"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datepicker/range"
+                  controller="com/haulmont/sampler/web/ui/components/datepicker/range/RangeDatePickerSample.java"/>
             <item id="resolution-datepicker" docUrlSuffix="gui_DatePicker"
                   image="images/dashboard/components/resolution-datepicker.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/datepicker/resolution"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datepicker/resolution"
+                  controller="com/haulmont/sampler/web/ui/components/datepicker/resolution/ResolutionDatePickerSample.java"/>
         </menu>
 
         <menu id="embedded">
             <item id="image-embedded" docUrlSuffix="gui_Embedded" sampleHeight="250px"
                   image="images/dashboard/components/image-embedded.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/embedded/image"
-                  controller="com/haulmont/sampler/web/ui/components/embedded/image/ImageEmbeddedFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/embedded/image/ImageEmbeddedSample.java"/>
             <item id="web-embedded" docUrlSuffix="gui_Embedded" splitEnabled="true" sampleHeight="70"
                   image="images/dashboard/components/web-embedded.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/embedded/web"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/embedded/web"
+                  controller="com/haulmont/sampler/web/ui/components/embedded/web/WebEmbeddedSample.java"/>
         </menu>
 
         <menu id="fieldGroup">
             <item id="simple-fieldgroup" docUrlSuffix="gui_FieldGroup" sampleHeight="150px"
                   image="images/dashboard/components/simple-fieldgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/fieldgroup/simple"
-                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/simple/SimpleFieldGroupFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/simple/SimpleFieldGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -404,7 +420,7 @@
             <item id="column-fieldgroup" docUrlSuffix="gui_FieldGroup" sampleHeight="110px"
                   image="images/dashboard/components/column-fieldgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/fieldgroup/column"
-                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/column/ColumnFieldGroupFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/column/ColumnFieldGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -412,7 +428,7 @@
             <item id="generate-fieldgroup" docUrlSuffix="gui_FieldGroup" sampleHeight="110px"
                   image="images/dashboard/components/generate-fieldgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/fieldgroup/generate"
-                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/generate/GenerateFieldGroupFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/generate/GenerateFieldGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -420,7 +436,7 @@
             <item id="customize-fieldgroup" docUrlSuffix="gui_FieldGroup" sampleHeight="110px"
                   image="images/dashboard/components/customize-fieldgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/fieldgroup/customize"
-                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/customize/CustomizeFieldGroupFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/fieldgroup/customize/CustomizeFieldGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -437,28 +453,32 @@
         <menu id="filter">
             <item id="multiple-filter" docUrlSuffix="gui_Filter" splitEnabled="true" sampleHeight="50"
                   image="images/dashboard/components/multiple-filter.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/multiple">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/multiple"
+                  controller="com/haulmont/sampler/web/ui/components/filter/multiple/MultipleFilterSample.java">
                 <screenParams>
                     <param name="filter" value="Multiple Conditions"/>
                 </screenParams>
             </item>
             <item id="group-filter" docUrlSuffix="gui_Filter" splitEnabled="true" sampleHeight="50"
                   image="images/dashboard/components/group-filter.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/group">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/group"
+                  controller="com/haulmont/sampler/web/ui/components/filter/group/GroupFilterSample.java">
                 <screenParams>
                     <param name="filter" value="Group Conditions"/>
                 </screenParams>
             </item>
             <item id="related-filter" docUrlSuffix="gui_Filter" splitEnabled="true" sampleHeight="50"
                   image="images/dashboard/components/related-filter.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/related">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/related"
+                  controller="com/haulmont/sampler/web/ui/components/filter/related/RelatedFilterSample.java">
                 <screenParams>
                     <param name="filter" value="Related Entity"/>
                 </screenParams>
             </item>
             <item id="custom-filter" docUrlSuffix="gui_Filter" splitEnabled="true" sampleHeight="50"
                   image="images/dashboard/components/custom-filter.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/custom">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/filter/custom"
+                  controller="com/haulmont/sampler/web/ui/components/filter/custom/CustomFilterSample.java">
                 <screenParams>
                     <param name="filter" value="Custom Condition"/>
                 </screenParams>
@@ -469,39 +489,39 @@
             <item id="all-icons" docUrlSuffix="gui_icons" splitEnabled="true" sampleHeight="400px"
                   image="images/dashboard/components/all-icons.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/icons/all"
-                  controller="com/haulmont/sampler/web/ui/components/icons/all/AllIconsFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/icons/all/AllIconsSample.java">
             </item>
             <item id="simple-icons" docUrlSuffix="gui_icons"
                   image="images/dashboard/components/simple-icons.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/icons/simple"
-                  controller="com/haulmont/sampler/web/ui/components/icons/simple/SimpleIconsFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/icons/simple/SimpleIconsSample.java"/>
         </menu>
 
         <menu id="image">
             <item id="url-image" sampleHeight="80px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/url-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/url"
-                  controller="com/haulmont/sampler/web/ui/components/image/url/UrlImageFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/image/url/UrlImageSample.java"/>
             <item id="relativepath-image" sampleHeight="80px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/relativepath-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/relativepath"
-                  controller="com/haulmont/sampler/web/ui/components/image/relativepath/RelativePathImageFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/image/relativepath/RelativePathImageSample.java"/>
             <item id="theme-image" sampleHeight="80px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/relativepath-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/theme"
-                  controller="com/haulmont/sampler/web/ui/components/image/theme/ThemeImageFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/image/theme/ThemeImageSample.java"/>
             <item id="classpath-image" sampleHeight="80px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/relativepath-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/classpath"
-                  controller="com/haulmont/sampler/web/ui/components/image/classpath/ClassPathImageFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/image/classpath/ClassPathImageSample.java"/>
             <item id="stream-image" sampleHeight="80px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/stream-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/stream"
-                  controller="com/haulmont/sampler/web/ui/components/image/stream/StreamImageFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/image/stream/StreamImageSample.java"/>
             <item id="filedescriptor-image" splitEnabled="true" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/filedescriptor-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/filedescriptor"
-                  controller="com/haulmont/sampler/web/ui/components/image/filedescriptor/FileDescriptorImageFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/image/filedescriptor/FileDescriptorImageSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -509,21 +529,22 @@
             <item id="scale-image" sampleHeight="320px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/scale-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/scale"
-                  controller="com/haulmont/sampler/web/ui/components/image/scale/ScaleImageFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/image/scale/ScaleImageSample.java"/>
             <item id="click-image" sampleHeight="320px" docUrlSuffix="gui_Image"
                   image="images/dashboard/components/click-image.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/image/click"
-                  controller="com/haulmont/sampler/web/ui/components/image/click/ClickImageFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/image/click/ClickImageSample.java"/>
         </menu>
 
         <menu id="label">
             <item id="simple-label" docUrlSuffix="gui_Label" sampleHeight="80px"
                   image="images/dashboard/components/simple-label.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/label/simple"/>
-            <item id="datasource-label" docUrlSuffix="gui_Label" sampleHeight="360px"
-                  image="images/dashboard/components/datasource-label.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/label/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/label/datasource/DatasourceLabelFrame.java">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/label/simple"
+                  controller="com/haulmont/sampler/web/ui/components/label/simple/SimpleLabelSample.java"/>
+            <item id="dataaware-label" docUrlSuffix="gui_Label" sampleHeight="360px"
+                  image="images/dashboard/components/dataaware-label.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/label/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/label/dataaware/DataawareLabelSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -531,22 +552,23 @@
             <item id="html-label" docUrlSuffix="gui_Label" sampleHeight="120px"
                   image="images/dashboard/components/html-label.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/label/html"
-                  controller="com/haulmont/sampler/web/ui/components/label/html/HtmlLabelFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/label/html/HtmlLabelSample.java"/>
             <item id="formatter-label" docUrlSuffix="gui_Label" sampleHeight="120px"
                   image="images/dashboard/components/formatter-label.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/label/formatter"
-                  controller="com/haulmont/sampler/web/ui/components/label/formatter/FormatterLabelFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/label/formatter/FormatterLabelSample.java"/>
         </menu>
 
         <item id="simple-link" docUrlSuffix="gui_Link" sampleHeight="75px"
               image="images/dashboard/components/simple-link.png"
-              descriptionsPack="com/haulmont/sampler/web/ui/components/link"/>
+              descriptionsPack="com/haulmont/sampler/web/ui/components/link"
+              controller="com/haulmont/sampler/web/ui/components/link/SimpleLinkSample.java"/>
 
         <menu id="lookupField">
             <item id="simple-lookupfield" docUrlSuffix="gui_LookupField" sampleHeight="30px"
                   image="images/dashboard/components/simple-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/simple"
-                  controller="com/haulmont/sampler/web/ui/components/lookupfield/simple/SimpleLookupFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/simple/SimpleLookupFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                     <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
@@ -555,7 +577,7 @@
             <item id="related-entity-lookupfield" docUrlSuffix="gui_LookupField" sampleHeight="30px"
                   image="images/dashboard/components/related-entity-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/relatedentity"
-                  controller="com/haulmont/sampler/web/ui/components/lookupfield/relatedentity/RelatedEntityLookupFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/relatedentity/RelatedEntityLookupFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -564,7 +586,7 @@
             <item id="custom-options-lookupfield" docUrlSuffix="gui_LookupField" sampleHeight="50px"
                   image="images/dashboard/components/custom-options-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/customoptions"
-                  controller="com/haulmont/sampler/web/ui/components/lookupfield/customoptions/CustomOptionsLookupFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/customoptions/CustomOptionsLookupFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -574,19 +596,19 @@
             <item id="filter-mode-lookupfield" docUrlSuffix="gui_LookupField" sampleHeight="50px"
                   image="images/dashboard/components/filter-mode-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/filtermode"
-                  controller="com/haulmont/sampler/web/ui/components/lookupfield/filtermode/FilterModeLookupFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/filtermode/FilterModeLookupFieldSample.java"/>
             <item id="user-input-lookupfield" docUrlSuffix="gui_LookupField" sampleHeight="30px"
                   image="images/dashboard/components/user-input-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/userinput"
-                  controller="com/haulmont/sampler/web/ui/components/lookupfield/userinput/UserInputLookupFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/userinput/UserInputLookupFieldSample.java"/>
             <item id="icon-provider-lookupfield" docUrlSuffix="gui_LookupField" sampleHeight="50px"
                   image="images/dashboard/components/icon-provider-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/iconprovider"
-                  controller="com/haulmont/sampler/web/ui/components/lookupfield/iconprovider/IconProviderLookupFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/iconprovider/IconProviderLookupFieldSample.java"/>
             <item id="options-style-provider-lookupfield" docUrlSuffix="gui_LookupField"
                   image="images/dashboard/components/options-style-provider-lookupfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider"
-                  controller="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/OptionsStyleProviderLookupFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/lookupfield/optionsstyleprovider/OptionsStyleProviderLookupFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                     <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
@@ -598,7 +620,7 @@
         <item id="simple-lookuppickerfield" docUrlSuffix="gui_LookupPickerField" sampleHeight="30px"
               image="images/dashboard/components/simple-lookuppickerfield.png"
               descriptionsPack="com/haulmont/sampler/web/ui/components/lookuppickerfield"
-              controller="com/haulmont/sampler/web/ui/components/lookuppickerfield/SimpleLookupPickerFieldFrame.java">
+              controller="com/haulmont/sampler/web/ui/components/lookuppickerfield/SimpleLookupPickerFieldSample.java">
             <otherFiles>
                 <file name="com/haulmont/sampler/entity/Order.java"/>
                 <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -609,7 +631,7 @@
             <item id="simple-optionsgroup" docUrlSuffix="gui_OptionsGroup" sampleHeight="150px"
                   image="images/dashboard/components/simple-optionsgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/optionsgroup/simple"
-                  controller="com/haulmont/sampler/web/ui/components/optionsgroup/simple/SimpleOptionsGroupFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/optionsgroup/simple/SimpleOptionsGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -617,14 +639,15 @@
             <item id="custom-options-optionsgroup" docUrlSuffix="gui_OptionsGroup" sampleHeight="115px"
                   image="images/dashboard/components/custom-options-optionsgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/optionsgroup/customoptions"
-                  controller="com/haulmont/sampler/web/ui/components/optionsgroup/customoptions/CustomOptionsGroupFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/optionsgroup/customoptions/CustomOptionsGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="datasource-optionsgroup" docUrlSuffix="gui_OptionsGroup" sampleHeight="185px"
-                  image="images/dashboard/components/datasource-optionsgroup.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/optionsgroup/datasource">
+            <item id="dataaware-optionsgroup" docUrlSuffix="gui_OptionsGroup" sampleHeight="185px"
+                  image="images/dashboard/components/dataaware-optionsgroup.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/optionsgroup/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/optionsgroup/dataaware/DataawareOptionsGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Product.java"/>
                 </otherFiles>
@@ -632,7 +655,7 @@
             <item id="multiselect-optionsgroup" docUrlSuffix="gui_OptionsGroup" sampleHeight="185px"
                   image="images/dashboard/components/multiselect-optionsgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/optionsgroup/multiselect"
-                  controller="com/haulmont/sampler/web/ui/components/optionsgroup/multiselect/MultiSelectOptionsGroupFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/optionsgroup/multiselect/MultiSelectOptionsGroupSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Product.java"/>
                 </otherFiles>
@@ -643,7 +666,7 @@
             <item id="simple-optionslist" docUrlSuffix="gui_OptionsList" sampleHeight="190px"
                   image="images/dashboard/components/simple-optionslist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/optionslist/simple"
-                  controller="com/haulmont/sampler/web/ui/components/optionslist/simple/SimpleOptionsListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/optionslist/simple/SimpleOptionsListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -651,14 +674,15 @@
             <item id="custom-options-optionslist" docUrlSuffix="gui_OptionsList" sampleHeight="115px"
                   image="images/dashboard/components/custom-options-optionslist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/optionslist/customoptions"
-                  controller="com/haulmont/sampler/web/ui/components/optionslist/customoptions/CustomOptionsListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/optionslist/customoptions/CustomOptionsListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="datasource-optionslist" docUrlSuffix="gui_OptionsList" sampleHeight="185px"
-                  image="images/dashboard/components/datasource-optionslist.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/optionslist/datasource">
+            <item id="dataaware-optionslist" docUrlSuffix="gui_OptionsList" sampleHeight="185px"
+                  image="images/dashboard/components/dataaware-optionslist.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/optionslist/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/optionslist/dataaware/DataawareOptionsListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Product.java"/>
                 </otherFiles>
@@ -666,7 +690,7 @@
             <item id="multiselect-optionslist" docUrlSuffix="gui_OptionsList" sampleHeight="185px"
                   image="images/dashboard/components/multiselect-optionslist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/optionslist/multiselect"
-                  controller="com/haulmont/sampler/web/ui/components/optionslist/multiselect/MultiSelectOptionsListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/optionslist/multiselect/MultiSelectOptionsListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Product.java"/>
                 </otherFiles>
@@ -677,7 +701,7 @@
             <item id="simple-pickerfield" docUrlSuffix="gui_PickerField" sampleHeight="50px"
                   image="images/dashboard/components/simple-pickerfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/pickerfield/simple"
-                  controller="com/haulmont/sampler/web/ui/components/pickerfield/simple/SimplePickerFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/pickerfield/simple/SimplePickerFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -686,7 +710,7 @@
             <item id="actions-pickerfield" docUrlSuffix="gui_PickerField" sampleHeight="50px"
                   image="images/dashboard/components/actions-pickerfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/pickerfield/actions"
-                  controller="com/haulmont/sampler/web/ui/components/pickerfield/actions/ActionsPickerFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/pickerfield/actions/ActionsPickerFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -695,7 +719,7 @@
             <item id="metaclass-pickerfield" docUrlSuffix="gui_PickerField" sampleHeight="30px"
                   image="images/dashboard/components/metaclass-pickerfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/pickerfield/metaclass"
-                  controller="com/haulmont/sampler/web/ui/components/pickerfield/metaclass/MetaClassPickerFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/pickerfield/metaclass/MetaClassPickerFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -705,11 +729,12 @@
         <menu id="popupView">
             <item id="closing-popupview" docUrlSuffix="gui_PopupView"
                   image="images/dashboard/components/closing-popupview.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupview/closing"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupview/closing"
+                  controller="com/haulmont/sampler/web/ui/components/popupview/closing/ClosingPopupViewSample.java"/>
             <item id="opening-popupview" docUrlSuffix="gui_PopupView"
                   image="images/dashboard/components/opening-popupview.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/popupview/opening"
-                  controller="com/haulmont/sampler/web/ui/components/popupview/opening/OpeningPopupViewFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/popupview/opening/OpeningPopupViewSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -717,27 +742,30 @@
             <item id="listener-popupview" docUrlSuffix="gui_PopupView"
                   image="images/dashboard/components/listener-popupview.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/popupview/listener"
-                  controller="com/haulmont/sampler/web/ui/components/popupview/listener/ListenerPopupViewFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/popupview/listener/ListenerPopupViewSample.java">
             </item>
             <item id="minimized-value-popupview" docUrlSuffix="gui_PopupView"
                   image="images/dashboard/components/minimized-value-popupview.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupview/minimizedvalue"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/popupview/minimizedvalue"
+                  controller="com/haulmont/sampler/web/ui/components/popupview/minimizedvalue/MinimizedValuePopupViewSample.java"/>
         </menu>
 
         <menu id="progressBar">
-            <item id="normal-progressbar" docUrlSuffix="gui_ProgressBar" sampleHeight="10px"
-                  image="images/dashboard/components/normal-progressbar.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/progressbar/normal"
-                  controller="com/haulmont/sampler/web/ui/components/progressbar/normal/NormalProgressBarFrame.java"/>
+            <item id="standard-progressbar" docUrlSuffix="gui_ProgressBar" sampleHeight="10px"
+                  image="images/dashboard/components/standard-progressbar.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/progressbar/standard"
+                  controller="com/haulmont/sampler/web/ui/components/progressbar/standard/StandardProgressBarSample.java"/>
             <item id="indeterminate-progressbar" docUrlSuffix="gui_ProgressBar" sampleHeight="25px"
                   image="images/dashboard/components/indeterminate-progressbar.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/progressbar/indeterminate"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/progressbar/indeterminate"
+                  controller="com/haulmont/sampler/web/ui/components/progressbar/indeterminate/IndeterminateProgressBarSample.java"/>
         </menu>
 
         <menu id="relatedEntities">
             <item id="simple-relatedentities" docUrlSuffix="gui_RelatedEntities" splitEnabled="true"
                   image="images/dashboard/components/simple-relatedentities.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/relatedentities/simple">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/relatedentities/simple"
+                  controller="com/haulmont/sampler/web/ui/components/relatedentities/simple/SimpleRelatedEntitiesSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -746,7 +774,8 @@
             </item>
             <item id="relatedentities-with-exclude" docUrlSuffix="gui_RelatedEntities" splitEnabled="true"
                   image="images/dashboard/components/simple-relatedentities.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/relatedentities/exclude">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/relatedentities/exclude"
+                  controller="com/haulmont/sampler/web/ui/components/relatedentities/exclude/RelatedEntitiesWithExcludeSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -755,59 +784,30 @@
             </item>
         </menu>
 
-        <menu id="searchPickerField">
-            <item id="simple-searchpickerfield" docUrlSuffix="gui_SearchPickerField" sampleHeight="30px"
-                  image="images/dashboard/components/simple-searchpickerfield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/searchpickerfield/simple"
-                  controller="com/haulmont/sampler/web/ui/components/searchpickerfield/simple/SimpleSearchPickerFieldFrame.java">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Order.java"/>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
-                </otherFiles>
-            </item>
-            <item id="minlength-searchpickerfield" docUrlSuffix="gui_SearchPickerField" sampleHeight="30px"
-                  image="images/dashboard/components/simple-searchpickerfield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/searchpickerfield/minlength"
-                  controller="com/haulmont/sampler/web/ui/components/searchpickerfield/minlength/MinLengthSearchPickerFieldFrame.java">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Order.java"/>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
-                </otherFiles>
-            </item>
-            <item id="notifications-searchpickerfield" docUrlSuffix="gui_SearchPickerField" sampleHeight="30px"
-                  image="images/dashboard/components/notifications-searchpickerfield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/searchpickerfield/notifications"
-                  controller="com/haulmont/sampler/web/ui/components/searchpickerfield/notifications/NotificationsSearchPickerFieldFrame.java">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Order.java"/>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
-                </otherFiles>
-            </item>
-        </menu>
-
         <menu id="codeEditor">
             <item id="simple-codeeditor" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/components/simple-codeeditor.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/codeeditor/simple"
-                  controller="com/haulmont/sampler/web/ui/components/codeeditor/simple/SimpleSourceCodeEditorFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/codeeditor/simple/SimpleSourceCodeEditorSample.java"/>
             <item id="mode-codeeditor" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/components/mode-codeeditor.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/codeeditor/mode"
-                  controller="com/haulmont/sampler/web/ui/components/codeeditor/mode/ModeCodeEditorFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/codeeditor/mode/ModeCodeEditorSample.java"/>
             <item id="tab-codeeditor" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/components/tab-codeeditor.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/codeeditor/tab"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/codeeditor/tab"
+                  controller="com/haulmont/sampler/web/ui/components/codeeditor/tab/TabCodeEditorSample.java"/>
             <item id="suggester-codeeditor" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/components/suggester-codeeditor.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/codeeditor/suggester"
-                  controller="com/haulmont/sampler/web/ui/components/codeeditor/suggester/SuggesterCodeEditorFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/codeeditor/suggester/SuggesterCodeEditorSample.java"/>
         </menu>
 
         <menu id="suggestionField">
-            <item id="datasource-suggestionfield" docUrlSuffix="gui_SuggestionField"
-                  image="images/dashboard/components/datasource-suggestionfield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionfield/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/suggestionfield/datasource/DatasourceSuggestionFieldFrame.java">
+            <item id="dataaware-suggestionfield" docUrlSuffix="gui_SuggestionField"
+                  image="images/dashboard/components/dataaware-suggestionfield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionfield/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/suggestionfield/dataaware/DataawareSuggestionFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -816,11 +816,11 @@
             <item id="optiontype-suggestionfield" docUrlSuffix="gui_SuggestionField"
                   image="images/dashboard/components/optiontype-suggestionfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionfield/optiontype"
-                  controller="com/haulmont/sampler/web/ui/components/suggestionfield/optiontype/OptionTypeSuggestionFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/suggestionfield/optiontype/OptionTypeSuggestionFieldSample.java"/>
             <item id="optionsstyleprovider-suggestionfield" docUrlSuffix="gui_SuggestionField"
                   image="images/dashboard/components/optionsstyleprovider-suggestionfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionfield/optionsstyleprovider"
-                  controller="com/haulmont/sampler/web/ui/components/suggestionfield/optionsstyleprovider/OptionsStyleProviderSuggestionFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/suggestionfield/optionsstyleprovider/OptionsStyleProviderSuggestionFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/suggestionfield/optionsstyleprovider/style.scss"/>
                 </otherFiles>
@@ -828,18 +828,19 @@
         </menu>
 
         <menu id="suggestion-picker-field">
-            <item id="datasource-suggestion-picker-field" docUrlSuffix="gui_SuggestionPickerField" sampleHeight="30"
-                  image="images/dashboard/components/datasource-suggestion-picker-field.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionpickerfield/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/suggestionpickerfield/datasource/DatasourceSuggestionPickerFieldFrame.java">
+            <item id="dataaware-suggestion-picker-field" docUrlSuffix="gui_SuggestionPickerField" sampleHeight="30"
+                  image="images/dashboard/components/dataaware-suggestion-picker-field.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionpickerfield/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/suggestionpickerfield/dataaware/DataawareSuggestionPickerFieldSample.java">
                 <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
             <item id="metaclass-suggestion-picker-field" docUrlSuffix="gui_SuggestionPickerField" sampleHeight="30"
-                  image="images/dashboard/components/datasource-suggestion-picker-field.png"
+                  image="images/dashboard/components/dataaware-suggestion-picker-field.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionpickerfield/metaclass"
-                  controller="com/haulmont/sampler/web/ui/components/suggestionpickerfield/metaclass/MetaClassSuggestionPickerFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/suggestionpickerfield/metaclass/MetaClassSuggestionPickerFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -847,7 +848,7 @@
             <item id="optionsstyleprovider-suggestionpickerfield" docUrlSuffix="gui_SuggestionPickerField"
                   image="images/dashboard/components/optionsstyleprovider-suggestionpickerfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/suggestionpickerfield/optionsstyleprovider"
-                  controller="com/haulmont/sampler/web/ui/components/suggestionpickerfield/optionsstyleprovider/StyleProviderSuggestionPickerFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/suggestionpickerfield/optionsstyleprovider/StyleProviderSuggestionPickerFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/suggestionpickerfield/optionsstyleprovider/style.scss"/>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
@@ -859,21 +860,23 @@
         <menu id="textArea">
             <item id="simple-textarea" docUrlSuffix="gui_TextArea" sampleHeight="125px"
                   image="images/dashboard/components/simple-textarea.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/textarea/simple"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/textarea/simple"
+                  controller="com/haulmont/sampler/web/ui/components/textarea/simple/SimpleTextAreaSample.java"/>
             <item id="resizable-textarea" docUrlSuffix="gui_TextArea" sampleHeight="105px"
                   image="images/dashboard/components/resizable-textarea.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/textarea/resizable"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/textarea/resizable"
+                  controller="com/haulmont/sampler/web/ui/components/textarea/resizable/ResizableTextAreaSample.java"/>
             <item id="simple-richtextarea" docUrlSuffix="gui_RichTextArea" sampleHeight="256px"
                   image="images/dashboard/components/simple-richtextarea.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/richtextarea"
-                  controller="com/haulmont/sampler/web/ui/components/richtextarea/SimpleRichTextAreaFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/richtextarea/SimpleRichTextAreaSample.java"/>
         </menu>
 
         <menu id="table">
             <item id="simple-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/simple-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/simple"
-                  controller="com/haulmont/sampler/web/ui/components/table/simple/SimpleTableFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/table/simple/SimpleTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -881,7 +884,8 @@
             </item>
             <item id="maxlength-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/maxlength-table.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/maxlength">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/maxlength"
+                  controller="com/haulmont/sampler/web/ui/components/table/maxlength/MaxLengthTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -890,14 +894,15 @@
             <item id="action-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/action-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/action"
-                  controller="com/haulmont/sampler/web/ui/components/table/action/ActionTableFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/table/action/ActionTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
             <item id="editable-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/editable-table.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/editable">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/editable"
+                  controller="com/haulmont/sampler/web/ui/components/table/editable/EditableTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -905,7 +910,7 @@
             <item id="formatter-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/formatter-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/formatter"
-                  controller="com/haulmont/sampler/web/ui/components/table/formatter/FormatterTableFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/table/formatter/FormatterTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/table/formatter/LowercaseFormatter.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -914,7 +919,7 @@
             <item id="icon-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/icon-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/icon"
-                  controller="com/haulmont/sampler/web/ui/components/table/icon/IconTableFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/table/icon/IconTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -922,7 +927,7 @@
             <item id="style-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/style-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/style"
-                  controller="com/haulmont/sampler/web/ui/components/table/style/StyleTableFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/table/style/StyleTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/table/style/style.scss"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -931,7 +936,7 @@
             <item id="itemclick-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/itemclick-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/itemclick"
-                  controller="com/haulmont/sampler/web/ui/components/table/itemclick/ItemClickTableFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/table/itemclick/ItemClickTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -939,13 +944,14 @@
             <item id="generate-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/generate-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/generate"
-                  controller="com/haulmont/sampler/web/ui/components/table/generate/GenerateTableFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/table/generate/GenerateTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
             <item id="aggregatable-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/aggregatable-table.png"
+                  controller="com/haulmont/sampler/web/ui/components/table/aggregatable/AggregatableTableSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/aggregatable">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
@@ -953,23 +959,18 @@
                     <file name="com/haulmont/sampler/web/ui/components/table/aggregatable/CustomerGradeAggregation.java"/>
                 </otherFiles>
             </item>
-            <!--<item id="presentations-table" docUrlSuffix="gui_Table"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/presentations">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Order.java"/>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
-                </otherFiles>
-            </item>-->
             <item id="no-header-table" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="images/dashboard/components/no-header-table.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/noheader">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/noheader"
+                  controller="com/haulmont/sampler/web/ui/components/table/noheader/NoHeaderTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-valueds" docUrlSuffix="value_datasources" splitEnabled="true"
-                  image="images/dashboard/components/table-valueds.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/valueds">
+            <item id="table-keyvalue" docUrlSuffix="gui_keyvalue_containers" splitEnabled="true"
+                  image="images/dashboard/components/table-keyvalue.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/keyvalue"
+                  controller="com/haulmont/sampler/web/ui/components/table/keyvalue/KeyValueTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -977,14 +978,16 @@
             </item>
             <item id="group-table" docUrlSuffix="gui_GroupTable" splitEnabled="true"
                   image="images/dashboard/components/group-table.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/grouptable">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/grouptable"
+                  controller="com/haulmont/sampler/web/ui/components/table/grouptable/GroupTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
             <item id="tree-table" docUrlSuffix="gui_TreeTable" splitEnabled="true"
                   image="images/dashboard/components/tree-table.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/treetable">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/treetable"
+                  controller="com/haulmont/sampler/web/ui/components/table/treetable/TreeTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Task.java"/>
                 </otherFiles>
@@ -994,22 +997,24 @@
         <menu id="textField">
             <item id="simple-textfield" docUrlSuffix="gui_TextField" sampleHeight="110px"
                   image="images/dashboard/components/simple-textfield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/simple"/>
-            <item id="datasource-textfield" docUrlSuffix="gui_TextField" sampleHeight="80px"
-                  image="images/dashboard/components/datasource-textfield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/textfield/datasource/DatasourceTextFieldFrame.java">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/simple"
+                  controller="com/haulmont/sampler/web/ui/components/textfield/simple/SimpleTextFieldSample.java"/>
+            <item id="dataaware-textfield" docUrlSuffix="gui_TextField" sampleHeight="80px"
+                  image="images/dashboard/components/dataaware-textfield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/textfield/dataaware/DataawareTextFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
             <item id="datatype-textfield" docUrlSuffix="gui_TextField" sampleHeight="50px"
                   image="images/dashboard/components/datatype-textfield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/datatype"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/datatype"
+                  controller="com/haulmont/sampler/web/ui/components/textfield/datatype/DatatypeTextFieldSample.java"/>
             <item id="validator-textfield" docUrlSuffix="gui_TextField" sampleHeight="30px"
                   image="images/dashboard/components/validator-textfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/validator"
-                  controller="com/haulmont/sampler/web/ui/components/textfield/validator/ValidatorTextFieldFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/textfield/validator/ValidatorTextFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/textfield/validator/PositiveIntegerValidator.java"/>
                 </otherFiles>
@@ -1017,51 +1022,53 @@
             <item id="trim-textfield" docUrlSuffix="gui_TextField" sampleHeight="55px"
                   image="images/dashboard/components/trim-textfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/trim"
-                  controller="com/haulmont/sampler/web/ui/components/textfield/trim/TrimTextFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/textfield/trim/TrimTextFieldSample.java"/>
             <item id="enterpress-textfield" docUrlSuffix="gui_TextField" sampleHeight="55px"
                   image="images/dashboard/components/enterpress-textfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/enterpress"
-                  controller="com/haulmont/sampler/web/ui/components/textfield/enterpress/EnterPressTextFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/textfield/enterpress/EnterPressTextFieldSample.java"/>
             <item id="textchange-textfield" docUrlSuffix="gui_TextField" sampleHeight="55px"
                   image="images/dashboard/components/textchange-textfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/textchange"
-                  controller="com/haulmont/sampler/web/ui/components/textfield/textchange/TextChangeTextFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/textfield/textchange/TextChangeTextFieldSample.java"/>
             <item id="textchangeeventmode-textfield" docUrlSuffix="gui_TextField" sampleHeight="55px"
                   image="images/dashboard/components/textchangeeventmode-textfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/textchangeeventmode"
-                  controller="com/haulmont/sampler/web/ui/components/textfield/textchangeeventmode/TextChangeEventModeTextFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/textfield/textchangeeventmode/TextChangeEventModeTextFieldSample.java"/>
             <item id="simple-passwordfield" docUrlSuffix="gui_PasswordField" sampleHeight="50px"
                   image="images/dashboard/components/simple-passwordfield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/passwordfield"
-                  controller="com/haulmont/sampler/web/ui/components/passwordfield/SimplePasswordFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/passwordfield/SimplePasswordFieldSample.java"/>
             <item id="masked-field" docUrlSuffix="gui_MaskedField" sampleHeight="110px"
                   image="images/dashboard/components/masked-field.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/textfield/maskedfield"
-                  controller="com/haulmont/sampler/web/ui/components/textfield/maskedfield/MaskedFieldFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/components/textfield/maskedfield/MaskedFieldSample.java"/>
         </menu>
 
         <menu id="timeField">
             <item id="simple-timefield" docUrlSuffix="gui_TimeField" sampleHeight="30px"
                   image="images/dashboard/components/simple-timefield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/simple"/>
-            <item id="datasource-timefield" docUrlSuffix="gui_TimeField" sampleHeight="60px"
-                  image="images/dashboard/components/datasource-timefield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/datasource"
-                  controller="com/haulmont/sampler/web/ui/components/timefield/datasource/DatasourceTimeFieldFrame.java">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/simple"
+                  controller="com/haulmont/sampler/web/ui/components/timefield/simple/SimpleTimeFieldSample.java"/>
+            <item id="dataaware-timefield" docUrlSuffix="gui_TimeField" sampleHeight="60px"
+                  image="images/dashboard/components/dataaware-timefield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/timefield/dataaware/DataawareTimeFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
             <item id="format-timefield" docUrlSuffix="gui_TimeField" sampleHeight="50px"
                   image="images/dashboard/components/format-timefield.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/format"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/format"
+                  controller="com/haulmont/sampler/web/ui/components/timefield/format/FormatTimeFieldSample.java"/>
         </menu>
 
         <menu id="tokenList">
             <item id="normal-tokenlist" docUrlSuffix="gui_TokenList" sampleHeight="30px"
                   image="images/dashboard/components/normal-tokenlist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tokenlist/normal"
-                  controller="com/haulmont/sampler/web/ui/components/tokenlist/normal/NormalTokenListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/tokenlist/normal/NormalTokenListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/OrderItem.java"/>
@@ -1071,7 +1078,7 @@
             <item id="simple-mode-tokenlist" docUrlSuffix="gui_TokenList" sampleHeight="30px"
                   image="images/dashboard/components/simple-mode-tokenlist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tokenlist/simplemode"
-                  controller="com/haulmont/sampler/web/ui/components/tokenlist/simplemode/SimpleModeTokenListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/tokenlist/simplemode/SimpleModeTokenListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/gui/entities/orderitem/OrderItemBrowse.java"/>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
@@ -1082,7 +1089,7 @@
             <item id="clear-tokenlist" docUrlSuffix="gui_TokenList" sampleHeight="30px"
                   image="images/dashboard/components/clear-tokenlist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tokenlist/clear"
-                  controller="com/haulmont/sampler/web/ui/components/tokenlist/clear/ClearTokenListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/tokenlist/clear/ClearTokenListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/OrderItem.java"/>
@@ -1092,7 +1099,7 @@
             <item id="position-tokenlist" docUrlSuffix="gui_TokenList" sampleHeight="30px"
                   image="images/dashboard/components/position-tokenlist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tokenlist/position"
-                  controller="com/haulmont/sampler/web/ui/components/tokenlist/position/PositionTokenListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/tokenlist/position/PositionTokenListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/OrderItem.java"/>
@@ -1102,7 +1109,7 @@
             <item id="lookup-tokenlist" docUrlSuffix="gui_TokenList" sampleHeight="30px"
                   image="images/dashboard/components/lookup-tokenlist.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tokenlist/lookup"
-                  controller="com/haulmont/sampler/web/ui/components/tokenlist/lookup/LookupTokenListFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/tokenlist/lookup/LookupTokenListSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/OrderItem.java"/>
@@ -1114,7 +1121,8 @@
         <menu id="tree">
             <item id="simple-tree" docUrlSuffix="gui_Tree" sampleHeight="200px"
                   image="images/dashboard/components/simple-tree.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/tree/simple">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/tree/simple"
+                  controller="com/haulmont/sampler/web/ui/components/tree/simple/SimpleTreeSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Task.java"/>
                 </otherFiles>
@@ -1122,7 +1130,7 @@
             <item id="icon-tree" docUrlSuffix="gui_Tree" sampleHeight="200px"
                   image="images/dashboard/components/icon-tree.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tree/icon"
-                  controller="com/haulmont/sampler/web/ui/components/tree/icon/IconTreeFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/tree/icon/IconTreeSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Task.java"/>
                 </otherFiles>
@@ -1130,7 +1138,7 @@
             <item id="itemclick-tree" docUrlSuffix="gui_Tree" sampleHeight="200px"
                   image="images/dashboard/components/simple-tree.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tree/itemclick"
-                  controller="com/haulmont/sampler/web/ui/components/tree/itemclick/ItemClickTreeFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/tree/itemclick/ItemClickTreeSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Task.java"/>
                 </otherFiles>
@@ -1141,7 +1149,7 @@
             <item id="simple-twincolumn" docUrlSuffix="gui_TwinColumn" sampleHeight="250px"
                   image="images/dashboard/components/simple-twincolumn.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/twincolumn/simple"
-                  controller="com/haulmont/sampler/web/ui/components/twincolumn/simple/SimpleTwinColumnFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/twincolumn/simple/SimpleTwinColumnSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -1149,7 +1157,7 @@
             <item id="style-twincolumn" docUrlSuffix="gui_TwinColumn" sampleHeight="210px"
                   image="images/dashboard/components/style-twincolumn.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/twincolumn/style"
-                  controller="com/haulmont/sampler/web/ui/components/twincolumn/style/StyleTwinColumnFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/twincolumn/style/StyleTwinColumnSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/components/twincolumn/style/style.scss"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -1158,7 +1166,7 @@
             <item id="custom-options-twincolumn" docUrlSuffix="gui_TwinColumn" sampleHeight="270px"
                   image="images/dashboard/components/custom-options-twincolumn.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/twincolumn/customoptions"
-                  controller="com/haulmont/sampler/web/ui/components/twincolumn/customoptions/CustomOptionsTwinColumnFrame.java">
+                  controller="com/haulmont/sampler/web/ui/components/twincolumn/customoptions/CustomOptionsTwinColumnSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
@@ -1171,7 +1179,8 @@
         <menu id="accordion">
             <item id="simple-accordion" docUrlSuffix="gui_Accordion" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/containers/simple-accordion.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/accordion/simple">
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/accordion/simple"
+                  controller="com/haulmont/sampler/web/ui/containers/accordion/simple/SimpleAccordionSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                     <file name="com/haulmont/sampler/entity/DateValue.java"/>
@@ -1180,80 +1189,95 @@
             <item id="lazy-accordion" docUrlSuffix="gui_Accordion" splitEnabled="true" sampleHeight="170px"
                   image="images/dashboard/containers/simple-accordion.svg"
                   descriptionsPack="com/haulmont/sampler/web/ui/containers/accordion/lazy"
-                  controller="com/haulmont/sampler/web/ui/containers/accordion/lazy/LazyAccordionFrame.java"/>
+                  controller="com/haulmont/sampler/web/ui/containers/accordion/lazy/LazyAccordionSample.java"/>
         </menu>
 
         <menu id="boxLayout">
             <item id="hbox-sample" docUrlSuffix="gui_BoxLayout" sampleHeight="30px"
                   image="images/dashboard/containers/hbox-sample.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/boxlayout/hbox"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/boxlayout/hbox"
+                  controller="com/haulmont/sampler/web/ui/containers/boxlayout/hbox/HBoxSample.java"/>
             <item id="vbox-sample" docUrlSuffix="gui_BoxLayout" sampleHeight="140px"
                   image="images/dashboard/containers/vbox-sample.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/boxlayout/vbox"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/boxlayout/vbox"
+                  controller="com/haulmont/sampler/web/ui/containers/boxlayout/vbox/VBoxSample.java"/>
             <item id="flowbox-sample" docUrlSuffix="gui_BoxLayout" sampleHeight="80px"
                   image="images/dashboard/containers/flowbox-sample.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/boxlayout/flowbox"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/boxlayout/flowbox"
+                  controller="com/haulmont/sampler/web/ui/containers/boxlayout/flowbox/FlowBoxSample.java"/>
         </menu>
 
         <menu id="buttonsPanel">
             <item id="table-buttonspanel" docUrlSuffix="gui_ButtonsPanel" splitEnabled="true"
                   image="images/dashboard/containers/table-buttonspanel.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/buttonspanel/table"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/buttonspanel/table"
+                  controller="com/haulmont/sampler/web/ui/containers/buttonspanel/table/TableButtonsPanelSample.java"/>
             <item id="always-visible-buttonspanel" docUrlSuffix="gui_ButtonsPanel" sampleHeight="30px"
                   image="images/dashboard/containers/table-buttonspanel.svg"
-                  controller="com/haulmont/sampler/web/ui/containers/buttonspanel/alwaysvisible/AlwaysVisibleButtonsPanelFrame.java"
+                  controller="com/haulmont/sampler/web/ui/containers/buttonspanel/alwaysvisible/AlwaysVisibleButtonsPanelSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/containers/buttonspanel/alwaysvisible">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/containers/buttonspanel/alwaysvisible/visible-buttonspanel.xml"/>
+                    <file name="com/haulmont/sampler/web/ui/containers/buttonspanel/alwaysvisible/VisibleButtonsPanel.java"/>
                     <file name="com/haulmont/sampler/web/ui/containers/buttonspanel/alwaysvisible/invisible-buttonspanel.xml"/>
+                    <file name="com/haulmont/sampler/web/ui/containers/buttonspanel/alwaysvisible/InvisibleButtonsPanel.java"/>
                 </otherFiles>
             </item>
         </menu>
 
         <item id="responsive-csslayout" docUrlSuffix="gui_CssLayout"
               image="images/dashboard/containers/responsive-csslayout.svg"
-              descriptionsPack="com/haulmont/sampler/web/ui/containers/csslayout/responsive">
+              descriptionsPack="com/haulmont/sampler/web/ui/containers/csslayout/responsive"
+              controller="com/haulmont/sampler/web/ui/containers/csslayout/responsive/ResponsiveCssLayoutSample.java">
             <otherFiles>
                 <file name="com/haulmont/sampler/web/ui/containers/csslayout/responsive/style.scss"/>
             </otherFiles>
         </item>
 
-        <item id="simple-frame" docUrlSuffix="gui_Frame" sampleHeight="150px"
-              image="images/dashboard/containers/simple-frame.svg"
-              descriptionsPack="com/haulmont/sampler/web/ui/containers/frame/simple">
+        <item id="simple-fragment" docUrlSuffix="gui_Frame" sampleHeight="150px"
+              image="images/dashboard/containers/simple-fragment.svg"
+              descriptionsPack="com/haulmont/sampler/web/ui/containers/fragment/simple"
+              controller="com/haulmont/sampler/web/ui/containers/fragment/simple/SimpleFragmentSample.java">
             <otherFiles>
                 <file name="com/haulmont/sampler/web/ui/components/button/simple/simple-button.xml"/>
+                <file name="com/haulmont/sampler/web/ui/components/button/simple/SimpleButtonSample.java"/>
             </otherFiles>
         </item>
 
         <menu id="gridLayout">
             <item id="simple-grid" docUrlSuffix="gui_GridLayout" sampleHeight="70px"
                   image="images/dashboard/containers/simple-grid.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/simple"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/simple"
+                  controller="com/haulmont/sampler/web/ui/containers/gridlayout/simple/SimpleGridSample.java"/>
             <item id="columns-flex-grid" docUrlSuffix="gui_GridLayout" sampleHeight="70px"
                   image="images/dashboard/containers/simple-grid.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/columnsflex"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/columnsflex"
+                  controller="com/haulmont/sampler/web/ui/containers/gridlayout/columnsflex/ColumnsFlexGridSample.java"/>
             <item id="rows-flex-grid" docUrlSuffix="gui_GridLayout" sampleHeight="200px"
                   image="images/dashboard/containers/simple-grid.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/rowsflex"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/rowsflex"
+                  controller="com/haulmont/sampler/web/ui/containers/gridlayout/rowsflex/RowsFlexGridSample.java"/>
             <item id="span-grid" docUrlSuffix="gui_GridLayout" sampleHeight="70px"
                   image="images/dashboard/containers/simple-grid.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/span"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/gridlayout/span"
+                  controller="com/haulmont/sampler/web/ui/containers/gridlayout/span/SpanGridSample.java"/>
         </menu>
 
         <menu id="groupBoxLayout">
             <item id="simple-groupbox" docUrlSuffix="gui_GroupBoxLayout" sampleHeight="250px"
                   image="images/dashboard/containers/simple-groupbox.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/groupboxlayout/simple"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/groupboxlayout/simple"
+                  controller="com/haulmont/sampler/web/ui/containers/groupboxlayout/simple/SimpleGroupBoxSample.java"/>
             <item id="collapsable-groupbox" docUrlSuffix="gui_GroupBoxLayout" sampleHeight="180px"
                   image="images/dashboard/containers/simple-groupbox.svg"
-                  descriptionsPack="com/haulmont/sampler/web/ui/containers/groupboxlayout/collapsable"/>
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/groupboxlayout/collapsable"
+                  controller="com/haulmont/sampler/web/ui/containers/groupboxlayout/collapsable/CollapsableGroupBoxSample.java"/>
         </menu>
 
         <menu id="html-box-menu">
             <item id="html-box" docUrlSuffix="gui_HtmlBoxLayout" splitEnabled="true" sampleHeight="250px"
                   image="images/dashboard/containers/html-box.svg"
-                  controller="com/haulmont/sampler/web/ui/containers/htmlbox/simple/HtmlBoxFrame.java"
+                  controller="com/haulmont/sampler/web/ui/containers/htmlbox/simple/HtmlBoxSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/containers/htmlbox/simple">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/containers/htmlbox/simple/html-layout.html"/>
@@ -1262,7 +1286,7 @@
             </item>
             <item id="html-box-template" docUrlSuffix="gui_HtmlBoxLayout" splitEnabled="true" sampleHeight="300px"
                   image="images/dashboard/containers/html-box.svg"
-                  controller="com/haulmont/sampler/web/ui/containers/htmlbox/template/HtmlBoxTemplateFrame.java"
+                  controller="com/haulmont/sampler/web/ui/containers/htmlbox/template/HtmlBoxTemplateSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/containers/htmlbox/template">
                 <otherFiles>
                     <file name="com/haulmont/sampler/web/ui/containers/htmlbox/simple/html-layout.scss"/>
@@ -1272,30 +1296,33 @@
 
         <item id="simple-scrollbox" docUrlSuffix="gui_ScrollBoxLayout" sampleHeight="150px"
               image="images/dashboard/containers/simple-scrollbox.svg"
-              descriptionsPack="com/haulmont/sampler/web/ui/containers/scrollboxlayout/simple"/>
+              descriptionsPack="com/haulmont/sampler/web/ui/containers/scrollboxlayout/simple"
+              controller="com/haulmont/sampler/web/ui/containers/scrollboxlayout/simple/SimpleScrollBoxSample.java"/>
 
         <item id="simple-split" docUrlSuffix="gui_SplitPanel" sampleHeight="300px"
               image="images/dashboard/containers/simple-split.svg"
-              descriptionsPack="com/haulmont/sampler/web/ui/containers/splitpanel/simple"/>
+              descriptionsPack="com/haulmont/sampler/web/ui/containers/splitpanel/simple"
+              controller="com/haulmont/sampler/web/ui/containers/splitpanel/simple/SimpleSplitSample.java"/>
 
         <menu id="tabSheet">
             <item id="simple-tabsheet" docUrlSuffix="gui_TabSheet" sampleHeight="150px"
                   image="images/dashboard/containers/simple-tabsheet.svg"
+                  controller="com/haulmont/sampler/web/ui/containers/tabsheet/simple/SimpleTabSheetSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/containers/tabsheet/simple"/>
             <item id="lazy-tabsheet" docUrlSuffix="gui_TabSheet" sampleHeight="170px"
                   image="images/dashboard/containers/simple-tabsheet.svg"
-                  controller="com/haulmont/sampler/web/ui/containers/tabsheet/lazy/LazyTabSheetFrame.java"
+                  controller="com/haulmont/sampler/web/ui/containers/tabsheet/lazy/LazyTabSheetSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/containers/tabsheet/lazy"/>
         </menu>
 
         <item id="layout-click" docUrlSuffix="gui_BoxLayout" sampleHeight="300px"
               descriptionsPack="com/haulmont/sampler/web/ui/containers/layoutclick"
-              controller="com/haulmont/sampler/web/ui/containers/layoutclick/LayoutClickFrame.java">
+              controller="com/haulmont/sampler/web/ui/containers/layoutclick/LayoutClickSample.java">
         </item>
 
         <item id="layout-shortcut" docUrlSuffix="gui_BoxLayout" sampleHeight="300px"
               descriptionsPack="com/haulmont/sampler/web/ui/containers/layoutshortcut"
-              controller="com/haulmont/sampler/web/ui/containers/layoutshortcut/LayoutShortcutFrame.java">
+              controller="com/haulmont/sampler/web/ui/containers/layoutshortcut/LayoutShortcutSample.java">
         </item>
     </menu>
 
@@ -1303,15 +1330,15 @@
 
         <menu id="dialogs">
             <item id="message-dialog-sample" docUrlSuffix="dialogs" sampleHeight="30px"
-                  controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/message/MessageDialogSampleFrame.java"
+                  controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/message/MessageDialogSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/message"/>
             <item id="option-dialog-sample" docUrlSuffix="dialogs" sampleHeight="30px"
-                  controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/option/OptionDialogSampleFrame.java"
+                  controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/option/OptionDialogSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/option"/>
         </menu>
 
         <item id="notifications-sample" docUrlSuffix="notifications" sampleHeight="30px"
-              controller="com/haulmont/sampler/web/ui/dialogsandnotifications/notification/NotificationsSampleFrame.java"
+              controller="com/haulmont/sampler/web/ui/dialogsandnotifications/notification/NotificationsSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/notification"/>
 
     </menu>
@@ -1320,27 +1347,31 @@
         <menu id="styles-menu">
             <item id="styles-button"
                   image="images/dashboard/styles/styles-button.png"
+                  controller="com/haulmont/sampler/web/ui/styles/button/StylesButtonSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/button"
                   sampleHeight="40"/>
             <item id="styles-containers"
                   image="images/dashboard/styles/styles-containers.png"
+                  controller="com/haulmont/sampler/web/ui/styles/containers/StylesContainersSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/containers"
                   sampleHeight="50"/>
             <item id="styles-label"
                   image="images/dashboard/styles/styles-label.png"
+                  controller="com/haulmont/sampler/web/ui/styles/label/StylesLabelSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/label"
                   sampleHeight="40"/>
             <item id="styles-misc"
                   image="images/dashboard/styles/styles-misc.png"
-                  controller="com/haulmont/sampler/web/ui/styles/misc/MiscStylesFrame.java"
+                  controller="com/haulmont/sampler/web/ui/styles/misc/StylesMiscSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/misc"
                   sampleHeight="60"/>
             <item id="styles-splitpanel"
                   image="images/dashboard/styles/styles-splitpanel.png"
+                  controller="com/haulmont/sampler/web/ui/styles/splitpanel/StylesSplitPanelSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/splitpanel"
                   sampleHeight="60"/>
             <item id="styles-table"
-                  controller="com/haulmont/sampler/web/ui/styles/table/TableStylesFrame.java"
+                  controller="com/haulmont/sampler/web/ui/styles/table/TableStylesSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/table"
                   sampleHeight="60"
                   splitEnabled="true">
@@ -1350,19 +1381,19 @@
             </item>
             <item id="styles-tabsheet"
                   image="images/dashboard/styles/styles-tabsheet.png"
-                  controller="com/haulmont/sampler/web/ui/styles/tabsheet/TabSheetStylesFrame.java"
+                  controller="com/haulmont/sampler/web/ui/styles/tabsheet/TabSheetStylesSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/tabsheet"
                   sampleHeight="50"/>
         </menu>
         <menu id="input-fields">
             <item id="styles-simple-input-fields"
                   image="images/dashboard/styles/styles-simple-input-fields.png"
-                  controller="/com/haulmont/sampler/web/ui/styles/inputfields/simple/StylesSimpleInputFieldsFrame.java"
+                  controller="/com/haulmont/sampler/web/ui/styles/inputfields/simple/StylesSimpleInputFieldsSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/inputfields/simple"
                   sampleHeight="90"/>
             <item id="styles-input-fields-with-actions"
                   image="images/dashboard/styles/styles-input-fields-with-actions.png"
-                  controller="/com/haulmont/sampler/web/ui/styles/inputfields/withactions/StylesWithActionsInputFieldsFrame.java"
+                  controller="/com/haulmont/sampler/web/ui/styles/inputfields/withactions/StylesWithActionsInputFieldsSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/styles/inputfields/withactions"
                   sampleHeight="90">
                 <otherFiles>
@@ -1378,6 +1409,7 @@
             <menu id="serialChart">
                 <item id="line-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/line-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/line/LineChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/line">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/DateValue.java"/>
@@ -1385,6 +1417,7 @@
                 </item>
                 <item id="colorsupsdowns-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/colorsupsdowns-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/colorsupsdowns/ColorsUpsDownsChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/colorsupsdowns">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/DateValue.java"/>
@@ -1393,6 +1426,7 @@
                 <item id="smoothedline-chart" docUrlSuffix="serial_chart"
                       splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/smoothedline-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/smoothedline/SmootheredLineChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/smoothedline">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/DateValue.java"/>
@@ -1400,6 +1434,7 @@
                 </item>
                 <item id="stackedarea-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/stackedarea-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/stackedarea/StackedAreaChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/stackedarea">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/TransportCount.java"/>
@@ -1407,6 +1442,7 @@
                 </item>
                 <item id="stackedcolumn-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/stackedcolumn-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/stackedcolumn/StackedColumnChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/stackedcolumn">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/TransportCount.java"/>
@@ -1414,14 +1450,15 @@
                 </item>
                 <item id="clusteredbar-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/clusteredbar-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/clusteredbar/ClusteredBarChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/clusteredbar">
                     <otherFiles>
-                        <file name="com/haulmont/sampler/web/ui/charts/charts/serial/clusteredbar/ClusteredBarChartFrame.java"/>
                         <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
                     </otherFiles>
                 </item>
                 <item id="columnline-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/columnline-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/columnline/ColumnLineChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/columnline">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/IncomeExpenses.java"/>
@@ -1429,6 +1466,7 @@
                 </item>
                 <item id="column3d-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/column3d-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/column3d/Column3dChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/column3d">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/CountryGrowth.java"/>
@@ -1436,6 +1474,7 @@
                 </item>
                 <item id="multiple-valueaxis-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/multiple-valueaxis-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/multipleaxis/MultipleValueAxisSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/multipleaxis">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
@@ -1443,15 +1482,18 @@
                 </item>
                 <item id="micro-chart" docUrlSuffix="serial_chart" sampleHeight="250"
                       image="images/dashboard/charts/micro-chart.png"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/micro/MicroChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/micro"/>
                 <item id="cylinder-chart" docUrlSuffix="gauge_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/cylinder-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/serial/cylinder/CylinderChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/cylinder"/>
             </menu>
 
             <menu id="xy-chart-menu">
                 <item id="xy-chart" docUrlSuffix="xy_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/xy-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/xy/simple/XYChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/xy/simple">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/PointPair.java"/>
@@ -1459,10 +1501,11 @@
                 </item>
                 <item id="xy-dateaxis-chart" docUrlSuffix="xy_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/xy-dateaxis-chart.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/xy/xydate/XYDateBasedAxisChartFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/xy/xydate/XYDateBasedAxisChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/xy/xydate"/>
                 <item id="fills-axis-chart" docUrlSuffix="xy_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/fills-axis-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/xy/fillsaxis/FillsAxisChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/xy/fillsaxis">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/PointPair.java"/>
@@ -1473,6 +1516,7 @@
             <menu id="pieChart">
                 <item id="pie-chart" docUrlSuffix="pie_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/pie-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/pie/pie/PieChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/pie/pie">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/CountryLitres.java"/>
@@ -1480,6 +1524,7 @@
                 </item>
                 <item id="pie3d-chart" docUrlSuffix="pie_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/pie3d-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/pie/pie3d/Pie3dChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/pie/pie3d">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/CountryLitres.java"/>
@@ -1487,13 +1532,14 @@
                 </item>
                 <item id="donut-chart" docUrlSuffix="pie_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/donut-chart.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/pie/donut/DonutChartFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/pie/donut/DonutChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/pie/donut"/>
             </menu>
 
             <menu id="radarChart">
                 <item id="radar-chart" docUrlSuffix="radar_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/radar-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/radar/radar/RadarChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/radar/radar">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/CountryLitres.java"/>
@@ -1501,13 +1547,14 @@
                 </item>
                 <item id="polar-chart" docUrlSuffix="radar_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/polar-chart.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/radar/polar/PolarChartFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/radar/polar/PolarChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/radar/polar"/>
             </menu>
 
             <menu id="ganttChart">
                 <item id="gantt-chart" docUrlSuffix="gantt_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/gantt-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/gantt/gantt/GanttChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/gantt/gantt">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/Segment.java"/>
@@ -1516,6 +1563,7 @@
                 </item>
                 <item id="gantt-chart-dates" docUrlSuffix="gantt_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/gantt-chart-dates.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/gantt/dates/GanttChartDatesSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/gantt/dates">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/DateSegment.java"/>
@@ -1527,18 +1575,22 @@
             <menu id="gauge-chart-menu">
                 <item id="gauge-chart" docUrlSuffix="gauge_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/gauge-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/gauge/angular/GaugeChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/gauge/angular"/>
                 <item id="angular-twoaxes-chart" docUrlSuffix="gauge_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/angular-twoaxes-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/gauge/twoaxes/AngularTwoAxesChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/gauge/twoaxes"/>
                 <item id="solid-gauge-chart" docUrlSuffix="gauge_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/solid-gauge-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/gauge/solid/SolidGaugeChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/gauge/solid"/>
             </menu>
 
             <menu id="funnelChart">
                 <item id="funnel-chart" docUrlSuffix="funnel_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/funnel-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/funnel/funnel/FunnelChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/funnel/funnel">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/TitleValue.java"/>
@@ -1546,6 +1598,7 @@
                 </item>
                 <item id="funnel3d-chart" docUrlSuffix="funnel_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/funnel3d-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/funnel/funnel3d/Funnel3dChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/funnel/funnel3d">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/TitleValue.java"/>
@@ -1556,7 +1609,7 @@
             <menu id="chartEvents">
                 <item id="chart-click" docUrlSuffix="chart_listeners" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/chart-click.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/events/click/ChartClickFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/events/click/ChartClickSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/events/click">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/PointPair.java"/>
@@ -1564,7 +1617,7 @@
                 </item>
                 <item id="chart-graph-click" docUrlSuffix="chart_listeners" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/chart-graph-click.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/events/graphclick/ChartGraphClickFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/events/graphclick/ChartGraphClickSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/events/graphclick">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/IncomeExpenses.java"/>
@@ -1572,7 +1625,7 @@
                 </item>
                 <item id="chart-legend" docUrlSuffix="chart_listeners" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/chart-legend.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/events/legend/ChartLegendFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/events/legend/ChartLegendSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/events/legend">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/CountryLitres.java"/>
@@ -1580,7 +1633,7 @@
                 </item>
                 <item id="chart-slice" docUrlSuffix="chart_listeners" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/chart-slice.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/events/slice/ChartSliceFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/events/slice/ChartSliceSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/events/slice">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/CountryLitres.java"/>
@@ -1588,7 +1641,7 @@
                 </item>
                 <item id="chart-zoom" docUrlSuffix="chart_listeners" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/chart-zoom.svg"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/events/zoom/ChartZoomFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/events/zoom/ChartZoomSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/events/zoom">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/DateValue.java"/>
@@ -1597,7 +1650,7 @@
                 <item id="chart-category-item-click" docUrlSuffix="chart_listeners" splitEnabled="true"
                       image="images/dashboard/charts/chart-category-item-click.svg"
                       sampleHeight="60"
-                      controller="com/haulmont/sampler/web/ui/charts/charts/events/categoryitem/ChartCategoryItemClickFrame.java"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/events/categoryitem/ChartCategoryItemClickSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/events/categoryitem">
                     <otherFiles>
                         <file name="com/haulmont/sampler/entity/DateValue.java"/>
@@ -1607,16 +1660,17 @@
 
             <item id="chart-responsive" docUrlSuffix="chart" splitEnabled="true" sampleHeight="65"
                   image="images/dashboard/charts/chart-responsive.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/responsive/ChartResponsiveFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/responsive/ChartResponsiveSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/responsive">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/TransportCount.java"/>
                 </otherFiles>
             </item>
 
-            <item id="chart-valueds" splitEnabled="true"
-                  image="images/dashboard/charts/chart-valueds.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/valueds">
+            <item id="chart-keyvalue" splitEnabled="true"
+                  image="images/dashboard/charts/chart-keyvalue.png"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/keyvalue/CharKeyValueSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/keyvalue">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
@@ -1627,7 +1681,7 @@
         <menu id="stockCharts">
             <item id="stockchart-multiple-datasets" docUrlSuffix="stock_chart" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/stockchart-multiple-datasets.png"
-                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/multipledatasets/StockChartMultipleDataSetsFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/multipledatasets/StockChartMultipleDataSetsSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/stockcharts/multipledatasets">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
@@ -1635,7 +1689,7 @@
             </item>
             <item id="stockchart-stock-events" docUrlSuffix="stock_chart" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/stockchart-stock-events.svg"
-                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/stockevents/StockChartStockEventsFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/stockevents/StockChartStockEventsSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/stockcharts/stockevents">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
@@ -1643,7 +1697,7 @@
             </item>
             <item id="stockchart-multiple-panels" docUrlSuffix="stock_chart" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/stockchart-multiple-panels.svg"
-                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/multiplepanels/StockChartMultiplePanelsFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/multiplepanels/StockChartMultiplePanelsSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/stockcharts/multiplepanels">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/StockData.java"/>
@@ -1651,7 +1705,7 @@
             </item>
             <item id="stockchart-intraday-data" docUrlSuffix="stock_chart" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/stockchart-intraday-data.svg"
-                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/intradaydata/StockChartIntradayDataFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/intradaydata/StockChartIntradayDataSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/stockcharts/intradaydata">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
@@ -1659,7 +1713,7 @@
             </item>
             <item id="stockchart-drawing" docUrlSuffix="stock_chart" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/stockchart-drawing.png"
-                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/drawing/StockChartDrawingFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/drawing/StockChartDrawingSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/stockcharts/drawing">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
@@ -1670,7 +1724,7 @@
         <menu id="dataItems">
             <item id="entity-data-item" docUrlSuffix="chart_data_binding" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/entity-data-item.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/dataitems/entitydataitem/EntityDataItemFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/dataitems/entitydataitem/EntityDataItemSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/dataitems/entitydataitem">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/ValueDescription.java"/>
@@ -1678,18 +1732,18 @@
             </item>
             <item id="map-data-item" docUrlSuffix="chart_data_binding" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/entity-data-item.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/dataitems/mapdataitem/MapDataItemFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/dataitems/mapdataitem/MapDataItemSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/dataitems/mapdataitem"/>
             <item id="simple-data-item" docUrlSuffix="chart_data_binding" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/entity-data-item.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/dataitems/simpledataitem/SimpleDataItemFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/dataitems/simpledataitem/SimpleDataItemSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/dataitems/simpledataitem"/>
         </menu>
 
         <menu id="incrementalUpdate">
             <item id="update-column-chart" docUrlSuffix="chart_data_binding" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/update-column-chart.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/column/UpdateColumnChartFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/column/UpdateColumnChartSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/column">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/IncomeExpenses.java"/>
@@ -1697,7 +1751,7 @@
             </item>
             <item id="update-line-chart" docUrlSuffix="chart_data_binding" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/update-line-chart.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/line/UpdateLineChartFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/line/UpdateLineChartSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/line">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/DateValue.java"/>
@@ -1705,7 +1759,7 @@
             </item>
             <item id="update-xy-chart" docUrlSuffix="chart_data_binding" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/update-xy-chart.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/xy/UpdateXyChartFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/xy/UpdateXyChartSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/incrementalupdate/xy">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/PointValue.java"/>
@@ -1713,7 +1767,7 @@
             </item>
             <item id="update-stock-chart" docUrlSuffix="chart_data_binding" splitEnabled="true" sampleHeight="60"
                   image="images/dashboard/charts/update-stock-chart.png"
-                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/incrementalupdate/UpdateStockChartFrame.java"
+                  controller="com/haulmont/sampler/web/ui/charts/stockcharts/incrementalupdate/UpdateStockChartSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/stockcharts/incrementalupdate">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
@@ -1725,6 +1779,7 @@
     <menu id="pivotTable" image="images/dashboard/mainmenu/pivotTable.svg">
         <item id="pivot-table-simple" docUrlSuffix="pivotTable"
               image="images/dashboard/pivottable/pivot-table-simple.png"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/simple/PivotTableSimpleSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/simple">
             <otherFiles>
                 <file name="com/haulmont/sampler/entity/TipInfo.java"/>
@@ -1732,7 +1787,7 @@
         </item>
         <item id="pivot-table-sorter-function" docUrlSuffix="pivotTable"
               image="images/dashboard/pivottable/pivot-table-sorter-function.png"
-              controller="com/haulmont/sampler/web/ui/charts/pivot/sorter/PivotTableSorterFunction.java"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/sorter/PivotTableSorterFunctionSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/sorter">
             <otherFiles>
                 <file name="com/haulmont/sampler/entity/TipInfo.java"/>
@@ -1740,6 +1795,7 @@
         </item>
         <item id="pivot-table-editable" docUrlSuffix="pivotTable" splitEnabled="true"
               image="images/dashboard/pivottable/pivot-table-editable.png"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/editable/PivotTableEditableSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/editable">
             <otherFiles>
                 <file name="com/haulmont/sampler/entity/TipInfo.java"/>
@@ -1747,6 +1803,7 @@
         </item>
         <item id="pivot-table-explicit-renderer-aggregation" docUrlSuffix="pivotTable"
               image="images/dashboard/pivottable/pivot-table-explicit-renderer-aggregation.png"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/explicitrendrer/PivotTableExplicitRendererAggregationSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/explicitrendrer">
             <otherFiles>
                 <file name="com/haulmont/sampler/entity/TipInfo.java"/>
@@ -1754,6 +1811,7 @@
         </item>
         <item id="pivot-table-renderer-aggregation-custom-set" docUrlSuffix="pivotTable" splitEnabled="true"
               image="images/dashboard/pivottable/pivot-table-renderer-aggregation-custom-set.png"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/rendererset/PivotTableRendererAggregationCustomSetSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/rendererset">
             <otherFiles>
                 <file name="com/haulmont/sampler/entity/TipInfo.java"/>
@@ -1764,11 +1822,11 @@
     <menu id="maps" image="images/dashboard/mainmenu/maps.svg">
         <item id="marker-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/marker-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/marker/MarkerMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/marker/MarkerMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/marker"/>
         <item id="polygon-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/polygon-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/polygon/PolygonMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/polygon/PolygonMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/polygon">
             <otherFiles>
                 <file name="com/haulmont/sampler/web/ui/charts/map/polygon/PolygonPoints.java"/>
@@ -1776,7 +1834,7 @@
         </item>
         <item id="polyline-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/polyline-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/polyline/PolylineMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/polyline/PolylineMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/polyline">
             <otherFiles>
                 <file name="com/haulmont/sampler/web/ui/charts/map/polyline/PolylinePoints.java"/>
@@ -1784,15 +1842,15 @@
         </item>
         <item id="directions-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/directions-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/directions/DirectionsMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/directions/DirectionsMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/directions"/>
         <item id="circle-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/circle-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/circle/CircleMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/circle/CircleMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/circle"/>
         <item id="heat-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/heat-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/heat/HeatMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/heat/HeatMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/heat">
             <otherFiles>
                 <file name="com/haulmont/sampler/web/ui/charts/map/heat/HeatPoints.java"/>
@@ -1800,11 +1858,11 @@
         </item>
         <item id="actions-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/actions-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/actions/ActionsMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/actions/ActionsMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/actions"/>
         <item id="vertex-removal-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/vertex-removal-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/vertexremoval/VertexRemovalMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/vertexremoval/VertexRemovalMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/vertexremoval">
             <otherFiles>
                 <file name="com/haulmont/sampler/web/ui/charts/map/vertexremoval/PolygonPoints.java"/>
@@ -1812,7 +1870,7 @@
         </item>
         <item id="label-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/label-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/label/LabelMapFrame.java"
+              controller="com/haulmont/sampler/web/ui/charts/map/label/LabelMapSample.java"
               descriptionsPack="com/haulmont/sampler/web/ui/charts/map/label"/>
     </menu>
 

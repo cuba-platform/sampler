@@ -1,5 +1,4 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout spacing="true">
         <hbox height="100%" width="100%" spacing="true">
             <sourceCodeEditor caption="Tab key is ignored" height="100%" width="100%"/>

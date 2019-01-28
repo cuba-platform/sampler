@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.charts.stockcharts.stockevents.StockChartStockEventsFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="stockChartDs"
-                              class="com.haulmont.sampler.entity.DateValueVolume"
-                              refreshMode="NEVER"
-                              view="_local"/>
-    </dsContext>
+    <data>
+        <collection id="stockChartDc"
+                    class="com.haulmont.sampler.entity.DateValueVolume"
+                    view="_local"/>
+    </data>
     <layout>
         <chart:stockChart id="stockChart"
                           height="100%"
@@ -16,7 +13,7 @@
                 <chart:dataSet id="dataSet"
                                categoryField="date"
                                color="#b0de09"
-                               datasource="stockChartDs">
+                               dataContainer="stockChartDc">
                     <chart:fieldMappings>
                         <chart:fieldMapping fromField="value"
                                             toField="value"/>

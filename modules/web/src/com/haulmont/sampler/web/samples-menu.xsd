@@ -4,9 +4,7 @@
         targetNamespace="com/haulmont/sampler/web/samples-menu.xsd"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns="com/haulmont/sampler/web/samples-menu.xsd"
-        elementFormDefault="qualified"
-        attributeFormDefault="unqualified"
-        >
+        elementFormDefault="qualified">
 
     <xs:element name="sample-menu-config" type="menuOrItem"/>
 
@@ -22,17 +20,17 @@
     <xs:complexType name="itemType">
         <xs:sequence>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="otherFiles" type="otherFilesType" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="screenParams" type="screenParamsType" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="otherFiles" type="otherFilesType" minOccurs="0"/>
+                <xs:element name="screenParams" type="screenParamsType" minOccurs="0"/>
             </xs:choice>
         </xs:sequence>
         <xs:attribute name="id" type="xs:string" use="required"/>
-        <xs:attribute name="controller" type="xs:string" use="optional"/>
-        <xs:attribute name="descriptionsPack" type="xs:string" use="optional"/>
-        <xs:attribute name="docUrlSuffix" type="xs:string" use="optional"/>
-        <xs:attribute name="sampleHeight" type="xs:string" use="optional"/>
-        <xs:attribute name="splitEnabled" type="xs:boolean" use="optional"/>
-        <xs:attribute name="image" type="xs:string" use="optional"/>
+        <xs:attribute name="controller" type="xs:string"/>
+        <xs:attribute name="descriptionsPack" type="xs:string"/>
+        <xs:attribute name="docUrlSuffix" type="xs:string"/>
+        <xs:attribute name="sampleHeight" type="xs:string"/>
+        <xs:attribute name="splitEnabled" type="xs:boolean"/>
+        <xs:attribute name="image" type="xs:string"/>
     </xs:complexType>
 
     <xs:complexType name="menuType">
@@ -43,7 +41,7 @@
             </xs:choice>
         </xs:sequence>
         <xs:attribute name="id" type="xs:string" use="required"/>
-        <xs:attribute name="image" type="xs:string" use="optional"/>
+        <xs:attribute name="image" type="xs:string"/>
     </xs:complexType>
 
     <xs:complexType name="fileType">

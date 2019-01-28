@@ -1,31 +1,33 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
-    <dsContext>
-        <collectionDatasource id="dateValueDs"
-                              class="com.haulmont.sampler.entity.DateValue"
-                              maxResults="10"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$DateValue e order by e.date]]>
-            </query>
-        </collectionDatasource>
-        <collectionDatasource id="incomeExpensesDs"
-                              class="com.haulmont.sampler.entity.IncomeExpenses"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$IncomeExpenses e order by e.year]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+    <data>
+        <collection id="dateValueDc"
+                    class="com.haulmont.sampler.entity.DateValue"
+                    view="_local">
+            <loader id="dateValueLoader"
+                    maxResults="10">
+                <query>
+                    <![CDATA[select e from sampler$DateValue e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="incomeExpensesDc"
+                    class="com.haulmont.sampler.entity.IncomeExpenses"
+                    view="_local">
+            <loader id="incomeExpensesLoader">
+                <query>
+                    <![CDATA[select e from sampler$IncomeExpenses e order by e.year]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
         <vbox height="250px" spacing="true">
             <chart:serialChart id="lineChart"
                                width="250px"
                                height="30px"
                                categoryField="date"
-                               datasource="dateValueDs"
+                               dataContainer="dateValueDc"
                                autoMargins="false"
                                marginLeft="0"
                                marginRight="5"
@@ -50,7 +52,7 @@
                                addClassNames="true"
                                autoMargins="false"
                                categoryField="year"
-                               datasource="incomeExpensesDs"
+                               dataContainer="incomeExpensesDc"
                                height="30px"
                                marginBottom="0"
                                marginLeft="0"

@@ -1,14 +1,15 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.styles.table.TableStylesFrame">
-    <dsContext>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout expand="customersTable"
             spacing="true">
         <groupBox caption="Styles"
@@ -31,6 +32,7 @@
             </flowBox>
         </groupBox>
         <table id="customersTable"
+               dataContainer="customersDc"
                multiselect="true"
                width="100%">
             <columns>
@@ -40,7 +42,6 @@
                 <column id="active"/>
                 <column id="grade"/>
             </columns>
-            <rows datasource="customersDs"/>
         </table>
     </layout>
 </window>

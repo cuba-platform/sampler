@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.table.simple.SimpleTableFrame">
-    <dsContext>
-        <collectionDatasource id="ordersDs"
-                              class="com.haulmont.sampler.entity.Order"
-                              view="order-with-customer">
-            <query>
-                <![CDATA[select e from sampler$Order e order by e.date]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="ordersDc"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="order-with-customer">
+            <loader id="ordersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Order e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout expand="ordersTable"
             spacing="true">
         <hbox spacing="true">
@@ -25,6 +25,7 @@
                       caption="showSelection"/>
         </hbox>
         <table id="ordersTable"
+               dataContainer="ordersDc"
                width="100%">
             <columns>
                 <column id="date"/>
@@ -32,7 +33,6 @@
                 <column id="amount"/>
                 <column id="description"/>
             </columns>
-            <rows datasource="ordersDs"/>
         </table>
     </layout>
 </window>

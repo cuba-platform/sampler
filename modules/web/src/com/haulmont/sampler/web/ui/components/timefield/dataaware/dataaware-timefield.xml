@@ -1,0 +1,16 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="orderDc"
+                    class="com.haulmont.sampler.entity.Order"
+                    view="_local"/>
+    </data>
+    <layout spacing="true">
+        <timeField dataContainer="orderDc"
+                   property="createTs"/>
+        <hbox spacing="true">
+            <label value="Time in the Container:"/>
+            <label dataContainer="orderDc"
+                   property="createTs"/>
+        </hbox>
+    </layout>
+</window>

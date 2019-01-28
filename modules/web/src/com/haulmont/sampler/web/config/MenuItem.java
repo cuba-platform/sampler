@@ -6,9 +6,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author gorelov
- */
 public class MenuItem {
 
     private final MenuItem parent;

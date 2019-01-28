@@ -1,20 +1,22 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.popupview.opening.OpeningPopupViewFrame">
-    <dsContext>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customersDs"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout spacing="true">
         <popupView id="popupView"
                    minimizedValue="Minimized Value"
                    hideOnMouseOut="false">
             <vbox width="300px" height="400px">
                 <table id="customerTable"
+                       dataContainer="customersDs"
                        height="100%"
                        width="100%">
                     <columns>
@@ -24,10 +26,10 @@
                         <column id="active"/>
                         <column id="grade"/>
                     </columns>
-                    <rows datasource="customersDs"/>
                 </table>
             </vbox>
         </popupView>
-        <button caption="Open the popup programmatically" invoke="openPopup"/>
+        <button id="button"
+                caption="Open the popup programmatically"/>
     </layout>
 </window>

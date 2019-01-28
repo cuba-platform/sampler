@@ -1,5 +1,5 @@
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.fieldgroup.customize.CustomizeFieldGroupFrame">
+        class="com.haulmont.sampler.web.ui.components.fieldgroup.customize.CustomizeFieldGroupSample">
     <dsContext>
         <datasource id="orderDs"
                     allowCommit="false"

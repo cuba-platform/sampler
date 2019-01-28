@@ -1,11 +1,10 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.containers.buttonspanel.alwaysvisible.AlwaysVisibleButtonsPanelFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox spacing="true">
-            <button caption="Visible"
-                    invoke="showVisible"/>
-            <button caption="Invisible"
-                    invoke="showInvisible"/>
+            <button id="showVisible"
+                    caption="Visible"/>
+            <button id="showInvisible"
+                    caption="Invisible"/>
         </hbox>
     </layout>
 </window>

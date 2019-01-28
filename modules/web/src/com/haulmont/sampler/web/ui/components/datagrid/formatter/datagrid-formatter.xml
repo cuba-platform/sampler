@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.datagrid.formatter.DataGridFormatterFrame">
-    <dsContext>
-        <collectionDatasource id="customersDs"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_minimal">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout expand="customersDataGrid"
             spacing="true">
         <dataGrid id="customersDataGrid"
-                  datasource="customersDs"
+                  dataContainer="customersDc"
                   width="100%">
             <columns>
                 <column property="name">
-                    <formatter class="com.haulmont.sampler.web.ui.components.datagrid.formatter.DataGridFormatterFrame$UppercaseFormatter"/>
+                    <formatter class="com.haulmont.sampler.web.ui.components.datagrid.formatter.DataGridFormatterSample$UppercaseFormatter"/>
                 </column>
                 <column property="lastName">
                     <formatter class="com.haulmont.sampler.web.ui.components.datagrid.formatter.LowercaseFormatter"/>

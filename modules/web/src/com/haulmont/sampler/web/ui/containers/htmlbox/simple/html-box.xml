@@ -1,20 +1,16 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.containers.htmlbox.simple.HtmlBoxFrame">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout spacing="true">
         <htmlBox id="htmlSample"
                  height="100%"
                  stylename="html-sample"
                  template="html-layout">
                 <button id="addons"
-                        invoke="click"
                         caption="Addons"
                         width="100%"/>
                 <button id="buy"
-                        invoke="click"
                         caption="Buy"
                         width="100%"/>
                 <button id="support"
-                        invoke="click"
                         caption="Support"
                         width="100%"/>
         </htmlBox>

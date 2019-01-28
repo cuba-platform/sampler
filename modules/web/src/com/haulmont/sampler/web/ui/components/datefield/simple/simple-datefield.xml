@@ -1,10 +1,9 @@
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.sampler.web.ui.components.datefield.simple.SimpleDateFieldFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         messagesPack="com.haulmont.sampler.web.ui.components.datefield.simple">
     <layout spacing="true">
         <dateField id="dateField"
                    caption="msg://datefield.caption"/>
-        <button caption="msg://datefield.value"
-                invoke="showValue"/>
+        <button id="button"
+                caption="msg://datefield.value"/>
     </layout>
 </window>

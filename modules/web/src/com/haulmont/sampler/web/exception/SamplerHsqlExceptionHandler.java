@@ -5,11 +5,8 @@ import com.haulmont.cuba.core.global.Messages;
 import com.haulmont.cuba.web.App;
 import com.haulmont.cuba.web.exception.AbstractExceptionHandler;
 import com.vaadin.ui.Notification;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
-/**
- * @author gorelov
- */
 public class SamplerHsqlExceptionHandler extends AbstractExceptionHandler {
 
     public SamplerHsqlExceptionHandler() {

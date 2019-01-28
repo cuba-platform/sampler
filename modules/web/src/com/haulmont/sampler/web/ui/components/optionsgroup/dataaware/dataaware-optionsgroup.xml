@@ -1,0 +1,16 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="productsDc"
+                    class="com.haulmont.sampler.entity.Product"
+                    view="_local">
+            <loader id="productsLoader">
+                <query>
+                    <![CDATA[select e from sampler$Product e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <optionsGroup optionsContainer="productsDc"/>
+    </layout>
+</window>

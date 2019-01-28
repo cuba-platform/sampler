@@ -1,18 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame">
-    <dsContext>
-        <collectionDatasource id="customersDs"
-                              allowCommit="false"
-                              class="com.haulmont.sampler.entity.Customer"
-                              view="_local">
-            <query>
-                <![CDATA[select e from sampler$Customer e]]>
-            </query>
-        </collectionDatasource>
-    </dsContext>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="customersDc"
+                    class="com.haulmont.sampler.entity.Customer"
+                    view="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler$Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
     <layout>
-        <table editable="true"
+        <table id="customerTable"
+               editable="true"
+               dataContainer="customersDc"
                height="100%"
                width="100%">
             <columns>
@@ -25,7 +26,6 @@
                 <column id="grade"
                         editable="true"/>
             </columns>
-            <rows datasource="customersDs"/>
         </table>
     </layout>
 </window>

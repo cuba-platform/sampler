@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
-        class="com.haulmont.cuba.gui.components.AbstractFrame"
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
     <layout>
         <chart:gaugeChart id="gaugeChart"
@@ -65,7 +63,7 @@
                              color="#FFD700"/>
                 <chart:label id="third" text="Third option" align="RIGHT" size="15" x="49%" y="28%" bold="true"
                              color="#ff696e"/>
-                <chart:label id="four" text="Firth option" align="RIGHT" size="15" x="49%" y="39%" bold="true"
+                <chart:label id="four" text="Fourth option" align="RIGHT" size="15" x="49%" y="39%" bold="true"
                              color="#6970ff"/>
             </chart:allLabels>
             <chart:export/>
