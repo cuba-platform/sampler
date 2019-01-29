@@ -118,6 +118,33 @@
             </item>
         </menu>
 
+        <menu id="checkBoxGroup">
+            <item id="checkboxgroup-simple" docUrlSuffix="gui_CheckBoxGroup" sampleHeight="150px"
+                  image="images/dashboard/components/checkboxgroup-simple.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/checkboxgroup/simple"
+                  controller="com/haulmont/sampler/web/ui/components/checkboxgroup/simple/CheckBoxGroupSimpleSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="checkboxgroup-custom-options" docUrlSuffix="gui_CheckBoxGroup" sampleHeight="115px"
+                  image="images/dashboard/components/checkboxgroup-custom-options.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/checkboxgroup/customoptions"
+                  controller="com/haulmont/sampler/web/ui/components/checkboxgroup/customoptions/CheckBoxGroupCustomSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="checkboxgroup-dataaware" docUrlSuffix="gui_CheckBoxGroup" sampleHeight="185px"
+                  image="images/dashboard/components/checkboxgroup-dataaware.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/checkboxgroup/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/checkboxgroup/dataaware/CheckBoxGroupDataawareSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Product.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="colorPicker">
             <item id="simple-colorpicker" docUrlSuffix="gui_ColorPicker"
                   image="images/dashboard/components/simple-colorpicker.png"

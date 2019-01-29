@@ -1,0 +1,17 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="_local"/>
+    </data>
+    <layout spacing="true">
+        <checkBoxGroup dataContainer="customerDc"
+                       property="grade"
+                       caption="Vertical"/>
+
+        <checkBoxGroup dataContainer="customerDc"
+                       property="grade"
+                       caption="Horizontal"
+                       orientation="horizontal"/>
+    </layout>
+</window>
