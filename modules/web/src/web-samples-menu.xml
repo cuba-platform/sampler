@@ -796,6 +796,33 @@
                   controller="com/haulmont/sampler/web/ui/components/progressbar/indeterminate/IndeterminateProgressBarSample.java"/>
         </menu>
 
+        <menu id="radioButtonGroup">
+            <item id="radiobuttongroup-simple" docUrlSuffix="gui_RadioButtonGroup" sampleHeight="150px"
+                  image="images/dashboard/components/radiobuttongroup-simple.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/radiobuttongroup/simple"
+                  controller="com/haulmont/sampler/web/ui/components/radiobuttongroup/simple/RadioButtonGroupSimpleSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="radiobuttongroup-custom-options" docUrlSuffix="gui_RadioButtonGroup" sampleHeight="115px"
+                  image="images/dashboard/components/radiobuttongroup-custom-options.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/radiobuttongroup/customoptions"
+                  controller="com/haulmont/sampler/web/ui/components/radiobuttongroup/customoptions/RadioButtonGroupCustomSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="radiobuttongroup-dataaware" docUrlSuffix="gui_RadioButtonGroup" sampleHeight="185px"
+                  image="images/dashboard/components/radiobuttongroup-dataaware.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/radiobuttongroup/dataaware"
+                  controller="com/haulmont/sampler/web/ui/components/radiobuttongroup/dataaware/RadioButtonGroupDataawareSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Product.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="relatedEntities">
             <item id="simple-relatedentities" docUrlSuffix="gui_RelatedEntities" splitEnabled="true"
                   image="images/dashboard/components/simple-relatedentities.png"
