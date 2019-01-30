@@ -571,6 +571,15 @@
                   controller="com/haulmont/sampler/web/ui/components/image/click/ClickImageSample.java"/>
         </menu>
 
+        <item id="java-script-component" docUrlSuffix="jsComponent" sampleHeight="400px"
+              image="images/dashboard/components/java-script-component.png"
+              descriptionsPack="com/haulmont/sampler/web/ui/components/jscomponent"
+              controller="com/haulmont/sampler/web/ui/components/jscomponent/JavaScriptComponentSample.java">
+            <otherFiles>
+                <file name="com/haulmont/sampler/web/ui/components/jscomponent/time-picker-connector.js"/>
+            </otherFiles>
+        </item>
+
         <menu id="label">
             <item id="simple-label" docUrlSuffix="gui_Label" sampleHeight="80px"
                   image="images/dashboard/components/simple-label.png"

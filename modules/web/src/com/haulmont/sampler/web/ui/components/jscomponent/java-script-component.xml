@@ -1,0 +1,14 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <layout spacing="true">
+        <jsComponent id="timePicker"
+                     initFunctionName="com_haulmont_sampler_web_ui_components_jscomponent_TimePicker">
+            <dependencies>
+                <dependency path="webjar://jquery:jquery.min.js"/>
+                <dependency path="vaadin://timepicker/wickedpicker.min.js"/>
+                <dependency path="vaadin://timepicker/wickedpicker.min.css"/>
+                <dependency path="vaadin://timepicker/time-picker-connector.js"/>
+            </dependencies>
+        </jsComponent>
+        <button id="showValueBtn" caption="Show Value"/>
+    </layout>
+</window>
