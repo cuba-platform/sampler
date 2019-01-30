@@ -22,9 +22,9 @@ public class JavaScriptComponentSample extends ScreenFragment {
     @Subscribe
     protected void onInit(InitEvent event) {
         TimePickerState state = new TimePickerState();
-        state.setNow("12:35:57");
-        state.setShowSeconds(true);
-        state.setTwentyFour(true);
+        state.now = "12:35:57";
+        state.showSeconds = true;
+        state.twentyFour = true;
 
         timePicker.addFunction("onBeforeShow", callbackEvent ->
                 notifications.create()
@@ -46,32 +46,8 @@ public class JavaScriptComponentSample extends ScreenFragment {
     }
 
     public class TimePickerState implements Serializable {
-        private String now;             // hh:mm 24 hour format only, defaults to current time
-        private boolean twentyFour;     // Display 24 hour format, defaults to false
-        private boolean showSeconds;    // Whether or not to show seconds
-
-        public String getNow() {
-            return now;
-        }
-
-        public void setNow(String now) {
-            this.now = now;
-        }
-
-        public boolean isTwentyFour() {
-            return twentyFour;
-        }
-
-        public void setTwentyFour(boolean twentyFour) {
-            this.twentyFour = twentyFour;
-        }
-
-        public boolean isShowSeconds() {
-            return showSeconds;
-        }
-
-        public void setShowSeconds(boolean showSeconds) {
-            this.showSeconds = showSeconds;
-        }
+        public String now;             // hh:mm 24 hour format only, defaults to current time
+        public boolean twentyFour;     // Display 24 hour format, defaults to false
+        public boolean showSeconds;    // Whether or not to show seconds
     }
 }
