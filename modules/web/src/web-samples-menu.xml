@@ -1305,7 +1305,7 @@
             </otherFiles>
         </item>
 
-        <item id="simple-fragment" docUrlSuffix="gui_Frame" sampleHeight="150px"
+        <item id="simple-fragment" docUrlSuffix="screen_controllers" sampleHeight="150px"
               image="images/dashboard/containers/simple-fragment.svg"
               descriptionsPack="com/haulmont/sampler/web/ui/containers/fragment/simple"
               controller="com/haulmont/sampler/web/ui/containers/fragment/simple/SimpleFragmentSample.java">
