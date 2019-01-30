@@ -1,13 +1,13 @@
-``# How to add a sample
+# How to add a sample
 
 - Create a sample files inside `com.haulmont.sampler.web.ui` package of _web module_. 
 
     Required files are:
     - XML descriptor
+    - Controller class
     - HTML files with localized descriptions and name pattern: `<xml_descriptor_name>-<locale_code>.html`
   
     Optional files are:
-    - Controller class
     - Additional files like scss styles, html templates, etc.
   
 > Every sample has its own directory and all samples are structured logically. For example:
@@ -22,6 +22,8 @@ For example: `com.haulmont.sampler.web.ui.components.bulkeditor`.
     - `id` - equals to sample xml file name. For example: `id="simple-button"`.
     - `descriptionPack` - relative path to a sample directory. Used to find description files. 
     For example: `descriptionsPack="com/haulmont/sampler/web/ui/components/button/simple"`.
+    - `controller` - relative path to a sample controller class file. For example:
+    `controller="com/haulmont/sampler/web/ui/components/button/simple/SimpleButtonFrame.java"`.
     
     Highly recommended:
     - `sampleHeight` - an integer number defining height of the sample area. Can be set in pixel or as a percentage. 
@@ -29,8 +31,6 @@ For example: `com.haulmont.sampler.web.ui.components.bulkeditor`.
     - `docUrlSuffix` - used to create link to the documentation.
     
     Optional attributes and elements:
-    - `controller` - relative path to a sample controller class file. For example: 
-    `controller="com/haulmont/sampler/web/ui/components/button/simple/SimpleButtonFrame.java"`.
     - `splitEnabled` - controls whether or not split is used to separate a sample and its description. 
     Default value is `false`.
     - `otherFiles` - contains nested `file` elements, where `name` attribute is a relative path to a additional files. 
