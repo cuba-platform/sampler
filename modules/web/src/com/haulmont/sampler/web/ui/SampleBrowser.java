@@ -119,7 +119,7 @@ public class SampleBrowser extends Screen {
     private void updateLayout(Fragment fragment, MenuItem item) {
         getWindow().removeAll();
 
-        TabSheet tabSheet = getTabSheet();
+        TabSheet tabSheet = createTabSheet();
 
         String splitEnabled = item.getSplitEnabled();
         if (BooleanUtils.toBoolean(splitEnabled)) {
@@ -157,11 +157,9 @@ public class SampleBrowser extends Screen {
         }
     }
 
-    private TabSheet getTabSheet() {
-        if (tabSheet == null) {
-            tabSheet = uiComponents.create(TabSheet.NAME);
-            tabSheet.setId("tabSheet");
-        }
+    private TabSheet createTabSheet() {
+        tabSheet = uiComponents.create(TabSheet.NAME);
+        tabSheet.setId("tabSheet");
         return tabSheet;
     }
 
@@ -173,7 +171,7 @@ public class SampleBrowser extends Screen {
     }
 
     private void updateTabs(String id, MenuItem item) {
-        getTabSheet().removeAllTabs();
+        tabSheet.removeAllTabs();
 
         String descriptionsPack = item.getDescriptionsPack();
         if (!Strings.isNullOrEmpty(descriptionsPack)) {
