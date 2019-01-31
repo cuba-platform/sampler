@@ -160,6 +160,7 @@ public class SampleBrowser extends Screen {
     private TabSheet createTabSheet() {
         tabSheet = uiComponents.create(TabSheet.NAME);
         tabSheet.setId("tabSheet");
+        tabSheet.setHeightFull();
         return tabSheet;
     }
 
@@ -184,7 +185,7 @@ public class SampleBrowser extends Screen {
         String screenSrc = info.getTemplate();
         addSourceTab(screenSrc);
 
-        String controller = item.getSplitEnabled();
+        String controller = item.getController();
         if (!Strings.isNullOrEmpty(controller)) {
             addSourceTab(controller);
         }
