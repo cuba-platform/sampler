@@ -205,7 +205,7 @@
                   descriptionsPack="com/haulmont/sampler/web/ui/components/currencyfield/simple"
                   controller="com/haulmont/sampler/web/ui/components/currencyfield/simple/SimpleCurrencyFieldSample.java">
                 <otherFiles>
-                    <file name="com/haulmont/sampler/web/ui/components/currencyfield/simple/Product.java"/>
+                    <file name="com/haulmont/sampler/entity/Product.java"/>
                 </otherFiles>
             </item>
             <item id="annotation-currencyfield" docUrlSuffix="gui_CurrencyField" sampleHeight="110px"
