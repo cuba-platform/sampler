@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
     <screen id="mainWindow"
-            template="/com/haulmont/sampler/web/app/mainwindow/sampler-main-window.xml"
-            route="main"/>
+            template="/com/haulmont/sampler/web/app/mainwindow/sampler-main-window.xml"/>
     <!-- Components -->
     <screen id="simple-fieldgroup"
             template="/com/haulmont/sampler/web/ui/components/fieldgroup/simple/simple-fieldgroup.xml"/>

@@ -3,10 +3,7 @@
         caption="msg://sampleBrowser"
         messagesPack="com.haulmont.sampler.web.ui">
     <data/>
-    <layout expand="tabSheet"
-            margin="true,false,false,false"
+    <layout margin="true,false,false,false"
             spacing="true">
-        <label id="spacer" height="10px"/>
-        <tabSheet id="tabSheet"/>
     </layout>
 </window>
