@@ -1151,7 +1151,7 @@
                   descriptionsPack="com/haulmont/sampler/web/ui/components/tokenlist/simplemode"
                   controller="com/haulmont/sampler/web/ui/components/tokenlist/simplemode/SimpleModeTokenListSample.java">
                 <otherFiles>
-                    <file name="com/haulmont/sampler/gui/entities/orderitem/OrderItemBrowse.java"/>
+                    <file name="com/haulmont/sampler/web/ui/entities/orderitem/OrderItemBrowse.java"/>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
                     <file name="com/haulmont/sampler/entity/OrderItem.java"/>
                     <file name="com/haulmont/sampler/entity/Product.java"/>
