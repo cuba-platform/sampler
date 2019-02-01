@@ -6,20 +6,19 @@ import com.haulmont.cuba.core.global.GlobalConfig;
 import com.haulmont.cuba.core.global.MessageTools;
 import com.haulmont.cuba.core.global.Messages;
 import com.haulmont.cuba.core.global.UserSessionSource;
-import com.haulmont.cuba.gui.Fragments;
-import com.haulmont.cuba.gui.Route;
-import com.haulmont.cuba.gui.UiComponents;
-import com.haulmont.cuba.gui.UrlRouting;
+import com.haulmont.cuba.gui.*;
 import com.haulmont.cuba.gui.components.*;
 import com.haulmont.cuba.gui.config.WindowConfig;
 import com.haulmont.cuba.gui.config.WindowInfo;
 import com.haulmont.cuba.gui.navigation.UrlParamsChangedEvent;
 import com.haulmont.cuba.gui.screen.*;
+import com.haulmont.cuba.web.AppUI;
 import com.haulmont.cuba.web.controllers.ControllerUtils;
 import com.haulmont.cuba.web.gui.components.WebComponentsHelper;
 import com.haulmont.cuba.web.sys.navigation.UrlIdSerializer;
 import com.haulmont.cuba.web.widgets.CubaSourceCodeEditor;
 import com.haulmont.cuba.web.widgets.addons.aceeditor.AceMode;
+import com.haulmont.sampler.web.app.mainwindow.SamplerMainWindow;
 import com.haulmont.sampler.web.config.MenuItem;
 import com.haulmont.sampler.web.config.SamplesMenuConfig;
 import com.haulmont.sampler.web.util.SamplesHelper;
@@ -106,6 +105,12 @@ public class SampleBrowser extends Screen {
         String serializedSampleId = event.getParams().get("id");
         sampleId = (String) UrlIdSerializer.deserializeId(String.class, serializedSampleId);
         updateSample(sampleId);
+
+        Screens.OpenedScreens openedScreens = AppUI.getCurrent().getScreens().getOpenedScreens();
+        Screen rootScreen = openedScreens.getRootScreen();
+        if (rootScreen instanceof SamplerMainWindow) {
+            ((SamplerMainWindow) rootScreen).expandItemsFromDirectLink(sampleId);
+        }
     }
 
     private void updateCaption(String id, MenuItem item) {
