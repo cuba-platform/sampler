@@ -204,6 +204,15 @@ configure(webModule) {
         // copy sources from core to show the service classes for samples in the ui
         from coreModule.sourceSets.main.allJava
     }
+
+    task themesJar(type: Jar) {
+        from file('themes')
+        classifier = 'themes'
+    }
+
+    artifacts {
+        archives themesJar
+    }
 }
 
 

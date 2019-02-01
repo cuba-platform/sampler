@@ -18,6 +18,6 @@ public class ThemeBrowserFrameSample extends ScreenFragment {
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        browserFrame.setSource(ThemeResource.class).setPath("../halo/files/cuba-hands-on-lab.pdf");
+        browserFrame.setSource(ThemeResource.class).setPath("files/cuba-hands-on-lab.pdf");
     }
 }

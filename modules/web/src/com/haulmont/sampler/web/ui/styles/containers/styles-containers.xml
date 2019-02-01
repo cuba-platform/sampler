@@ -15,7 +15,7 @@
                 </cssLayout>
 
                 <cssLayout stylename="v-component-group">
-                    <textField/>
+                    <textField width="150px"/>
                     <button caption="Send"/>
                 </cssLayout>
             </groupBox>

@@ -1,12 +1,11 @@
 @import "halo-defaults";
-@import "halo-ext-defaults";
-@import "halo-ext";
+@import "com.haulmont.sampler/halo-ext-defaults";
+@import "app-components";
+@import "com.haulmont.sampler/halo-ext";
 
 .halo {
-  @include halo-ext;
-}
+  // include auto-generated app components SCSS
+  @include app_components;
 
-// hide Vaadin warning about theme version
-.v-theme-version {
-  display: none;
+  @include com_haulmont_sampler-halo-ext;
 }

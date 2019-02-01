@@ -13,7 +13,7 @@
                       height="100%">
                 <browserFrame height="100%"
                               width="100%">
-                    <theme path="../halo/files/cuba-hands-on-lab.pdf"/>
+                    <theme path="files/cuba-hands-on-lab.pdf"/>
                 </browserFrame>
             </groupBox>
         </hbox>

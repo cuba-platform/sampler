@@ -19,7 +19,7 @@
                    scrollBars="horizontal"
                    spacing="true">
             <groupBox caption="LookupField"
-                      height="202px"
+                      height="205px"
                       spacing="true"
                       width="AUTO">
                 <lookupField id="lookupFieldAlignCenter"
@@ -47,7 +47,7 @@
                              stylename="borderless"/>
             </groupBox>
             <groupBox caption="PickerField"
-                      height="202px"
+                      height="205px"
                       spacing="true"
                       width="AUTO">
                 <pickerField caption="align-center"
@@ -64,7 +64,7 @@
                              stylename="borderless"/>
             </groupBox>
             <groupBox caption="LookupPickerField"
-                      height="202px"
+                      height="205px"
                       spacing="true"
                       width="AUTO">
                 <lookupPickerField caption="align-center"

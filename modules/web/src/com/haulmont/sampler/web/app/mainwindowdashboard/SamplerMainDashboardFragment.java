@@ -31,8 +31,8 @@ public class SamplerMainDashboardFragment extends ScreenFragment {
     private static final String LABEL_TITLE_STYLE = "label-title";
     private static final String LABEL_IMAGE_STYLE = "label-image";
 
-    private static final String PLACEHOLDER_IMAGE_PATH = "VAADIN/themes/halo/images/dashboard/mainmenu/";
-    private static final String IMAGE_PATH = "VAADIN/themes/halo/";
+    private static final String PLACEHOLDER_IMAGE_PATH = "VAADIN/images/dashboard/mainmenu/";
+    private static final String IMAGE_PATH = "VAADIN/";
 
     @Inject
     private CssLayout cssLayout;
