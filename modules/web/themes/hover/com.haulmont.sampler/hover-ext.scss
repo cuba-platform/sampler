@@ -1,4 +1,5 @@
 @import "app/folderspane";
+@import "app/mainwindow";
 @import "app/samplebrowser";
 @import "app/sampler-main-dashboard-frame";
 @import "components/button/button-ext";
@@ -23,6 +24,7 @@
   @include sampler-folderspane;
   @include sampler-popupview;
   @include sampler-sourcecodeeditor;
+  @include sampler-mainwindow;
   @include sample-table;
   @include sample-datagrid;
   @include sample-calendar;

@@ -92,6 +92,16 @@ public class SampleBrowser extends Screen {
         updateLayout(fragment, item);
         updateCaption(sampleId, item);
         updateTabs(sampleId, item);
+        focusFirstPossibleComponent(fragment);
+    }
+
+    private void focusFirstPossibleComponent(Fragment fragment) {
+        fragment.getComponents().stream()
+                .filter(component ->
+                        component instanceof Component.Focusable)
+                .findFirst()
+                .ifPresent(component ->
+                        ((Component.Focusable) component).focus());
     }
 
     @Subscribe

@@ -19,7 +19,7 @@
             </list>
         </property>
     </bean>
-    <bean class="com.haulmont.sampler.web.App"
+    <bean class="com.haulmont.sampler.web.SamplerApp"
           name="cuba_App"
           scope="vaadin"/>
     <bean class="com.haulmont.cuba.web.sys.remoting.WebRemoteProxyBeanCreator">

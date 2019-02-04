@@ -1,14 +1,18 @@
 package com.haulmont.sampler.web.app.mainwindow;
 
+import com.haulmont.cuba.core.global.GlobalConfig;
 import com.haulmont.cuba.gui.Screens;
+import com.haulmont.cuba.gui.UrlRouting;
 import com.haulmont.cuba.gui.components.*;
 import com.haulmont.cuba.gui.components.mainwindow.SideMenu;
 import com.haulmont.cuba.gui.screen.OpenMode;
 import com.haulmont.cuba.gui.screen.ScreenOptions;
 import com.haulmont.cuba.gui.screen.Subscribe;
 import com.haulmont.cuba.web.widgets.CubaHorizontalSplitPanel;
+import com.haulmont.sampler.web.SamplerApp;
 import com.haulmont.sampler.web.app.mainwindowdashboard.DashboardItemClickEvent;
 import com.haulmont.sampler.web.app.mainwindowdashboard.SamplerMainDashboardFragment;
+import com.haulmont.sampler.web.config.MenuItem;
 import com.haulmont.sampler.web.config.SamplesAppConfig;
 import com.haulmont.sampler.web.config.SamplesMenuConfig;
 import com.haulmont.sampler.web.util.SamplesHelper;
@@ -17,8 +21,7 @@ import org.apache.commons.lang3.StringUtils;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.haulmont.cuba.gui.components.mainwindow.SideMenu.MenuItem;
+import java.util.Locale;
 
 public class SamplerMainWindow extends AbstractMainWindow {
 
@@ -33,9 +36,9 @@ public class SamplerMainWindow extends AbstractMainWindow {
     @Inject
     private SideMenu sideMenu;
     @Inject
-    private HBoxLayout searchBox;
-    @Inject
     private SplitPanel mainSplit;
+    @Inject
+    private LookupField<Locale> localesSelect;
 
     @Inject
     private SamplerMainDashboardFragment dashboardFrame;
@@ -48,15 +51,23 @@ public class SamplerMainWindow extends AbstractMainWindow {
     private SamplesAppConfig samplesAppConfig;
 
     @Inject
-    private Screens screens;
+    protected SamplerApp app;
 
-    private List<MenuItem> foundItems = new ArrayList<>();
+    @Inject
+    private Screens screens;
+    @Inject
+    private GlobalConfig globalConfig;
+    @Inject
+    private UrlRouting urlRouting;
+
+    private List<SideMenu.MenuItem> foundItems = new ArrayList<>();
     private List<String> parentListIdsToExpand = new ArrayList<>();
 
     @Subscribe
     protected void onInit(InitEvent event) {
         initSideMenu();
         initMainSplit();
+        initLocales();
 
         titleBar.setVisible(samplesAppConfig.isDeveloperMode());
         refreshMenuBtn.setVisible(samplesAppConfig.isDeveloperMode());
@@ -66,11 +77,19 @@ public class SamplerMainWindow extends AbstractMainWindow {
         searchField.focus();
     }
 
+    @Subscribe
+    protected void onAfterShow(AfterShowEvent event) {
+        if (app.getRedirectHandler() != null
+                && app.getRedirectHandler().scheduled()) {
+            app.getRedirectHandler().redirect();
+        }
+    }
+
     private void onDashboardItemClicked(DashboardItemClickEvent event) {
         sideMenu.removeAllMenuItems();
         initMenuItems();
 
-        MenuItem item = sideMenu.getMenuItem(event.getMenuItemId());
+        SideMenu.MenuItem item = sideMenu.getMenuItem(event.getMenuItemId());
         if (item != null) {
             item.setStyleName(FOUND_ITEM_STYLE);
             item.setExpanded(true);
@@ -95,11 +114,23 @@ public class SamplerMainWindow extends AbstractMainWindow {
     private void initSideMenu() {
         sideMenu.removeAllMenuItems();
         initMenuItems();
+    }
 
-        searchBox.addShortcutAction(new ShortcutAction("ENTER",
-                shortcutTriggeredEvent ->
-                        search(searchField.getValue())
-        ));
+    private void initLocales() {
+        localesSelect.setOptionsMap(globalConfig.getAvailableLocales());
+        localesSelect.setValue(app.getLocale());
+
+        boolean localeSelectVisible = globalConfig.getLocaleSelectVisible();
+        localesSelect.setVisible(localeSelectVisible);
+
+        localesSelect.addValueChangeListener(e -> {
+            Locale selectedLocale = e.getValue();
+
+            app.getRedirectHandler().schedule(urlRouting.getState());
+
+            app.setLocale(selectedLocale);
+            app.createTopLevelWindow();
+        });
     }
 
     @Subscribe("searchButton")
@@ -112,19 +143,25 @@ public class SamplerMainWindow extends AbstractMainWindow {
         samplesMenuConfig.reset();
     }
 
+    @Subscribe("searchField")
+    protected void onSearchFieldEnterPress(TextInputField.EnterPressEvent event) {
+        search(searchField.getValue());
+    }
+
     private void initMenuItems() {
-        List<com.haulmont.sampler.web.config.MenuItem> samplerMenuItems = samplesMenuConfig.getRootItems();
-        for (com.haulmont.sampler.web.config.MenuItem item : samplerMenuItems) {
-            MenuItem menuItem = sideMenu.createMenuItem(item.getId());
+        List<MenuItem> samplerMenuItems = samplesMenuConfig.getRootItems();
+        for (MenuItem item : samplerMenuItems) {
+            SideMenu.MenuItem menuItem = sideMenu.createMenuItem(item.getId());
             menuItem.setCaption(samplesMenuConfig.getMenuItemCaption(item.getId()));
             loadMenuItems(item, menuItem);
             sideMenu.addMenuItem(menuItem);
         }
     }
 
-    private void loadMenuItems(com.haulmont.sampler.web.config.MenuItem parentSamplerItem, MenuItem parentSideMenuItem) {
-        for (com.haulmont.sampler.web.config.MenuItem currentItem : parentSamplerItem.getChildren()) {
-            MenuItem child;
+    private void loadMenuItems(MenuItem parentSamplerItem,
+                               SideMenu.MenuItem parentSideMenuItem) {
+        for (MenuItem currentItem : parentSamplerItem.getChildren()) {
+            SideMenu.MenuItem child;
             String id = currentItem.getId();
             if (currentItem.isMenu()) {
                 child = sideMenu.createMenuItem(id);
@@ -155,7 +192,7 @@ public class SamplerMainWindow extends AbstractMainWindow {
         if (!StringUtils.isEmpty(searchValue)) {
             findItemsRecursively(sideMenu.getMenuItems(), searchValue);
 
-            for (MenuItem item : foundItems) {
+            for (SideMenu.MenuItem item : foundItems) {
                 if (samplesMenuConfig.getItemById(item.getId()).getParent() != null) {
                     expandAllParentRecursively(item.getId());
                 }
@@ -169,7 +206,7 @@ public class SamplerMainWindow extends AbstractMainWindow {
     }
 
     private void findItemsRecursively(List<SideMenu.MenuItem> items, String searchValue) {
-        for (MenuItem item : items) {
+        for (SideMenu.MenuItem item : items) {
             if (StringUtils.containsIgnoreCase(item.getCaption(), searchValue)) {
                 item.setStyleName(FOUND_ITEM_STYLE);
                 foundItems.add(item);
@@ -180,8 +217,9 @@ public class SamplerMainWindow extends AbstractMainWindow {
         }
     }
 
-    private void removeNotRequestedItems(List<MenuItem> list, MenuItem parentItem, String searchValue) {
-        for (MenuItem item : list) {
+    private void removeNotRequestedItems(List<SideMenu.MenuItem> list,
+                                         SideMenu.MenuItem parentItem, String searchValue) {
+        for (SideMenu.MenuItem item : list) {
             if (item.hasChildren()) {
                 if (!item.isExpanded()) {
                     if (parentItem != null) {
@@ -202,22 +240,22 @@ public class SamplerMainWindow extends AbstractMainWindow {
 
     @Subscribe("expandAllBtn")
     protected void onExpandAllBtnClick(Button.ClickEvent event) {
-        for (MenuItem item : sideMenu.getMenuItems()) {
+        for (SideMenu.MenuItem item : sideMenu.getMenuItems()) {
             expand(item, true);
         }
     }
 
     @Subscribe("collapseAllBtn")
     protected void onCollapseAllBtnClick(Button.ClickEvent event) {
-        for (MenuItem item : sideMenu.getMenuItems()) {
+        for (SideMenu.MenuItem item : sideMenu.getMenuItems()) {
             expand(item, false);
         }
     }
 
-    private void expand(MenuItem item, boolean isExpand) {
+    private void expand(SideMenu.MenuItem item, boolean isExpand) {
         if (item.hasChildren()) {
             item.setExpanded(isExpand);
-            for (MenuItem menuItem : item.getChildren()) {
+            for (SideMenu.MenuItem menuItem : item.getChildren()) {
                 if (menuItem.hasChildren()) {
                     expand(menuItem, isExpand);
                 }
@@ -229,7 +267,7 @@ public class SamplerMainWindow extends AbstractMainWindow {
         parentListIdsToExpand.clear();
         fillParentListToExpand(id);
         for (String s : parentListIdsToExpand) {
-            MenuItem item = sideMenu.getMenuItem(s);
+            SideMenu.MenuItem item = sideMenu.getMenuItem(s);
             if (item != null) {
                 item.setExpanded(true);
             }
@@ -237,7 +275,7 @@ public class SamplerMainWindow extends AbstractMainWindow {
     }
 
     private void fillParentListToExpand(String id) {
-        com.haulmont.sampler.web.config.MenuItem itemToExpand = samplesMenuConfig.getItemById(id);
+        MenuItem itemToExpand = samplesMenuConfig.getItemById(id);
         if (itemToExpand.getParent() != null) {
             parentListIdsToExpand.add(itemToExpand.getParent().getId());
             fillParentListToExpand(itemToExpand.getParent().getId());
@@ -248,13 +286,13 @@ public class SamplerMainWindow extends AbstractMainWindow {
         sideMenu.removeAllMenuItems();
         initMenuItems();
         expandAllParentRecursively(id);
-        MenuItem item = sideMenu.getMenuItemNN(id);
+        SideMenu.MenuItem item = sideMenu.getMenuItemNN(id);
         item.setStyleName(FOUND_ITEM_STYLE);
         item.setExpanded(true);
     }
 
     private void removeStyleNameFromAll(String styleName, List<SideMenu.MenuItem> list) {
-        for (MenuItem menuItem : list) {
+        for (SideMenu.MenuItem menuItem : list) {
             menuItem.removeStyleName(styleName);
             if (menuItem.hasChildren()) {
                 removeStyleNameFromAll(styleName, menuItem.getChildren());
