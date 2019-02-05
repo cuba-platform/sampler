@@ -17,6 +17,7 @@
             <label value="msg://enterQuery"/>
             <suggestionPickerField id="suggestionPickerField"
                                    dataContainer="orderDc"
+                                   inputPrompt="Start typing"
                                    property="customer"
                                    width="100%">
                 <actions>

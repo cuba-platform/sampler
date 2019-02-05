@@ -16,6 +16,7 @@
     <layout>
         <suggestionPickerField id="suggestionPickerField"
                                dataContainer="orderDc"
+                               inputPrompt="Start typing"
                                property="customer">
             <actions>
                 <action id="lookup" type="picker_lookup"/>

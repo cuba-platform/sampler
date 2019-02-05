@@ -16,6 +16,7 @@
               width="300px">
             <label value="msg://enterQuery"/>
             <suggestionPickerField id="suggestionPickerField"
+                                   inputPrompt="Start typing"
                                    metaClass="sampler$Customer"
                                    width="100%">
                 <actions>

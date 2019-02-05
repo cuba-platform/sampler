@@ -1,9 +1,18 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <layout>
         <hbox spacing="true">
-            <lookupField id="noFilterLookup" caption="NO" filterMode="NO"/>
-            <lookupField id="startsWithFilterLookup" caption="STARTS_WITH" filterMode="STARTS_WITH"/>
-            <lookupField id="containsFilterLookup" caption="CONTAINS" filterMode="CONTAINS"/>
+            <lookupField id="noFilterLookup"
+                         caption="NO"
+                         inputPrompt="Start typing"
+                         filterMode="NO"/>
+            <lookupField id="startsWithFilterLookup"
+                         caption="STARTS_WITH"
+                         inputPrompt="Start typing"
+                         filterMode="STARTS_WITH"/>
+            <lookupField id="containsFilterLookup"
+                         caption="CONTAINS"
+                         inputPrompt="Start typing"
+                         filterMode="CONTAINS"/>
         </hbox>
     </layout>
 </window>

@@ -16,6 +16,7 @@
     <layout>
         <suggestionField id="suggestionField"
                          dataContainer="orderDc"
+                         inputPrompt="Start typing"
                          property="customer">
             <query entityClass="com.haulmont.sampler.entity.Customer"
                    escapeValueForLike="true"
