@@ -283,6 +283,14 @@ values ('64ba6daa-a337-80a3-7dfa-cf98b52e9acc', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('df941370-56b5-0fec-8a94-9e7ab42d1fbb', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sampler$Order.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID) 
+values ('3de88368-758c-8dc4-8e06-23b831358286', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sampler$Product.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID) 
 values ('c9e74b19-7748-7a66-29fd-b2fba0e950b7', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'aboutWindow', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
@@ -311,7 +319,15 @@ values ('523e0bb2-cde7-fdf4-87c6-0ac30969c0a3', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('c84cb1cf-87ad-71e9-e1ae-a6c6bb6ba057', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$Product.edit:form', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID) 
 values ('a8339b00-0923-1d46-d6b3-b3eeee2950b6', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sec$Role.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('b20112a6-c51c-c55c-85ec-47dfc52d582d', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sec$SessionLogEntry.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -319,14 +335,14 @@ values ('50247f36-ccdc-809f-e095-c8b45258e43e', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('8edc5ff8-40e6-30df-5717-b2ea4fb5d90d', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$Order.edit:fieldGroup', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
-
-insert into SEC_PERMISSION
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('0430db66-ee43-f846-b7d0-7f5df955a191', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'entityLog', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('726e1f07-ac14-2439-7cc0-2fecf7e335d7', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 20, 'sampler$Color:update', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID) 
 values ('aa3fc0f0-92a0-8dd6-16aa-0ecb73629e25', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'performanceStatistics', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
@@ -351,7 +367,7 @@ values ('ac5c75d9-c5b6-4c9d-a18a-934ff186c9cb', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('f4cbc6fc-0d47-ddfc-12ec-db47595a3b9b', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$OrderItem.edit:fieldGroup', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+values ('7bd24490-c64d-7bba-6fbd-f436c98bcbd3', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$OrderItem.edit:form', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -359,7 +375,7 @@ values ('74311c41-9a59-47c4-1244-8344871bf0de', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('9b717790-fb4c-f71d-5936-e00f921e223f', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$Product.edit:fieldGroup', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+values ('08e397e3-5f62-c669-c674-da7c20d1bbb9', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 40, 'cuba.restApi.enabled', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -375,11 +391,11 @@ values ('713f77d3-3f14-d9bd-106d-41c4bb83a15f', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('04ef5576-f9da-cc35-1345-6fa55de3aec4', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sys$FileDescriptor.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+values ('a5120a0d-d2ae-e488-87fc-678ae55970a7', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sampler$Customer.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('eaf484d2-8fbf-6f16-6c79-9b065b720a36', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$Customer.edit:fieldGroup', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+values ('04ef5576-f9da-cc35-1345-6fa55de3aec4', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sys$FileDescriptor.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -391,6 +407,10 @@ values ('adce7749-164c-d9c1-b2a2-268ce02de0fe', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('83e3b755-1d4a-c77b-5584-cf09bbfd684f', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$Order.edit:form', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+
+insert into SEC_PERMISSION 
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID) 
 values ('f951f377-c2db-0fe2-c55e-8b58498ba86b', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sys$SendingMessage.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
@@ -411,7 +431,7 @@ values ('5dca22ad-7946-c202-9c54-66daf64a9ed8', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('726e1f07-ac14-2439-7cc0-2fecf7e335d7', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 20, 'sampler$Color:update', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+values ('73ebb311-25bd-b143-9b5e-34c39283f365', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 50, 'sampler$Customer.edit:form', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 ------------------------------------------------------------------------------------------------------------
 

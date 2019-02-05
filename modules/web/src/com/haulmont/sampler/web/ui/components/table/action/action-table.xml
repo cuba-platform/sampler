@@ -21,8 +21,7 @@
                 <action id="remove" type="remove"/>
                 <action id="excel" type="excel"/>
                 <action id="greeting"
-                        caption="Greeting"
-                        invoke="greet"/>
+                        caption="Greeting"/>
             </actions>
             <columns>
                 <column id="name"/>
