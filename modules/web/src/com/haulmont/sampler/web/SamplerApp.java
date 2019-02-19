@@ -29,11 +29,13 @@ public class SamplerApp extends DefaultApp {
 
     @EventListener
     protected void onAppStarted(AppStartedEvent event) throws LoginException {
-        Connection connection = event.getApp().getConnection();
-        if (!connection.isAuthenticated()) {
-            Locale locale = event.getApp().getLocale();
-            LoginPasswordCredentials credentials = new LoginPasswordCredentials("demo", "cuba123", locale);
-            connection.login(credentials);
+        if (!BooleanUtils.toBoolean(AppContext.getProperty("sampler.developerMode"))) {
+            Connection connection = event.getApp().getConnection();
+            if (!connection.isAuthenticated()) {
+                Locale locale = event.getApp().getLocale();
+                LoginPasswordCredentials credentials = new LoginPasswordCredentials("demo", "cuba123", locale);
+                connection.login(credentials);
+            }
         }
     }
 }
