@@ -3,6 +3,8 @@
 
 ![CUBA sampler overview](/img/cuba-sampler-overview.png)
 
+[CUBA Sampler - demo.cuba-platform.com/sampler](https://demo.cuba-platform.com/sampler)
+
 The CUBA Sampler project contains over 250 examples of using CUBA visual components and containers. Each example includes source code, description and links to documentation.
 It also contains examples for the [Charts and Maps Add-on](https://github.com/cuba-platform/charts).
 
