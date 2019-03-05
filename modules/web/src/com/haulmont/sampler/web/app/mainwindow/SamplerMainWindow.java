@@ -8,6 +8,8 @@ import com.haulmont.cuba.gui.components.mainwindow.SideMenu;
 import com.haulmont.cuba.gui.screen.OpenMode;
 import com.haulmont.cuba.gui.screen.ScreenOptions;
 import com.haulmont.cuba.gui.screen.Subscribe;
+import com.haulmont.cuba.web.AppUI;
+import com.haulmont.cuba.web.sys.RedirectHandler;
 import com.haulmont.cuba.web.widgets.CubaHorizontalSplitPanel;
 import com.haulmont.sampler.web.SamplerApp;
 import com.haulmont.sampler.web.app.mainwindowdashboard.DashboardItemClickEvent;
@@ -73,6 +75,9 @@ public class SamplerMainWindow extends AbstractMainWindow {
         refreshMenuBtn.setVisible(samplesAppConfig.isDeveloperMode());
 
         dashboardFrame.addDashboardItemClickListener(this::onDashboardItemClicked);
+        if (app.getRedirectHandler() == null) {
+            app.setRedirectHandler(getBeanLocator().getPrototype(RedirectHandler.NAME, AppUI.getCurrent()));
+        }
 
         searchField.focus();
     }
