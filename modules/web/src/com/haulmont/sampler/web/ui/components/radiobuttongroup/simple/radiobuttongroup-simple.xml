@@ -1,17 +1,10 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
-    <data>
-        <instance id="customerDc"
-                  class="com.haulmont.sampler.entity.Customer"
-                  view="_local"/>
-    </data>
     <layout spacing="true">
-        <radioButtonGroup dataContainer="customerDc"
-                          property="grade"
-                          caption="Vertical"/>
+        <radioButtonGroup caption="Vertical"
+                          optionsEnum="com.haulmont.sampler.entity.CustomerGrade"/>
 
-        <radioButtonGroup dataContainer="customerDc"
-                          property="grade"
-                          caption="Horizontal"
+        <radioButtonGroup caption="Horizontal"
+                          optionsEnum="com.haulmont.sampler.entity.CustomerGrade"
                           orientation="horizontal"/>
     </layout>
 </window>
