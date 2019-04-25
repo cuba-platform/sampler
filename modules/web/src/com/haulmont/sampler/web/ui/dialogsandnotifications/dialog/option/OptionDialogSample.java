@@ -28,13 +28,15 @@ public class OptionDialogSample extends ScreenFragment {
                 .withCaption("Title")
                 .withMessage("Message")
                 .withType(Dialogs.MessageType.CONFIRMATION)
-                .withActions(new Action[]{
+                .withActions(
                         new DialogAction(DialogAction.Type.OK)
-                                .withHandler(actionPerformedEvent -> notifications.create()
-                                .withCaption("OK pressed")
-                                .show()),
-                        new DialogAction(DialogAction.Type.CANCEL)
-                })
+                                .withHandler(e ->
+                                        notifications.create()
+                                                .withCaption("OK pressed")
+                                                .show()
+                                ),
+
+                        new DialogAction(DialogAction.Type.CANCEL))
                 .show();
     }
 
@@ -45,13 +47,12 @@ public class OptionDialogSample extends ScreenFragment {
                 .withMessage("All available DialogActions")
                 .withType(Dialogs.MessageType.CONFIRMATION)
                 .withWidth("500px")
-                .withActions(new Action[]{
+                .withActions(
                         new DialogAction(DialogAction.Type.OK),
                         new DialogAction(DialogAction.Type.CANCEL),
                         new DialogAction(DialogAction.Type.YES),
                         new DialogAction(DialogAction.Type.NO),
-                        new DialogAction(DialogAction.Type.CLOSE)
-                })
+                        new DialogAction(DialogAction.Type.CLOSE))
                 .show();
     }
 
@@ -62,14 +63,16 @@ public class OptionDialogSample extends ScreenFragment {
                 .withMessage("Message")
                 .withType(Dialogs.MessageType.CONFIRMATION)
                 .withContentMode(ContentMode.HTML)
-                .withActions(new Action[]{
+                .withActions(
                         new BaseAction("customAction")
                                 .withCaption("Do something")
-                                .withHandler(actionPerformedEvent -> notifications.create()
-                                .withCaption("Done")
-                                .show()),
-                        new DialogAction(DialogAction.Type.CANCEL)
-                })
+                                .withHandler(e ->
+                                        notifications.create()
+                                                .withCaption("Done")
+                                                .show()
+                                ),
+
+                        new DialogAction(DialogAction.Type.CANCEL))
                 .show();
     }
 }
