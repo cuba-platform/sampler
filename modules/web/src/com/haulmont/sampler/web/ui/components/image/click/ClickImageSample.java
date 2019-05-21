@@ -14,10 +14,6 @@ import javax.inject.Inject;
 public class ClickImageSample extends ScreenFragment {
 
     @Inject
-    private Image imageClick;
-    @Inject
-    private Image imageDoubleClick;
-    @Inject
     private Label<String> infoLabel;
     @Inject
     private Label<String> doubleInfoLabel;
