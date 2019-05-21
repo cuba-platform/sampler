@@ -7,7 +7,6 @@ import com.haulmont.cuba.gui.actions.list.EditAction;
 import com.haulmont.cuba.gui.components.Actions;
 import com.haulmont.cuba.gui.components.DataGrid;
 import com.haulmont.cuba.gui.model.CollectionContainer;
-import com.haulmont.cuba.gui.model.CollectionLoader;
 import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.sampler.entity.Customer;
 
@@ -22,8 +21,6 @@ public class DataGridEditorActionsSample extends ScreenFragment {
     private DataGrid<Customer> customersDataGrid;
     @Inject
     private CollectionContainer<Customer> customersDc;
-    @Inject
-    private CollectionLoader<Customer> customersLoader;
     @Inject
     private Actions actions;
     @Inject
