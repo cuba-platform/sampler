@@ -6,9 +6,11 @@ import com.haulmont.cuba.web.Connection;
 import com.haulmont.cuba.web.security.events.AppStartedEvent;
 import org.apache.commons.lang3.BooleanUtils;
 import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
 
 import java.util.Locale;
 
+@Component
 public class AppStartedEventListener implements ApplicationListener<AppStartedEvent> {
 
     @Override
