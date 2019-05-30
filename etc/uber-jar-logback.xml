@@ -67,7 +67,7 @@
 
     <logger name="com.vaadin" level="WARN"/>
 
-    <logger name="org.atmosphere" level="WARN"/>
+    <logger name="org.atmosphere" level="OFF"/>
 
     <logger name="org.activiti" level="INFO"/>
 
