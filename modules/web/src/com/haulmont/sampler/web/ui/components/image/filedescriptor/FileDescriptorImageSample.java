@@ -5,6 +5,7 @@ import com.haulmont.cuba.gui.components.Component.Alignment;
 import com.haulmont.cuba.gui.components.Image;
 import com.haulmont.cuba.gui.components.Image.ScaleMode;
 import com.haulmont.cuba.gui.components.Table;
+import com.haulmont.cuba.gui.components.data.value.ContainerValueSource;
 import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.sampler.entity.Customer;
 
@@ -31,7 +32,7 @@ public class FileDescriptorImageSample extends ScreenFragment {
                 avatarImage.setWidth("100%");
                 avatarImage.setHeight("30px");
 
-                avatarImage.setDatasource(table.getItemDatasource(customer), "avatar");
+                avatarImage.setValueSource(new ContainerValueSource<>(table.getInstanceContainer(customer), "avatar"));
                 return avatarImage;
             }
             return null;
