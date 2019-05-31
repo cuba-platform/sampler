@@ -407,6 +407,10 @@ values ('46021ec4-51a8-1b16-22b2-fe13b5e58ad0', 1, current_timestamp, 'admin', c
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('c1d8ed70-74e0-ae6a-f3eb-538a36fb2b54', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 30, 'sampler$Customer:avatar', 1, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('4a212a17-1979-bb6f-eee0-9d7f1a11fdc1', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'jmxConsole', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
