@@ -1,0 +1,45 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
+    <data>
+        <collection id="tipsDc"
+                    class="com.haulmont.sampler.entity.TipInfo"
+                    view="_local">
+            <loader id="tipsLoader">
+                <query>
+                    <![CDATA[select e from sampler$TipInfo e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="pivotTable" spacing="true">
+        <hbox spacing="true">
+            <button id="showUiBtn" caption="msg://showUiBtn.caption"/>
+            <button id="showRowTotalsBtn" caption="msg://showRowTotalsBtn.caption"/>
+            <button id="showColTotalsBtn" caption="msg://showColTotalsBtn.caption"/>
+        </hbox>
+        <chart:pivotTable id="pivotTable"
+                          dataContainer="tipsDc"
+                          editable="true"
+                          showColTotals="true"
+                          showRowTotals="true"
+                          showUI="true">
+            <chart:properties>
+                <chart:property name="totalBill"/>
+                <chart:property name="tip"/>
+                <chart:property name="sex"/>
+                <chart:property name="smoker"/>
+                <chart:property name="day"/>
+                <chart:property name="time"/>
+                <chart:property name="size"/>
+            </chart:properties>
+            <chart:columns>
+                <chart:column value="day"/>
+                <chart:column value="time"/>
+            </chart:columns>
+            <chart:rows>
+                <chart:row value="sex"/>
+                <chart:row value="smoker"/>
+            </chart:rows>
+        </chart:pivotTable>
+    </layout>
+</window>

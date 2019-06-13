@@ -1888,6 +1888,22 @@
                 <file name="com/haulmont/sampler/entity/TipInfo.java"/>
             </otherFiles>
         </item>
+        <item id="pivot-table-ui-properties" docUrlSuffix="pivotTable" splitEnabled="true" sampleHeight="60"
+              image="images/dashboard/pivottable/pivot-table-ui-properties.png"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/uiproperties/PivotTableUiPropertiesSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/uiproperties">
+            <otherFiles>
+                <file name="com/haulmont/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivot-table-data-export" docUrlSuffix="pivotTable_extension" splitEnabled="true"
+              image="images/dashboard/pivottable/pivot-table-data-export.png"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/dataexport/PivotTableDataExportSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/dataexport">
+            <otherFiles>
+                <file name="com/haulmont/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
     </menu>
 
     <menu id="maps" image="images/dashboard/mainmenu/maps.svg">
