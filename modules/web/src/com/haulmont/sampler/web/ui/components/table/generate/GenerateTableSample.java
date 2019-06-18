@@ -37,8 +37,8 @@ public class GenerateTableSample extends ScreenFragment {
             return lookupField;
         });
 
-        customerTable.setColumnCaption("fullName", "Full Name");
-        customerTable.setColumnCaption("language", "Language");
+        customerTable.getColumn("fullName").setCaption("Full Name");
+        customerTable.getColumn("language").setCaption("Language");
     }
 
     public Component generateFullNameCell(Customer entity) {
