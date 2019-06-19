@@ -1551,7 +1551,7 @@
                         <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
                     </otherFiles>
                 </item>
-                <item id="micro-chart" docUrlSuffix="serial_chart" sampleHeight="250"
+                <item id="micro-chart" docUrlSuffix="serial_chart" sampleHeight="60"
                       image="images/dashboard/charts/micro-chart.png"
                       controller="com/haulmont/sampler/web/ui/charts/charts/serial/micro/MicroChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/micro"/>
@@ -1559,6 +1559,25 @@
                       image="images/dashboard/charts/cylinder-chart.svg"
                       controller="com/haulmont/sampler/web/ui/charts/charts/serial/cylinder/CylinderChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/cylinder"/>
+            </menu>
+
+            <menu id="gap-chart">
+                <item id="gap-field-chart" docUrlSuffix="serial_chart" sampleHeight="60" splitEnabled="true"
+                      image="images/dashboard/charts/gap-field-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/gap/gapfield/GapFieldChartSample.java"
+                      descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/gap/gapfield">
+                    <otherFiles>
+                        <file name="com/haulmont/sampler/entity/DateValueGap.java"/>
+                    </otherFiles>
+                </item>
+                <item id="connect-chart" docUrlSuffix="serial_chart" sampleHeight="60" splitEnabled="true"
+                      image="images/dashboard/charts/connect-chart.svg"
+                      controller="com/haulmont/sampler/web/ui/charts/charts/gap/connect/ConnectChartSample.java"
+                      descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/gap/connect">
+                    <otherFiles>
+                        <file name="com/haulmont/sampler/entity/DateValueGap.java"/>
+                    </otherFiles>
+                </item>
             </menu>
 
             <menu id="xy-chart-menu">
