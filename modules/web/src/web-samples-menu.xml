@@ -57,7 +57,7 @@
                   controller="com/haulmont/sampler/web/ui/components/browserframe/url/UrlBrowserFrameSample.java"/>
         </menu>
 
-        <item id="bulk-editor" docUrlSuffix="gui_BulkEditor" splitEnabled="true" sampleHeight="60"
+        <item id="bulk-editor" docUrlSuffix="std_list_actions" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/components/bulk-editor.png"
               descriptionsPack="com/haulmont/sampler/web/ui/components/bulkeditor"
               controller="com/haulmont/sampler/web/ui/components/bulkeditor/BulkEditorSample.java">
