@@ -20,10 +20,12 @@ For example: `com.haulmont.sampler.web.ui.components.bulkeditor`.
 
     Required _item_ attributes:
     - `id` - equals to sample xml file name. For example: `id="simple-button"`.
+    - `image` - relative path to the image file that is used as preview for dashboard tile. 
+    For example: `image="images/dashboard/components/simple-button.png"` 
     - `descriptionPack` - relative path to a sample directory. Used to find description files. 
     For example: `descriptionsPack="com/haulmont/sampler/web/ui/components/button/simple"`.
     - `controller` - relative path to a sample controller class file. For example:
-    `controller="com/haulmont/sampler/web/ui/components/button/simple/SimpleButtonFrame.java"`.
+    `controller="com/haulmont/sampler/web/ui/components/button/simple/SimpleButtonSample.java"`.
     
     Highly recommended:
     - `sampleHeight` - an integer number defining height of the sample area. Can be set in pixel or as a percentage. 
@@ -49,6 +51,9 @@ in `com.haulmont.sampler.web` package.
 
 # Code style and samples rules
 
+- XML file name consists of a component name + sample name hyphenated, e.g. `datagrid-basic-settings.xml`.
+- Controller class name consists of XML file name in CamelCase notation + `Sample`, e.g. `DataGridBasicSettingsSample`.
+- **UiController id** equals to the XML file name.
 - Use less code as possible. For example, remove unnecessary calls of empty _super_ methods 
 (`super.init(params)`, etc.).
 - All XML files must be formatted by CUBA Studio. For example, Studio places component attributes in 
