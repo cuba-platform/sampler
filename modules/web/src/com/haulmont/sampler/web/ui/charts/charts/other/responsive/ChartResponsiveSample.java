@@ -1,4 +1,4 @@
-package com.haulmont.sampler.web.ui.charts.charts.responsive;
+package com.haulmont.sampler.web.ui.charts.charts.other.responsive;
 
 import com.haulmont.charts.gui.components.charts.SerialChart;
 import com.haulmont.cuba.gui.components.HasValue;

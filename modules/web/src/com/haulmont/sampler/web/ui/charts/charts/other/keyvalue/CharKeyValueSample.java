@@ -1,4 +1,4 @@
-package com.haulmont.sampler.web.ui.charts.charts.keyvalue;
+package com.haulmont.sampler.web.ui.charts.charts.other.keyvalue;
 
 import com.haulmont.cuba.gui.screen.LoadDataBeforeShow;
 import com.haulmont.cuba.gui.screen.ScreenFragment;

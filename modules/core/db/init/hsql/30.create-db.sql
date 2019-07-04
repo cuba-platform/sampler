@@ -2674,3 +2674,34 @@ insert into SAMPLER_TIP_INFO
 values (NEWID(), 1, current_timestamp, 'admin', 18.78, 3.0, 'female', false, 'thu', 'dinner', 2);
 
 ------------------------------------------------------------------------------------------------------------
+
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('2ceda37b-7721-01a0-226f-d8af17a64b7c', 1, '2019-06-21 18:43:42', 'admin', '2019-06-21 18:50:22', 'admin', null, null, 'Keyboard', 'Russia- Keyboard', 'Russia', 348, 163);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('3d6f7f23-ca74-93aa-d36a-a623461aa099', 1, '2019-06-21 18:49:30', 'admin', '2019-06-21 18:49:30', null, null, null, 'Computer mouse', 'USA - Computer mouse', 'USA', 345, 198);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('427ac929-ff30-6944-5c46-8c7d9bd4bcf8', 1, '2019-06-21 18:48:55', 'admin', '2019-06-21 18:48:55', null, null, null, 'Keyboard', 'Germany - Keyboard', 'Germany', 373, 183);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('4b538cd7-c2f0-45cc-1dbc-c04b376ffd26', 1, '2019-06-21 18:48:27', 'admin', '2019-06-21 18:48:27', null, null, null, 'Computer mouse', 'Germany - Computer mouse', 'Germany', 412, 201);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('5b13f7df-d2ba-22bb-9327-ce3c0efb9f3f', 1, '2019-06-21 18:47:25', 'admin', '2019-06-21 18:47:25', null, null, null, 'Keyboard', 'France- Keyboard', 'France', 376, 198);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('a557a503-d6e3-afe8-fdaa-c42f29116f46', 1, '2019-06-21 18:45:59', 'admin', '2019-06-21 18:45:59', null, null, null, 'Keyboard', 'UK - Keyboard', 'UK', 421, 167);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('a59ee68f-09c2-4a42-ea09-13858f9db2f4', 1, '2019-06-21 18:50:10', 'admin', '2019-06-21 18:50:10', null, null, null, 'Keyboard', 'USA - Keyboard', 'USA', 349, 165);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('dabac1de-aef8-86b3-a76a-377010294734', 1, '2019-06-21 18:46:52', 'admin', '2019-06-21 18:46:52', null, null, null, 'Computer mouse', 'France - Computer mouse', 'France', 382, 187);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('f64d6d5d-d396-6afe-06af-b288fc289801', 1, '2019-06-21 18:42:23', 'admin', '2019-06-21 18:45:07', 'admin', null, null, 'Computer mouse', 'Russia - Computer mouse', 'Russia', 427, 176);
+insert into SAMPLER_COUNTRY_SALES
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('fab72f7d-b93a-ec11-113a-c0a1459f5c8e', 1, '2019-06-21 18:45:37', 'admin', '2019-06-21 18:45:37', null, null, null, 'Computer mouse', 'UK - Computer mouse', 'UK', 328, 189);

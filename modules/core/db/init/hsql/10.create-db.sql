@@ -371,3 +371,23 @@ create table SAMPLER_TIP_INFO (
     primary key (ID)
 )^
 -- end SAMPLER_TIP_INFO
+-- begin SAMPLER_COUNTRY_SALES
+create table SAMPLER_COUNTRY_SALES (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    PRODUCT varchar(255),
+    CATEGORY varchar(255),
+    COUNTRY varchar(255),
+    SALES integer,
+    EXPENSE integer,
+    --
+    primary key (ID)
+)^
+-- end SAMPLER_COUNTRY_SALES

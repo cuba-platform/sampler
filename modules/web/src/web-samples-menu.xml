@@ -1747,25 +1747,6 @@
                     </otherFiles>
                 </item>
             </menu>
-
-            <item id="chart-responsive" docUrlSuffix="chart" splitEnabled="true" sampleHeight="65"
-                  image="images/dashboard/charts/chart-responsive.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/responsive/ChartResponsiveSample.java"
-                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/responsive">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/TransportCount.java"/>
-                </otherFiles>
-            </item>
-
-            <item id="chart-keyvalue" splitEnabled="true"
-                  image="images/dashboard/charts/chart-keyvalue.png"
-                  controller="com/haulmont/sampler/web/ui/charts/charts/keyvalue/CharKeyValueSample.java"
-                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/keyvalue">
-                <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Order.java"/>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
-                </otherFiles>
-            </item>
         </menu>
 
         <menu id="stockCharts">
@@ -1861,6 +1842,42 @@
                   descriptionsPack="com/haulmont/sampler/web/ui/charts/stockcharts/incrementalupdate">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/DateValueVolume.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
+        <menu id="other">
+            <item id="chart-responsive" docUrlSuffix="chart" splitEnabled="true" sampleHeight="65"
+                  image="images/dashboard/charts/chart-responsive.png"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/other/responsive/ChartResponsiveSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/other/responsive">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/TransportCount.java"/>
+                </otherFiles>
+            </item>
+            <item id="chart-keyvalue" splitEnabled="true"
+                  image="images/dashboard/charts/chart-keyvalue.png"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/other/keyvalue/CharKeyValueSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/other/keyvalue">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Order.java"/>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="dynamically-creating-graphs-chart" docUrlSuffix="chart" sampleHeight="60" splitEnabled="true"
+                  image="images/dashboard/charts/dynamically-creating-graphs-chart.svg"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/other/dynamicallyсreatinggraphs/DynamicallyCreatingGraphsChartSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/other/dynamicallyсreatinggraphs">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/TransportCount.java"/>
+                </otherFiles>
+            </item>
+            <item id="two-level-category-chart" docUrlSuffix="chart" sampleHeight="60" splitEnabled="true"
+                  image="images/dashboard/charts/two-level-category-chart.svg"
+                  controller="com/haulmont/sampler/web/ui/charts/charts/other/twolevelcategory/TwoLevelCategoryChartSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/other/twolevelcategory">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/CountrySales.java"/>
                 </otherFiles>
             </item>
         </menu>
