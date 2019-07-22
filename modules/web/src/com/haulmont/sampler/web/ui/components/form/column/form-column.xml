@@ -1,0 +1,20 @@
+<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd">
+    <data>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="_local"/>
+    </data>
+    <layout>
+        <form dataContainer="customerDc">
+            <column width="300px">
+                <textField property="name"/>
+                <textField property="lastName"/>
+            </column>
+            <column width="200px">
+                <textField property="age"/>
+                <lookupField property="grade"/>
+                <checkBox property="active"/>
+            </column>
+        </form>
+    </layout>
+</fragment>

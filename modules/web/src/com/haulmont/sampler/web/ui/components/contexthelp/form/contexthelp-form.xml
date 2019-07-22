@@ -1,0 +1,22 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        messagesPack="com.haulmont.sampler.web.ui.components.contexthelp.form">
+    <data>
+        <instance id="customerDc"
+                  class="com.haulmont.sampler.entity.Customer"
+                  view="_local"/>
+    </data>
+    <layout spacing="true">
+        <form id="form"
+              dataContainer="customerDc">
+            <column width="250px">
+                <field property="name"
+                       description="Description"
+                       contextHelpText="msg://contextHelpText.content"/>
+                <field property="age"/>
+                <field property="active"
+                       contextHelpText="msg://contextHelpText.htmlContent"
+                       contextHelpTextHtmlEnabled="true"/>
+            </column>
+        </form>
+    </layout>
+</window>

@@ -16,7 +16,7 @@
     <screen id="annotation-currencyfield"
             template="com/haulmont/sampler/web/ui/components/currencyfield/annotation/annotation-currencyfield.xml"/>
     <screen id="contexthelp-fieldgroup"
-            template="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroup/contexthelp-fieldgroup.xml"/>
+            template="com/haulmont/sampler/web/ui/components/contexthelp/form/contexthelp-fieldgroup.xml"/>
     <screen id="contexthelp-fieldgroup-click"
-            template="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick/contexthelp-fieldgroup-click.xml"/>
+            template="com/haulmont/sampler/web/ui/components/contexthelp/formclick/contexthelp-fieldgroup-click.xml"/>
 </screen-config>

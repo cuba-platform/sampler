@@ -1,0 +1,20 @@
+<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd">
+    <data>
+        <instance id="orderDc"
+                  class="com.haulmont.sampler.entity.Order"
+                  view="order-with-customer"/>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <form dataContainer="orderDc">
+                <dateField id="dateField" property="date" width="100%"/>
+                <pickerField id="customerField" property="customer"/>
+                <textField id="amountField" property="amount"/>
+                <textField id="descriptionField" property="description"/>
+            </form>
+            <button id="showOrderBtn"
+                    align="MIDDLE_LEFT"
+                    caption="Show Order"/>
+        </hbox>
+    </layout>
+</fragment>

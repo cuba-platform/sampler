@@ -181,18 +181,18 @@
                   image="images/dashboard/components/contexthelp-field-click.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldclick"
                   controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldclick/ContextHelpFieldClickSample.java"/>
-            <item id="contexthelp-fieldgroup" docUrlSuffix="gui_attributes"
-                  image="images/dashboard/components/contexthelp-fieldgroup.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroup"
-                  controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroup/ContextHelpFieldGroupSample.java">
+            <item id="contexthelp-form" docUrlSuffix="gui_attributes"
+                  image="images/dashboard/components/contexthelp-form.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/form"
+                  controller="com/haulmont/sampler/web/ui/components/contexthelp/form/ContextHelpFormSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="contexthelp-fieldgroup-click" docUrlSuffix="gui_attributes"
-                  image="images/dashboard/components/contexthelp-fieldgroup-click.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick"
-                  controller="com/haulmont/sampler/web/ui/components/contexthelp/fieldgroupclick/ContextHelpFieldGroupClickSample.java">
+            <item id="contexthelp-form-click" docUrlSuffix="gui_attributes"
+                  image="images/dashboard/components/contexthelp-form-click.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/contexthelp/formclick"
+                  controller="com/haulmont/sampler/web/ui/components/contexthelp/formclick/ContextHelpFormClickSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -442,7 +442,7 @@
                   controller="com/haulmont/sampler/web/ui/components/embedded/web/WebEmbeddedSample.java"/>
         </menu>
 
-        <menu id="fieldGroup">
+        <!--<menu id="fieldGroup">
             <item id="simple-fieldgroup" docUrlSuffix="gui_FieldGroup" sampleHeight="150px"
                   image="images/dashboard/components/simple-fieldgroup.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/fieldgroup/simple"
@@ -483,7 +483,7 @@
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-        </menu>
+        </menu>-->
 
         <menu id="filter">
             <item id="multiple-filter" docUrlSuffix="gui_Filter" splitEnabled="true" sampleHeight="50"
@@ -517,6 +517,43 @@
                 <screenParams>
                     <param name="filter" value="Custom Condition"/>
                 </screenParams>
+            </item>
+        </menu>
+
+        <menu id="form">
+            <item id="form-simple" docUrlSuffix="gui_Form" sampleHeight="150px"
+                  image="images/dashboard/components/form-simple.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/simple"
+                  controller="com/haulmont/sampler/web/ui/components/form/simple/FormSimpleSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Order.java"/>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-column" docUrlSuffix="gui_Form" sampleHeight="110px"
+                  image="images/dashboard/components/form-column.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/column"
+                  controller="com/haulmont/sampler/web/ui/components/form/column/FormColumnSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-captionposition" docUrlSuffix="gui_Form" sampleHeight="110px"
+                  image="images/dashboard/components/form-captionposition.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/caption"
+                  controller="com/haulmont/sampler/web/ui/components/form/caption/FormCaptionPositionSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-field" docUrlSuffix="gui_Form" sampleHeight="150px"
+                  image="images/dashboard/components/form-simple.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/field"
+                  controller="com/haulmont/sampler/web/ui/components/form/field/FormFieldSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Order.java"/>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
             </item>
         </menu>
 
