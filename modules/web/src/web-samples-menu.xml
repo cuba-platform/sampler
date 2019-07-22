@@ -1400,17 +1400,22 @@
     <menu id="dialogsAndNotifications" image="images/dashboard/mainmenu/dialogsAndNotifications.svg">
 
         <menu id="dialogs">
-            <item id="message-dialog-sample" docUrlSuffix="dialogs" sampleHeight="30px"
+            <item id="message-dialog" docUrlSuffix="gui_dialogs" sampleHeight="30px"
                   controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/message/MessageDialogSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/message"/>
-            <item id="option-dialog-sample" docUrlSuffix="dialogs" sampleHeight="30px"
+            <item id="option-dialog" docUrlSuffix="gui_dialogs" sampleHeight="30px"
                   controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/option/OptionDialogSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/option"/>
         </menu>
 
-        <item id="notifications-sample" docUrlSuffix="notifications" sampleHeight="30px"
-              controller="com/haulmont/sampler/web/ui/dialogsandnotifications/notification/NotificationsSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/notification"/>
+        <menu id="notifications">
+            <item id="notification-type" docUrlSuffix="gui_notifications" sampleHeight="30px"
+                  controller="com/haulmont/sampler/web/ui/dialogsandnotifications/notification/type/NotificationTypeSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/notification/type"/>
+            <item id="notification-position" docUrlSuffix="gui_notifications" sampleHeight="160px"
+                  controller="com/haulmont/sampler/web/ui/dialogsandnotifications/notification/position/NotificationPositionSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/notification/position"/>
+        </menu>
 
     </menu>
 

@@ -10,8 +10,8 @@ import com.haulmont.cuba.gui.screen.UiDescriptor;
 
 import javax.inject.Inject;
 
-@UiController("message-dialog-sample")
-@UiDescriptor("message-dialog-sample.xml")
+@UiController("message-dialog")
+@UiDescriptor("message-dialog.xml")
 public class MessageDialogSample extends ScreenFragment {
     @Inject
     private Dialogs dialogs;

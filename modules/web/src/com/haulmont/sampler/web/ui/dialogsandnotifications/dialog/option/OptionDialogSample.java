@@ -14,8 +14,8 @@ import com.haulmont.cuba.gui.screen.UiDescriptor;
 
 import javax.inject.Inject;
 
-@UiController("option-dialog-sample")
-@UiDescriptor("option-dialog-sample.xml")
+@UiController("option-dialog")
+@UiDescriptor("option-dialog.xml")
 public class OptionDialogSample extends ScreenFragment {
     @Inject
     private Dialogs dialogs;

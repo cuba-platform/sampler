@@ -1,4 +1,4 @@
-package com.haulmont.sampler.web.ui.dialogsandnotifications.notification;
+package com.haulmont.sampler.web.ui.dialogsandnotifications.notification.type;
 
 import com.haulmont.cuba.gui.Notifications;
 import com.haulmont.cuba.gui.Notifications.NotificationType;
@@ -11,9 +11,9 @@ import com.haulmont.cuba.gui.screen.UiDescriptor;
 
 import javax.inject.Inject;
 
-@UiController("notifications-sample")
-@UiDescriptor("notifications-sample.xml")
-public class NotificationsSample extends ScreenFragment {
+@UiController("notification-type")
+@UiDescriptor("notification-type.xml")
+public class NotificationTypeSample extends ScreenFragment {
 
     @Inject
     private Notifications notifications;
