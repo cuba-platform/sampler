@@ -1,12 +1,16 @@
 
 buildscript {
-    ext.cubaVersion = '7.0.5'
+    ext.cubaVersion = '7.1.0.BETA1'
     repositories {
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
         }
+        mavenCentral()
         jcenter()
-    }
+        maven {
+            url 'http://maven.vaadin.com/vaadin-addons'
+        }
+}
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
     }

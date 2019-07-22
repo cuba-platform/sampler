@@ -106,6 +106,12 @@ public class SampleBrowser extends Screen {
 
     @Subscribe
     protected void onAfterShow(AfterShowEvent event) {
+        // When a locale is changed, UrlParamsChangedEvent is fired after AfterShowEvent
+        // See cuba-platform/cuba#1665
+        if (sampleId == null) {
+            return;
+        }
+
         String serializedSampleId = UrlIdSerializer.serializeId(sampleId);
         urlRouting.replaceState(this, ImmutableMap.of("id", serializedSampleId));
     }

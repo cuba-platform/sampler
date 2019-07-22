@@ -7,6 +7,8 @@ import org.apache.commons.lang3.BooleanUtils;
 
 public class SamplerApp extends DefaultApp {
 
+    private RedirectHandler redirectHandler;
+
     @Override
     protected String routeTopLevelWindowId() {
         if (BooleanUtils.toBoolean(AppContext.getProperty("sampler.developerMode"))) {
@@ -18,5 +20,9 @@ public class SamplerApp extends DefaultApp {
 
     public RedirectHandler getRedirectHandler() {
         return redirectHandler;
+    }
+
+    public void setRedirectHandler(RedirectHandler redirectHandler) {
+        this.redirectHandler = redirectHandler;
     }
 }

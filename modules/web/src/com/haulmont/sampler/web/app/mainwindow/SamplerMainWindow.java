@@ -53,7 +53,7 @@ public class SamplerMainWindow extends AbstractMainWindow {
     private SamplesAppConfig samplesAppConfig;
 
     @Inject
-    protected SamplerApp app;
+    private SamplerApp app;
 
     @Inject
     private Screens screens;
@@ -136,6 +136,10 @@ public class SamplerMainWindow extends AbstractMainWindow {
             app.setLocale(selectedLocale);
             app.createTopLevelWindow();
         });
+
+        localesSelect.setOptionStyleProvider(locale ->
+                locale.equals(app.getLocale()) ? "selected-locale" : null
+        );
     }
 
     @Subscribe("searchButton")
