@@ -4,7 +4,8 @@
     padding: round($v-unit-size/3);
   }
 
-  .v-filterselect-item-selected-locale {
+  .v-filterselect-item-selected-locale,
+  .v-filterselect-item-selected-theme {
     text-decoration: underline;
   }
 }

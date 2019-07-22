@@ -4,11 +4,14 @@ import com.haulmont.cuba.core.global.GlobalConfig;
 import com.haulmont.cuba.gui.Screens;
 import com.haulmont.cuba.gui.UrlRouting;
 import com.haulmont.cuba.gui.components.*;
+import com.haulmont.cuba.gui.components.data.options.ListOptions;
 import com.haulmont.cuba.gui.components.mainwindow.SideMenu;
 import com.haulmont.cuba.gui.screen.OpenMode;
 import com.haulmont.cuba.gui.screen.ScreenOptions;
 import com.haulmont.cuba.gui.screen.Subscribe;
+import com.haulmont.cuba.gui.theme.ThemeConstantsRepository;
 import com.haulmont.cuba.web.AppUI;
+import com.haulmont.cuba.web.app.UserSettingsTools;
 import com.haulmont.cuba.web.sys.RedirectHandler;
 import com.haulmont.cuba.web.widgets.CubaHorizontalSplitPanel;
 import com.haulmont.sampler.web.SamplerApp;
@@ -24,6 +27,7 @@ import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 public class SamplerMainWindow extends AbstractMainWindow {
 
@@ -41,6 +45,8 @@ public class SamplerMainWindow extends AbstractMainWindow {
     private SplitPanel mainSplit;
     @Inject
     private LookupField<Locale> localesSelect;
+    @Inject
+    private LookupField<String> themeSelect;
 
     @Inject
     private SamplerMainDashboardFragment dashboardFrame;
@@ -60,6 +66,10 @@ public class SamplerMainWindow extends AbstractMainWindow {
     @Inject
     private GlobalConfig globalConfig;
     @Inject
+    private ThemeConstantsRepository themeConstantsRepository;
+    @Inject
+    private UserSettingsTools userSettingsTools;
+    @Inject
     private UrlRouting urlRouting;
 
     private List<SideMenu.MenuItem> foundItems = new ArrayList<>();
@@ -70,6 +80,7 @@ public class SamplerMainWindow extends AbstractMainWindow {
         initSideMenu();
         initMainSplit();
         initLocales();
+        initThemes();
 
         titleBar.setVisible(samplesAppConfig.isDeveloperMode());
         refreshMenuBtn.setVisible(samplesAppConfig.isDeveloperMode());
@@ -139,6 +150,28 @@ public class SamplerMainWindow extends AbstractMainWindow {
 
         localesSelect.setOptionStyleProvider(locale ->
                 locale.equals(app.getLocale()) ? "selected-locale" : null
+        );
+    }
+
+    private void initThemes() {
+        Set<String> availableThemes = themeConstantsRepository.getAvailableThemes();
+        themeSelect.setOptions(new ListOptions<>(availableThemes));
+
+        String userAppTheme = userSettingsTools.loadAppWindowTheme();
+        themeSelect.setValue(userAppTheme);
+
+        themeSelect.addValueChangeListener(valueChangeEvent -> {
+            String selectedTheme = valueChangeEvent.getValue();
+
+            app.getRedirectHandler().schedule(urlRouting.getState());
+
+            userSettingsTools.saveAppWindowTheme(selectedTheme);
+            app.setUserAppTheme(selectedTheme);
+            app.createTopLevelWindow();
+        });
+
+        themeSelect.setOptionStyleProvider(theme ->
+                theme.equals(userSettingsTools.loadAppWindowTheme()) ? "selected-theme" : null
         );
     }
 

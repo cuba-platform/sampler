@@ -86,13 +86,32 @@
                 <sideMenu id="sideMenu"
                           width="100%"/>
                 <hbox id="localesBox"
-                      spacing="true"
+                      expand="spacer"
+                      margin="false,false,false,true"
                       width="100%">
+                    <label id="themeLabel"
+                           align="MIDDLE_LEFT"
+                           stylename="bold"
+                           value="msg://theme.caption"/>
+                    <lookupField id="themeSelect"
+                                 align="MIDDLE_LEFT"
+                                 nullOptionVisible="false"
+                                 stylename="borderless"
+                                 textInputAllowed="false"
+                                 width="80px"/>
+
+                    <label id="spacer"/>
+
+                    <label id="localesLabel"
+                           align="MIDDLE_RIGHT"
+                           stylename="bold"
+                           value="msg://locales.caption"/>
                     <lookupField id="localesSelect"
                                  align="MIDDLE_RIGHT"
                                  nullOptionVisible="false"
-                                 stylename="c-login-locale"
-                                 textInputAllowed="false"/>
+                                 stylename="borderless"
+                                 textInputAllowed="false"
+                                 width="100px"/>
                 </hbox>
             </vbox>
 
