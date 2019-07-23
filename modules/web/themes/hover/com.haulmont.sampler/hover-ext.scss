@@ -13,6 +13,7 @@
 @import "samples/components/calendar/calendar";
 @import "samples/components/twincolumn/twincolumn";
 @import "samples/components/htmlLayout/html-layout";
+@import "samples/components/composite/composite";
 @import "samples/containers/cssLayout/css-layout";
 @import "samples/containers/layoutClick/layout-click";
 @import "samples/components/icons/icons";
@@ -36,4 +37,5 @@
   @include sample-main-dashboard-frame;
   @include sample-all-icons;
   @include sample-options-style-provider-lookupfield;
+  @include sample-composite-component;
 }

@@ -172,6 +172,20 @@
                   controller="com/haulmont/sampler/web/ui/components/colorpicker/captions/CaptionsColorPickerSample.java"/>
         </menu>
 
+        <item id="composite-component" docUrlSuffix="composite_components"
+              image="images/dashboard/components/composite-component.png"
+              descriptionsPack="com/haulmont/sampler/web/ui/components/composite"
+              controller="com/haulmont/sampler/web/ui/components/composite/CompositeComponentSample.java">
+            <otherFiles>
+                <file name="com/haulmont/sampler/web/ui/components/composite/component/StepperField.java"/>
+                <file name="com/haulmont/sampler/web/ui/components/composite/component/stepper-component.xml"/>
+                <file name="com/haulmont/sampler/web/ui/components/composite/component/StepperFieldLoader.java"/>
+                <file name="com/haulmont/sampler/web/ui/components/composite/component/ui-component.xml"/>
+                <file name="com/haulmont/sampler/web/ui/components/composite/component/ui-component.xsd"/>
+                <file name="com/haulmont/sampler/web/ui/components/composite/component/styles.scss"/>
+            </otherFiles>
+        </item>
+
         <menu id="contextHelp">
             <item id="contexthelp-field" docUrlSuffix="gui_attributes"
                   image="images/dashboard/components/contexthelp-field.png"

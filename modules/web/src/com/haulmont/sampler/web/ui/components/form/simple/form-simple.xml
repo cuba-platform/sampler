@@ -1,4 +1,4 @@
-<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <data>
         <instance id="orderDc"
                   class="com.haulmont.sampler.entity.Order"
@@ -17,4 +17,4 @@
                     caption="Show Order"/>
         </hbox>
     </layout>
-</fragment>
+</window>

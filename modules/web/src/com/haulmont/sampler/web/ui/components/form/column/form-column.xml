@@ -1,4 +1,4 @@
-<fragment xmlns="http://schemas.haulmont.com/cuba/screen/fragment.xsd">
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
     <data>
         <instance id="customerDc"
                   class="com.haulmont.sampler.entity.Customer"
@@ -17,4 +17,4 @@
             </column>
         </form>
     </layout>
-</fragment>
+</window>

@@ -1,0 +1,7 @@
+<components xmlns="http://schemas.haulmont.com/cuba/components.xsd">
+    <component>
+        <name>stepperField</name>
+        <componentLoader>com.haulmont.sampler.web.ui.components.composite.component.StepperFieldLoader</componentLoader>
+        <class>com.haulmont.sampler.web.ui.components.composite.component.StepperFieldLoader</class>
+    </component>
+</components>

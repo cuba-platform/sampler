@@ -1,0 +1,16 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:app="http://schemas.company.com/demo/0.1/ui-component.xsd">
+    <data>
+        <instance id="orderItemDc"
+                  class="com.haulmont.sampler.entity.OrderItem"
+                  view="orderItem-with-product">
+            <loader/>
+        </instance>
+    </data>
+    <layout>
+        <app:stepperField id="quantityField"
+                          dataContainer="orderItemDc"
+                          property="quantity"
+                          step="1"/>
+    </layout>
+</window>

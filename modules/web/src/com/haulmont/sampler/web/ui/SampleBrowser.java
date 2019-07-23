@@ -375,6 +375,9 @@ public class SampleBrowser extends Screen {
 
     private AceMode getAceMode(String src) {
         String fileExtension = samplesHelper.getFileExtension(src);
+        if ("xsd".equals(fileExtension)) {
+            fileExtension = "xml";
+        }
         return fileExtension != null ? AceMode.forFileEnding(fileExtension) : AceMode.text;
     }
 
