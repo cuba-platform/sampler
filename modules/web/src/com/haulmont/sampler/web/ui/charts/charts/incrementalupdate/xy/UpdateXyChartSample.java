@@ -1,7 +1,6 @@
 package com.haulmont.sampler.web.ui.charts.charts.incrementalupdate.xy;
 
 import com.haulmont.cuba.core.global.Metadata;
-import com.haulmont.cuba.gui.Facets;
 import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.Timer;
@@ -25,22 +24,12 @@ public class UpdateXyChartSample extends ScreenFragment {
     @Inject
     private Label<String> statusLabel;
     @Inject
-    private Facets facets;
-
     private Timer timer;
 
-    @Subscribe
-    protected void onInit(InitEvent event) {
-        timer = facets.create(Timer.class);
-        timer.setDelay(5000);
-        timer.setRepeating(true);
-        getHostScreen().getWindow().addFacet(timer);
-
-        timer.addTimerActionListener(timerActionEvent -> {
-            addDate();
-            removeDate();
-        });
-        timer.start();
+    @Subscribe("timer")
+    private void onTimerTick(Timer.TimerActionEvent event) {
+        addData();
+        removeData();
     }
 
     @Subscribe("startTimer")
@@ -55,11 +44,11 @@ public class UpdateXyChartSample extends ScreenFragment {
         statusLabel.setValue("Update disabled");
     }
 
-    private void addDate() {
+    private void addData() {
         pointsDc.getMutableItems().add(generatePointValue());
     }
 
-    private void removeDate() {
+    private void removeData() {
         List<PointValue> items = pointsDc.getMutableItems();
         if (!items.isEmpty()) {
             items.remove(0);

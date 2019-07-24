@@ -12,6 +12,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <timer id="timer" autostart="true" delay="5000" repeating="true"/>
+    </facets>
     <layout expand="lineChart" spacing="true">
         <hbox spacing="true">
             <button id="startTimer" caption="Start" icon="font-awesome-icon:PLAY"/>

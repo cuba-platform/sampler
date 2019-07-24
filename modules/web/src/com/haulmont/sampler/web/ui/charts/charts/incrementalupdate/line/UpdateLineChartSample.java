@@ -2,7 +2,6 @@ package com.haulmont.sampler.web.ui.charts.charts.incrementalupdate.line;
 
 import com.haulmont.cuba.core.global.Metadata;
 import com.haulmont.cuba.core.global.TimeSource;
-import com.haulmont.cuba.gui.Facets;
 import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.Timer;
@@ -26,27 +25,18 @@ public class UpdateLineChartSample extends ScreenFragment {
     private Metadata metadata;
     @Inject
     private Label<String> statusLabel;
-
     @Inject
-    private Facets facets;
+    private Timer timer;
+
     @Inject
     private TimeSource timeSource;
 
-    private Timer timer;
     private Date lastDate;
 
-    @Subscribe
-    protected void onInit(InitEvent event) {
-        timer = facets.create(Timer.class);
-        timer.setDelay(5000);
-        timer.setRepeating(true);
-        getHostScreen().getWindow().addFacet(timer);
-
-        timer.addTimerActionListener(timerActionEvent -> {
-            addDate();
-            removeDate();
-        });
-        this.timer.start();
+    @Subscribe("timer")
+    private void onTimerTick(Timer.TimerActionEvent event) {
+        addData();
+        removeData();
     }
 
     @Subscribe("startTimer")
@@ -61,11 +51,11 @@ public class UpdateLineChartSample extends ScreenFragment {
         statusLabel.setValue("Update disabled");
     }
 
-    private void addDate() {
+    private void addData() {
         dateValueDc.getMutableItems().add(generateDateValue());
     }
 
-    private void removeDate() {
+    private void removeData() {
         List<DateValue> items = dateValueDc.getMutableItems();
         if (!items.isEmpty()) {
             items.remove(0);

@@ -2,7 +2,6 @@ package com.haulmont.sampler.web.ui.charts.stockcharts.incrementalupdate;
 
 import com.haulmont.cuba.core.global.Metadata;
 import com.haulmont.cuba.core.global.TimeSource;
-import com.haulmont.cuba.gui.Facets;
 import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.Timer;
@@ -33,35 +32,29 @@ public class UpdateStockChartSample extends ScreenFragment {
     private CollectionContainer<DateValueVolume> stockChartDc4;
     @Inject
     private Label<String> statusLabel;
+    @Inject
+    private Timer timer;
 
     @Inject
     private Metadata metadata;
     @Inject
     private TimeSource timeSource;
-    @Inject
-    private Facets facets;
 
     private final Random random = new Random();
     private int lastIndex = DAYS_COUNT;
     private Date lastDate;
-    private Timer timer;
 
     @Subscribe
     protected void onInit(InitEvent event) {
         generateData();
 
         lastDate = timeSource.currentTimestamp();
+    }
 
-        timer = facets.create(Timer.class);
-        timer.setDelay(5000);
-        timer.setRepeating(true);
-        getHostScreen().getWindow().addFacet(timer);
-
-        timer.addTimerActionListener(timerActionEvent -> {
-            addData();
-            removeData();
-        });
-        timer.start();
+    @Subscribe("timer")
+    private void onTimerTick(Timer.TimerActionEvent event) {
+        addData();
+        removeData();
     }
 
     @Subscribe("startTimer")
