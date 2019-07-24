@@ -1,7 +1,7 @@
 package com.haulmont.sampler.web.ui.charts.charts.incrementalupdate.xy;
 
 import com.haulmont.cuba.core.global.Metadata;
-import com.haulmont.cuba.gui.UiComponents;
+import com.haulmont.cuba.gui.Facets;
 import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.Timer;
@@ -25,16 +25,16 @@ public class UpdateXyChartSample extends ScreenFragment {
     @Inject
     private Label<String> statusLabel;
     @Inject
-    private UiComponents uiComponents;
+    private Facets facets;
 
     private Timer timer;
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        timer = uiComponents.create(Timer.NAME);
+        timer = facets.create(Timer.class);
         timer.setDelay(5000);
         timer.setRepeating(true);
-        getHostScreen().getWindow().addTimer(timer);
+        getHostScreen().getWindow().addFacet(timer);
 
         timer.addTimerActionListener(timerActionEvent -> {
             addDate();

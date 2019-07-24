@@ -2,7 +2,7 @@ package com.haulmont.sampler.web.ui.charts.charts.incrementalupdate.line;
 
 import com.haulmont.cuba.core.global.Metadata;
 import com.haulmont.cuba.core.global.TimeSource;
-import com.haulmont.cuba.gui.UiComponents;
+import com.haulmont.cuba.gui.Facets;
 import com.haulmont.cuba.gui.components.Button;
 import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.Timer;
@@ -28,7 +28,7 @@ public class UpdateLineChartSample extends ScreenFragment {
     private Label<String> statusLabel;
 
     @Inject
-    private UiComponents uiComponents;
+    private Facets facets;
     @Inject
     private TimeSource timeSource;
 
@@ -37,10 +37,10 @@ public class UpdateLineChartSample extends ScreenFragment {
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        timer = uiComponents.create(Timer.NAME);
+        timer = facets.create(Timer.class);
         timer.setDelay(5000);
         timer.setRepeating(true);
-        getHostScreen().getWindow().addTimer(timer);
+        getHostScreen().getWindow().addFacet(timer);
 
         timer.addTimerActionListener(timerActionEvent -> {
             addDate();
