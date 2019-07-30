@@ -2,6 +2,6 @@
     <component>
         <name>stepperField</name>
         <componentLoader>com.haulmont.sampler.web.ui.components.composite.component.StepperFieldLoader</componentLoader>
-        <class>com.haulmont.sampler.web.ui.components.composite.component.StepperFieldLoader</class>
+        <class>com.haulmont.sampler.web.ui.components.composite.component.StepperField</class>
     </component>
 </components>
