@@ -1457,6 +1457,9 @@
             <item id="option-dialog" docUrlSuffix="gui_dialogs" sampleHeight="30px"
                   controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/option/OptionDialogSample.java"
                   descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/option"/>
+            <item id="input-dialog" docUrlSuffix="gui_dialogs" sampleHeight="30px"
+                  controller="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/input/InputDialogSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/dialogsandnotifications/dialog/input"/>
         </menu>
 
         <menu id="notifications">
