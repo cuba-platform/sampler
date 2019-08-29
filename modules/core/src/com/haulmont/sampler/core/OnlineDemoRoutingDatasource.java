@@ -90,7 +90,7 @@ public class OnlineDemoRoutingDatasource extends AbstractDataSource implements A
         try {
             dbUpdater.updateDatabase();
         } catch (DbInitializationException e) {
-            throw new RuntimeException("Error initializing database " + urlPrefix + dbAddress, e);
+            throw new RuntimeException("Error initializing datasource " + urlPrefix + dbAddress, e);
         }
 
         return ds;
@@ -114,7 +114,7 @@ public class OnlineDemoRoutingDatasource extends AbstractDataSource implements A
     }
 
     public void cleanup() {
-        log.debug("Cleaning up user datasources (" + dataSources.size() + ")");
+        log.info("Cleaning up user datasources (" + dataSources.size() + ")");
         Iterator<Map.Entry<String, DataSource>> iterator = dataSources.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, DataSource> entry = iterator.next();
@@ -125,7 +125,7 @@ public class OnlineDemoRoutingDatasource extends AbstractDataSource implements A
             UserSessionsAPI userSessions = (UserSessionsAPI) applicationContext.getBean(UserSessionsAPI.NAME);
             UserSession userSession = userSessions.get(sessionId);
             if (userSession == null) {
-                log.debug("Session " + entry.getKey() + " does not exist, removing the datasource");
+                log.info("Session " + entry.getKey() + " does not exist, removing the datasource");
                 DataSource dataSource = entry.getValue();
                 try {
                     Statement statement = dataSource.getConnection().createStatement();
