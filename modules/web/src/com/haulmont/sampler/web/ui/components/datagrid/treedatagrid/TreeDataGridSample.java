@@ -3,6 +3,7 @@ package com.haulmont.sampler.web.ui.components.datagrid.treedatagrid;
 import com.haulmont.chile.core.model.MetaPropertyPath;
 import com.haulmont.cuba.core.global.MessageTools;
 import com.haulmont.cuba.core.global.MetadataTools;
+import com.haulmont.cuba.gui.Notifications;
 import com.haulmont.cuba.gui.components.DataGrid;
 import com.haulmont.cuba.gui.components.HasValue;
 import com.haulmont.cuba.gui.components.LookupField;
@@ -26,12 +27,35 @@ public class TreeDataGridSample extends ScreenFragment {
     private TreeDataGrid<Task> taskDataGrid;
 
     @Inject
+    private MessageTools messageTools;
+    @Inject
     private MetadataTools metadataTools;
     @Inject
-    private MessageTools messageTools;
+    private Notifications notifications;
 
     @Subscribe
     protected void onInit(InitEvent event) {
+        initColumnSelector();
+
+        taskDataGrid.addCollapseListener(this::onCollapse);
+        taskDataGrid.addExpandListener(this::onExpand);
+    }
+
+    private void onCollapse(TreeDataGrid.CollapseEvent<Task> event) {
+        notifications.create()
+                .withCaption("Collapsed Item: " +
+                        metadataTools.getInstanceName(event.getCollapsedItem()))
+                .show();
+    }
+
+    private void onExpand(TreeDataGrid.ExpandEvent<Task> event) {
+        notifications.create()
+                .withCaption("Expanded Item: " +
+                        metadataTools.getInstanceName(event.getExpandedItem()))
+                .show();
+    }
+
+    private void initColumnSelector() {
         List<DataGrid.Column<Task>> columns = taskDataGrid.getColumns();
         Map<String, String> columnsMap = columns.stream()
                 .collect(Collectors.toMap(
