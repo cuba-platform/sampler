@@ -5,6 +5,8 @@
 --  where ID='60885987-1b61-4247-94c7-dff348347f93';
 
 ------------------------------------------------------------------------------------------------------------
+-- Images
+------------------------------------------------------------------------------------------------------------
 
 insert into SYS_FILE
 (NAME, EXT, FILE_SIZE, CREATE_DATE, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -18,6 +20,8 @@ insert into SYS_FILE
 (NAME, EXT, FILE_SIZE, CREATE_DATE, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values ('cuba-logo.png', 'png', 6010, '2017-07-19 00:00:00', 1, current_timestamp, null, null, null, 'a2ba9e37-9f05-3ee3-4041-e838d505415c', current_timestamp, 'admin');
 
+------------------------------------------------------------------------------------------------------------
+-- Customers
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_CUSTOMER
@@ -89,6 +93,8 @@ insert into SAMPLER_CUSTOMER
 values ('James', 'White', 56, true, 20, 1, current_timestamp, null, null, null, '6e3008dd-1eb8-1faf-788d-b6df97130e8d', current_timestamp, 'admin', 'a2ba9e37-9f05-3ee3-4041-e838d505415c');
 
 ------------------------------------------------------------------------------------------------------------
+-- Products
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_PRODUCT
 (NAME, PRICE, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -123,6 +129,8 @@ insert into SAMPLER_PRODUCT
 values ('DVD', 1000.00, 1, current_timestamp, null, null, null, 'dab66821-e3b0-b6a8-eae1-e0b3f0e71d4f', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
+-- Hierarchical Tasks
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_TASK
 (NAME, DUE_DATE, ASSIGNEE_ID, PARENT_TASK_ID, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -149,6 +157,8 @@ insert into SAMPLER_TASK
 values ('Task6', '2015-04-01 00:00:00', 'e7e127d7-33b4-2bd9-d405-0f7923a8bec6', null, 1, current_timestamp, null, null, null, '2373294a-f53c-ea74-2c24-c80725b7ba85', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
+-- Orders
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_ORDER
 (CUSTOMER_ID, DATE_, AMOUNT, DESCRIPTION, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -166,6 +176,8 @@ insert into SAMPLER_ORDER
 (CUSTOMER_ID, DATE_, AMOUNT, DESCRIPTION, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values ('ee875696-0a4d-0d54-41c8-b3dea6e3e7d1', '2015-03-26', 59999.00, 'Gamer equipment', 1, current_timestamp, null, null, null, 'bbb4351b-d605-40c6-55da-d785c7f32e03', current_timestamp, 'admin');
 
+------------------------------------------------------------------------------------------------------------
+-- Invoice Items
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_INVOICE_ITEM
@@ -213,6 +225,8 @@ insert into SAMPLER_INVOICE_ITEM
 values ('17bc9b95-b562-0dd2-f904-db6df80b9c71', 1.000, '3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf', 1, current_timestamp, null, null, null, 'e2e78593-5939-2941-4518-f79e47c7f257', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
+-- Point Values
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_POINT_VALUE
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, X, Y, VALUE_)
@@ -243,7 +257,8 @@ insert into SAMPLER_POINT_VALUE
 values ('e66eb943-7b88-06ba-06c1-51087f874204', 1, '2016-10-21 19:10:12', 'admin', '2016-10-21 19:10:12', null, null, null, 6.0, 1.0, 35);
 
 ------------------------------------------------------------------------------------------------------------
-
+-- Demo User
+------------------------------------------------------------------------------------------------------------
 
 insert into SEC_USER
 (ID, CREATE_TS, VERSION, LOGIN, LOGIN_LC, PASSWORD, NAME, GROUP_ID, ACTIVE)
@@ -297,9 +312,10 @@ insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('c9e74b19-7748-7a66-29fd-b2fba0e950b7', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'aboutWindow', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
-insert into SEC_PERMISSION
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('ee5385b2-52c2-6ba8-c97d-c0f06854775a', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'serverLog', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+-- TODO: uncomment
+-- insert into SEC_PERMISSION
+-- (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+-- values ('ee5385b2-52c2-6ba8-c97d-c0f06854775a', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'serverLog', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -437,9 +453,10 @@ insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('cb6009ea-4fda-2140-bf99-2f9f3bfa1458', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 20, 'sec$UserRole:update', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
-insert into SEC_PERMISSION
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
-values ('adce7749-164c-d9c1-b2a2-268ce02de0fe', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sec$UserSessionEntity.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+-- TODO: uncomment
+-- insert into SEC_PERMISSION
+-- (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+-- values ('adce7749-164c-d9c1-b2a2-268ce02de0fe', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sec$UserSessionEntity.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -461,6 +478,8 @@ insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('4855befe-6696-5594-d011-5595b3493c9b', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 20, 'sec$User:update', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
+------------------------------------------------------------------------------------------------------------
+-- Filters
 ------------------------------------------------------------------------------------------------------------
 
 insert into SEC_FILTER
@@ -533,6 +552,8 @@ values ('sample-browser.custom-filter.filter', 'Custom Condition', 'Custom Condi
 </filter>
 ', null, 1, current_timestamp, 'admin', null, null, '0d5dbf8e-97f3-6abc-6c3a-a856182f6073', current_timestamp, 'admin');
 
+------------------------------------------------------------------------------------------------------------
+-- Date Values
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_DATE_VALUE
@@ -1288,6 +1309,8 @@ insert into SAMPLER_DATE_VALUE
 values ('2013-01-30', 81, 1, current_timestamp, null, null, null, '95f6c0c5-ce68-498b-ad1d-ff2536607a47', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
+-- Transport Counts
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_TRANSPORT_COUNT
 (YEAR_, CARS, MOTORCYCLES, BICYCLES, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1366,6 +1389,8 @@ insert into SAMPLER_TRANSPORT_COUNT
 values (2012, 1159, 277, 71, 1, current_timestamp, null, null, null, '1f805b20-b11f-4652-b0e7-95c0c8386529', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
+-- Income Expenses
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_INCOME_EXPENSES
 (YEAR_, INCOME, EXPENSES, ALPHA, DASH_LENGTH_LINE, DASH_LENGTH_COLUMN, ADDITIONAL, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1391,6 +1416,8 @@ insert into SAMPLER_INCOME_EXPENSES
 (YEAR_, INCOME, EXPENSES, ALPHA, DASH_LENGTH_LINE, DASH_LENGTH_COLUMN, ADDITIONAL, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (2014, 34.1, 32.9, 0.2, null, 5, '(projection)', 1, current_timestamp, null, null, null, '5b306626-115a-492f-a3d4-8b2808feaa21', current_timestamp, 'admin');
 
+------------------------------------------------------------------------------------------------------------
+-- Country Growths
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_COUNTRY_GROWTH
@@ -1429,6 +1456,8 @@ insert into SAMPLER_COUNTRY_GROWTH
 (COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values ('China', 9.9, 10.1, 1, current_timestamp, null, null, null, '054a6e6a-86f8-4400-9e2d-1ccb0aa487f5', current_timestamp, 'admin');
 
+------------------------------------------------------------------------------------------------------------
+-- Point Pairs
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_POINT_PAIR
@@ -1480,6 +1509,8 @@ insert into SAMPLER_POINT_PAIR
 values (12.0, 11.7, 12.0, 19.0, 1, current_timestamp, null, null, null, 'de9456f9-8984-4891-8e1a-26464338875d', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
+-- Country Litres
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_COUNTRY_LITRES
 (COUNTRY, LITRES, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1509,6 +1540,8 @@ insert into SAMPLER_COUNTRY_LITRES
 (COUNTRY, LITRES, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values ('Belgium', 40.0, 1, current_timestamp, null, null, null, '8df0609a-317a-4f03-81db-0aa6653a4c8b', current_timestamp, 'admin');
 
+------------------------------------------------------------------------------------------------------------
+-- Title Values
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_TITLE_VALUE
@@ -1540,6 +1573,8 @@ insert into SAMPLER_TITLE_VALUE
 values ('Purchased more', 18, 1, current_timestamp, null, null, null, '0be7a2b2-8b28-44b6-9430-8e18daa2a0f0', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
+-- Task Spans with Segments
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_TASK_SPAN 
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY) 
@@ -1557,6 +1592,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 2, '#8dc49f', 'Task #3', '45b72563-6f35-29ba-af6a-f92ec7824a86', 3, 1, current_timestamp, null, null, null, '736d331e-856d-fa38-54f4-0860be998105', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1574,6 +1610,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 4, '#46615e', 'Task #1', 'ea6a27df-d2e1-386e-61b1-befcaaac7100', 3, 1, current_timestamp, null, null, null, '2b48407d-5f3d-3f7b-4ea8-2562fcd3dff5', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1587,6 +1624,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (16, 2, '#FFCF96', 'Task #4', '8b4dd0ad-cde2-2766-d83c-485a9bead8b7', 2, 1, current_timestamp, null, null, null, '2053d743-c83e-6ada-0d21-a83e505a6be8', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1600,6 +1638,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 4, '#727d6f', 'Task #2', '4bea2fa9-9296-b8f0-6f61-269c64c2409e', 2, 1, current_timestamp, null, null, null, '780c52e4-e0ce-3b07-c744-e3ef1a70038d', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1613,6 +1652,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 4, '#46615e', 'Task #1', 'dd60a011-4ec7-092c-a4a2-f9a84c4f848e', 2, 1, current_timestamp, null, null, null, '92437b45-8bcd-7b67-dc2e-84630d6d8e68', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1622,6 +1662,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (15, 3, '#727d6f', 'Task #2', 'b8884f20-3290-328f-3a51-28413b9c9241', 1, 1, current_timestamp, null, null, null, '9d212c69-e7c7-90d6-b6e2-2b5fdda35f89', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1639,6 +1680,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 8, '#8dc49f', 'Task #3', '7e7b5048-0faf-545c-02d2-4e78c67a8f8d', 3, 1, current_timestamp, null, null, null, 'e57ed427-30d6-2cc9-f4ac-a80badddd35c', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1652,6 +1694,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 7, '#8dc49f', 'Task #3', 'ab25cb5e-320b-ff5e-33f6-ebd7da150619', 2, 1, current_timestamp, null, null, null, '00ac9143-26d5-dbdc-78dc-b06a61b516ba', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1665,6 +1708,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (19, 2, '#FFCF96', 'Task #4', 'c262de4b-9897-e16c-df88-d24e0fd7bf5f', 2, 1, current_timestamp, null, null, null, '417f321a-de73-a501-b6bf-2b28888c5ed7', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1682,6 +1726,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 5, '#8dc49f', 'Task #3', '7574c53b-5bce-845d-908c-bf30f29182a9', 3, 1, current_timestamp, null, null, null, 'be6a6074-1a39-7b51-2ce9-3018f368008c', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1691,6 +1736,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (6, 3, '#727d6f', 'Task #2', 'c2fd2888-1b41-8268-814e-278522b37e23', 1, 1, current_timestamp, null, null, null, 'ecf9df21-261a-07ce-9ae9-54cfff7538aa', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1704,6 +1750,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (16, 2, '#FFCF96', 'Task #4', '24fe04b8-c410-0354-338c-126cc78c7734', 2, 1, current_timestamp, null, null, null, 'f1c33c16-d95a-0a19-c642-cc6aac431f35', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1717,6 +1764,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 2, '#727d6f', 'Task #2', '4a63bf60-c121-d269-c592-a54dc56e666d', 2, 1, current_timestamp, null, null, null, '9c33fd53-bb62-5620-80f1-400b001a899e', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1730,6 +1778,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 3, '#8dc49f', 'Task #3', '47649c8a-674d-d551-2d72-27d198f796d2', 2, 1, current_timestamp, null, null, null, 'b2551d03-e64d-0261-19de-e78d15928f0c', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1743,6 +1792,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 2, '#FFCF96', 'Task #4', 'faecb45a-4663-6bbc-6ae6-ddab158af784', 2, 1, current_timestamp, null, null, null, '47473750-1de0-41ed-1c1e-6ecb58473d70', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1760,6 +1810,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 2, '#8dc49f', 'Task #3', '46937a60-6620-b6ce-a530-71792cd0c6d4', 3, 1, current_timestamp, null, null, null, 'ca4260a6-d4f8-0c55-75fc-e65cca5da030', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1777,6 +1828,7 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (null, 4, '#46615e', 'Task #1', '0f8dab07-0d2e-958c-dc0b-4f52e31706e4', 3, 1, current_timestamp, null, null, null, 'c58160ca-a3fd-2e49-5ee7-352dc16bfc89', current_timestamp, 'admin');
 
+--
 
 insert into SAMPLER_TASK_SPAN
 (CATEGORY, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
@@ -1789,7 +1841,8 @@ insert into SAMPLER_SEGMENT
 (START_, DURATION, COLOR, TASK_, TASK_SPAN_ID, INDEX_, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
 values (17, 4, '#FFCF96', 'Task #4', 'e3c711f1-9de7-6856-736d-98392fa2e79b', 2, 1, current_timestamp, null, null, null, 'a1a12b4b-a5e5-780c-1577-3ec3aa4f7c50', current_timestamp, 'admin');
 
-
+------------------------------------------------------------------------------------------------------------
+-- Date Task Spans with Date Segments
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_DATE_TASK_SPAN
@@ -1812,6 +1865,7 @@ insert into SAMPLER_DATE_SEGMENT
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, START_, END_, COLOR, TASK_, TASK_SPAN_ID)
 values ('e23b4d92-91ca-6fd0-31f6-1ecbd9c7c6ca', 1, '2016-10-17 16:22:41', 'admin', '2016-10-17 16:22:41', null, null, null, '2016-04-18', '2016-04-30', null, 'Testing and QA', '77aaa6cf-ed0b-fd3f-2790-d68f3fa159ed');
 
+--
 
 insert into SAMPLER_DATE_TASK_SPAN
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, CATEGORY)
@@ -1833,6 +1887,7 @@ insert into SAMPLER_DATE_SEGMENT
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, START_, END_, COLOR, TASK_, TASK_SPAN_ID)
 values ('0109236a-5142-03c9-7b24-300852586038', 1, '2016-10-17 16:28:12', 'admin', '2016-10-17 16:28:12', null, null, null, '2016-02-10', '2016-02-18', null, 'Testing and QA', '4d04aa84-ae6d-fa6b-a1bb-562dd555fe6c');
 
+--
 
 insert into SAMPLER_DATE_TASK_SPAN
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, CATEGORY)
@@ -1854,6 +1909,7 @@ insert into SAMPLER_DATE_SEGMENT
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, START_, END_, COLOR, TASK_, TASK_SPAN_ID)
 values ('553db4f4-b26a-5b41-99c1-39c636ef7b4f', 1, '2016-10-17 16:33:58', 'admin', '2016-10-17 16:33:58', null, null, null, '2016-03-12', '2016-04-05', null, 'Testing and QA', 'd7701287-004e-30e8-e5f6-baad0a09ab7a');
 
+--
 
 insert into SAMPLER_DATE_TASK_SPAN
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, CATEGORY)
@@ -1875,6 +1931,7 @@ insert into SAMPLER_DATE_SEGMENT
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, START_, END_, COLOR, TASK_, TASK_SPAN_ID)
 values ('e3f30242-e6c8-449f-7fd8-38c9f713278a', 1, '2016-10-17 16:42:55', 'admin', '2016-10-17 16:42:55', null, null, null, '2016-04-27', '2016-05-15', null, 'Testing and QA', '975d175b-e07c-0f34-3f8b-07faec59c248');
 
+--
 
 insert into SAMPLER_DATE_TASK_SPAN
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, CATEGORY)
@@ -1896,6 +1953,8 @@ insert into SAMPLER_DATE_SEGMENT
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, START_, END_, COLOR, TASK_, TASK_SPAN_ID)
 values ('42a3792e-42a9-bc3b-a756-8de7d375ca15', 1, '2016-10-17 16:47:03', 'admin', '2016-10-17 16:47:03', null, null, null, '2016-03-08', '2016-03-30', null, 'Testing and QA', '4fc62742-91e2-dead-a1ec-9d7754b6e814');
 
+------------------------------------------------------------------------------------------------------------
+-- Calendar Events
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_CALENDAR_EVENT
@@ -1939,769 +1998,1025 @@ insert into SAMPLER_CALENDAR_EVENT
 values ('f1a0c8a1-d122-b3c6-f88f-fad62fe85fa9', 1, '2016-10-19 16:49:05', 'admin', '2016-10-19 16:49:05', null, null, null, 'Meeting', 'Meeting with lawyer', '2016-10-17 13:00:00', '2016-10-17 12:00:00', 'event-blue');
 
 ------------------------------------------------------------------------------------------------------------
+-- Tip Infos
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.99, 1.01, 'female', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.34, 1.66, 'male', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 21.01, 3.5, 'male', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 23.68, 3.31, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.59, 3.61, 'female', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 25.29, 4.71, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 8.77, 2.0, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 26.88, 3.12, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.04, 1.96, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.78, 3.23, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.27, 1.71, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 35.26, 5.0, 'female', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.42, 1.57, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.43, 3.0, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.83, 3.02, 'female', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 21.58, 3.92, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.33, 1.67, 'female', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.29, 3.71, 'male', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.97, 3.5, 'female', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.65, 3.35, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.92, 4.08, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.29, 2.75, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.77, 2.23, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 39.42, 7.58, 'male', false, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 19.82, 3.18, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.81, 2.34, 'male', false, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.37, 2.0, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.69, 2.0, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 21.7, 4.3, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 19.65, 3.0, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 9.55, 1.45, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.35, 2.5, 'male', false, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.06, 3.0, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.69, 2.45, 'female', false, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.78, 3.27, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.06, 3.6, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.31, 2.0, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.93, 3.07, 'female', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.69, 2.31, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 31.27, 5.0, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.04, 2.24, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.46, 2.54, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.94, 3.06, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 9.68, 1.32, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 30.4, 5.6, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.29, 3.0, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.23, 5.0, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 32.4, 6.0, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 28.55, 2.05, 'male', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.04, 3.0, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.54, 2.5, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.29, 2.6, 'female', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 34.81, 5.2, 'female', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 9.94, 1.56, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 25.56, 4.34, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 19.49, 3.51, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 38.01, 3.0, 'male', true, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 26.41, 1.5, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.24, 1.76, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 48.27, 6.73, 'male', false, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.29, 3.21, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.81, 2.0, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.02, 1.98, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.29, 3.76, 'male', true, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.59, 2.64, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.08, 3.15, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.45, 2.47, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 3.07, 1.0, 'female', true, 'sat', 'dinner', 1);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.23, 2.01, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.01, 2.09, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.02, 1.97, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.07, 3.0, 'female', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 26.86, 3.14, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 25.28, 5.0, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.73, 2.2, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.51, 1.25, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.92, 3.08, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 27.2, 4.0, 'male', false, 'thu', 'lunch', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.76, 3.0, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.29, 2.71, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 19.44, 3.0, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.66, 3.4, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.07, 1.83, 'female', false, 'thu', 'lunch', 1);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 32.68, 5.0, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.98, 2.03, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 34.83, 5.17, 'female', false, 'thu', 'lunch', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.03, 2.0, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.28, 4.0, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.71, 5.85, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 21.16, 3.0, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 28.97, 3.0, 'male', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.49, 3.5, 'male', false, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 5.75, 1.0, 'female', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.32, 4.3, 'female', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.75, 3.25, 'female', false, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 40.17, 4.73, 'male', true, 'fri', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 27.28, 4.0, 'male', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.03, 1.5, 'male', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 21.01, 3.0, 'male', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.46, 1.5, 'male', false, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.35, 2.5, 'female', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.38, 3.0, 'female', true, 'fri', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 44.3, 2.5, 'female', true, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.42, 3.48, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.92, 4.08, 'female', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.36, 1.64, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.49, 4.06, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 25.21, 4.29, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.24, 3.76, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.31, 4.0, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.0, 3.0, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 7.25, 1.0, 'female', false, 'sat', 'dinner', 1);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 38.07, 4.0, 'male', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 23.95, 2.55, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 25.71, 4.0, 'female', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.31, 3.5, 'female', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 29.93, 5.07, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.65, 1.5, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.43, 1.8, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.08, 2.92, 'female', false, 'thu', 'lunch', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.69, 2.31, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.42, 1.68, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.26, 2.5, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.95, 2.0, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.48, 2.52, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 29.8, 4.2, 'female', false, 'thu', 'lunch', 6);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 8.52, 1.48, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.52, 2.0, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.38, 2.0, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.82, 2.18, 'male', false, 'thu', 'lunch', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 19.08, 1.5, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.27, 2.83, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.17, 1.5, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.26, 2.0, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.26, 3.25, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 8.51, 1.25, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.33, 2.0, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.15, 2.0, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.0, 2.0, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.16, 2.75, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.47, 3.5, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 34.3, 6.7, 'male', false, 'thu', 'lunch', 6);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 41.19, 5.0, 'male', false, 'thu', 'lunch', 5);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 27.05, 5.0, 'female', false, 'thu', 'lunch', 6);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.43, 2.3, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 8.35, 1.5, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.64, 1.36, 'female', false, 'thu', 'lunch', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.87, 1.63, 'female', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 9.78, 1.73, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 7.51, 2.0, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.07, 2.5, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.13, 2.0, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.26, 2.74, 'male', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.55, 2.0, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 19.77, 2.0, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 29.85, 5.14, 'female', false, 'sun', 'dinner', 5);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 48.17, 5.0, 'male', false, 'sun', 'dinner', 6);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 25.0, 3.75, 'female', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.39, 2.61, 'female', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.49, 2.0, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 21.5, 3.5, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.66, 2.5, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.21, 2.0, 'female', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.81, 2.0, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.51, 3.0, 'female', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.52, 3.48, 'male', false, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.76, 2.24, 'male', false, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 31.71, 4.5, 'male', false, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.59, 1.61, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.63, 2.0, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 50.81, 10.0, 'male', true, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.81, 3.16, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 7.25, 5.15, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 31.85, 3.18, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.82, 4.0, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 32.9, 3.11, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.89, 2.0, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 14.48, 2.0, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 9.6, 4.0, 'female', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 34.63, 3.55, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 34.65, 3.68, 'male', true, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 23.33, 5.65, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 45.35, 3.5, 'male', true, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 23.17, 6.5, 'male', true, 'sun', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 40.55, 3.0, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.69, 5.0, 'male', false, 'sun', 'dinner', 5);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.9, 3.5, 'female', true, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 30.46, 2.0, 'male', true, 'sun', 'dinner', 5);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.15, 3.5, 'female', true, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 23.1, 4.0, 'male', true, 'sun', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.69, 1.5, 'male', true, 'sun', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 19.81, 4.19, 'female', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 28.44, 2.56, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.48, 2.02, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.58, 4.0, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 7.56, 1.44, 'male', false, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.34, 2.0, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 43.11, 5.0, 'female', true, 'thu', 'lunch', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.0, 2.0, 'female', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.51, 2.0, 'male', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.71, 4.0, 'male', true, 'thu', 'lunch', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.74, 2.01, 'female', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.0, 2.0, 'female', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.4, 2.5, 'female', true, 'thu', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.53, 4.0, 'male', true, 'thu', 'lunch', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.47, 3.23, 'female', true, 'thu', 'lunch', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 26.59, 3.41, 'male', true, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 38.73, 3.0, 'male', true, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.27, 2.03, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.76, 2.23, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 30.06, 2.0, 'male', true, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 25.89, 5.16, 'male', true, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 48.33, 9.0, 'male', false, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.27, 2.5, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 28.17, 6.5, 'female', true, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.9, 1.1, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 28.15, 3.0, 'male', true, 'sat', 'dinner', 5);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.59, 1.5, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 7.74, 1.44, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 30.14, 3.09, 'female', true, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.16, 2.2, 'male', true, 'fri', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.42, 3.48, 'female', true, 'fri', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 8.58, 1.92, 'male', true, 'fri', 'lunch', 1);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.98, 3.0, 'female', false, 'fri', 'lunch', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.42, 1.58, 'male', true, 'fri', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 16.27, 2.5, 'female', true, 'fri', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.09, 2.0, 'female', true, 'fri', 'lunch', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 20.45, 3.0, 'male', false, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 13.28, 2.72, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.12, 2.88, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 24.01, 2.0, 'male', true, 'sat', 'dinner', 4);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.69, 3.0, 'male', true, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 11.61, 3.39, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.77, 1.47, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 15.53, 3.0, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 10.07, 1.25, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 12.6, 1.0, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 32.83, 1.17, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 35.83, 4.67, 'female', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 29.03, 5.92, 'male', false, 'sat', 'dinner', 3);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 27.18, 2.0, 'female', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 22.67, 2.0, 'male', true, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 17.82, 1.75, 'male', false, 'sat', 'dinner', 2);
+
 insert into SAMPLER_TIP_INFO
 (ID, VERSION, CREATE_TS, CREATED_BY, TOTAL_BILL, TIP, SEX, SMOKER, DAY_, TIME_, SIZE_)
 values (NEWID(), 1, current_timestamp, 'admin', 18.78, 3.0, 'female', false, 'thu', 'dinner', 2);
 
 ------------------------------------------------------------------------------------------------------------
+-- Country Sales
+------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('2ceda37b-7721-01a0-226f-d8af17a64b7c', 1, '2019-06-21 18:43:42', 'admin', '2019-06-21 18:50:22', 'admin', null, null, 'Keyboard', 'Russia- Keyboard', 'Russia', 348, 163);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('2ceda37b-7721-01a0-226f-d8af17a64b7c', 1, current_timestamp, 'admin', 'Keyboard', 'Russia- Keyboard', 'Russia', 348, 163);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('3d6f7f23-ca74-93aa-d36a-a623461aa099', 1, '2019-06-21 18:49:30', 'admin', '2019-06-21 18:49:30', null, null, null, 'Computer mouse', 'USA - Computer mouse', 'USA', 345, 198);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('3d6f7f23-ca74-93aa-d36a-a623461aa099', 1, current_timestamp, 'admin', 'Computer mouse', 'USA - Computer mouse', 'USA', 345, 198);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('427ac929-ff30-6944-5c46-8c7d9bd4bcf8', 1, '2019-06-21 18:48:55', 'admin', '2019-06-21 18:48:55', null, null, null, 'Keyboard', 'Germany - Keyboard', 'Germany', 373, 183);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('427ac929-ff30-6944-5c46-8c7d9bd4bcf8', 1, current_timestamp, 'admin', 'Keyboard', 'Germany - Keyboard', 'Germany', 373, 183);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('4b538cd7-c2f0-45cc-1dbc-c04b376ffd26', 1, '2019-06-21 18:48:27', 'admin', '2019-06-21 18:48:27', null, null, null, 'Computer mouse', 'Germany - Computer mouse', 'Germany', 412, 201);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('4b538cd7-c2f0-45cc-1dbc-c04b376ffd26', 1, current_timestamp, 'admin', 'Computer mouse', 'Germany - Computer mouse', 'Germany', 412, 201);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('5b13f7df-d2ba-22bb-9327-ce3c0efb9f3f', 1, '2019-06-21 18:47:25', 'admin', '2019-06-21 18:47:25', null, null, null, 'Keyboard', 'France- Keyboard', 'France', 376, 198);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('5b13f7df-d2ba-22bb-9327-ce3c0efb9f3f', 1, current_timestamp, 'admin', 'Keyboard', 'France- Keyboard', 'France', 376, 198);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('a557a503-d6e3-afe8-fdaa-c42f29116f46', 1, '2019-06-21 18:45:59', 'admin', '2019-06-21 18:45:59', null, null, null, 'Keyboard', 'UK - Keyboard', 'UK', 421, 167);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('a557a503-d6e3-afe8-fdaa-c42f29116f46', 1, current_timestamp, 'admin', 'Keyboard', 'UK - Keyboard', 'UK', 421, 167);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('a59ee68f-09c2-4a42-ea09-13858f9db2f4', 1, '2019-06-21 18:50:10', 'admin', '2019-06-21 18:50:10', null, null, null, 'Keyboard', 'USA - Keyboard', 'USA', 349, 165);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('a59ee68f-09c2-4a42-ea09-13858f9db2f4', 1, current_timestamp, 'admin', 'Keyboard', 'USA - Keyboard', 'USA', 349, 165);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('dabac1de-aef8-86b3-a76a-377010294734', 1, '2019-06-21 18:46:52', 'admin', '2019-06-21 18:46:52', null, null, null, 'Computer mouse', 'France - Computer mouse', 'France', 382, 187);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('dabac1de-aef8-86b3-a76a-377010294734', 1, current_timestamp, 'admin', 'Computer mouse', 'France - Computer mouse', 'France', 382, 187);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('f64d6d5d-d396-6afe-06af-b288fc289801', 1, '2019-06-21 18:42:23', 'admin', '2019-06-21 18:45:07', 'admin', null, null, 'Computer mouse', 'Russia - Computer mouse', 'Russia', 427, 176);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('f64d6d5d-d396-6afe-06af-b288fc289801', 1, current_timestamp, 'admin', 'Computer mouse', 'Russia - Computer mouse', 'Russia', 427, 176);
+
 insert into SAMPLER_COUNTRY_SALES
-(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
-values ('fab72f7d-b93a-ec11-113a-c0a1459f5c8e', 1, '2019-06-21 18:45:37', 'admin', '2019-06-21 18:45:37', null, null, null, 'Computer mouse', 'UK - Computer mouse', 'UK', 328, 189);
+(ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
+values ('fab72f7d-b93a-ec11-113a-c0a1459f5c8e', 1, current_timestamp, 'admin', 'Computer mouse', 'UK - Computer mouse', 'UK', 328, 189);

@@ -57,6 +57,8 @@
 
     <logger name="com.haulmont.cuba.core.app.LockManager" level="INFO"/>
 
+    <logger name="com.haulmont.cuba.core.sys.dbupdate.DbUpdaterEngine" level="WARN"/>
+
     <!-- End CUBA -->
 
     <logger name="eclipselink" level="WARN"/>
@@ -108,6 +110,8 @@
     <logger name="org.docx4j.TraversalUtil" level="ERROR"/>
 
     <logger name="org.docx4j.fonts" level="ERROR"/>
+
+    <logger name="com.haulmont.sample.petclinic.core.OnlineDemoRoutingDatasource" level="DEBUG"/>
 
     <!-- Begin Perf4J  -->
 
