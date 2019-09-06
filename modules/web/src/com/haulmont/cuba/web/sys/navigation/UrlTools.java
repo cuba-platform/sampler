@@ -126,6 +126,11 @@ public class UrlTools {
     }
 
     private static void trackPageView(String navigationState) {
+        GoogleAnalyticsTracker tracker = SamplerAppUI.getCurrent().getGoogleAnalyticsTracker();
+        if (tracker == null) {
+            return;
+        }
+
         NavigationState state = parseState(navigationState);
 
         if (SAMPLE_ROUTE.equals(state.getNestedRoute())
@@ -133,7 +138,6 @@ public class UrlTools {
             return;
         }
 
-        GoogleAnalyticsTracker tracker = SamplerAppUI.getCurrent().getGoogleAnalyticsTracker();
         tracker.trackPageview(asRoute(state));
     }
 

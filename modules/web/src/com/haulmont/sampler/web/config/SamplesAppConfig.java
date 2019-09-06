@@ -14,8 +14,12 @@ public interface SamplesAppConfig extends Config{
     @DefaultBoolean(true)
     boolean isDeveloperMode();
 
+    @Property("sampler.googleAnalyticsTracker.enabled")
+    @DefaultBoolean(false)
+    boolean isGoogleAnalyticsTrackerEnabled();
+
     @Property("sampler.googleAnalyticsTracker.trackerId")
-    String getGoogleAnalyticsTrackerTrackerId();
+    String getGoogleAnalyticsTrackerId();
 
     @Property("sampler.googleAnalyticsTracker.domainName")
     @Default("none")
