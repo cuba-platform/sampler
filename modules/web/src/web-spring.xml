@@ -19,9 +19,11 @@
             </list>
         </property>
     </bean>
-    <bean class="com.haulmont.sampler.web.SamplerApp"
-          name="cuba_App"
-          scope="vaadin"/>
+
+    <bean name="cuba_App" class="com.haulmont.sampler.web.SamplerApp" scope="vaadin"/>
+
+    <bean id="cuba_AppUI" class="com.haulmont.sampler.web.SamplerAppUI" scope="prototype"/>
+
     <bean class="com.haulmont.cuba.web.sys.remoting.WebRemoteProxyBeanCreator">
         <property name="serverSelector"
                   ref="cuba_ServerSelector"/>

@@ -142,7 +142,7 @@ configure(webModule) {
     dependencies {
         compileOnly(servletApi)
         compile(globalModule)
-
+        compile('org.vaadin.addons:googleanalyticstracker:3.0.0')
     }
     
     task webArchive(type: Zip) {
