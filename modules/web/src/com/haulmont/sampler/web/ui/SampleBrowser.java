@@ -160,10 +160,10 @@ public class SampleBrowser extends Screen {
             if (!Strings.isNullOrEmpty(sampleHeight)) {
                 if (sampleHeight.contains("px")) {
                     String height = sampleHeight.replace("px", "");
-                    split.setSplitPosition(Integer.valueOf(height) + SPLIT_POSITION_SPACING, SizeUnit.PIXELS);
+                    split.setSplitPosition(Integer.parseInt(height) + SPLIT_POSITION_SPACING, SizeUnit.PIXELS);
                 } else {
                     fragment.setHeight("100%");
-                    split.setSplitPosition(Integer.valueOf(sampleHeight));
+                    split.setSplitPosition(Integer.parseInt(sampleHeight));
                 }
             } else {
                 fragment.setHeight("100%");
