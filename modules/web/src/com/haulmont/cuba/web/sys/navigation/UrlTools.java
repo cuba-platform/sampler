@@ -137,8 +137,9 @@ public class UrlTools {
                 && MapUtils.isEmpty(state.getParams())) {
             return;
         }
-
-        tracker.trackPageview(asRoute(state));
+        String pageId = asRoute(state);
+        log.debug("trackPageview with pageId: {}", pageId);
+        tracker.trackPageview(pageId);
     }
 
     private static String asRoute(NavigationState state) {
