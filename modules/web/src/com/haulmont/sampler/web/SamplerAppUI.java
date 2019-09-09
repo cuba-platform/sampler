@@ -1,6 +1,7 @@
 package com.haulmont.sampler.web;
 
 import com.haulmont.cuba.web.AppUI;
+import com.haulmont.cuba.web.controllers.ControllerUtils;
 import com.haulmont.sampler.web.config.SamplesAppConfig;
 import com.vaadin.server.VaadinRequest;
 import org.slf4j.Logger;
@@ -36,13 +37,13 @@ public class SamplerAppUI extends AppUI {
             return;
         }
 
-        tracker = new GoogleAnalyticsTracker(
-                samplesAppConfig.getGoogleAnalyticsTrackerId(),
-                samplesAppConfig.getGoogleAnalyticsTrackerDomainName(),
-                "/sampler/");
+        String trackerId = samplesAppConfig.getGoogleAnalyticsTrackerId();
+        String domainName = samplesAppConfig.getGoogleAnalyticsTrackerDomainName();
+        tracker = new GoogleAnalyticsTracker(trackerId, domainName, "/sampler/");
+        tracker.setUniversalTracking(false);
         tracker.extend(this);
 
-        log.info("GoogleAnalyticsTracker enabled");
+        log.info("GoogleAnalyticsTracker enabled. Tracker Id: {}, Domain Name: {}", trackerId, domainName);
     }
 
     @Nullable
