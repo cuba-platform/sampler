@@ -40,7 +40,6 @@ public class SamplerAppUI extends AppUI {
         String trackerId = samplesAppConfig.getGoogleAnalyticsTrackerId();
         String domainName = samplesAppConfig.getGoogleAnalyticsTrackerDomainName();
         tracker = new GoogleAnalyticsTracker(trackerId, domainName, "/sampler/");
-        tracker.setUniversalTracking(false);
         tracker.extend(this);
 
         log.info("GoogleAnalyticsTracker enabled. Tracker Id: {}, Domain Name: {}", trackerId, domainName);
