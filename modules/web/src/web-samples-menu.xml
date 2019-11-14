@@ -445,16 +445,16 @@
                   controller="com/haulmont/sampler/web/ui/components/datepicker/resolution/ResolutionDatePickerSample.java"/>
         </menu>
 
-        <menu id="embedded">
-            <item id="image-embedded" docUrlSuffix="gui_Embedded" sampleHeight="250px"
-                  image="images/dashboard/components/image-embedded.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/embedded/image"
-                  controller="com/haulmont/sampler/web/ui/components/embedded/image/ImageEmbeddedSample.java"/>
-            <item id="web-embedded" docUrlSuffix="gui_Embedded" splitEnabled="true" sampleHeight="70"
-                  image="images/dashboard/components/web-embedded.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/embedded/web"
-                  controller="com/haulmont/sampler/web/ui/components/embedded/web/WebEmbeddedSample.java"/>
-        </menu>
+<!--        <menu id="embedded">-->
+<!--            <item id="image-embedded" docUrlSuffix="gui_Embedded" sampleHeight="250px"-->
+<!--                  image="images/dashboard/components/image-embedded.png"-->
+<!--                  descriptionsPack="com/haulmont/sampler/web/ui/components/embedded/image"-->
+<!--                  controller="com/haulmont/sampler/web/ui/components/embedded/image/ImageEmbeddedSample.java"/>-->
+<!--            <item id="web-embedded" docUrlSuffix="gui_Embedded" splitEnabled="true" sampleHeight="70"-->
+<!--                  image="images/dashboard/components/web-embedded.png"-->
+<!--                  descriptionsPack="com/haulmont/sampler/web/ui/components/embedded/web"-->
+<!--                  controller="com/haulmont/sampler/web/ui/components/embedded/web/WebEmbeddedSample.java"/>-->
+<!--        </menu>-->
 
         <!--<menu id="fieldGroup">
             <item id="simple-fieldgroup" docUrlSuffix="gui_FieldGroup" sampleHeight="150px"
