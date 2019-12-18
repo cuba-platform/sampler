@@ -8,9 +8,14 @@
        xmlns:gui="http://schemas.haulmont.com/cuba/spring/cuba-gui.xsd">
     <!-- Annotation-based beans -->
     <context:component-scan base-package="com.haulmont.sampler"/>
+
     <bean id="cuba_LinkHandler"
           class="com.haulmont.sampler.web.sys.SamplerLinkHandler"
           scope="prototype"/>
+
+    <bean id="cuba_UrlTools"
+          class="com.haulmont.sampler.web.sys.navigation.SamplerUrlTools"/>
+
     <bean id="sampler_exceptionHandlersConf"
           class="com.haulmont.cuba.web.exception.ExceptionHandlersConfiguration">
         <property name="handlerClasses">
