@@ -35,9 +35,9 @@ import java.util.regex.Pattern;
 
 import static com.haulmont.bali.util.Preconditions.checkNotNullArgument;
 
-public class UrlTools {
+public class UrlTools2 {
 
-    private static final Logger log = LoggerFactory.getLogger(UrlTools.class);
+    private static final Logger log = LoggerFactory.getLogger(UrlTools2.class);
 
     private static final String SAMPLE_ROUTE = "sample";
 
