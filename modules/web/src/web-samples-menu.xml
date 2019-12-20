@@ -1443,10 +1443,20 @@
               descriptionsPack="com/haulmont/sampler/web/ui/containers/scrollboxlayout/simple"
               controller="com/haulmont/sampler/web/ui/containers/scrollboxlayout/simple/SimpleScrollBoxSample.java"/>
 
-        <item id="simple-split" docUrlSuffix="gui_SplitPanel" sampleHeight="300px"
-              image="images/dashboard/containers/simple-split.svg"
-              descriptionsPack="com/haulmont/sampler/web/ui/containers/splitpanel/simple"
-              controller="com/haulmont/sampler/web/ui/containers/splitpanel/simple/SimpleSplitSample.java"/>
+        <menu id="split-panel">
+            <item id="simple-split" docUrlSuffix="gui_SplitPanel" sampleHeight="300px"
+                  image="images/dashboard/containers/simple-split.svg"
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/splitpanel/simple"
+                  controller="com/haulmont/sampler/web/ui/containers/splitpanel/simple/SimpleSplitSample.java"/>
+            <item id="split-dockable" docUrlSuffix="gui_SplitPanel" sampleHeight="300px"
+                  image="images/dashboard/containers/simple-split.svg"
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/splitpanel/dockable"
+                  controller="com/haulmont/sampler/web/ui/containers/splitpanel/dockable/SplitDockableSample.java"/>
+            <item id="split-position" docUrlSuffix="gui_SplitPanel" sampleHeight="300px"
+                  image="images/dashboard/containers/simple-split.svg"
+                  descriptionsPack="com/haulmont/sampler/web/ui/containers/splitpanel/position"
+                  controller="com/haulmont/sampler/web/ui/containers/splitpanel/position/SplitPositionSample.java"/>
+        </menu>
 
         <menu id="tabSheet">
             <item id="simple-tabsheet" docUrlSuffix="gui_TabSheet" sampleHeight="150px"
