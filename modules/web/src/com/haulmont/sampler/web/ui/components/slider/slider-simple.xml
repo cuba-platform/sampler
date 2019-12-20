@@ -1,0 +1,9 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <layout spacing="true">
+        <slider orientation="horizontal"
+                resolution="3"
+                updateValueOnClick="true"
+                width="200px"/>
+        <slider orientation="vertical" max="1000"/>
+    </layout>
+</window>

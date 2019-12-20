@@ -947,6 +947,11 @@
                   controller="com/haulmont/sampler/web/ui/components/codeeditor/suggester/SuggesterCodeEditorSample.java"/>
         </menu>
 
+        <item id="slider-simple" docUrlSuffix="gui_Slider"
+              image="images/dashboard/components/slider-simple.png"
+              descriptionsPack="com/haulmont/sampler/web/ui/components/slider"
+              controller="com/haulmont/sampler/web/ui/components/slider/SliderSimpleSample.java"/>
+
         <menu id="suggestionField">
             <item id="dataaware-suggestionfield" docUrlSuffix="gui_SuggestionField"
                   image="images/dashboard/components/dataaware-suggestionfield.png"
