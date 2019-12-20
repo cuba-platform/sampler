@@ -57,14 +57,26 @@
                   controller="com/haulmont/sampler/web/ui/components/browserframe/url/UrlBrowserFrameSample.java"/>
         </menu>
 
-        <item id="bulk-editor" docUrlSuffix="std_list_actions" splitEnabled="true" sampleHeight="60"
-              image="images/dashboard/components/bulk-editor.png"
-              descriptionsPack="com/haulmont/sampler/web/ui/components/bulkeditor"
-              controller="com/haulmont/sampler/web/ui/components/bulkeditor/BulkEditorSample.java">
-            <otherFiles>
-                <file name="com/haulmont/sampler/entity/Customer.java"/>
-            </otherFiles>
-        </item>
+        <menu id="bulk-edit">
+            <item id="bulk-edit-simple" docUrlSuffix="BulkEditAction" splitEnabled="true" sampleHeight="60"
+                  image="images/dashboard/components/bulk-editor.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/bulkedit/simple"
+                  controller="com/haulmont/sampler/web/ui/components/bulkedit/simple/BulkEditSimpleSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="bulk-edit-columns-mode" docUrlSuffix="BulkEditAction" splitEnabled="true" sampleHeight="60"
+                  image="images/dashboard/components/bulk-editor.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/bulkedit/columnsmode"
+                  controller="com/haulmont/sampler/web/ui/components/bulkedit/columnsmode/BulkEditColumnsModeSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
+
 
         <menu id="calendar">
             <item id="month-calendar" docUrlSuffix="gui_Calendar" splitEnabled="true" sampleHeight="60"

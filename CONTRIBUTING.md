@@ -14,7 +14,7 @@
 button samples are placed inside the `com.haulmont.sampler.web.ui.components.button.*` package, 
 where `components` - base package for all GUI components samples and `button` - base package for button samples. 
 If a certain component has only one sample, then it can be placed in a base package for this component. 
-For example: `com.haulmont.sampler.web.ui.components.bulkeditor`.
+For example: `com.haulmont.sampler.web.ui.components.jscomponent`.
 
 - Add a descriptor to `web-samples-menu.xml` inside a proper submenu. 
 
