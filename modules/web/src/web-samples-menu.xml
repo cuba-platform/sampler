@@ -401,6 +401,16 @@
                     <file name="com/haulmont/sampler/service/DataGridDetailsGeneratorServiceBean.java"/>
                 </otherFiles>
             </item>
+            <item id="datagrid-aggregatable" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="images/dashboard/components/datagrid-aggregatable.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/aggregatable"
+                  controller="com/haulmont/sampler/web/ui/components/datagrid/aggregatable/DataGridAggregatableSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Order.java"/>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                    <file name="com/haulmont/sampler/web/ui/components/datagrid/aggregatable/CustomerGradeAggregation.java"/>
+                </otherFiles>
+            </item>
             <item id="tree-datagrid" docUrlSuffix="gui_TreeDataGrid" splitEnabled="true"
                   image="images/dashboard/components/tree-datagrid.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datagrid/treedatagrid"
