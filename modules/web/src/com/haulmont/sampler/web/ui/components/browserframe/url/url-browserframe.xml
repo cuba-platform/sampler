@@ -13,7 +13,7 @@
                       height="100%">
                 <browserFrame height="100%"
                               width="100%">
-                    <url url="https://doc.cuba-platform.com/manual-7.0/"/>
+                    <url url="https://doc.cuba-platform.com/manual-7.2/"/>
                 </browserFrame>
             </groupBox>
         </hbox>

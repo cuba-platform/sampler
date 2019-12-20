@@ -22,7 +22,7 @@ public class UrlBrowserFrameSample extends ScreenFragment {
     protected void onInit(InitEvent event) {
         URL url = null;
         try {
-            url = new URL("https://doc.cuba-platform.com/manual-7.0/");
+            url = new URL("https://doc.cuba-platform.com/manual-7.2/");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
