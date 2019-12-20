@@ -1531,6 +1531,13 @@
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
+            <item id="datagrid-styles" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  controller="com/haulmont/sampler/web/ui/styles/datagrid/DataGridStylesSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/styles/datagrid">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
             <item id="styles-tabsheet"
                   image="images/dashboard/styles/styles-tabsheet.png"
                   controller="com/haulmont/sampler/web/ui/styles/tabsheet/TabSheetStylesSample.java"

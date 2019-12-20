@@ -1,39 +1,39 @@
-package com.haulmont.sampler.web.ui.styles.table;
+package com.haulmont.sampler.web.ui.styles.datagrid;
 
 import com.haulmont.cuba.gui.components.CheckBox;
 import com.haulmont.cuba.gui.components.Component;
+import com.haulmont.cuba.gui.components.DataGrid;
 import com.haulmont.cuba.gui.components.HasValue;
-import com.haulmont.cuba.gui.components.Table;
 import com.haulmont.cuba.gui.screen.*;
 import com.haulmont.sampler.entity.Customer;
 
 import javax.inject.Inject;
 
-@UiController("styles-table")
-@UiDescriptor("styles-table.xml")
+@UiController("datagrid-styles")
+@UiDescriptor("datagrid-styles.xml")
 @LoadDataBeforeShow
-public class TableStylesSample extends ScreenFragment {
+public class DataGridStylesSample extends ScreenFragment {
 
     @Inject
-    private Table<Customer> customersTable;
+    private DataGrid<Customer> customersDataGrid;
 
     @Subscribe
     protected void onInit(InitEvent event) {
         for (Component component : getFragment().getComponents()) {
             if (component instanceof CheckBox) {
                 CheckBox checkBox = (CheckBox) component;
-                checkBox.addValueChangeListener(this::updateTableStyle);
+                checkBox.addValueChangeListener(this::updateDataGridStyle);
             }
         }
     }
 
-    private void updateTableStyle(HasValue.ValueChangeEvent<Boolean> e) {
+    private void updateDataGridStyle(HasValue.ValueChangeEvent<Boolean> e) {
         String id = e.getComponent().getId();
-        Object value = e.getValue();
+        Boolean value = e.getValue();
         if (Boolean.TRUE.equals(value)) {
-            customersTable.addStyleName(prepareStyleName(id));
+            customersDataGrid.addStyleName(prepareStyleName(id));
         } else {
-            customersTable.removeStyleName(prepareStyleName(id));
+            customersDataGrid.removeStyleName(prepareStyleName(id));
         }
     }
 
