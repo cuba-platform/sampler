@@ -1,0 +1,41 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="tipsDc"
+                    class="com.haulmont.sampler.entity.TipInfo"
+                    view="_local">
+            <loader id="tipsLoader">
+                <query>
+                    <![CDATA[select e from sampler$TipInfo e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <groupTable id="tipsTable"
+                    dataContainer="tipsDc"
+                    height="100%"
+                    width="100%">
+            <actions>
+                <action id="customShowPivotAction"
+                        type="pivot_showPivot"/>
+            </actions>
+            <buttonsPanel>
+                <button id="customShowPivotBtn"
+                        action="tipsTable.customShowPivotAction"
+                        caption="msg://button.customShowPivot.caption"/>
+                <button id="defaultShowPivotBtn"
+                        caption="msg://button.defaultShowPivot.caption"/>
+            </buttonsPanel>
+            <columns>
+                <column id="day"/>
+                <column id="time"/>
+                <column id="sex"/>
+                <column id="smoker"/>
+                <column id="tip"/>
+                <column id="size"/>
+                <column id="totalBill"/>
+            </columns>
+            <rows/>
+        </groupTable>
+    </layout>
+</window>

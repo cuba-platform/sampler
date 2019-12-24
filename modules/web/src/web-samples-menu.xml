@@ -2043,6 +2043,14 @@
                 <file name="com/haulmont/sampler/entity/TipInfo.java"/>
             </otherFiles>
         </item>
+        <item id="pivot-table-show-pivot-action" docUrlSuffix="pivotTable_ShowPivotAction" splitEnabled="true"
+              image="images/dashboard/pivottable/pivot-table-show-pivot-action.png"
+              controller="com/haulmont/sampler/web/ui/charts/pivot/showpivotaction/PivotTableShowPivotActionSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/charts/pivot/showpivotaction">
+            <otherFiles>
+                <file name="com/haulmont/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
     </menu>
 
     <menu id="maps" image="images/dashboard/mainmenu/maps.svg">
