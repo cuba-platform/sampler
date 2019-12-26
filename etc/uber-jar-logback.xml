@@ -113,7 +113,7 @@
 
     <logger name="org.docx4j.fonts" level="ERROR"/>
 
-    <logger name="com.haulmont.sample.petclinic.core.OnlineDemoRoutingDatasource" level="INFO"/>
+    <logger name="com.haulmont.sampler.core.OnlineDemoRoutingDatasource" level="INFO"/>
 
     <!-- Begin Perf4J  -->
 
