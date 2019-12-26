@@ -1,4 +1,4 @@
-package com.haulmont.sampler.web.ui.components.table.grouptable;
+package com.haulmont.sampler.web.ui.components.table.grouptable.simple;
 
 import com.haulmont.cuba.gui.screen.LoadDataBeforeShow;
 import com.haulmont.cuba.gui.screen.ScreenFragment;

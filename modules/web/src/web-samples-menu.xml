@@ -1127,10 +1127,19 @@
             </item>
             <item id="group-table" docUrlSuffix="gui_GroupTable" splitEnabled="true"
                   image="images/dashboard/components/group-table.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/grouptable"
-                  controller="com/haulmont/sampler/web/ui/components/table/grouptable/GroupTableSample.java">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/grouptable/simple"
+                  controller="com/haulmont/sampler/web/ui/components/table/grouptable/simple/GroupTableSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="style-group-table" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+                  image="images/dashboard/components/style-group-table.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/grouptable/style"
+                  controller="com/haulmont/sampler/web/ui/components/table/grouptable/style/StyleGroupTableSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                    <file name="com/haulmont/sampler/web/ui/components/table/grouptable/style/style.scss"/>
                 </otherFiles>
             </item>
             <item id="tree-table" docUrlSuffix="gui_TreeTable" splitEnabled="true"
