@@ -3021,3 +3021,39 @@ values ('f64d6d5d-d396-6afe-06af-b288fc289801', 1, current_timestamp, 'admin', '
 insert into SAMPLER_COUNTRY_SALES
 (ID, VERSION, CREATE_TS, CREATED_BY, PRODUCT, CATEGORY, COUNTRY, SALES, EXPENSE)
 values ('fab72f7d-b93a-ec11-113a-c0a1459f5c8e', 1, current_timestamp, 'admin', 'Computer mouse', 'UK - Computer mouse', 'UK', 328, 189);
+
+------------------------------------------------------------------------------------------------------------
+-- Employee
+------------------------------------------------------------------------------------------------------------
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('333a257f-0a1c-8345-30e7-a6efda9a6634', 1, '2019-12-27 10:26:04', 'admin', '2019-12-27 10:26:04', null, null, null, 'John', 'Brown', 29, 10, 20, 1500.00);
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('5c527836-a992-0efb-7c04-904097977055', 1, '2019-12-27 10:26:28', 'admin', '2019-12-27 10:26:28', null, null, null, 'Mary', 'Thomas', 24, 10, 10, 1000.00);
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('b31f88ac-0c7d-7be0-8546-63e69250c136', 1, '2019-12-27 10:25:16', 'admin', '2019-12-27 10:25:16', null, null, null, 'James', 'Anderson', 25, 20, 10, 1000.00);
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('e2f2a7c2-10f4-f925-1157-721805069f8c', 1, '2019-12-27 10:25:37', 'admin', '2019-12-27 10:25:37', null, null, null, 'Karen', 'White', 28, 20, 20, 1500.00);
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('f1d8dc8d-a88f-6043-4dfe-b47868f17872', 1, '2019-12-27 10:34:33', 'admin', '2019-12-27 10:34:33', null, null, null, 'Emily', 'Thompson', 26, 10, 10, 1000.00);
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('e74cf36c-e40e-409f-ed7a-78d659280f06', 1, '2019-12-27 10:35:02', 'admin', '2019-12-27 10:35:02', null, null, null, 'Ben', 'Davies', 27, 10, 20, 1500.00);
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('b29aaa13-d78a-4673-22f5-973058c6fd38', 1, '2019-12-27 10:35:33', 'admin', '2019-12-27 10:35:33', null, null, null, 'Chloe', 'Wilson', 29, 20, 20, 1500.00);
+
+insert into SAMPLER_EMPLOYEE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LAST_NAME, AGE, DEPARTMENT, EXPERIENCE, SALARY)
+values ('b0fbe93d-7943-4053-d14d-5eb6d79dae25', 1, '2019-12-27 10:36:14', 'admin', '2019-12-27 10:36:14', null, null, null, 'Sam', 'Evans', 26, 20, 10, 1000.00);

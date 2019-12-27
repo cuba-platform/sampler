@@ -1142,6 +1142,14 @@
                     <file name="com/haulmont/sampler/web/ui/components/table/grouptable/style/style.scss"/>
                 </otherFiles>
             </item>
+            <item id="aggregation-distribution-provider-group-table" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+                  image="images/dashboard/components/aggregation-distribution-provider-group-table.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/table/grouptable/aggregationdistribution"
+                  controller="com/haulmont/sampler/web/ui/components/table/grouptable/aggregationdistribution/AggregationDistributionProviderGroupTableSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Employee.java"/>
+                </otherFiles>
+            </item>
             <item id="tree-table" docUrlSuffix="gui_TreeTable" splitEnabled="true"
                   image="images/dashboard/components/tree-table.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/table/treetable"

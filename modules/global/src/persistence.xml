@@ -24,5 +24,6 @@
         <class>com.haulmont.sampler.entity.Color</class>
         <class>com.haulmont.sampler.entity.TipInfo</class>
         <class>com.haulmont.sampler.entity.CountrySales</class>
+        <class>com.haulmont.sampler.entity.Employee</class>
     </persistence-unit>
 </persistence>

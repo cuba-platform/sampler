@@ -1,0 +1,33 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <data>
+        <collection id="employeeDc"
+                    class="com.haulmont.sampler.entity.Employee"
+                    view="_local">
+            <loader id="employeeLd">
+                <query>select e from sampler_Employee e</query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <groupTable id="employeesTable"
+                    aggregatable="true"
+                    dataContainer="employeeDc"
+                    fixedGrouping="true"
+                    height="100%"
+                    width="100%">
+            <columns>
+                <group>
+                    <column id="department"/>
+                </group>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="salary">
+                    <aggregation type="SUM" editable="true"/>
+                </column>
+                <column id="experience"/>
+            </columns>
+            <rows/>
+        </groupTable>
+    </layout>
+</window>
