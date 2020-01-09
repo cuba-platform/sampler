@@ -28,17 +28,24 @@ public class DataGridEditorActionsSample extends ScreenFragment {
     @Inject
     private Metadata metadata;
 
+    @SuppressWarnings("unchecked")
     @Subscribe
     protected void onInit(InitEvent event) {
-        CreateAction createAction = (CreateAction) actions.create(CreateAction.ID);
+        CreateAction<Customer> createAction = (CreateAction<Customer>) actions.create(CreateAction.ID);
         createAction.withHandler(actionPerformedEvent -> {
+            if (customersDataGrid.isEditorActive()) {
+                notifications.create()
+                        .withCaption("Close the editor before creating a new entity")
+                        .show();
+                return;
+            }
             Customer newCustomer = metadata.create(Customer.class);
             customersDc.getMutableItems().add(newCustomer);
             customersDataGrid.edit(newCustomer);
         });
         customersDataGrid.addAction(createAction);
 
-        EditAction editAction = (EditAction) actions.create(EditAction.ID);
+        EditAction<Customer> editAction = (EditAction<Customer>) actions.create(EditAction.ID);
         editAction.withHandler(actionPerformedEvent -> {
             Customer selected = customersDataGrid.getSingleSelected();
             if (selected != null) {
