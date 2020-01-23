@@ -312,10 +312,9 @@ insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('c9e74b19-7748-7a66-29fd-b2fba0e950b7', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'aboutWindow', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
--- TODO: uncomment
--- insert into SEC_PERMISSION
--- (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
--- values ('ee5385b2-52c2-6ba8-c97d-c0f06854775a', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'serverLog', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('ee5385b2-52c2-6ba8-c97d-c0f06854775a', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'serverLog', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -377,10 +376,9 @@ insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('de624ae0-06f0-b678-966d-618b561fe42e', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 20, 'sec$User:delete', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
--- TODO: uncomment
--- insert into SEC_PERMISSION
--- (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
--- values ('aa3fc0f0-92a0-8dd6-16aa-0ecb73629e25', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'performanceStatistics', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('aa3fc0f0-92a0-8dd6-16aa-0ecb73629e25', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'performanceStatistics', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
@@ -454,10 +452,9 @@ insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
 values ('cb6009ea-4fda-2140-bf99-2f9f3bfa1458', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 20, 'sec$UserRole:update', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
--- TODO: uncomment
--- insert into SEC_PERMISSION
--- (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
--- values ('adce7749-164c-d9c1-b2a2-268ce02de0fe', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sec$UserSessionEntity.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('adce7749-164c-d9c1-b2a2-268ce02de0fe', 1, current_timestamp, 'admin', current_timestamp, null, null, null, 10, 'sec$UserSessionEntity.browse', 0, 'abc5c887-12fd-7211-64ee-b07e871cd985');
 
 insert into SEC_PERMISSION
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
