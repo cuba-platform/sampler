@@ -3,11 +3,9 @@ package com.haulmont.sampler.security.app.role;
 import com.haulmont.cuba.core.entity.FileDescriptor;
 import com.haulmont.cuba.core.entity.KeyValueEntity;
 import com.haulmont.cuba.security.app.role.AnnotatedRoleDefinition;
+import com.haulmont.cuba.security.app.role.annotation.Role;
 import com.haulmont.cuba.security.app.role.annotation.*;
-import com.haulmont.cuba.security.entity.Access;
-import com.haulmont.cuba.security.entity.EntityAttrAccess;
-import com.haulmont.cuba.security.entity.EntityOp;
-import com.haulmont.cuba.security.entity.FilterEntity;
+import com.haulmont.cuba.security.entity.*;
 import com.haulmont.cuba.security.role.EntityAttributePermissionsContainer;
 import com.haulmont.cuba.security.role.EntityPermissionsContainer;
 import com.haulmont.cuba.security.role.ScreenPermissionsContainer;
@@ -22,6 +20,8 @@ public class DemoRole extends AnnotatedRoleDefinition {
     @EntityAccess(target = FileDescriptor.class, allow = {EntityOp.READ})
     @EntityAccess(target = KeyValueEntity.class, allow = {EntityOp.READ})
     @EntityAccess(target = FilterEntity.class,
+            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(target = UserSetting.class,
             allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
     @EntityAccess(target = CalendarEvent.class,
             allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
@@ -118,6 +118,7 @@ public class DemoRole extends AnnotatedRoleDefinition {
             "thirdpartyLicenseWindow",
             /* Sampler screen */
             "sample-browser",
+            "event-window",
             "sampler$Customer.browse",
             "sampler$Customer.edit",
             "sampler$Order.edit",
