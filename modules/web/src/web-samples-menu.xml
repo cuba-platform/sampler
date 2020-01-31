@@ -1675,7 +1675,7 @@
                       image="images/dashboard/charts/micro-chart.png"
                       controller="com/haulmont/sampler/web/ui/charts/charts/serial/micro/MicroChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/micro"/>
-                <item id="cylinder-chart" docUrlSuffix="gauge_chart" splitEnabled="true" sampleHeight="60"
+                <item id="cylinder-chart" docUrlSuffix="serial_chart" splitEnabled="true" sampleHeight="60"
                       image="images/dashboard/charts/cylinder-chart.svg"
                       controller="com/haulmont/sampler/web/ui/charts/charts/serial/cylinder/CylinderChartSample.java"
                       descriptionsPack="com/haulmont/sampler/web/ui/charts/charts/serial/cylinder"/>

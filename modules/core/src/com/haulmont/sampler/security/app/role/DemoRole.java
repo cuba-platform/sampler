@@ -88,6 +88,7 @@ public class DemoRole extends AnnotatedRoleDefinition {
     }
 
     @ScreenAccess(allow = {
+            /* CUBA screens */
             "addCondition",
             "backgroundWorkProgressWindow",
             "backgroundWorkWindow",
@@ -116,7 +117,9 @@ public class DemoRole extends AnnotatedRoleDefinition {
             "saveSetInFolder",
             "inputDialog",
             "thirdpartyLicenseWindow",
-            /* Sampler screen */
+            /* Charts screens */
+            "chart$pivotTableScreen",
+            /* Sampler screens */
             "sample-browser",
             "event-window",
             "sampler$Customer.browse",
@@ -125,6 +128,8 @@ public class DemoRole extends AnnotatedRoleDefinition {
             "sampler$OrderItem.browse",
             "sampler$OrderItem.edit",
             "sampler$Product.edit",
+            "visible-buttonspanel",
+            "invisible-buttonspanel"
     })
     @Override
     public ScreenPermissionsContainer screenPermissions() {

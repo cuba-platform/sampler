@@ -1,7 +1,7 @@
 <window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
         xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd">
     <layout>
-        <chart:serialChart id="gaugeChart"
+        <chart:serialChart id="cylinderChart"
                            height="100%"
                            width="100%"
                            depth3D="100"

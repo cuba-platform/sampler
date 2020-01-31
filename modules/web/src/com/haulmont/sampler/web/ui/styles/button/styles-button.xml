@@ -2,7 +2,7 @@
     <layout expand="spacer"
             spacing="true">
         <hbox spacing="true">
-            <groupBox caption="Icon style"
+            <groupBox caption="Icon styles"
                       spacing="true">
                 <button caption="icon-align-right"
                         icon="icons/upload.png"
@@ -16,7 +16,7 @@
                         stylename="icon-only"/>
             </groupBox>
             <vbox spacing="true">
-                <groupBox caption="Border style"
+                <groupBox caption="Border styles"
                           spacing="true">
                     <hbox spacing="true">
                         <button caption="borderless"
@@ -27,7 +27,7 @@
                                 stylename="quiet"/>
                     </hbox>
                 </groupBox>
-                <groupBox caption="Action style"
+                <groupBox caption="Action styles"
                           spacing="true">
                     <hbox spacing="true">
                         <button caption="primary"
