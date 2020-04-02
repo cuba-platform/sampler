@@ -276,6 +276,7 @@ public class SampleBrowser extends Screen {
         }
         Label<String> doc = uiComponents.create(Label.TYPE_STRING);
         doc.setHtmlEnabled(true);
+        doc.setHtmlSanitizerEnabled(false);
         doc.setWidth("100%");
         doc.setValue(sb.toString());
         return doc;
