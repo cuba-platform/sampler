@@ -576,8 +576,8 @@
             </item>
             <item id="form-captionposition" docUrlSuffix="gui_Form" sampleHeight="110px"
                   image="images/dashboard/components/form-captionposition.png"
-                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/caption"
-                  controller="com/haulmont/sampler/web/ui/components/form/caption/FormCaptionPositionSample.java">
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/captionpos"
+                  controller="com/haulmont/sampler/web/ui/components/form/captionpos/FormCaptionPositionSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
@@ -588,6 +588,14 @@
                   controller="com/haulmont/sampler/web/ui/components/form/field/FormFieldSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Order.java"/>
+                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-captionalignment" docUrlSuffix="gui_Form" sampleHeight="110px"
+                  image="images/dashboard/components/form-captionalignment.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/captionalignment"
+                  controller="com/haulmont/sampler/web/ui/components/form/captionalignment/FormCaptionAlignmentSample.java">
+                <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>

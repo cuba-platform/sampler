@@ -1,4 +1,4 @@
-package com.haulmont.sampler.web.ui.components.form.caption;
+package com.haulmont.sampler.web.ui.components.form.captionpos;
 
 import com.haulmont.cuba.gui.screen.ScreenFragment;
 import com.haulmont.cuba.gui.screen.UiController;
