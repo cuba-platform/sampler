@@ -136,4 +136,14 @@ public class StepperField extends CompositeComponent<CssLayout> implements Field
     public ValueSource<BigDecimal> getValueSource() {
         return valueField.getValueSource();
     }
+
+    @Override
+    public boolean isHtmlSanitizerEnabled() {
+        return getComposition().isHtmlSanitizerEnabled();
+    }
+
+    @Override
+    public void setHtmlSanitizerEnabled(boolean htmlSanitizerEnabled) {
+        getComposition().setHtmlSanitizerEnabled(htmlSanitizerEnabled);
+    }
 }

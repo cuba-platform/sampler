@@ -17,77 +17,77 @@ public class DemoRole extends AnnotatedRoleDefinition {
 
     public static final String ROLE_NAME = "demo-access";
 
-    @EntityAccess(target = FileDescriptor.class, allow = {EntityOp.READ})
-    @EntityAccess(target = KeyValueEntity.class, allow = {EntityOp.READ})
-    @EntityAccess(target = FilterEntity.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = UserSetting.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = CalendarEvent.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = Color.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = CountryGrowth.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = CountryLitres.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = CountrySales.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = Customer.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = DateSegment.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = DateTaskSpan.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = DateValue.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = DateValueVolume.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = IncomeExpenses.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = Order.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = OrderItem.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = PointPair.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = PointValue.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = Product.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = Segment.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = StockData.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = Task.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = TaskSpan.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = TipInfo.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = TitleValue.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = TransportCount.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = ValueDescription.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = DateValueGap.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
-    @EntityAccess(target = Employee.class,
-            allow = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = FileDescriptor.class, operations = {EntityOp.READ})
+    @EntityAccess(entityClass = KeyValueEntity.class, operations = {EntityOp.READ})
+    @EntityAccess(entityClass = FilterEntity.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = UserSetting.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = CalendarEvent.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Color.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = CountryGrowth.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = CountryLitres.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = CountrySales.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Customer.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = DateSegment.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = DateTaskSpan.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = DateValue.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = DateValueVolume.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = IncomeExpenses.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Order.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = OrderItem.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = PointPair.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = PointValue.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Product.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Segment.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = StockData.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Task.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = TaskSpan.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = TipInfo.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = TitleValue.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = TransportCount.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = ValueDescription.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = DateValueGap.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Employee.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
     @Override
     public EntityPermissionsContainer entityPermissions() {
         return super.entityPermissions();
     }
 
-    @EntityAttributeAccess(target = Customer.class, view = {"avatar"})
-    @DefaultEntityAttributeAccess(EntityAttrAccess.MODIFY)
+    @EntityAttributeAccess(entityClass = Customer.class, view = {"avatar"})
+    @EntityAttributeAccess(entityName = "*", modify = "*")
     @Override
     public EntityAttributePermissionsContainer entityAttributePermissions() {
         return super.entityAttributePermissions();
     }
 
-    @ScreenAccess(allow = {
+    @ScreenAccess(screenIds = {
             /* CUBA screens */
             "addCondition",
             "backgroundWorkProgressWindow",
@@ -137,9 +137,7 @@ public class DemoRole extends AnnotatedRoleDefinition {
     }
 
     @Override
-    @SpecificAccess(target = "cuba.gui.loginToClient", access = Access.ALLOW)
-    @SpecificAccess(target = "cuba.gui.bulkEdit", access = Access.ALLOW)
-    @SpecificAccess(target = "cuba.gui.filter.edit", access = Access.ALLOW)
+    @SpecificAccess(permissions = {"cuba.gui.loginToClient", "cuba.gui.bulkEdit", "cuba.gui.filter.edit"})
     public SpecificPermissionsContainer specificPermissions() {
         return super.specificPermissions();
     }
