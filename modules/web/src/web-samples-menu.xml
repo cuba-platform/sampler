@@ -574,7 +574,7 @@
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="form-captionposition" docUrlSuffix="gui_Form" sampleHeight="110px"
+            <item id="form-captionposition" docUrlSuffix="gui_Form" sampleHeight="170px"
                   image="images/dashboard/components/form-captionposition.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/form/captionpos"
                   controller="com/haulmont/sampler/web/ui/components/form/captionpos/FormCaptionPositionSample.java">
@@ -591,12 +591,20 @@
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="form-captionalignment" docUrlSuffix="gui_Form" sampleHeight="110px"
+            <item id="form-captionalignment" docUrlSuffix="gui_Form" sampleHeight="170px"
                   image="images/dashboard/components/form-captionalignment.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/form/captionalignment"
                   controller="com/haulmont/sampler/web/ui/components/form/captionalignment/FormCaptionAlignmentSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-spans" docUrlSuffix="gui_Form" sampleHeight="350px"
+                  image="images/dashboard/components/form-spans.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/form/spans"
+                  controller="com/haulmont/sampler/web/ui/components/form/spans/FormSpansSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
         </menu>
