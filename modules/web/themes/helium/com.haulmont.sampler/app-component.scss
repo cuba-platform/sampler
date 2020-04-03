@@ -1,0 +1,5 @@
+@import "helium-ext";
+
+@mixin com_haulmont_sampler {
+  @include com_haulmont_sampler-helium-ext;
+}

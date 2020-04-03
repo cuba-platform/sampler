@@ -39,7 +39,8 @@
             <vbox id="sideMenuBox"
                   expand="sideMenu"
                   height="100%"
-                  spacing="true">
+                  spacing="true"
+                  stylename="side-menu-box">
                 <hbox id="appTitleBox"
                       spacing="true"
                       stylename="c-sidemenu-title"
@@ -55,8 +56,8 @@
                                inputPrompt="msg://sideMenu.search"
                                width="100%"/>
                     <button id="searchButton"
-                            caption="msg://sideMenu.search"
-                            icon="font-icon:SEARCH"/>
+                            icon="font-icon:SEARCH"
+                            stylename="icon-only secondary"/>
                 </cssLayout>
                 <hbox id="menuHeaderBox"
                       expand="menuCaptionLabel"
@@ -98,7 +99,7 @@
                                  nullOptionVisible="false"
                                  stylename="borderless"
                                  textInputAllowed="false"
-                                 width="80px"/>
+                                 width="95px"/>
 
                     <label id="spacer"/>
 
@@ -111,7 +112,7 @@
                                  nullOptionVisible="false"
                                  stylename="borderless"
                                  textInputAllowed="false"
-                                 width="100px"/>
+                                 width="105px"/>
                 </hbox>
             </vbox>
 

@@ -1,0 +1,42 @@
+@import "app/folderspane";
+@import "app/mainwindow";
+@import "app/samplebrowser";
+@import "app/sampler-main-dashboard-frame";
+@import "components/button/button-ext";
+@import "components/label/label-ext";
+@import "components/popupview/popupview-ext";
+@import "components/sidemenu/sidemenu-ext";
+@import "samples/components/table/table";
+@import "samples/components/lookup/lookupfield";
+@import "samples/components/datagrid/datagrid";
+@import "samples/components/calendar/calendar";
+@import "samples/components/twincolumn/twincolumn";
+@import "samples/components/htmlLayout/html-layout";
+@import "samples/components/composite/composite";
+@import "samples/containers/cssLayout/css-layout";
+@import "samples/containers/layoutClick/layout-click";
+@import "samples/components/icons/icons";
+
+@mixin com_haulmont_sampler-helium-ext {
+  @include sampler-samplebrowser;
+  @include sampler-button;
+  @include sampler-label;
+  @include sampler-folderspane;
+  @include sampler-popupview;
+  @include sampler-mainwindow;
+  @include sample-table;
+  @include sample-datagrid;
+  @include sample-calendar;
+  @include sample-twincolumn;
+  @include sample-html-layout;
+  @include sample-css-layout;
+  @include sample-layout-click;
+  @include sample-sidemenu;
+  @include sample-main-dashboard-frame;
+  @include sample-all-icons;
+  @include sample-options-style-provider-lookupfield;
+  @include sample-composite-component;
+
+  //--sidemenu-background-color: var(--background-color);
+  --sidemenu-title-background-color: var(--sidemenu-background-color);
+}
