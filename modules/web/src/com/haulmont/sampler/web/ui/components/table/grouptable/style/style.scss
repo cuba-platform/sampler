@@ -1,18 +1,41 @@
-.active-customer {
+.v-table {
+  .active-customer {
     font-weight: bold;
-}
+  }
 
-.premium-grade {
-    background-color: red;
-    color: white;
-}
+  .v-table-row,
+  .v-table-row-odd {
+    &.premium-grade {
+      background-color: red;
+      color: white;
 
-.high-grade {
-    background-color: green;
-    color: white;
-}
+      .c-grouptable-group-cell-expander:before {
+        color: white;
+      }
+    }
+  }
 
-.standard-grade {
-    background-color: blue;
-    color: white;
+  .v-table-row,
+  .v-table-row-odd {
+    &.high-grade {
+      background-color: green;
+      color: white;
+
+      .c-grouptable-group-cell-expander:before {
+        color: white;
+      }
+    }
+  }
+
+  .v-table-row,
+  .v-table-row-odd {
+    &.standard-grade {
+      background-color: blue;
+      color: white;
+
+      .c-grouptable-group-cell-expander:before {
+        color: white;
+      }
+    }
+  }
 }

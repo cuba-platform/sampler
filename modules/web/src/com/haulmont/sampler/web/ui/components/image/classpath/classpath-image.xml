@@ -3,7 +3,7 @@
         <hbox spacing="true">
             <groupBox caption="Image with a programmatically defined source"
                       height="250px"
-                      width="320px">
+                      width="370px">
                 <image id="programmaticImage"
                        align="MIDDLE_CENTER"
                        scaleMode="SCALE_DOWN"
@@ -11,7 +11,7 @@
             </groupBox>
             <groupBox caption="Image with a declaratively defined source"
                       height="250px"
-                      width="320px">
+                      width="370px">
                 <image id="declarativeImage"
                        align="MIDDLE_CENTER">
                     <classpath path="/com/haulmont/sampler/web/ui/components/image/classpath/cuba-logo.png"/>

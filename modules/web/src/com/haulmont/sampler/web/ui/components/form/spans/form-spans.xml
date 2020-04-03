@@ -7,22 +7,22 @@
     <layout spacing="true">
         <groupBox caption="Col Span" width="AUTO">
             <form dataContainer="orderDc">
-                <column>
+                <column width="250px">
                     <textField property="customer"/>
                     <textField property="description" colspan="2" width="100%"/>
                 </column>
-                <column>
+                <column width="250px">
                     <textField property="date"/>
                 </column>
             </form>
         </groupBox>
         <groupBox caption="Row Span" width="AUTO">
             <form dataContainer="orderDc">
-                <column>
+                <column width="250px">
                     <textField property="customer"/>
                     <textField property="date"/>
                 </column>
-                <column>
+                <column width="250px">
                     <textArea property="description" rowspan="2" height="100%"/>
                 </column>
             </form>

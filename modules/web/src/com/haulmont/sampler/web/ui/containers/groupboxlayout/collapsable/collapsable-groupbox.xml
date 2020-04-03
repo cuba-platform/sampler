@@ -6,7 +6,7 @@
                       spacing="true"
                       width="300px">
                 <label value="Label"/>
-                <textField inputPrompt="TextField"/>
+                <textField inputPrompt="TextField" width="100%"/>
                 <button caption="Button"/>
                 <button caption="Button"/>
             </groupBox>
@@ -19,7 +19,7 @@
                       stylename="light"
                       width="300px">
                 <label value="Label"/>
-                <textField inputPrompt="TextField"/>
+                <textField inputPrompt="TextField" width="100%"/>
                 <button caption="Button"/>
                 <button caption="Button"/>
             </groupBox>

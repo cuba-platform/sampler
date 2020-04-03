@@ -6,7 +6,7 @@
                        timeFormat="mm/HH"/>
             <timeField caption="msg://myTimeFormat"
                        timeFormat="msg://myTimeFormat"
-                       width="80px"/>
+                       width="90px"/>
         </hbox>
     </layout>
 </window>

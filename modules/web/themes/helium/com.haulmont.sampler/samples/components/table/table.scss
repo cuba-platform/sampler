@@ -1,6 +1,6 @@
-@mixin sample-table {
+@mixin sample-table($primary-stylename: v-table) {
   .active-customer {
-      font-weight: bold;
+    font-weight: bold;
   }
 
   .premium-grade {
@@ -16,5 +16,43 @@
   .standard-grade {
     background-color: blue;
     color: white;
+  }
+
+  .#{$primary-stylename} {
+    .#{$primary-stylename}-row,
+    .#{$primary-stylename}-row-odd {
+      &.premium-grade {
+        background-color: red;
+        color: white;
+
+        .c-grouptable-group-cell-expander:before {
+          color: white;
+        }
+      }
+    }
+
+    .#{$primary-stylename}-row,
+    .#{$primary-stylename}-row-odd {
+      &.high-grade {
+        background-color: green;
+        color: white;
+
+        .c-grouptable-group-cell-expander:before {
+          color: white;
+        }
+      }
+    }
+
+    .#{$primary-stylename}-row,
+    .#{$primary-stylename}-row-odd {
+      &.standard-grade {
+        background-color: blue;
+        color: white;
+
+        .c-grouptable-group-cell-expander:before {
+          color: white;
+        }
+      }
+    }
   }
 }

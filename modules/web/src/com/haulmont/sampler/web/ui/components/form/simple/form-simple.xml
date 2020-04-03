@@ -7,10 +7,12 @@
     <layout>
         <hbox spacing="true">
             <form dataContainer="orderDc">
-                <dateField id="dateField" property="date" width="100%"/>
-                <pickerField id="customerField" property="customer"/>
-                <textField id="amountField" property="amount"/>
-                <textField id="descriptionField" property="description"/>
+                <column width="250px">
+                    <dateField id="dateField" property="date"/>
+                    <pickerField id="customerField" property="customer"/>
+                    <textField id="amountField" property="amount"/>
+                    <textField id="descriptionField" property="description"/>
+                </column>
             </form>
             <button id="showOrderBtn"
                     align="MIDDLE_LEFT"

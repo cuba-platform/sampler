@@ -30,13 +30,11 @@
   }
 
   .vbox-icon:hover {
-    background-color: $v-focus-color;
-
-    $font-color: valo-font-color($v-selection-color, 0.9);
-    color: $font-color;
+    background-color: var(--primary-color);
+    color: var(--primary-contrast-text-color);
 
     .icon-label > span {
-      color: $font-color;
+      color: var(--primary-contrast-text-color);
     }
   }
 }

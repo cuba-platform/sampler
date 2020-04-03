@@ -2,7 +2,7 @@
     <layout>
         <groupBox caption="Image with a programmatically defined source"
                   height="250px"
-                  width="320px">
+                  width="370px">
             <image id="image"
                    align="MIDDLE_CENTER"/>
         </groupBox>
