@@ -1248,6 +1248,14 @@
                   image="images/dashboard/components/format-timefield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/format"
                   controller="com/haulmont/sampler/web/ui/components/timefield/format/FormatTimeFieldSample.java"/>
+            <item id="timemode-timefield" docUrlSuffix="gui_TimeField" sampleHeight="50px"
+                  image="images/dashboard/components/timemode-timefield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/timefield/timemode"
+                  controller="com/haulmont/sampler/web/ui/components/timefield/timemode/TimeModeTimeFieldSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
         </menu>
 
         <menu id="tokenList">
