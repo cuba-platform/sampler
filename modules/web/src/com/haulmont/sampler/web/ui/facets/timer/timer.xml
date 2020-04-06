@@ -1,0 +1,21 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <facets>
+        <timer id="timer"
+               autostart="false"
+               delay="5000"
+               repeating="true"/>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <button id="startTimer"
+                    caption="Start"
+                    icon="font-awesome-icon:PLAY"/>
+            <button id="stopTimer"
+                    caption="Stop"
+                    icon="font-awesome-icon:STOP"/>
+            <label id="statusLabel"
+                   align="MIDDLE_LEFT"
+                   value="Timer is not running"/>
+        </hbox>
+    </layout>
+</window>

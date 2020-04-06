@@ -764,6 +764,34 @@
             </otherFiles>
         </item>
 
+        <menu id="facets" image="images/dashboard/mainmenu/dialogsAndNotifications.svg">
+            <item id="dialog-facet" docUrlSuffix="gui_facets" sampleHeight="30px"
+                  image="images/dashboard/components/dialog-facet.png"
+                  controller="com/haulmont/sampler/web/ui/facets/dialog/DialogFacetSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/facets/dialog"/>
+            <item id="notification-facet" docUrlSuffix="gui_facets" sampleHeight="30px"
+                  image="images/dashboard/components/notification-facet.png"
+                  controller="com/haulmont/sampler/web/ui/facets/notification/NotificationFacetSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/facets/notification"/>
+            <item id="screen-facet" docUrlSuffix="gui_facets" sampleHeight="30px"
+                  image="images/dashboard/components/screen-facet.png"
+                  controller="com/haulmont/sampler/web/ui/facets/screen/ScreenFacetSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/facets/screen">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/web/ui/sample-browser.xml"/>
+                    <file name="com/haulmont/sampler/web/ui/SampleBrowser.java"/>
+                    <file name="com/haulmont/sampler/web/ui/entities/customer/customer-browse.xml"/>
+                    <file name="com/haulmont/sampler/web/ui/entities/customer/CustomerBrowse.java"/>
+                    <file name="com/haulmont/sampler/web/ui/entities/customer/customer-edit.xml"/>
+                    <file name="com/haulmont/sampler/web/ui/entities/customer/CustomerEdit.java"/>
+                </otherFiles>
+            </item>
+            <item id="timer" docUrlSuffix="gui_Timer" sampleHeight="30px"
+                  image="images/dashboard/components/timer.png"
+                  controller="com/haulmont/sampler/web/ui/facets/timer/TimerSample.java"
+                  descriptionsPack="com/haulmont/sampler/web/ui/facets/timer"/>
+        </menu>
+
         <menu id="optionsGroup">
             <item id="simple-optionsgroup" docUrlSuffix="gui_OptionsGroup" sampleHeight="150px"
                   image="images/dashboard/components/simple-optionsgroup.png"
