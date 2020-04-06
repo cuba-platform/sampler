@@ -442,6 +442,10 @@
                   image="images/dashboard/components/resolution-datefield.png"
                   descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/resolution"
                   controller="com/haulmont/sampler/web/ui/components/datefield/resolution/ResolutionDateFieldSample.java"/>
+            <item id="autofill-datefield" docUrlSuffix="gui_DateField" sampleHeight="110px"
+                  image="images/dashboard/components/autofill-datefield.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/datefield/autofill"
+                  controller="com/haulmont/sampler/web/ui/components/datefield/autofill/AutofillDateFieldSample.java"/>
         </menu>
 
         <menu id="datePicker">
