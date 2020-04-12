@@ -1,0 +1,28 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:maps="http://schemas.haulmont.com/maps/0.1/ui-component.xsd">
+    <data>
+        <collection id="locationsDc"
+                    class="com.haulmont.sampler.entity.Location"
+                    view="_local">
+            <loader id="locationsDl">
+                <query>
+                    select e from sampler_Location e
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <maps:geoMap id="map"
+                     zoom="14"
+                     center="-1.98, 53.464"
+                     height="100%"
+                     width="100%">
+            <maps:layers>
+                <maps:tile id="tiles" tileProvider="maps_OpenStreetMap"/>
+                <maps:vector id="locations" dataContainer="locationsDc">
+                    <maps:cluster/>
+                </maps:vector>
+            </maps:layers>
+        </maps:geoMap>
+    </layout>
+</window>

@@ -1,0 +1,14 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:maps="http://schemas.haulmont.com/maps/0.1/ui-component.xsd">
+    <layout>
+        <maps:geoMap id="map"
+                     zoom="17"
+                     center="-0.1640009880065918, 51.48068132423847"
+                     height="100%"
+                     width="100%">
+            <maps:layers selectedLayer="canvas">
+                <maps:tile id="tiles" tileProvider="maps_OpenStreetMap"/>
+            </maps:layers>
+        </maps:geoMap>
+    </layout>
+</window>

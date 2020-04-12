@@ -75,6 +75,8 @@ public class DemoRole extends AnnotatedRoleDefinition {
             operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
     @EntityAccess(entityClass = Employee.class,
             operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
+    @EntityAccess(entityClass = Location.class,
+            operations = {EntityOp.CREATE, EntityOp.READ, EntityOp.UPDATE, EntityOp.DELETE})
     @Override
     public EntityPermissionsContainer entityPermissions() {
         return super.entityPermissions();

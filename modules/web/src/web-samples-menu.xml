@@ -2127,58 +2127,50 @@
     </menu>
 
     <menu id="maps" image="images/dashboard/mainmenu/maps.svg">
-        <item id="marker-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
-              image="images/dashboard/maps/marker-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/marker/MarkerMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/marker"/>
-        <item id="polygon-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
+        <item id="point-map" docUrlSuffix="#" splitEnabled="true" sampleHeight="60"
+              image="images/dashboard/maps/point-map.png"
+              controller="com/haulmont/sampler/web/ui/maps/point/PointMapSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/maps/point"/>
+        <item id="polygon-map" docUrlSuffix="#" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/polygon-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/polygon/PolygonMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/polygon">
+              controller="com/haulmont/sampler/web/ui/maps/polygon/PolygonMapSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/maps/polygon">
             <otherFiles>
-                <file name="com/haulmont/sampler/web/ui/charts/map/polygon/PolygonPoints.java"/>
+                <file name="com/haulmont/sampler/web/ui/maps/polygon/PolygonPoints.java"/>
             </otherFiles>
         </item>
-        <item id="polyline-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
+        <item id="polyline-map" docUrlSuffix="#" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/polyline-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/polyline/PolylineMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/polyline">
+              controller="com/haulmont/sampler/web/ui/maps/polyline/PolylineMapSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/maps/polyline">
             <otherFiles>
-                <file name="com/haulmont/sampler/web/ui/charts/map/polyline/PolylinePoints.java"/>
+                <file name="com/haulmont/sampler/web/ui/maps/polyline/PolylinePoints.java"/>
             </otherFiles>
         </item>
-        <item id="directions-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
-              image="images/dashboard/maps/directions-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/directions/DirectionsMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/directions"/>
-        <item id="circle-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
-              image="images/dashboard/maps/circle-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/circle/CircleMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/circle"/>
-        <item id="heat-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
+        <item id="heat-map" docUrlSuffix="#_heatmaps" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/heat-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/heat/HeatMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/heat">
+              controller="com/haulmont/sampler/web/ui/maps/heat/HeatMapSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/maps/heat">
             <otherFiles>
-                <file name="com/haulmont/sampler/web/ui/charts/map/heat/HeatPoints.java"/>
+                <file name="com/haulmont/sampler/web/ui/maps/heat/HeatPoints.java"/>
             </otherFiles>
         </item>
-        <item id="actions-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
+        <item id="actions-map" docUrlSuffix="#" splitEnabled="true" sampleHeight="60"
               image="images/dashboard/maps/actions-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/actions/ActionsMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/actions"/>
-        <item id="vertex-removal-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
-              image="images/dashboard/maps/vertex-removal-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/vertexremoval/VertexRemovalMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/vertexremoval">
+              controller="com/haulmont/sampler/web/ui/maps/actions/ActionsMapSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/maps/actions"/>
+        <item id="label-map" docUrlSuffix="#" splitEnabled="true" sampleHeight="60"
+              image="images/dashboard/maps/label-map.png"
+              controller="com/haulmont/sampler/web/ui/maps/label/LabelMapSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/maps/label"/>
+        <item id="cluster-map" docUrlSuffix="#_clustering" splitEnabled="true" sampleHeight="60"
+              image="images/dashboard/maps/cluster-map.png"
+              controller="com/haulmont/sampler/web/ui/maps/cluster/ClusterMapSample.java"
+              descriptionsPack="com/haulmont/sampler/web/ui/maps/cluster">
             <otherFiles>
-                <file name="com/haulmont/sampler/web/ui/charts/map/vertexremoval/PolygonPoints.java"/>
+                <file name="com/haulmont/sampler/entity/Location.java"/>
             </otherFiles>
         </item>
-        <item id="label-map" docUrlSuffix="map" splitEnabled="true" sampleHeight="60"
-              image="images/dashboard/maps/label-map.png"
-              controller="com/haulmont/sampler/web/ui/charts/map/label/LabelMapSample.java"
-              descriptionsPack="com/haulmont/sampler/web/ui/charts/map/label"/>
     </menu>
 
 </sample-menu-config>

@@ -9,6 +9,14 @@ buildscript {
                 password(rootProject.hasProperty('repoPass') ? rootProject['repoPass'] : 'cuba123')
             }
         }
+
+        maven {
+            url 'https://repo.cuba-platform.com/content/groups/premium'
+            credentials {
+                username(rootProject.hasProperty('premiumRepoUser') ? rootProject['premiumRepoUser'] : System.getenv('CUBA_PREMIUM_USER'))
+                password(rootProject.hasProperty('premiumRepoPass') ? rootProject['premiumRepoPass'] : System.getenv('CUBA_PREMIUM_PASSWORD'))
+            }
+        }
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
@@ -20,6 +28,7 @@ def modulePrefix = 'sampler'
 def globalModule = project(":${modulePrefix}-global" )
 def coreModule = project(":${modulePrefix}-core" )
 def webModule = project(":${modulePrefix}-web" )
+def webToolkitModule = project(":${modulePrefix}-web-toolkit")
 
 def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
@@ -42,12 +51,13 @@ dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
     appComponent("com.haulmont.charts:charts-global:$cubaVersion")
     appComponent('com.haulmont.addon.helium:helium-global:0.2.0.BETA.3')
+    appComponent('com.haulmont.addon.maps:maps-global:1.2.0')
 
 }
 
 def hsql = 'org.hsqldb:hsqldb:2.4.1'
 
-configure([globalModule, coreModule, webModule]) {
+configure([globalModule, coreModule, webModule, webToolkitModule]) {
     apply(plugin: 'java')
     apply(plugin: 'maven')
     apply(plugin: 'cuba')
@@ -144,7 +154,14 @@ configure(webModule) {
         compile(globalModule)
         compile('org.vaadin.addons:googleanalyticstracker:3.0.0')
     }
-    
+
+    jar {
+        with copySpec {
+            from sourceSets.main.allJava
+            include "com/haulmont/sampler/web/toolkit/ui/client/**"
+        }
+    }
+
     task webArchive(type: Zip) {
         from file("$buildDir/web")
         from file('web')
@@ -217,6 +234,38 @@ configure(webModule) {
     }
 }
 
+configure(webToolkitModule) {
+    dependencies {
+        compile(webModule)
+    }
+
+    jar {
+        from sourceSets.main.allJava
+    }
+
+    task buildWidgetSet(type: CubaWidgetSetBuilding) {
+        widgetSetClass = 'com.haulmont.sampler.web.toolkit.ui.AppWidgetSet'
+    }
+
+    task debugWidgetSet(type: CubaWidgetSetDebug) {
+        widgetSetClass = 'com.haulmont.sampler.web.toolkit.ui.AppWidgetSet'
+    }
+
+    task webArchive(dependsOn: buildWidgetSet, type: Jar) {
+        from file("$buildDir/web")
+        classifier = 'client'
+    }
+
+    artifacts {
+        archives webArchive
+    }
+
+    task deploy(dependsOn: webArchive, type: Copy) {
+        from webArchive
+        into "$cuba.tomcat.dir/webapps/${modulePrefix}/WEB-INF/lib"
+    }
+}
+
 
 task undeploy(type: Delete, dependsOn: ":${modulePrefix}-web:cleanConf" ) {
     delete("$cuba.tomcat.dir/shared")
@@ -224,7 +273,7 @@ task undeploy(type: Delete, dependsOn: ":${modulePrefix}-web:cleanConf" ) {
     delete("$cuba.tomcat.dir/webapps/${modulePrefix}" )
 }
 
-task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy" , ":${modulePrefix}-web:deploy" ],
+task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefix}-web:deploy", ":${modulePrefix}-web-toolkit:deploy"],
         description: 'Redeploys applications and restarts local Tomcat') {
     doLast {
         ant.waitfor(maxwait: 6, maxwaitunit: 'second', checkevery: 2, checkeveryunit: 'second') {

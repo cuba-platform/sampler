@@ -1,6 +1,8 @@
 rootProject.name = 'sampler'
 def modulePrefix = 'sampler'
-include(":${modulePrefix}-global" , ":${modulePrefix}-core", ":${modulePrefix}-web")
+include(":${modulePrefix}-global", ":${modulePrefix}-core", ":${modulePrefix}-web", ":${modulePrefix}-web-toolkit")
 project(":${modulePrefix}-global" ).projectDir = new File(settingsDir, 'modules/global')
 project(":${modulePrefix}-core" ).projectDir = new File(settingsDir, 'modules/core')
 project(":${modulePrefix}-web" ).projectDir = new File(settingsDir, 'modules/web')
+
+project(":${modulePrefix}-web-toolkit").projectDir = new File(settingsDir, 'modules/web-toolkit')
