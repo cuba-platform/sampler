@@ -36,7 +36,8 @@ public class LabelMapSample extends ScreenFragment {
     private String createLabelContent(Point center) {
         Point labelPointJts = (Point) labelPoint.getGeometry();
         return String.format(
-                "<h1>Distance from this point to the current center: <br>latitude: %s<br>longitude: %s</h1>",
+                "<h1 style=font-size:25px>Distance from this point to the current center: " +
+                        "<br>latitude: %s<br>longitude: %s</h1>",
                 BigDecimal.valueOf(labelPointJts.getY()).subtract(BigDecimal.valueOf(center.getY())),
                 BigDecimal.valueOf(labelPointJts.getX()).subtract(BigDecimal.valueOf(center.getX())));
     }

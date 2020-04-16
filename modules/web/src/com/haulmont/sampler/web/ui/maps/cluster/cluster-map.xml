@@ -20,7 +20,7 @@
             <maps:layers>
                 <maps:tile id="tiles" tileProvider="maps_OpenStreetMap"/>
                 <maps:vector id="locations" dataContainer="locationsDc">
-                    <maps:cluster/>
+                    <maps:cluster disableAtZoom="18"/>
                 </maps:vector>
             </maps:layers>
         </maps:geoMap>
