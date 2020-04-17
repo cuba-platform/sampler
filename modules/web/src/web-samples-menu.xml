@@ -136,7 +136,7 @@
                   descriptionsPack="com/haulmont/sampler/web/ui/components/checkboxgroup/simple"
                   controller="com/haulmont/sampler/web/ui/components/checkboxgroup/simple/CheckBoxGroupSimpleSample.java">
                 <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                    <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
             <item id="checkboxgroup-custom-options" docUrlSuffix="gui_CheckBoxGroup" sampleHeight="115px"
