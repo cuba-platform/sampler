@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '7.2.2'
+    ext.cubaVersion = '7.2.3'
     repositories {
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
@@ -50,7 +50,7 @@ cuba {
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
     appComponent("com.haulmont.charts:charts-global:$cubaVersion")
-    appComponent('com.haulmont.addon.helium:helium-global:0.2.0.BETA.3')
+    appComponent('com.haulmont.addon.helium:helium-global:0.2.0')
     appComponent('com.haulmont.addon.maps:maps-global:1.2.0')
 
 }
