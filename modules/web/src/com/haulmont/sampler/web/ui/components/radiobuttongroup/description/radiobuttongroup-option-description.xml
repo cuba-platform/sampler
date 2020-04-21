@@ -1,0 +1,6 @@
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd">
+    <layout>
+        <radioButtonGroup id="radioButtonGroup"
+                          optionsEnum="com.haulmont.sampler.entity.Experience"/>
+    </layout>
+</window>
