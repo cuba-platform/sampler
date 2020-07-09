@@ -3,7 +3,7 @@
         <hbox spacing="true"
               width="100%">
             <groupBox caption="HtmlBox with declaratively defined templateContents">
-                <htmlBox height="275px">
+                <htmlBox height="275px" htmlSanitizerEnabled="false">
                     <templateContents>
                         <![CDATA[
                         <table align="center" cellspacing="10"
@@ -41,6 +41,7 @@
             <groupBox caption="HtmlBox with programmatically defined templateContents">
                 <htmlBox id="htmlSample"
                          height="275px"
+                         htmlSanitizerEnabled="false"
                          stylename="html-sample">
                     <button id="addons"
                             caption="Addons"
