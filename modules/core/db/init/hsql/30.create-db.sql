@@ -1221,40 +1221,40 @@ values (2014, 34.1, 32.9, 0.2, null, 5, '(projection)', 1, current_timestamp, nu
 ------------------------------------------------------------------------------------------------------------
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('USA', 3.5, 4.2, 1, current_timestamp, null, null, null, '719b65f6-a32d-426f-8f69-db3f800a5124', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('USA', 'images/flags/flag-us.svg', 3.5, 4.2, 1, current_timestamp, null, null, null, '719b65f6-a32d-426f-8f69-db3f800a5124', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('UK', 1.7, 3.1, 1, current_timestamp, null, null, null, 'f74efb19-3d52-43cf-918e-87f48a9ac960', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('UK', 'images/flags/flag-gb.svg', 1.7, 3.1, 1, current_timestamp, null, null, null, 'f74efb19-3d52-43cf-918e-87f48a9ac960', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('Canada', 2.8, 2.9, 1, current_timestamp, null, null, null, '104ccf82-7d0a-4dc2-9273-6d66470ba661', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('Canada', 'images/flags/flag-ca.svg', 2.8, 2.9, 1, current_timestamp, null, null, null, '104ccf82-7d0a-4dc2-9273-6d66470ba661', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('Japan', 2.6, 2.3, 1, current_timestamp, null, null, null, 'b06075ab-66da-46fb-bbd9-6584e943367a', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('Japan', 'images/flags/flag-jp.svg', 2.6, 2.3, 1, current_timestamp, null, null, null, 'b06075ab-66da-46fb-bbd9-6584e943367a', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('France', 1.4, 2.1, 1, current_timestamp, null, null, null, '6f05051f-3dc3-4605-9287-467ea7b408ae', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('France', 'images/flags/flag-fr.svg', 1.4, 2.1, 1, current_timestamp, null, null, null, '6f05051f-3dc3-4605-9287-467ea7b408ae', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('Brazil', 2.6, 4.9, 1, current_timestamp, null, null, null, '47bd990b-b54d-4d77-989f-edfb6b52d5c9', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('Brazil', 'images/flags/flag-br.svg', 2.6, 4.9, 1, current_timestamp, null, null, null, '47bd990b-b54d-4d77-989f-edfb6b52d5c9', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('Russia', 6.4, 7.2, 1, current_timestamp, null, null, null, 'a9ce13f3-bcb9-4924-9651-a15ede3b3f3e', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('Russia', 'images/flags/flag-ru.svg', 6.4, 7.2, 1, current_timestamp, null, null, null, 'a9ce13f3-bcb9-4924-9651-a15ede3b3f3e', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('India', 8.0, 7.1, 1, current_timestamp, null, null, null, 'ebe80366-5264-4955-861c-bdabcea8c18a', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('India', 'images/flags/flag-us.svg', 8.0, 7.1, 1, current_timestamp, null, null, null, 'ebe80366-5264-4955-861c-bdabcea8c18a', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
-(COUNTRY, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('China', 9.9, 10.1, 1, current_timestamp, null, null, null, '054a6e6a-86f8-4400-9e2d-1ccb0aa487f5', current_timestamp, 'admin');
+(COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
+values ('China', 'images/flags/flag-cn.svg', 9.9, 10.1, 1, current_timestamp, null, null, null, '054a6e6a-86f8-4400-9e2d-1ccb0aa487f5', current_timestamp, 'admin');
 
 ------------------------------------------------------------------------------------------------------------
 -- Point Pairs

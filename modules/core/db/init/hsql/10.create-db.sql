@@ -162,6 +162,7 @@ create table SAMPLER_COUNTRY_GROWTH (
     DELETED_BY varchar(50),
     --
     COUNTRY varchar(255) not null,
+    FLAG varchar(255),
     YEAR2014 double precision not null,
     YEAR2015 double precision not null,
     --

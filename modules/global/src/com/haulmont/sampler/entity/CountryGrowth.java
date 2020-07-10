@@ -13,11 +13,22 @@ public class CountryGrowth extends StandardEntity {
     @Column(name = "COUNTRY", nullable = false)
     protected String country;
 
+    @Column(name = "FLAG")
+    private String flag;
+
     @Column(name = "YEAR2014", nullable = false)
     protected Double year2014;
 
     @Column(name = "YEAR2015", nullable = false)
     protected Double year2015;
+
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
 
     public void setCountry(String country) {
         this.country = country;
