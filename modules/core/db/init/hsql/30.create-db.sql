@@ -1250,7 +1250,7 @@ values ('Russia', 'images/flags/flag-ru.svg', 6.4, 7.2, 1, current_timestamp, nu
 
 insert into SAMPLER_COUNTRY_GROWTH
 (COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
-values ('India', 'images/flags/flag-us.svg', 8.0, 7.1, 1, current_timestamp, null, null, null, 'ebe80366-5264-4955-861c-bdabcea8c18a', current_timestamp, 'admin');
+values ('India', 'images/flags/flag-in.svg', 8.0, 7.1, 1, current_timestamp, null, null, null, 'ebe80366-5264-4955-861c-bdabcea8c18a', current_timestamp, 'admin');
 
 insert into SAMPLER_COUNTRY_GROWTH
 (COUNTRY, FLAG, YEAR2014, YEAR2015, VERSION, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, ID, CREATE_TS, CREATED_BY)
