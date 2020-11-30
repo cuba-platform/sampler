@@ -15,7 +15,7 @@ import java.util.Date;
 @UiDescriptor("week-calendar.xml")
 public class WeekCalendarSample extends ScreenFragment {
     @Inject
-    private Calendar calendar;
+    private Calendar<Date> calendar;
     @Inject
     private CheckBox isAllDay;
     @Inject
@@ -100,7 +100,7 @@ public class WeekCalendarSample extends ScreenFragment {
 
     private void generateEvent(String caption, String description, Date start, Date end,
                                boolean isAllDay, String stylename) {
-        SimpleCalendarEvent calendarEvent = new SimpleCalendarEvent();
+        SimpleCalendarEvent<Date> calendarEvent = new SimpleCalendarEvent<>();
         calendarEvent.setCaption(caption);
         calendarEvent.setDescription(description);
         calendarEvent.setStart(start);
