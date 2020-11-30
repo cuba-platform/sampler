@@ -24,6 +24,6 @@
     </servlet-mapping>
     <context-param>
         <param-name>appComponents</param-name>
-        <param-value>com.haulmont.cuba com.haulmont.charts com.haulmont.addon.helium com.haulmont.addon.maps</param-value>
+        <param-value>com.haulmont.cuba com.haulmont.charts com.haulmont.addon.maps com.haulmont.addon.helium</param-value>
     </context-param>
 </web-app>

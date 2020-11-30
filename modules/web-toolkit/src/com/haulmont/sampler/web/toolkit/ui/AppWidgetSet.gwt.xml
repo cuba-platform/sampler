@@ -3,5 +3,5 @@
     
     <inherits name="com.haulmont.cuba.web.widgets.WidgetSet" />
     <inherits name="com.haulmont.charts.web.widgets.ChartsWidgetSet" />
-    <inherits name="com.haulmont.addon.maps.web.toolkit.ui.MapsWidgetSet" />
+    <inherits name="com.haulmont.addon.maps.web.toolkit.ui.MapsWidgetSet"/>
 </module>
