@@ -155,6 +155,14 @@
                     <file name="com/haulmont/sampler/entity/Product.java"/>
                 </otherFiles>
             </item>
+            <item id="checkboxgroup-option-description" docUrlSuffix="gui_CheckBoxGroup" sampleHeight="185px"
+                  image="images/dashboard/components/checkboxgroup-dataaware.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/checkboxgroup/description"
+                  controller="com/haulmont/sampler/web/ui/components/checkboxgroup/description/CheckBoxGroupOptionDescriptionSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Product.java"/>
+                </otherFiles>
+            </item>
         </menu>
 
         <menu id="colorPicker">
@@ -932,7 +940,7 @@
                   descriptionsPack="com/haulmont/sampler/web/ui/components/radiobuttongroup/simple"
                   controller="com/haulmont/sampler/web/ui/components/radiobuttongroup/simple/RadioButtonGroupSimpleSample.java">
                 <otherFiles>
-                    <file name="com/haulmont/sampler/entity/Customer.java"/>
+                    <file name="com/haulmont/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
             <item id="radiobuttongroup-custom-options" docUrlSuffix="gui_RadioButtonGroup" sampleHeight="115px"
@@ -949,6 +957,14 @@
                   controller="com/haulmont/sampler/web/ui/components/radiobuttongroup/dataaware/RadioButtonGroupDataawareSample.java">
                 <otherFiles>
                     <file name="com/haulmont/sampler/entity/Product.java"/>
+                </otherFiles>
+            </item>
+            <item id="radiobuttongroup-option-description" docUrlSuffix="gui_RadioButtonGroup" sampleHeight="150px"
+                  image="images/dashboard/components/radiobuttongroup-option-description.png"
+                  descriptionsPack="com/haulmont/sampler/web/ui/components/radiobuttongroup/description"
+                  controller="com/haulmont/sampler/web/ui/components/radiobuttongroup/description/RadioButtonGroupOptionDescriptionSample.java">
+                <otherFiles>
+                    <file name="com/haulmont/sampler/entity/Experience.java"/>
                 </otherFiles>
             </item>
         </menu>
